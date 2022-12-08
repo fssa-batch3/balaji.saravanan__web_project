@@ -69,7 +69,7 @@
 
 .navbar1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-right: 30px;
 }
 
