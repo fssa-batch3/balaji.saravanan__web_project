@@ -196,10 +196,16 @@
 .section1 button {
     border-radius: 10px;
     width: 200px;
-    background-color: lawngreen;
     padding: 12px;
     margin-top: 25px;
     border: none;
+    background-color: none;
+    border: 1px solid gray;
+}
+.section1 button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: #04D939;
 }
 
 .section1 button a {
@@ -284,15 +290,23 @@
     padding: 10px;
     border: none;
     border-radius: 15px;
-    background-color: red;
     font-size: 20px;
     width: 200px;
+    background-color: none;
+    border: 1px solid gray;
 
 }
-
-.section3 button a {
+.section3 button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: #04D939;
     color: #ffffff;
+
+}
+.section3 button a {
     text-decoration: none;
+    color: black;
+
 }
 
 .section4 {
