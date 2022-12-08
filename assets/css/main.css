@@ -163,7 +163,7 @@
 .dropdown1:hover .dropdown-content1 {
     display: block;
 } 
-
+/* section 1 */
 .section1 {
     min-height: 100vh;
     display: flex;
@@ -184,11 +184,10 @@
 .section1 p {
     text-align: center;
     font-size: 22px;
-    font-weight: 700;
     padding-top: 20px;
     line-height: 1.3;
-    color: #ffffff;
-    text-shadow: -2px 2px black;
+    color: black;
+    text-shadow: -2px 2px #ffffff;
 
 
 }
