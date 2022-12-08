@@ -57,6 +57,7 @@
     padding: 10px;
     width: 350px;
     border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .input img {
@@ -69,6 +70,7 @@
 .navbar1 {
     display: flex;
     justify-content: space-between;
+    margin-right: 30px;
 }
 
 .nav ul {
