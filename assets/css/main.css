@@ -831,12 +831,16 @@ th {
     margin-left: 24%;
     margin-bottom: 30px;
 }
-
+.datelist table thead{
+    background-color: #ffcc00;
+}
 .datelist table td {
     padding: 20px;
     border: 2px solid gray;
 }
-
+.pastleaders table thead{
+    background-color: #ffcc00;
+}
 .pastleaders table td {
     border: 2px solid gray;
     padding: 20px;
@@ -850,6 +854,15 @@ th {
 .pastleaders table td a {
     text-decoration: none;
     color: black;
+}
+.pastleaders table td a:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: #04D939;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    column-span: 1;
 }
 
 /* governer page start */
