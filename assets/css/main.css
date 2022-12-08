@@ -196,7 +196,7 @@
 .section1 button {
     border-radius: 10px;
     width: 200px;
-    background-color: pink;
+    background-color: red;
     padding: 12px;
     margin-top: 25px;
     border: none;
@@ -205,7 +205,7 @@
 .section1 button a {
     text-decoration: none;
     font-size: 22px;
-    color: black;
+    color: #ffffff;
 }
 
 .section2 {
