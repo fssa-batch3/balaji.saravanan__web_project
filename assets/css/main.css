@@ -865,19 +865,35 @@ th {
 }
 
 /* governer page start */
+.governer h1{
+    padding: 30px;
+    text-decoration: underline;
+    margin-left: 30%;
+}
 .governer table {
     border-collapse: collapse;
     margin-left: 20%;
+}
+.governer table th{
+    background-color: #ffcc00;
 }
 
 .governer table td {
     padding: 20px;
     border: 2px solid gray;
+    background-color: ;
+
 }
 
 .governer table td a {
     text-decoration: none;
     color: black;
 }
-
-/* mla page start */
+.governer table td a:hover{
+   background-color: #04D939;
+   transform: scale(1.1); 
+   transition: 0.5s;
+   padding: 10px;
+   color: #ffffff;
+   border-radius: 10px;
+}
