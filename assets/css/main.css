@@ -771,55 +771,6 @@ th {
     font-size: 18px;
 }
 
-/* #slider{
-    overflow: hidden;
-    margin-top: 100px;
-    height: 350px;
-    width: 80%;
-    margin-left: 150px;
-}
-#slider figure{
-    position: relative;
-    width: 500%;
-    margin: 0;
-    left: 0;
-    animation: 20s slider infinite;
-}
-#slider figure img{
-    float: left;
-    width: 20%;
-    height: 500px;
-    object-fit: cover;
-}
-@keyframes slider{
-    0%{
-        left: 0;
-    }
-    20%{
-        left: 0;
-    }
-    25%{
-        left: -100%;
-    }
-    45%{
-        left: -100%;
-    }
-    50%{
-        left: -200%;
-    }
-    70%{
-        left: -200%;
-    }
-    75%{
-        left: -300%;
-    }
-    95%{
-        left: -300%;
-    }
-    100%{
-        left: -400%;
-    }
- */
 /* past leader page*/
 .piechart {
     margin-left: 30%;
