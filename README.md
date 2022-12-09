@@ -9,3 +9,5 @@ market rearch link:      https://docs.google.com/document/d/1MrJFknql45f6MZeRKmE
 problem statement :      https://docs.google.com/document/d/18cNdjR_qBlcSDR7yxrLtPlc7qm92l6ffmH3VKxUDsiQ/edit?usp=sharing
 
 flow chart:              https://drive.google.com/file/d/1SwNTXvAMWMkr1ggnMS1kwAlhyGNNQULW/view?usp=sharing
+
+wirw framing :           https://drive.google.com/file/d/1Xf0dAGK7TlTKlub9sVsr4T8w6eNtzHyf/view?usp=sharing
