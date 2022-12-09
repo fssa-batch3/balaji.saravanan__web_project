@@ -523,12 +523,12 @@
     justify-content: center;
     align-items: center;
     margin-left: 20%;
-    background-color:#FFCB9A ;
+    background-color: hotpink;
 }
 
 .joinbox h1 {
     font-size: 52px;
-    color: #ffffff;
+    color: black;
 }
 
 .joinbox input {
@@ -536,6 +536,7 @@
     width: 400px;
     font-size: 22px;
     margin: 30px 0 30px 0;
+    color: black;
 }
 
 .joinbox button a {
@@ -832,7 +833,6 @@ th {
 .governer table td {
     padding: 20px;
     border: 2px solid gray;
-    background-color: ;
 
 }
 
@@ -847,4 +847,51 @@ th {
    padding: 10px;
    color: #ffffff;
    border-radius: 10px;
+}
+
+/* start opinion queistion page */
+.opinionpoll{
+    width: 80%;
+    box-shadow: 4px 3px 20px -2px rgba(16, 52, 107, 1);
+    margin-left: 10%;
+    background-color: black;
+    height: 100%
+    
+}
+
+.opinionpoll form label{
+    font-size: 26px;
+    font-weight: 400;
+    margin: 20px;
+    padding: 20px;
+    margin-left: 10%;
+    color: #ffffff;
+}
+.opinionpoll form input{
+    width: 70%;
+    padding: 10px 0 70px 20px;
+    font-size: 18px;
+    margin: 50px;
+    margin-left: 10%;
+    color: black;
+    border-radius: 8px;
+}
+.opinionpoll button{
+    margin-bottom: 30PX;
+    margin-left: 35%;
+    padding: 10px;
+    width: 300px;
+
+}
+.opinionpoll button a{
+    font-size: 22px;
+    text-decoration: none;
+    color: black;  
+}
+.opinionpoll button:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+    background-color: #04D939;
+    border-radius: 10px;
+    color: #ffffff;
 }
