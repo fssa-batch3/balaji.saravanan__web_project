@@ -19,7 +19,7 @@
     height: 100px;
     position: sticky;
     top: 0px;
-    background-color: black;
+    background-color: #b199b7;
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
     background-position: center;
     background-size: cover;
@@ -35,7 +35,6 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 25px;
-    color: #ffffff;
 }
 
 .topic1 {
@@ -91,13 +90,12 @@
     margin-right: 30px;
     color: black;
     border-radius: 9px;
-    color: white;
 
 
 }
 
 .nav ul li a:hover {
-    background-color: #ffffff1A;
+    background-color: #04D939;
     transform: 0.5s;
     color: white;
 
@@ -116,7 +114,7 @@
     min-width: 120px;
     z-index: 1;
     margin: 10px;
-    background-color: #45475f;
+    background-color: #FFCB9A;
     border-radius: 9px;
 }
 .dropdown-content a {
@@ -124,11 +122,10 @@
     padding: 12px 2px;
     text-decoration: none;
     display: block;
-    color: #ffffff;
 }
 
 .dropdown-content a:hover {
-    background-color: #ffffff1A;
+    background-color: #04D939;
     border-radius: 9px;
 }
 
@@ -342,7 +339,7 @@
 .footer {
     display: flex;
     justify-content: space-around;
-    background-color: #45475f;
+    background-color: black;
     height: 380px;
     margin-top: 40px;
     color: lightgray;
@@ -799,8 +796,7 @@ th {
     margin-left: 20%;
 }
 .governer table th{
-    background-color: black;
-    color: #ffffff;
+    background-color: #ffcc00;
 }
 
 .governer table td {
@@ -827,7 +823,7 @@ th {
     width: 80%;
     box-shadow: 4px 3px 20px -2px rgba(16, 52, 107, 1);
     margin-left: 10%;
-    background-color: black;
+    background-color: #45475f;
     height: 100%
     
 }
