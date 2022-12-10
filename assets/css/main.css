@@ -105,6 +105,7 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    bottom: 20px;
 }
 
 .dropdown-content {
@@ -132,38 +133,7 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.dropdown1 {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content1 {
-    display: none;
-    position: absolute;
-    min-width: 120px;
-    z-index: 1;
-    margin: 10px;
-    background-color: #FFCB9A;
-    border-radius: 9px;
-}
-
-.dropdown-content1 a {
-    color: black;
-    padding: 12px 2px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content1 a:hover {
-    background-color: #04D939;
-    border-radius: 9px;
-}
-
-.dropdown1:hover .dropdown-content1 {
-    display: block;
-} 
-/* section 1 */
+/* section 1 stRT */
 .section1 {
     min-height: 100vh;
     display: flex;
