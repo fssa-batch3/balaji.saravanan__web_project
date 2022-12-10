@@ -19,7 +19,7 @@
     height: 100px;
     position: sticky;
     top: 0px;
-    background-color: #FFCB9A;
+    background-color: #45475f;
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
     background-position: center;
     background-size: cover;
@@ -35,6 +35,7 @@
     font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 25px;
+    color: #ffffff;
 }
 
 .topic1 {
@@ -90,12 +91,13 @@
     margin-right: 30px;
     color: black;
     border-radius: 9px;
+    color: #ffffff;
 
 
 }
 
 .nav ul li a:hover {
-    background-color: #04D939;
+    background-color: #ffffff1A;
     transform: 0.5s;
     color: white;
 
@@ -114,19 +116,19 @@
     min-width: 120px;
     z-index: 1;
     margin: 10px;
-    background-color: #FFCB9A;
+    background-color: #45475f;
     border-radius: 9px;
 }
-
 .dropdown-content a {
     color: black;
     padding: 12px 2px;
     text-decoration: none;
     display: block;
+    color: #ffffff;
 }
 
 .dropdown-content a:hover {
-    background-color: #04D939;
+    background-color: #ffffff1A;
     border-radius: 9px;
 }
 
@@ -168,7 +170,7 @@
     padding: 12px;
     margin-top: 25px;
     border: none;
-    background-color: none;
+    background-color: #ffffff1A;
     border: 1px solid gray;
 }
 .section1 button:hover{
@@ -261,7 +263,7 @@
     border-radius: 15px;
     font-size: 20px;
     width: 200px;
-    background-color: none;
+    background-color: #ffffff1A;
     border: 1px solid gray;
 
 }
@@ -319,7 +321,7 @@
 }
 
 .news .news1:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
     transition: 0.5s;
 }
 
@@ -340,7 +342,7 @@
 .footer {
     display: flex;
     justify-content: space-around;
-    background-color: black;
+    background-color: #45475f;
     height: 380px;
     margin-top: 40px;
     color: lightgray;
@@ -797,7 +799,8 @@ th {
     margin-left: 20%;
 }
 .governer table th{
-    background-color: #ffcc00;
+    background-color: black;
+    color: #ffffff;
 }
 
 .governer table td {
@@ -851,12 +854,13 @@ th {
     margin-left: 35%;
     padding: 10px;
     width: 300px;
+    background-color: #ffffff1A;
 
 }
 .opinionpoll button a{
     font-size: 22px;
     text-decoration: none;
-    color: black;  
+    color: #ffffff;  
 }
 .opinionpoll button:hover{
     transform: scale(1.1);
