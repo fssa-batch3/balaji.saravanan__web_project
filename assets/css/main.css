@@ -4,6 +4,7 @@
     box-sizing: border-box;
 
 }
+
 /* nav bar start */
 
 .headvideo video {
@@ -41,7 +42,10 @@
     display: flex;
     padding: 7px 200px 0 0;
 
+}
 
+.topic1 p a {
+    color: black;
 }
 
 .topic1 p {
@@ -117,6 +121,7 @@
     background-color: #FFCB9A;
     border-radius: 9px;
 }
+
 .dropdown-content a {
     color: black;
     padding: 12px 2px;
@@ -132,6 +137,7 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 /* section 1 stRT */
 .section1 {
     min-height: 100vh;
@@ -168,9 +174,10 @@
     margin-top: 25px;
     border: none;
     background-color: #ffffff1A;
-    border: 1px solid gray;
+    border: 2px outset orangered;
 }
-.section1 button:hover{
+
+.section1 button:hover {
     transform: scale(1.1);
     transition: 0.5s;
     background-color: #04D939;
@@ -262,15 +269,18 @@
     width: 200px;
     background-color: #ffffff1A;
     border: 1px solid gray;
+    border: 2px outset black;
 
 }
-.section3 button:hover{
+
+.section3 button:hover {
     transform: scale(1.1);
     transition: 0.5s;
     background-color: #04D939;
     color: #ffffff;
 
 }
+
 .section3 button a {
     text-decoration: none;
     color: black;
@@ -336,10 +346,11 @@
     border-radius: 10px;
 }
 
+/* footer page */
 .footer {
     display: flex;
     justify-content: space-around;
-    background-color: black;
+    background-color: #0e2a47;
     height: 380px;
     margin-top: 40px;
     color: lightgray;
@@ -751,16 +762,20 @@ th {
     margin-left: 24%;
     margin-bottom: 30px;
 }
-.datelist table thead{
+
+.datelist table thead {
     background-color: #ffcc00;
 }
+
 .datelist table td {
     padding: 20px;
     border: 2px solid gray;
 }
-.pastleaders table thead{
+
+.pastleaders table thead {
     background-color: #ffcc00;
 }
+
 .pastleaders table td {
     border: 2px solid gray;
     padding: 20px;
@@ -775,7 +790,8 @@ th {
     text-decoration: none;
     color: black;
 }
-.pastleaders table td a:hover{
+
+.pastleaders table td a:hover {
     transform: scale(1.1);
     transition: 0.5s;
     background-color: #04D939;
@@ -786,49 +802,110 @@ th {
 }
 
 /* governer page start */
-.governer h1{
+.governer h1 {
     padding: 30px;
     text-decoration: underline;
     margin-left: 30%;
 }
+
+.governer {
+    height: 750px;
+    overflow: scroll;
+    width: 90%;
+}
+
 .governer table {
     border-collapse: collapse;
-    margin-left: 20%;
+    margin-left: 10%;
 }
-.governer table th{
-    background-color: #ffcc00;
+
+.governer table th {
+    background-color: black;
+    color: #ffffff;
 }
 
 .governer table td {
     padding: 20px;
     border: 2px solid gray;
+    background-color: #ffffff1A;
+    color: black;
+    font-weight: 700;
 
 }
 
 .governer table td a {
     text-decoration: none;
     color: black;
+    font-weight: 800;
+    font-size: 22px;
+
 }
-.governer table td a:hover{
-   background-color: #04D939;
-   transform: scale(1.1); 
-   transition: 0.5s;
-   padding: 10px;
-   color: #ffffff;
-   border-radius: 10px;
+
+.governer table td a:hover {
+    background-color: #04D939;
+    transform: scale(1.1);
+    transition: 0.5s;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 10px;
+}
+/* mla ditail page */
+.ditails h1{
+    margin: 20px 0 30px 20px;
+    font-size: 30px;
+
+}
+.ditails p{
+    margin: 20px 0 30px 20px;
+   line-height: 1.2;
+    font-size: 18px;
+}
+.allcandidate{
+    height: 700px;
+    overflow: scroll;
+    width: 90%;
+}
+.candidate h2{
+    text-align: center;
+    padding: 40px;
+}
+.candidate table {
+    border-collapse: collapse;
+    margin: 40px 10% 30px 20%;
+}
+
+.candidate table th {
+    background-color: black;
+    color: #ffffff;
+}
+
+.candidate table td {
+    padding: 20px;
+    border: 2px solid gray;
+    background-color: #ffffff1A;
+    color: black;
+    font-weight: 700;
+
+}
+
+.candidate table td a {
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    font-size: 22px;
+
 }
 
 /* start opinion queistion page */
-.opinionpoll{
+.opinionpoll {
     width: 80%;
     box-shadow: 4px 3px 20px -2px rgba(16, 52, 107, 1);
     margin-left: 10%;
-    background-color: #45475f;
+    background-color: #45435f;
     height: 100%
-    
 }
 
-.opinionpoll form label{
+.opinionpoll form label {
     font-size: 26px;
     font-weight: 400;
     margin: 20px;
@@ -836,7 +913,8 @@ th {
     margin-left: 10%;
     color: #ffffff;
 }
-.opinionpoll form input{
+
+.opinionpoll form input {
     width: 70%;
     padding: 10px 0 70px 20px;
     font-size: 18px;
@@ -845,7 +923,8 @@ th {
     color: black;
     border-radius: 8px;
 }
-.opinionpoll button{
+
+.opinionpoll button {
     margin-bottom: 30PX;
     margin-left: 35%;
     padding: 10px;
@@ -853,12 +932,14 @@ th {
     background-color: #ffffff1A;
 
 }
-.opinionpoll button a{
+
+.opinionpoll button a {
     font-size: 22px;
     text-decoration: none;
-    color: #ffffff;  
+    color: #ffffff;
 }
-.opinionpoll button:hover{
+
+.opinionpoll button:hover {
     transform: scale(1.1);
     transition: 0.5s;
     background-color: #04D939;
