@@ -4,6 +4,9 @@
     box-sizing: border-box;
 
 }
+body::-webkit-scrollbar{
+    display: none;
+}
 
 /* nav bar start */
 
@@ -815,6 +818,9 @@ th {
     height: 750px;
     overflow: scroll;
     width: 90%;
+}
+.governer::-webkit-scrollbar{
+    display: none;
 }
 
 .governer table {
