@@ -23,7 +23,7 @@ body::-webkit-scrollbar{
     height: 100px;
     position: sticky;
     top: 0px;
-    background-color: #FFCB9A;
+    background-color: #0066cc;
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
     background-position: center;
     background-size: cover;
@@ -95,14 +95,14 @@ body::-webkit-scrollbar{
     margin: 10px;
     padding: 8px;
     margin-right: 30px;
-    color: black;
+    color: white;
     border-radius: 9px;
 
 
 }
 
 .nav ul li a:hover {
-    background-color: #04D939;
+    background-color: #ffffff1A;
     transform: 0.5s;
     color: white;
 
