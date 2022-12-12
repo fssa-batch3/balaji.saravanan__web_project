@@ -719,16 +719,20 @@ th {
 
 .complete .rules {
     width: 90%;
-    height: auto;
+    height: 250px;
     box-shadow: 4px 3px 20px -2px rgba(16, 52, 107, 1);
     margin-top: 50px;
-
+    overflow: scroll;
+   background-color: black;
 }
-
+.complete .rules::-webkit-scrollbar{
+    display: none;
+}
 .complete .rules h2 {
     padding: 30px;
     font-size: 30px;
     font-weight: 800;
+    color: #ffffff;
 }
 
 .complete .rules hr {
@@ -738,7 +742,7 @@ th {
     margin-bottom: 20px;
 }
 
-.complete .rules button {
+.complete .rules .rulescolor1 {
     padding: 12px;
     border-radius: 10px;
     margin-left: 30px;
@@ -753,6 +757,16 @@ th {
     padding-left: 30px;
     margin-top: 30px;
     font-size: 18px;
+    color: #ffffff;
+}
+.rules .rulescolor{
+    background-color: orange;padding: 12px;
+    border-radius: 10px;
+    margin-left: 30px;
+    border: none;
+    width: 150px;
+    color: black;
+    font-size: 16px;
 }
 
 /* past leader page*/
