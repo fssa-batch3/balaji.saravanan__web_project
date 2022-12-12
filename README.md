@@ -1,7 +1,7 @@
 # POLITIFACT
-main thing is manifesto clarification for normal people my wepsite update manifesto lists.<br>
- in my wepsite give a politics  knowledge for normal people and chilldren and crate a awerness of politics<br> 
- learn history you craete mistry this learn all leader life and leaders achivements all though things <br>
+main thing is manifesto clarification for normal peoples my wepsite update manifesto lists.<br>
+ In my wepsite give a politics  knowledge for normal people and chilldren and create a awerness of politics<br> 
+ learn history you craete mistry this learn all leader in life and leaders achivements all though things <br>
 
 
 market rearch link:      https://docs.google.com/document/d/1MrJFknql45f6MZeRKmEauv3PUigxctM5NCoTrUAyV5A/edit?usp=sharing
