@@ -103,9 +103,10 @@ body::-webkit-scrollbar{
     padding-right: 30px;
     text-transform: uppercase;
     font-size: 18px;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     margin: 10px;
-    padding: 8px;
+    /* padding: 8px; */
+    padding:8px 18px 8px 8px;
     margin-right: 30px;
     color: black;
     border-radius: 9px;
@@ -932,7 +933,7 @@ th {
     box-shadow: 4px 3px 20px -2px rgba(16, 52, 107, 1);
     margin-left: 10%;
     background-color: #45435f;
-    height: 100%
+    min-height: 100%;
 }
 
 .opinionpoll form label {
@@ -941,7 +942,7 @@ th {
     margin: 20px;
     padding: 20px;
     margin-left: 10%;
-    color: #ffffff;
+    color: black;
 }
 
 .opinionpoll form input {
