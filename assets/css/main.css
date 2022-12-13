@@ -188,7 +188,6 @@ body::-webkit-scrollbar{
     width: 200px;
     padding: 12px;
     margin-top: 25px;
-    border: none;
     background-color: #ffffff1A;
     border: 2px outset orangered;
 }
@@ -279,12 +278,10 @@ body::-webkit-scrollbar{
 
 .section3 button {
     padding: 10px;
-    border: none;
     border-radius: 15px;
     font-size: 20px;
     width: 200px;
     background-color: #ffffff1A;
-    border: 1px solid gray;
     border: 2px outset black;
 
 }
@@ -783,9 +780,6 @@ th {
 }
 
 /* past leader page*/
-.piechart {
-    margin-left: 30%;
-}
 
 .datelist table {
     border-collapse: collapse;
