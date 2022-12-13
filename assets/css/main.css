@@ -31,6 +31,8 @@ body::-webkit-scrollbar{
 .totalnav {
     height: 100px;
     position: sticky;
+    /* background-color: white; */
+    z-index: 10;
     top: 0px;
     /* background-color: #FF6B1A; */
     background-image: url(../images/);
