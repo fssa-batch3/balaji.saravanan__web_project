@@ -26,21 +26,17 @@ body::-webkit-scrollbar{
     min-width: 100%;
     min-height: 100%;
     z-index: -1;
-    /* filter: blur(5px); */
 }
+/* nav bar start */
 .totalnav {
     height: 100px;
     position: sticky;
-    /* background-color: white; */
-    z-index: 10;
+     z-index: 10; 
     top: 0px;
-    /* background-color: #FF6B1A; */
-    /* background-image: url(../images/); */
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
     background-position: center;
     background-size: cover;
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -90,6 +86,7 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: space-around;
     margin-right: 30px;
+
 }
 
 .nav ul {
@@ -114,7 +111,6 @@ body::-webkit-scrollbar{
 .nav ul li a:hover {
     background-color: #B3ECF2;
     transform: 0.5s;
-    /* color: #ffffff; */
 
 }
 
@@ -131,7 +127,7 @@ body::-webkit-scrollbar{
     min-width: 120px;
     z-index: 1;
     margin: 10px;
-    background-image: url(../images/basic-white-designify.png);
+    background-color: lightgray;
     border-radius: 9px;
     background-position: center;
 }
@@ -152,7 +148,7 @@ body::-webkit-scrollbar{
     display: block;
 }
 
-/* section 1 stRT */
+/* section 1 start */
 .section1 {
     min-height: 100vh;
     display: flex;
