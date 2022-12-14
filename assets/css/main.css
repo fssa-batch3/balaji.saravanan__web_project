@@ -35,7 +35,7 @@ body::-webkit-scrollbar{
     z-index: 10;
     top: 0px;
     /* background-color: #FF6B1A; */
-    background-image: url(../images/);
+    /* background-image: url(../images/); */
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
     background-position: center;
     background-size: cover;
