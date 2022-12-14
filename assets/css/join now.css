@@ -4,12 +4,15 @@
     box-sizing: border-box;
 
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
+
 /* nav bar start */
 
-.headvideo video {
+
+.headvideo1 video {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -18,11 +21,12 @@ body::-webkit-scrollbar{
     z-index: -1;
 }
 
+/* nav bar start */
 .totalnav {
     height: 100px;
     position: sticky;
+    z-index: 10;
     top: 0px;
-    background-color: #FFCB9A;
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
     background-position: center;
     background-size: cover;
@@ -44,7 +48,10 @@ body::-webkit-scrollbar{
     display: flex;
     padding: 7px 200px 0 0;
 
+}
 
+.topic1 p a {
+    color: black;
 }
 
 .topic1 p {
@@ -74,6 +81,7 @@ body::-webkit-scrollbar{
     display: flex;
     justify-content: space-around;
     margin-right: 30px;
+
 }
 
 .nav ul {
@@ -86,8 +94,8 @@ body::-webkit-scrollbar{
     text-decoration: none;
     text-transform: uppercase;
     font-size: 18px;
-    margin: 12px;
-    padding:8px 18px 8px 8px;
+    margin: 10px;
+    padding: 8px 18px 8px 8px;
     margin-right: 30px;
     color: black;
     border-radius: 9px;
@@ -96,11 +104,46 @@ body::-webkit-scrollbar{
 }
 
 .nav ul li a:hover {
-    background-color: #04D939;
+    background-color: #B3ECF2;
     transform: 0.5s;
-    color: white;
 
 }
+
+/* dropdown menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    bottom: 20px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 120px;
+    z-index: 1;
+    margin: 10px;
+    background-color: lightgray;
+    border-radius: 9px;
+    background-position: center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 2px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #04D939;
+    border-radius: 9px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* footer page */
 .footer {
     display: flex;
     justify-content: space-around;
@@ -136,66 +179,40 @@ body::-webkit-scrollbar{
     font-size: 22px;
 }
 
-/* dropdown menu*/
-.dropdown {
-    position: relative;
-    display: inline-block;
-    bottom: 20px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 120px;
-    z-index: 1;
-    margin: 10px;
-    background-color: #FFCB9A;
-    border-radius: 9px;
-}
-.dropdown-content a {
-    color: black;
-    padding: 12px 2px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #04D939;
-    border-radius: 9px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
 /* join now page start */
-.joinpage{
+.joinpage {
     width: 60%;
     margin-left: 20%;
-    /* box-shadow: 4px 3px 20px -2px rgb(173, 179, 189); */
-    /* background-image: url(../../assets/images/background-g34cf5bf80_1280.jpg); */
+    background-color: #EEF1FF;
 
+    
 }
-.joinpage h1{
+
+.joinpage h1 {
     text-align: start;
-    padding: 40px 0 40px 20px;
+    padding: 20px 0 40px 20px;
 }
+
 .joinpage form {
-       margin-left: 20%;
-       height: 700px;
+    margin-left: 20%;
+    height: 700px;
 }
-.joinpage form label{
+
+.joinpage form label {
     font-size: 22px;
-    line-height: 2; 
+    line-height: 2;
 }
-.joinpage input{
+
+.joinpage input {
     padding: 10px;
     width: 500px;
     border-radius: 10px;
     color: black;
-    border: 2px outset orange; 
-    background-color: #ffffff1A; 
+    border: 2px outset orange;
+    background-color: #ffffff1A;
 }
-.joinpage form button{
+
+.joinpage form button {
     padding: 10px;
     border: 2px outset brown;
     border-radius: 8px;
@@ -204,21 +221,23 @@ body::-webkit-scrollbar{
     margin-top: 30px;
     background-color: #ffffff1A;
 }
-.joinpage form button a{
+
+.joinpage form button a {
     color: black;
     text-decoration: none;
     font-size: 18px;
     font-weight: 400;
 }
-.joinpage form button:hover{
+
+.joinpage form button:hover {
     transform: scale(1.1);
     transition: 0.5;
-    background-color: #04D939;
+    background-color: #B1B2FF;
 }
-/* join now thanks page */
-.thanks{
 
-    background-image: url(../../assets/images/background-g34cf5bf80_1280.jpg);
+/* join now thanks page */
+.thanks {
+    background-color: #EEF1FF;
     min-height: 100vh;
     background-size: cover;
     background-position: center;
@@ -227,40 +246,47 @@ body::-webkit-scrollbar{
     justify-content: center;
     align-items: center;
 }
-.thanks h1{
+
+.thanks h1 {
     font-size: 52px;
     text-shadow: -2px 2px greenyellow;
     padding-bottom: 20px;
 }
-.thanks img{
+
+.thanks img {
     width: 100px;
     height: 100px;
 }
-.record{
+
+.record {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.record p{
-  padding-left: 20px;  
+
+.record p {
+    padding-left: 20px;
 }
-.thanks button{
-  padding: 10px;
-  background-color: #ffffff1A;
-  border: 2px outset blueviolet;
-  border-radius: 10px;
-  width: 200px;
-  margin-top: 40px;
+
+.thanks button {
+    padding: 10px;
+    background-color: #ffffff1A;
+    border: 2px outset blueviolet;
+    border-radius: 10px;
+    width: 200px;
+    margin-top: 40px;
 }
-.thanks button a{
+
+.thanks button a {
     color: black;
     text-decoration: none;
     font-size: 22px;
 
 }
-.thanks button:hover{
+
+.thanks button:hover {
     transform: scale(1.1);
     transition: 0.5s;
-    background-color: #04D939;
+    background-color: #B1B2FF;
     border-radius: 10px;
 }

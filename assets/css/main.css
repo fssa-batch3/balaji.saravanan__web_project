@@ -4,7 +4,8 @@
     box-sizing: border-box;
 
 }
-body::-webkit-scrollbar{
+
+body::-webkit-scrollbar {
     display: none;
 }
 
@@ -19,6 +20,7 @@ body::-webkit-scrollbar{
     z-index: -1;
     filter: blur(5px);
 }
+
 .headvideo1 video {
     position: absolute;
     right: 0;
@@ -27,16 +29,18 @@ body::-webkit-scrollbar{
     min-height: 100%;
     z-index: -1;
 }
+
 /* nav bar start */
 .totalnav {
     height: 100px;
     position: sticky;
-     z-index: 10; 
+    z-index: 10;
     top: 0px;
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
     background-position: center;
     background-size: cover;
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -100,7 +104,7 @@ body::-webkit-scrollbar{
     text-transform: uppercase;
     font-size: 18px;
     margin: 10px;
-    padding:8px 18px 8px 8px;
+    padding: 8px 18px 8px 8px;
     margin-right: 30px;
     color: black;
     border-radius: 9px;
@@ -109,8 +113,9 @@ body::-webkit-scrollbar{
 }
 
 .nav ul li a:hover {
-    background-color: #B3ECF2;
-    transform: 0.5s;
+    background-color: #B1B2FF;
+    transition: 0.5s;
+    transform:scale(1.1);
 
 }
 
@@ -140,8 +145,10 @@ body::-webkit-scrollbar{
 }
 
 .dropdown-content a:hover {
-    background-color: #04D939;
+    background-color: #B1B2FF;
     border-radius: 9px;
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 .dropdown:hover .dropdown-content {
@@ -189,7 +196,7 @@ body::-webkit-scrollbar{
 .section1 button:hover {
     transform: scale(1.1);
     transition: 0.5s;
-    background-color: #04D939;
+    background-color: #B1B2FF;
 }
 
 .section1 button a {
@@ -283,7 +290,7 @@ body::-webkit-scrollbar{
 .section3 button:hover {
     transform: scale(1.1);
     transition: 0.5s;
-    background-color: #04D939;
+    background-color: #B1B2FF;
     color: #ffffff;
 
 }
@@ -424,14 +431,13 @@ body::-webkit-scrollbar{
     text-align: center;
     margin-left: 15%;
     width: 170px;
-    /* background-color:; */
     border-radius: 13px;
     border: none;
     color: black;
 }
 
 .list1 button:hover {
-    background-color: #04D939;
+    background-color: #B1B2FF;
     transform: scale(1.1);
     transition: .2s;
 }
@@ -705,7 +711,7 @@ th {
 .complete .maninav nav ul li a:hover {
     transform: scale(1.1);
     transition: 0.5s;
-    background-color: #04D939;
+    background-color: #B1B2FF;
     color: #ffffff;
 }
 
@@ -727,11 +733,13 @@ th {
     box-shadow: 4px 3px 20px -2px rgba(16, 52, 107, 1);
     margin-top: 50px;
     overflow: scroll;
-   background-color: black;
+    background-color: black;
 }
-.complete .rules::-webkit-scrollbar{
+
+.complete .rules::-webkit-scrollbar {
     display: none;
 }
+
 .complete .rules h2 {
     padding: 30px;
     font-size: 30px;
@@ -763,8 +771,10 @@ th {
     font-size: 18px;
     color: #ffffff;
 }
-.rules .rulescolor{
-    background-color: orange;padding: 12px;
+
+.rules .rulescolor {
+    background-color: orange;
+    padding: 12px;
     border-radius: 10px;
     margin-left: 30px;
     border: none;
@@ -782,14 +792,16 @@ th {
 }
 
 .datelist table thead {
-    background-color: #ffcc00;
+    background-color: black;
+    color: #ffffff;
 }
 
 .datelist table td {
     padding: 20px;
     border: 2px solid gray;
 }
-.pastleaders tr:nth-child(even){
+
+.pastleaders tr:nth-child(even) {
     background-color: #FFCB9A;
 }
 
@@ -815,7 +827,7 @@ th {
 .pastleaders table td a:hover {
     transform: scale(1.1);
     transition: 0.5s;
-    background-color: #04D939;
+    background-color: #B1B2FF;
     color: #ffffff;
     padding: 10px;
     border-radius: 10px;
@@ -834,7 +846,8 @@ th {
     overflow: scroll;
     width: 90%;
 }
-.governer::-webkit-scrollbar{
+
+.governer::-webkit-scrollbar {
     display: none;
 }
 
@@ -866,33 +879,38 @@ th {
 }
 
 .governer table td a:hover {
-    background-color: #04D939;
+    background-color: #B1B2FF;
     transform: scale(1.1);
     transition: 0.5s;
     padding: 10px;
-    color: #ffffff;
+    color: black;
     border-radius: 10px;
 }
+
 /* mla ditail page */
-.ditails h1{
+.ditails h1 {
     margin: 20px 0 30px 20px;
     font-size: 30px;
 
 }
-.ditails p{
+
+.ditails p {
     margin: 20px 0 30px 20px;
-   line-height: 1.2;
+    line-height: 1.2;
     font-size: 18px;
 }
-.allcandidate{
+
+.allcandidate {
     height: 700px;
     overflow: scroll;
     width: 90%;
 }
-.candidate h2{
+
+.candidate h2 {
     text-align: center;
     padding: 40px;
 }
+
 .candidate table {
     border-collapse: collapse;
     margin: 40px 10% 30px 20%;
@@ -925,7 +943,7 @@ th {
     width: 80%;
     box-shadow: 4px 3px 20px -2px rgba(16, 52, 107, 1);
     margin-left: 10%;
-    background-color: #45435f;
+    background-color: #D2DAFF;
     min-height: 100%;
 }
 
@@ -960,13 +978,13 @@ th {
 .opinionpoll button a {
     font-size: 22px;
     text-decoration: none;
-    color: #ffffff;
+    color: black;
 }
 
 .opinionpoll button:hover {
     transform: scale(1.1);
     transition: 0.5s;
-    background-color: #04D939;
+    background-color: #B1B2FF;
     border-radius: 10px;
-    color: #ffffff;
+    color: black;
 }
