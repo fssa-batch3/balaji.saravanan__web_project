@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -2;
+    z-index: -1;
 }
 
 /* nav bar start */
@@ -128,19 +128,22 @@ body::-webkit-scrollbar {
 .dropdown-content {
     display: none;
     position: absolute;
-    min-width: 120px;
+    min-width: auto;
     z-index: 1;
     margin: 10px;
-    background-color: lightgray;
+    background-color: #ededed;
     border-radius: 9px;
     background-position: center;
+    
 }
 
-.dropdown-content a {
+.dropdown .dropdown-content a {
     color: black;
     padding: 12px 2px;
     text-decoration: none;
     display: block;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .dropdown-content a:hover {
@@ -161,7 +164,6 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .section1 h1 {
@@ -188,7 +190,7 @@ body::-webkit-scrollbar {
     padding: 12px;
     margin-top: 25px;
     background-color: #ffffff1A;
-    border: 2px outset orangered;
+    border: 2px outset black;
 }
 
 .section1 button:hover {
@@ -238,7 +240,10 @@ body::-webkit-scrollbar {
     font-size: 22px;
     padding: 10px;
 }
-
+.sideimage img{
+   width:500px ;
+   height:305px 
+}
 .section3 {
     background-image: url('../images/learning-gc49fa0086_1920.jpg');
     height: 600px;
@@ -283,7 +288,7 @@ body::-webkit-scrollbar {
     background-color: #ffffff1A;
     border: 2px outset black;
 
-}
+} 
 
 .section3 button:hover {
     transform: scale(1.1);
@@ -371,6 +376,7 @@ body::-webkit-scrollbar {
 .news .news1 img {
     margin: 20px 10px 10px 35px;
     border-radius: 10px;
+    width: 300px;
 }
 
 /* footer page */
@@ -537,7 +543,7 @@ body::-webkit-scrollbar {
 }
 
 
-
+/* join box */
 .joinbox {
     width: 60%;
     height: 250px;
@@ -894,6 +900,7 @@ th {
     height: 750px;
     overflow: scroll;
     width: 90%;
+
 }
 
 .governer::-webkit-scrollbar {
