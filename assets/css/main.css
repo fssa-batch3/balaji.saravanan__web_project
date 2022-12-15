@@ -26,7 +26,7 @@ body::-webkit-scrollbar {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-    z-index: -1;
+    z-index: -2;
 }
 
 /* nav bar start */
@@ -337,6 +337,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: space-around;
 
+
 }
 
 .news .news1:hover {
@@ -351,6 +352,20 @@ body::-webkit-scrollbar {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 .news .news1 img {
@@ -460,6 +475,21 @@ body::-webkit-scrollbar {
     height: 370px;
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
     border-radius: 8px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    /* animation-iteration-count: infinite */
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 .list2 img {
@@ -503,7 +533,10 @@ body::-webkit-scrollbar {
 .piechart {
     margin-left: 20%;
     margin-top: 30px;
+
 }
+
+
 
 .joinbox {
     width: 60%;
@@ -734,6 +767,21 @@ th {
     margin-top: 50px;
     overflow: scroll;
     background-color: black;
+    animation-duration: 3s;
+    animation-name: slidein;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
 }
 
 .complete .rules::-webkit-scrollbar {
@@ -764,6 +812,7 @@ th {
     color: black;
     font-size: 16px;
 }
+
 
 .complete .rules p {
     padding-left: 30px;
