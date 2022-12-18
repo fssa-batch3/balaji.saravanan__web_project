@@ -10,6 +10,15 @@ body{
 body::-webkit-scrollbar {
     display: none;
 }
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
 
 /* nav bar start */
 
