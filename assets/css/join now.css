@@ -49,10 +49,12 @@ a {
 }
 
 .topic h1 {
-    padding: 20px 0 0 40px;
-    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 0 0 40px;
+    font-family: 'Kanit', sans-serif;
     font-weight: 900;
     font-size: 25px;
+    color: #FE9227;
+
 }
 
 .topic1 {
