@@ -5,33 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mla-list</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="icon" type="image/jpg" sizes="60x32" href="../../assets/images/p logo.jpg">
+    <link href="../../assets/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+    <link rel="icon" type="image/jpg" sizes="60x32" href="../../assets/images/icons/p logo.jpg">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>mla list</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
 </head>
 
+
 <body>
-
-    <!-- background video -->
-
-    <div class="headvideo1">
-        <video autoplay muted loop id="myVideo">
-            <source src="../../assets/images/Pattern - 85590.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- allnav -->
+    <!-- navbar all -->
 
     <div class="totalnav">
 
         <div class="headvideo1">
             <video autoplay muted loop id="myVideo">
-                <source src="../../assets/images/Pattern - 85590.mp4" type="video/mp4">
+                <source src="../../assets/images/essecial/Pattern - 85590.mp4" type="video/mp4">
                 <track default />
             </video>
         </div>
 
-        <!-- navbar1 -->
+        <!-- navbar -->
 
         <div class="navbar">
 
@@ -40,78 +39,65 @@
             </div>
 
             <div class="topic1">
-                <p><a href="">தொடர்பு</a></p>
+                <p class="contact"><a href="pages/your opinion/join now.html">தொடர்பு</a></p>
+                <p class="contact">|</p>
+                <p class="contact"><a href="pages/your opinion/your opnion.html">பின்னூட்டம்</a></p>
+                <p><a href="../../English-version/more/mla-english.html">English</a></p>
                 <p>|</p>
-                <p><a href="">பின்னூட்டம்</a></p>
-
-                <p><a href="../more/mla-english.html">English</a></p>
-                <p>|</p>
-                <p><a href="../more/mla.html">தமிழ்</a></p>
+                <p><a href="mla.html">தமிழ்</a></p>
             </div>
 
         </div>
 
-        <!-- navbar2 -->
+        <!-- navbar1 -->
 
-        <div class="navbar1">
-
-            <div class="input">
-                <input type="text" placeholder="search">
-                <img src="../../assets/images/3917132.svg" width="20px" height="20px" alt="error image">
-            </div>
-
-            <div class="nav">
-
-                <nav aria-label="nav-menu">
-
-                    <ul>
-
-                        <li><a href="../../index.html">முகப்பு</a></li>
-                        <li><a href="../../pages/portfolio/parties-profile.html">விவரம்</a></li>
-
-                        <li>
-                            <div class="dropdown">
-
-                                <ul>
-                                    <li><a class="dropbtn" href="">அறிக்கைகள்</a></li>
-                                </ul>
-
-                                <div class="dropdown-content">
-                                    <a href="../manifesto/bending.html">நிலுவை</a>
-                                    <a href="../manifesto/complte.html">நிறைவு</a>
-                                </div>
-
-                            </div>
-
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item pe-5">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">முகப்பு</a>
                         </li>
-
-                        <li><a href="../passt leaders/past leaders.html">தலைவர்கள்</a></li>
-
-                        <li>
-
-                            <div class="dropdown">
-
-                                <ul>
-                                    <li><a class="dropbtn" href="">மேலும்</a></li>
-                                </ul>
-
-                                <div class="dropdown-content">
-                                    <a href="../more/Governer list.html">ஆளுநர்கள்</a>
-                                    <a href="../more/mla.html">பிரதிநிதிகள்</a>
-                                </div>
-
-                            </div>
-
+                        <li class="nav-item pe-5">
+                            <a class="nav-link" href="../portfolio/parties-profile.html">விவரம்</a>
                         </li>
+                        <li class="nav-item dropdown pe-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                அறிக்கைகள்
+                            </a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><a class="dropdown-item" href="../manifesto/bending.html">நிலுவை</a></li>
+                                <li><a class="dropdown-item" href="../manifesto/complte.html">நிறைவு</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item pe-5">
+                            <a class="nav-link" href="../passt leaders/past leaders.html">தலைவர்கள்</a>
+                        </li>
+                        <li class="nav-item dropdown pe-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                மேலும்
+                            </a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><a class="dropdown-item" href="Governer list.html">ஆளுநர்கள்</a></li>
+                                <li><a class="dropdown-item" href="mla.html">பிரதிநிதிகள்</a></li>
 
+                            </ul>
+                        </li>
                     </ul>
-
-                </nav>
-
+                </div>
             </div>
-
-        </div>
-
+        </nav>
     </div>
 
     <!-- mla page -->
@@ -126,17 +112,17 @@
     </div>
 
     <div class="governer">
-        <table>
+        <table class="table table-hover">
 
             <thead>
                 <tr>
-                    <th>வ.எண்</th>
-                    <th>தொகுதி பெயர்</th>
-                    <th>வேட்பாளர் பெயர்</th>
-                    <th>கட்சிகள்</th>
-                    <th>வாக்குகள்</th>
-                    <th>வாக்கு வித்தியாசம்</th>
-                    <th>வாக்கு விகிதம் %</th>
+                    <th class="text-center">வ.எண்</th>
+                    <th class="text-center">தொகுதி பெயர்</th>
+                    <th class="text-center">வேட்பாளர் பெயர்</th>
+                    <th class="text-center">கட்சிகள்</th>
+                    <th class="text-center">வாக்குகள்</th>
+                    <th class="text-center">வாக்கு வித்தியாசம்</th>
+                    <th class="text-center">வாக்கு விகிதம் %</th>
                 </tr>
 
             </thead>
@@ -148,7 +134,7 @@
                     <td>டி ஜெ கோவிந்தராசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -162,7 +148,7 @@
                     <td>துரை சந்திரசேகர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -176,7 +162,7 @@
                     <td>எஸ்.சந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -191,7 +177,7 @@
                     <td>வி.ஜி.ராஜேந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -206,7 +192,7 @@
                     <td>ஆ.கிருஷ்ணசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -220,7 +206,7 @@
                     <td>சா.மு.நாசர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -234,7 +220,7 @@
                     <td>காரப்பாக்கம் கணபதி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -248,7 +234,7 @@
                     <td>ஜோசப் சாமுவேல்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -262,7 +248,7 @@
                     <td>சுதர்சனம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -276,7 +262,7 @@
                     <td>சங்கர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -290,7 +276,7 @@
                     <td>ஜே.ஜே.எபிநேசர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -304,7 +290,7 @@
                     <td>ஆர்.டி.சேகர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -318,7 +304,7 @@
                     <td>M.K.ஸ்டாலின்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -332,7 +318,7 @@
                     <td>வெற்றியழகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -346,7 +332,7 @@
                     <td>தாயகம் கவி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -360,7 +346,7 @@
                     <td>பரந்தாமன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -374,7 +360,7 @@
                     <td>ஐட்ரீம் இரா.மூர்த்தி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -388,7 +374,7 @@
                     <td>சேகர்பாபு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -403,7 +389,7 @@
                     <td>உதயநிதி ஸ்டாலின்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -418,7 +404,7 @@
                     <td>Dr.எழிலன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -433,7 +419,7 @@
                     <td>எம்.கே.மோகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -447,7 +433,7 @@
                     <td>ஏ.எம்.வி.பிரபாகர் ராஜா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -462,7 +448,7 @@
                     <td>ம.சுப்ரமணியம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -477,7 +463,7 @@
                     <td>ஜெ.கருணாநிதி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -492,7 +478,7 @@
                     <td>தா வேலு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -506,7 +492,7 @@
                     <td>ஜே.எம்.எச்.ஹஸ்ஸான்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -520,7 +506,7 @@
                     <td>அரவிந்த் ரமேஷ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -534,7 +520,7 @@
                     <td>தா.மோ. அன்பரசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -548,7 +534,7 @@
                     <td>செல்வபெருந்தகை</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -562,7 +548,7 @@
                     <td>இ.கருணாநிதி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -576,7 +562,7 @@
                     <td>எஸ்.ஆர்.ராஜா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -590,7 +576,7 @@
                     <td>வரலட்சுமி மதுசூதனன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -604,7 +590,7 @@
                     <td>எஸ்.எஸ்.பாலாஜி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/vck.png" alt="">
+                            <img src="../../assets/images/flages/vck.png" alt="error image">
                             <p>விசிக</p>
                         </div>
                     </td>
@@ -618,7 +604,7 @@
                     <td>பாபு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/vck.png" alt="">
+                            <img src="../../assets/images/flages/vck.png" alt="error image">
                             <p>விசிக</p>
                         </div>
                     </td>
@@ -633,7 +619,7 @@
                     <td>மரகதம் குமாரவேல்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -647,7 +633,7 @@
                     <td>க.சுந்தர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -661,7 +647,7 @@
                     <td>சி.வி.எம்.பி. எழிலரசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -675,7 +661,7 @@
                     <td>சு. ரவி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -689,7 +675,7 @@
                     <td>முனிரத்தினம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -703,7 +689,7 @@
                     <td>துரைமுருகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -717,7 +703,7 @@
                     <td>காந்தி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -731,7 +717,7 @@
                     <td>ஜெ.எல்.ஈஸ்வரப்பன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -745,7 +731,7 @@
                     <td>கார்த்திகேயன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -760,7 +746,7 @@
                     <td>நந்தகுமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -784,7 +770,7 @@
                     <td>வி.அமுலு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -799,7 +785,7 @@
                     <td>செந்தில்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -813,7 +799,7 @@
                     <td>ஆ.செ.விஸ்வநாதன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -828,7 +814,7 @@
                     <td>க.தேவராஜி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -842,7 +828,7 @@
                     <td>எ.நல்லதம்பி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -856,7 +842,7 @@
                     <td>டி.எம்.தமிழ்செல்வம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -870,7 +856,7 @@
                     <td>தே.மதியழகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -885,7 +871,7 @@
                     <td>அசோக்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -899,7 +885,7 @@
                     <td>கேபி முனுசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -913,7 +899,7 @@
                     <td>ஒய்.பிரகாஷ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -927,7 +913,7 @@
                     <td>ராமச்சந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/cpm.png" alt="">
+                            <img src="../../assets/images/flages/cpm.png" alt="error image">
                             <p>சிபிஐ</p>
                         </div>
                     </td>
@@ -941,7 +927,7 @@
                     <td>கேபி அன்பழகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -956,7 +942,7 @@
                     <td>ஜிகே மணி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/Pmk_flag.jpg" alt="">
+                            <img src="../../assets/images/flages/Pmk_flag.jpg" alt="error image">
                             <p>பாமக</p>
                         </div>
                     </td>
@@ -970,7 +956,7 @@
                     <td>எஸ் பி வெங்கடேஸ்வரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/Pmk_flag.jpg" alt="">
+                            <img src="../../assets/images/flages/Pmk_flag.jpg" alt="error image">
                             <p>பாமக</p>
                         </div>
                     </td>
@@ -984,7 +970,7 @@
                     <td>ஏ. கோவிந்தசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -998,7 +984,7 @@
                     <td>வி. சம்பத்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1012,7 +998,7 @@
                     <td>மு.பெ.கிரி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1026,7 +1012,7 @@
                     <td>எ.வ.வேலு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1040,7 +1026,7 @@
                     <td>கு.பிச்சாண்டி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1055,7 +1041,7 @@
                     <td>பெ.சு.தி.சரவணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1069,7 +1055,7 @@
                     <td>அக்ரி கிருஷ்ணமூர்த்தி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1083,7 +1069,7 @@
                     <td>சேவூர் ராமச்சந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1097,7 +1083,7 @@
                     <td>ஓ.ஜோதி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1111,7 +1097,7 @@
                     <td>எஸ்.அம்பேத்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1125,7 +1111,7 @@
                     <td>கே.எஸ்.மஸ்தான்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1139,7 +1125,7 @@
                     <td>சிவக்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/Pmk_flag.jpg" alt="">
+                            <img src="../../assets/images/flages/Pmk_flag.jpg" alt="error image">
                             <p>பாமக</p>
                         </div>
                     </td>
@@ -1154,7 +1140,7 @@
                     <td>அர்ஜூனன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1168,7 +1154,7 @@
                     <td>சக்ரபாணி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1183,7 +1169,7 @@
                     <td>ஆர்.லட்சுமணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1197,7 +1183,7 @@
                     <td>நா.புகழேந்தி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1211,7 +1197,7 @@
                     <td>க.பொன்முடி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1225,7 +1211,7 @@
                     <td>எ.ஜெ.மணிகண்ணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1239,7 +1225,7 @@
                     <td>வசந்தம் கார்த்திகேயன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1253,7 +1239,7 @@
                     <td>தா.உதயசூரியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1267,7 +1253,7 @@
                     <td>செந்தில்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1281,7 +1267,7 @@
                     <td>நல்லதம்பி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1295,7 +1281,7 @@
                     <td>ஜெயசங்கரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1309,7 +1295,7 @@
                     <td>கு. சித்ரா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1323,7 +1309,7 @@
                     <td>ஆர். மணி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1337,7 +1323,7 @@
                     <td>சதாசிவம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/Pmk_flag.jpg" alt="">
+                            <img src="../../assets/images/flages/Pmk_flag.jpg" alt="error image">
                             <p>பாமக</p>
                         </div>
                     </td>
@@ -1351,7 +1337,7 @@
                     <td>கே.பழனிச்சாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1365,7 +1351,7 @@
                     <td>சுந்தரராஜ</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1380,7 +1366,7 @@
                     <td>இரா அருள்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/Pmk_flag.jpg" alt="">
+                            <img src="../../assets/images/flages/Pmk_flag.jpg" alt="error image">
                             <p>பாமக</p>
                         </div>
                     </td>
@@ -1395,7 +1381,7 @@
                     <td>இரா ராஜேந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1410,7 +1396,7 @@
                     <td>பாலசுப்பிரமணியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1424,7 +1410,7 @@
                     <td>எம். ராஜா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1438,7 +1424,7 @@
                     <td>மா.மதிவேந்தன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1452,7 +1438,7 @@
                     <td>கே.பொன்னுசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1466,7 +1452,7 @@
                     <td>பெ.ராமலிங்கம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1481,7 +1467,7 @@
                     <td>எஸ். சேகர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1495,7 +1481,7 @@
                     <td>ஈ.ஆர்.ஈஸ்வரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/kmdk.png" alt="">
+                            <img src="../../assets/images/flages/kmdk.png" alt="error image">
                             <p>KMDK</p>
                         </div>
                     </td>
@@ -1509,7 +1495,7 @@
                     <td>தங்கமணி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1523,7 +1509,7 @@
                     <td>திருமகன் ஈவேரா .</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -1537,7 +1523,7 @@
                     <td>சு.முத்துசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1551,7 +1537,7 @@
                     <td></td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/bjp.jpg" alt="">
+                            <img src="../../assets/images/flages/bjp.jpg" alt="error image">
                             <p>பாஜக</p>
                         </div>
                     </td>
@@ -1566,7 +1552,7 @@
                     <td>கயல்விழி செல்வராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1580,7 +1566,7 @@
                     <td>சாமிநாதன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1595,7 +1581,7 @@
                     <td>ஜெயக்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1609,7 +1595,7 @@
                     <td>கே.சி. கருப்பணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1623,7 +1609,7 @@
                     <td>எ.ஜி.வெங்கடாச்சலம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1637,7 +1623,7 @@
                     <td>கே.ஏ. செங்கோட்டையன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1652,7 +1638,7 @@
                     <td>பண்ணாரி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1666,7 +1652,7 @@
                     <td>ஆர்.கணேஷ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -1680,7 +1666,7 @@
                     <td>பொன். ஜெயசீலன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1694,7 +1680,7 @@
                     <td>கா.ராமசந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1708,7 +1694,7 @@
                     <td>ஏ.கே. செல்வராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1722,7 +1708,7 @@
                     <td>தனபால்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1736,7 +1722,7 @@
                     <td>விஜயகுமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1750,7 +1736,7 @@
                     <td>க.செல்வராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1764,7 +1750,7 @@
                     <td>எம்.எஸ்.எம். ஆனந்தன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1778,7 +1764,7 @@
                     <td>விபி கந்தசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1792,7 +1778,7 @@
                     <td>அருண்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1807,7 +1793,7 @@
                     <td>அம்மன் அர்ச்சுணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1821,7 +1807,7 @@
                     <td>எஸ்.பி. வேலுமணி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1836,7 +1822,7 @@
                     <td>வானதி சீனிவாசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/bjp.jpg" alt="">
+                            <img src="../../assets/images/flages/bjp.jpg" alt="error image">
                             <p>பாஜக</p>
                         </div>
                     </td>
@@ -1850,7 +1836,7 @@
                     <td>கே.ஆர். ஜெயராம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1864,7 +1850,7 @@
                     <td>தாமோதரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1879,7 +1865,7 @@
                     <td>பொள்ளாச்சி ஜெயராமன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1894,7 +1880,7 @@
                     <td>அமுல்கந்தசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1908,7 +1894,7 @@
                     <td>உடுமலை கே. ராதாகிருஷ்ணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1922,7 +1908,7 @@
                     <td>சி.மகேந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1936,7 +1922,7 @@
                     <td>ஐ.பி.செந்தில்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1950,7 +1936,7 @@
                     <td>அர.சக்கரபாணி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1964,7 +1950,7 @@
                     <td>இ.பெரியசாமி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -1978,7 +1964,7 @@
                     <td>தேன்மொழி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -1992,7 +1978,7 @@
                     <td>நத்தம் விஸ்வநாதன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2007,7 +1993,7 @@
                     <td>திண்டுக்கல் சீனிவாசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2022,7 +2008,7 @@
                     <td>எஸ்.காந்திராஜன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2036,7 +2022,7 @@
                     <td>ஆர்.இளங்கோ</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2050,7 +2036,7 @@
                     <td>செந்தில் பாலாஜி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2064,7 +2050,7 @@
                     <td>க.சிவகாமசுந்தரி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2079,7 +2065,7 @@
                     <td>இரா.மாணிக்கம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2093,7 +2079,7 @@
                     <td>அப்துல் சமது</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/Mmk_flag.png" alt="">
+                            <img src="../../assets/images/flages/Mmk_flag.png" alt="error image">
                             <p>MMK</p>
                         </div>
                     </td>
@@ -2108,7 +2094,7 @@
                     <td>எம்.பழனியாண்டி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2122,7 +2108,7 @@
                     <td>கேஎன் நேரு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2136,7 +2122,7 @@
                     <td>இனிகோ இருதயராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2150,7 +2136,7 @@
                     <td>அன்பில் மகேஷ் பொய்யாமொழி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2164,7 +2150,7 @@
                     <td>அ.சௌந்திரபாண்டியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2178,7 +2164,7 @@
                     <td>சீ.கதிரவன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2192,7 +2178,7 @@
                     <td>ந.தியாகராஜன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2206,7 +2192,7 @@
                     <td>செ.ஸ்டாலின் குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2221,7 +2207,7 @@
                     <td>எம்.பிரபாகரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2235,7 +2221,7 @@
                     <td>எஸ்.எஸ்.சிவசங்கர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2249,7 +2235,7 @@
                     <td>சின்னப்பா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/mathimuka.jpg" alt="">
+                            <img src="../../assets/images/flages/mathimuka.jpg" alt="error image">
                             <p>மதிமுக</p>
                         </div>
                     </td>
@@ -2263,7 +2249,7 @@
                     <td>கே.எஸ்.கே.கண்ணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2278,7 +2264,7 @@
                     <td>சி.வி.கணேசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2292,7 +2278,7 @@
                     <td>எம்.ஆர்.ஆர்.ராதாகிருஷ்ணன்</td>
                     <td>காங்.
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -2306,7 +2292,7 @@
                     <td>சபா.ராஜேந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2329,7 +2315,7 @@
                     <td>கோ.அய்யப்பன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2343,7 +2329,7 @@
                     <td>எம்.ஆர்.கே.பண்ணீர்செல்வம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2357,7 +2343,7 @@
                     <td>அருண்மொழிதேவன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2372,7 +2358,7 @@
                     <td>கேஏ பாண்டியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2387,7 +2373,7 @@
                     <td>
 
                         <div class="name-img">
-                            <img src="../../assets/images/vck.png" alt="">
+                            <img src="../../assets/images/flages/vck.png" alt="error image">
                             <p>விசிக</p>
                         </div>
                     </td>
@@ -2401,7 +2387,7 @@
                     <td>மு.பன்னீர்செல்வம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2415,7 +2401,7 @@
                     <td>ராஜகுமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -2430,7 +2416,7 @@
                     <td>நிவேதா முருகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2444,7 +2430,7 @@
                     <td>ஆளூர் ஷாநவாஸ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/vck.png" alt="">
+                            <img src="../../assets/images/flages/vck.png" alt="error image">
                             <p>விசிக</p>
                         </div>
                     </td>
@@ -2459,7 +2445,7 @@
                     <td>மாலி</td>
                     <td>சிபிஎம்
                         <div class="name-img">
-                            <img src="../../assets/images/cpm.png" alt="">
+                            <img src="../../assets/images/flages/cpm.png" alt="error image">
                             <p>சிபிஎம்</p>
                         </div>
                     </td>
@@ -2474,7 +2460,7 @@
                     <td>ஓஎஸ் மணியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2488,7 +2474,7 @@
                     <td>மாரிமுத்து</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/cpm.png" alt="">
+                            <img src="../../assets/images/flages/cpm.png" alt="error image">
                             <p>சிபிஎம்</p>
                         </div>
                     </td>
@@ -2503,7 +2489,7 @@
                     <td>டிஆர்பி ராஜா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2518,7 +2504,7 @@
                     <td>பூண்டி கலைவாணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2532,7 +2518,7 @@
                     <td>ஆர். காமராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2546,7 +2532,7 @@
                     <td>கோவி.செழியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2561,7 +2547,7 @@
                     <td>அன்பழகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2575,7 +2561,7 @@
                     <td>ஜவாஹிருல்லா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/Mmk_flag.png" alt="">
+                            <img src="../../assets/images/flages/Mmk_flag.png" alt="error image">
                             <p>MMK</p>
                         </div>
                     </td>
@@ -2590,7 +2576,7 @@
                     <td>துரை சந்திரசேகரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2604,7 +2590,7 @@
                     <td>டி.கே.ஜி.நீலமேகம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2619,7 +2605,7 @@
                     <td>வைத்திலிங்கம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2633,7 +2619,7 @@
                     <td>அண்ணாதுரை</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2648,7 +2634,7 @@
                     <td>அசோக்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2662,7 +2648,7 @@
                     <td>எம். சின்னதுரை</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/cpm.png" alt="">
+                            <img src="../../assets/images/flages/cpm.png" alt="error image">
                             <p>சிபிஎம்</p>
                         </div>
                     </td>
@@ -2677,7 +2663,7 @@
                     <td>விஜயபாஸ்கர்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2691,7 +2677,7 @@
                     <td>முத்துராஜா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2705,7 +2691,7 @@
                     <td>ரகுபதி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2719,7 +2705,7 @@
                     <td>மெய்யநாதன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2734,7 +2720,7 @@
                     <td>ராமச்சந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -2749,7 +2735,7 @@
                     <td>மான்குடி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -2763,7 +2749,7 @@
                     <td>கே.ஆர்.பெரியகருப்பன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2777,7 +2763,7 @@
                     <td>செந்தில்நாதன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2792,7 +2778,7 @@
                     <td>தமிழரசி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2806,7 +2792,7 @@
                     <td>பெரியபுள்ளான் என்ற செல்வம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2821,7 +2807,7 @@
                     <td>பி.மூர்த்தி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2836,7 +2822,7 @@
                     <td>வெங்கடேசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2851,7 +2837,7 @@
                     <td>தளபதி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2866,7 +2852,7 @@
                     <td>பூமிநாதன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/mathimuka.jpg" alt="">
+                            <img src="../../assets/images/flages/mathimuka.jpg" alt="error image">
                             <p>மதிமுக</p>
                         </div>
                     </td>
@@ -2880,7 +2866,7 @@
                     <td>பி.டி.ஆர்.பழனிவேல் தியாகராஜன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2895,7 +2881,7 @@
                     <td>செல்லூர் கே. ராஜூ</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2909,7 +2895,7 @@
                     <td>ராஜன் செல்லப்பா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2923,7 +2909,7 @@
                     <td>ஆர்.பி. உதயகுமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2937,7 +2923,7 @@
                     <td>அய்யப்பன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2952,7 +2938,7 @@
                     <td>மகாராஜன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2967,7 +2953,7 @@
                     <td>கே.எஸ்.சரவணக்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -2981,7 +2967,7 @@
                     <td>ஓ.பண்ணீர்செல்வம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -2995,7 +2981,7 @@
                     <td>கம்பம் ராமகிருஷ்ணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3010,7 +2996,7 @@
                     <td>சௌ.தங்கபாண்டியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3024,7 +3010,7 @@
                     <td>மான்ராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -3047,7 +3033,7 @@
                     <td>அசோகன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -3062,7 +3048,7 @@
                     <td>ஏஆர்ஆர் சீனிவாசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3076,7 +3062,7 @@
                     <td>எஸ்.எஸ் .ஆர் ராமச்சந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3091,7 +3077,7 @@
                     <td>தங்கம் தென்னரசு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3106,7 +3092,7 @@
                     <td>முருகேசன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3121,7 +3107,7 @@
                     <td>கருமாணிக்கம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -3135,7 +3121,7 @@
                     <td>காதர் பாட்ஷா எ முத்துராமலிங்கம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3149,7 +3135,7 @@
                     <td>ராஜ கண்ணப்பன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3163,7 +3149,7 @@
                     <td>மார்க்கண்டேயன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3177,7 +3163,7 @@
                     <td>கீதா ஜீவன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3191,7 +3177,7 @@
                     <td>அனிதா ராதாகிருஷ்ணன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3205,7 +3191,7 @@
                     <td>ஊர்வசி அமிர்தராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -3219,7 +3205,7 @@
                     <td>சண்முகையா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3234,7 +3220,7 @@
                     <td>கடம்பூர் ராஜூ</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -3248,7 +3234,7 @@
                     <td>இ.ராஜா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3262,7 +3248,7 @@
                     <td>சதன்திருமலைக்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/mathimuka.jpg" alt="">
+                            <img src="../../assets/images/flages/mathimuka.jpg" alt="error image">
                             <p>மதிமுக</p>
                         </div>
                     </td>
@@ -3276,7 +3262,7 @@
                     <td>கிருஷ்ணமுரளி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -3290,7 +3276,7 @@
                     <td>பழனி நாடார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -3304,7 +3290,7 @@
                     <td>மனோஜ் பாண்டியன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -3318,7 +3304,7 @@
                     <td>நயினார் நாகேந்திரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/bjp.jpg" alt="">
+                            <img src="../../assets/images/flages/bjp.jpg" alt="error image">
                             <p>பாஜக</p>
                         </div>
                     </td>
@@ -3332,7 +3318,7 @@
                     <td>இசக்கி சுப்பையா</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -3346,7 +3332,7 @@
                     <td>அப்துல் வஹாப்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3361,7 +3347,7 @@
                     <td>ரூபி மனோகரன்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -3376,7 +3362,7 @@
                     <td>மு. அப்பாவு</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3390,7 +3376,7 @@
                     <td>தளவாய் சுந்தரம்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/aiadmk.png" alt="">
+                            <img src="../../assets/images/flages/aiadmk.png" alt="error image">
                             <p>அதிமுக</p>
                         </div>
                     </td>
@@ -3405,7 +3391,7 @@
                     <td>எம்.ஆர். காந்தி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/bjp.jpg" alt="">
+                            <img src="../../assets/images/flages/bjp.jpg" alt="error image">
                             <p>பாஜக</p>
                         </div>
                     </td>
@@ -3419,7 +3405,7 @@
                     <td>பிரின்ஸ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -3433,7 +3419,7 @@
                     <td>மனோ தங்கராஜ்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/dmk-logo.png" alt="">
+                            <img src="../../assets/images/flages/dmk-logo.png" alt="error image">
                             <p>திமுக</p>
                         </div>
                     </td>
@@ -3448,7 +3434,7 @@
                     <td>விஜயதாரணி</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்.</p>
                         </div>
                     </td>
@@ -3463,7 +3449,7 @@
                     <td>ராஜேஷ்குமார்</td>
                     <td>
                         <div class="name-img">
-                            <img src="../../assets/images/inc.png" alt="">
+                            <img src="../../assets/images/flages/inc.png" alt="error image">
                             <p>காங்</p>
                         </div>
                     </td>
@@ -3487,10 +3473,10 @@
                 வலி மிகவும் முக்கியமானது, நோயாளியின் வலிப்புத்தாக்கத்தின் விளைவு, ஆனால் அது உழைப்பு மற்றும் வலியை
                 ஏற்படுத்தும் ஒரு நேரத்தில் அதைச் செய்யட்டும்.
             </p>
-            <img src="../../assets/images/icon-facebook.svg" alt="error image">
-            <img src="../../assets/images/icon-instagram.svg" alt="error image">
-            <img src="../../assets/images/icon-pinterest.svg" alt="error image">
-            <img src="../../assets/images/icon-twitter.svg" alt="error image">
+            <img src="../../assets/images/icons/icon-facebook.svg" alt="error image">
+            <img src="../../assets/images/icons/icon-instagram.svg" alt="error image">
+            <img src="../../assets/images/icons/icon-pinterest.svg" alt="error image">
+            <img src="../../assets/images/icons/icon-twitter.svg" alt="error image">
 
         </div>
 
@@ -3518,6 +3504,12 @@
         </div>
 
     </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </body>
 

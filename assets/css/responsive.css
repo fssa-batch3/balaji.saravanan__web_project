@@ -1,0 +1,208 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width :900px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    nav form {
+        width: 250px;
+        margin: 0%;
+    }
+
+    .section1 button {
+        width: 200px;
+        margin-bottom: 60px;
+    }
+
+    .section1 h2 {
+        font-size: 15px;
+    }
+
+    .section3 button {
+        width: 200px;
+    }
+
+    .section2 .content1 {
+        width: 100%;
+    }
+
+    .section2 .box {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 20em;
+    }
+
+    .section4 .project {
+        display: none;
+    }
+
+    .section4 {
+        position: relative;
+        bottom: 800px;
+    }
+
+    .news {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .news1 {
+        width: 100%;
+        margin-top: 10%;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    /* total parties */
+
+    .totalparties {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .parties-main {
+        margin: 30px;
+    }
+
+    /* portfolio */
+
+    .lists1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .list2 {
+        margin-left: 0%;
+    }
+
+    .piechart {
+        margin: 0%;
+        padding-top: 30px;
+    }
+
+    /* profile */
+    .headprofile {
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cm-name {
+        width: 90%;
+        line-height: 2;
+    }
+
+    .headprofile .cm-image img {
+        width: 300px;
+    }
+
+    .cm-total-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cmcontent {
+        margin: 0%;
+        width: 100%;
+    }
+
+    #income {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* pastleaders */
+
+    .pastleaders table {
+        margin: 0%;
+        padding: 0;
+    }
+
+    .pastleaders table td {
+        padding: 0%;
+    }
+
+    .pastleaders table .date {
+        display: none;
+    }
+
+    /* manifesto */
+
+    .manifesto-create {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mani-navbar ul {
+        height: 350px;
+        /* width: 400px; */
+        /* display: inline-flex; */
+        /* flex-wrap: wrap; */
+
+        /* z-index: -1; */
+    }
+
+    .kali {
+        /* display: none; */
+        z-index: 10;
+        height: 80px;
+    }
+
+    .kali .maninav {
+        display: none;
+    }
+
+    .kali .serch {
+        margin: 0%;
+    }
+
+    .complete {
+        width: 100%;
+        height: 500px;
+    }
+
+
+    .complete .rules {
+        width: 100%;
+
+    }
+
+    .manisurvey {
+        margin: 10px;
+    }
+
+    /* governer list */
+
+    #governer-list table {
+        margin: 0%;
+
+    }
+
+    /* english verssion past leaders */
+
+    .datelist table {
+        margin: 30px 0 30px 0;
+        ma
+    }
+}

@@ -1,30 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap'); */
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-}
-
-body {
     font-family: 'Noto Sans Tamil', sans-serif;
+    font-family: 'Kanit', sans-serif;
+
+
 }
+
+body {}
 
 body::-webkit-scrollbar {
     display: none;
 }
 
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
 
 /* nav bar start */
 .headvideo video {
@@ -48,18 +41,20 @@ a {
 
 /* nav bar start */
 .totalnav {
-    height: 100px;
+    height: 110px;
+    width: 100%;
     position: sticky;
     z-index: 10;
     top: 0px;
     box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
-    background-position: center;
-    background-size: cover;
+    /* background-position: center; */
+    /* background-size: cover; */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    padding: 0;
 }
 
 .topic h1 {
@@ -80,6 +75,8 @@ a {
 .topic1 p a {
     color: black;
     font-size: 13px;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .topic1 p {
@@ -87,7 +84,19 @@ a {
 
 }
 
-.input {
+nav {}
+
+#navbarSupportedContent ul li {
+    font-weight: 900;
+    color: black;
+
+}
+
+nav form {
+    margin-left: 20%;
+}
+
+/* .input {
     margin-left: 20%;
     margin-top: 10px;
 }
@@ -104,9 +113,10 @@ a {
     right: 40px;
     top: 5px;
 
-}
+} */
 
-.navbar1 {
+
+/* .navbar1 {
     display: flex;
     justify-content: space-around;
     margin-right: 30px;
@@ -137,10 +147,10 @@ a {
     transition: 0.5s;
     transform: scale(1.1);
 
-}
+} */
 
 /* dropdown menu*/
-.dropdown {
+/* .dropdown {
     position: relative;
     display: inline-block;
     bottom: 20px;
@@ -176,7 +186,7 @@ a {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
 
 /* section 1 start */
 .section1 {
@@ -186,8 +196,16 @@ a {
     justify-content: center;
     align-items: center;
 }
+.section1 h1{
+   text-shadow: -2px 2px #ffffff;
+}
 
-.section1 h1 {
+/* .section1 button {
+
+    width: 400px;
+} */
+
+/* .section1 h1 {
     font-size: 30px;
     text-align: center;
     color: black;
@@ -233,68 +251,80 @@ a {
     margin-top: 30px;
     align-items: center;
 
-}
-
+} */
+/* 
 .section2 h1 {
     font-weight: 900;
     padding-bottom: 30px;
+} */
+.section2 .decoration {
+    /* margin-left: 38%; */
 }
+
+/* .section2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    align-items: center;
+
+}  */
 
 .section2 .box {
     margin-top: 120px;
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     width: 60%;
     height: 100%;
-    height: auto;
+    /* height: auto; */
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
 }
 
 .content1 {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: center; */
+    width: 60%;
 }
 
 .content1 p {
-    font-size: 18px;
+    /* font-size: 18px;
     padding: 10px;
-    line-height: 1.5;
+    line-height: 1.5; */
 }
 
-.sideimage img {
+/* .sideimage img {
     width: 500px;
     height: 305px
-}
+} */
 
 .section3 {
-    background-image: url('../images/learning-gc49fa0086_1920.jpg');
+    background-image: url('../images/essecial/learning-gc49fa0086_1920.jpg');
     height: 600px;
     margin-top: 100px;
 
 }
 
 .section3 .content {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding-top: 100px;
+    justify-content: center; */
+    /* padding-top: 100px; */
 }
 
 .section3 .content p {
-    text-align: center;
-    color: brown;
+    /* text-align: center;
+    color: ;
     padding-bottom: 30px;
     font-size: 22px;
-    font-weight: 700;
+    font-weight: 700; */
 }
 
 .section3 h1 {
-    padding-bottom: 30px;
+    /* padding-bottom: 30px;
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 900; */
 }
 
 .section3 h1 span {
@@ -302,13 +332,13 @@ a {
 }
 
 .section3 h2 {
-    text-align: center;
+    /* text-align: center;
     font-weight: 600;
     font-size: 22px;
-    padding-bottom: 30px;
+    padding-bottom: 30px; */
 }
 
-.section3 button {
+/* .section3 button {
     padding: 10px;
     border-radius: 15px;
     font-size: 20px;
@@ -328,35 +358,37 @@ a {
 
 .section3 button a {
     text-decoration: none;
-    color: black;
+    color: black; */
 
-}
+
 
 .section4 {
-    display: flex;
-    flex-direction: row;
+    /* display: flex; */
+    /* flex-direction: row; */
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
-    justify-content: space-around;
+    /* justify-content: space-around; */
     width: 60%;
     height: 150px;
     margin-left: 21%;
-    bottom: 80px;
+    /* bottom: 80px;  */
+    top: 100px;
+    position: relative;
     background-color: aliceblue;
-    margin-top: 150px;
+    /* margin-top: 150px; */
 
 }
 
 .section4 .num1 h1 {
-    font-size: 52px;
-    text-align: center;
+    /* font-size: 52px; */
+    /* text-align: center; */
     text-shadow: -2px 2px greenyellow;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
 }
 
 .section4 p {
-    text-align: center;
+    /* text-align: center;
     text-transform: uppercase;
-    color: black;
+    color: black; */
 }
 
 .section5 .head {
@@ -368,10 +400,8 @@ a {
 
 
 .news {
-    display: flex;
-    justify-content: space-around;
-
-
+    /* display: flex;
+    justify-content: space-around; */
 }
 
 .news .news1:hover {
@@ -418,7 +448,6 @@ a {
 .news .news1 p {
     padding: 10px 0 0 35px;
     font-size: 15px;
-    /* text-align: justify; */
 }
 
 /* footer page */
@@ -446,7 +475,7 @@ a {
 }
 
 .footer .foot p {
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 .footer .foot1 {
@@ -497,7 +526,7 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url("../images/dmk-logo.png");
+    background-image: url("../images/flages/dmk-logo.png");
     background-position: center;
     background-size: cover;
     font-size: 16px;
@@ -551,6 +580,11 @@ a {
     width: 150px;
 }
 
+.backside button a {
+    text-decoration: none;
+    color: black;
+}
+
 .backside button:hover {
     background-color: #B1B2FF;
     border-radius: 10px;
@@ -562,7 +596,7 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url("../images/aiadmk.png");
+    background-image: url("../images/flages/aiadmk.png");
     background-position: center;
     background-size: cover;
     font-size: 16px;
@@ -592,7 +626,7 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url("../images/inc.png");
+    background-image: url("../images/flages/inc.png");
     background-position: center;
     background-size: cover;
     font-size: 16px;
@@ -624,7 +658,7 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url("../images/naam-tamizhar.jpg");
+    background-image: url("../images/flages/naam-tamizhar.jpg");
     background-position: center;
     background-size: cover;
     font-size: 16px;
@@ -656,15 +690,15 @@ a {
 
 .list1 {
     width: 300px;
-    height: 420px;
+    height: 450px;
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
-    margin: 50px;
+    /* margin: 50px; */
     border-radius: 8px;
-    margin-left: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    /* margin-left: 40%; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: space-around; */
 
 
 }
@@ -681,9 +715,9 @@ a {
 }
 
 .list1 p {
-    text-align: start;
+    /* text-align: start;
     line-height: 1.5;
-    padding-top: 10px;
+    padding-top: 10px; */
 }
 
 .list1 button {
@@ -715,14 +749,14 @@ a {
 
 .list2 {
     width: 300px;
-    height: 420px;
+    height: 450px;
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
     margin: 50px;
     border-radius: 8px;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-around; */
     /* animation-duration: 3s;
     animation-name: slidein; 
     animation-iteration-count: infinite; */
@@ -752,9 +786,9 @@ a {
 }
 
 .list2 p {
-    text-align: start;
+    /* text-align: start;
     line-height: 1.5;
-    padding-top: 10px;
+    padding-top: 10px; */
 }
 
 .list2 button {
@@ -763,7 +797,7 @@ a {
     width: 170px;
     border-radius: 13px;
     border: none;
-    color: black;
+    /* color: black; */
 }
 
 .list2 button:hover {
@@ -794,20 +828,20 @@ a {
 }
 
 .joinbox h1 {
-    font-size: 52px;
-    color: black;
+    /* font-size: 52px;
+    color: black; */
 }
 
 .joinbox input {
-    padding: 10px;
+    /* padding: 10px;
     width: 400px;
     font-size: 22px;
     margin: 30px 0 30px 0;
-    color: black;
+    color: black; */
 }
 
 .joinbox button a {
-    padding: 10px;
+    /* padding: 10px;
     text-decoration: none;
     width: 200px;
     border: none;
@@ -815,7 +849,7 @@ a {
     border-radius: 10px;
     color: black;
     font-size: 22px;
-    margin-top: 10px;
+    margin-top: 10px; */
 
 }
 
@@ -889,7 +923,9 @@ a {
 
 #birth {
     width: 90%;
-    min-height: 300px;
+    /* min-height: 350px; */
+    min-height: auto;
+
     line-height: 1.7;
     margin-left: 10%;
 }
@@ -902,7 +938,8 @@ a {
 
 #educatiion {
     width: 90%;
-    min-height: 300px;
+    /* min-height: 350px; */
+    min-height: auto;
     line-height: 1.7;
     margin-left: 10%;
 }
@@ -915,7 +952,9 @@ a {
 
 #family {
     width: 90%;
-    min-height: 570px;
+    /* min-height: 570px; */
+    min-height: auto;
+
     line-height: 1.7;
     margin-left: 10%;
 }
@@ -928,7 +967,8 @@ a {
 
 #movie {
     width: 90%;
-    min-height: 300px;
+    /* min-height: 350px; */
+    min-height: auto;
     line-height: 1.7;
     margin-left: 10%;
 }
@@ -941,7 +981,9 @@ a {
 
 #politics {
     width: 90%;
-    min-height: 500px;
+    /* min-height: 500px; */
+    min-height: auto;
+
     line-height: 1.7;
     margin-left: 10%;
 }
@@ -958,7 +1000,9 @@ a {
     justify-content: space-around;
     align-items: flex-start;
     width: 90%;
-    min-height: 300px;
+    /* min-height: 350px; */
+    min-height: auto;
+
     line-height: 1.7;
     margin-left: 10%;
 }
@@ -1010,9 +1054,9 @@ a {
 
 }
 
-.mani-navbar {
+/* .mani-navbar {
     position: sticky;
-    top: 0px;
+    top: 40px;
 
 }
 
@@ -1026,10 +1070,10 @@ a {
     margin-top: 30px;
 
 
-}
+} */
 
 .mani-navbar ul li {
-    font-size: 22px;
+    /* font-size: 22px; */
 }
 
 .manisurvey {
@@ -1040,7 +1084,7 @@ a {
 .complete {
     height: 700px;
     width: 60%;
-    overflow: scroll;
+    overflow-x: scroll;
 }
 
 
@@ -1080,13 +1124,15 @@ a {
 .serch {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 90%;
+    margin: 5% 0 0 50px;
 }
 
 .serch select {
-    padding: 10px;
+    /* padding: 10px;
     margin-top: 40px;
-    width: 250px;
+    width: 250px; */
 }
 
 .complete .rules {
@@ -1153,7 +1199,7 @@ a {
 
 /* past leader page*/
 
-.pastleaders h1{
+.pastleaders h1 {
     padding: 40px;
     text-align: center;
     text-decoration: underline double orange;
@@ -1206,7 +1252,7 @@ a {
 
 .governer {
     height: 750px;
-    overflow: scroll;
+    overflow-y: scroll;
 
 }
 
@@ -1307,7 +1353,7 @@ a {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background-image: url("../images/logo.png");
+    background-image: url("../images/icons/logo.png");
     background-position: center;
     background-size: cover;
     font-size: 16px;
@@ -1325,13 +1371,14 @@ a {
 }
 
 .fontsidepro p {
-    background-color: rgb(10, 135, 252);
-    background-color: rgba(63, 53, 251, 0.4);
+    /* background-color: rgb(10, 135, 252); */
+    /* background-color: rgba(63, 53, 251, 0.4); */
     text-align: center;
-    color: #ffffff;
+    color: black;
     height: 100%;
     width: 100%;
-    text-shadow: -2px 2px black;
+    text-shadow: -2px 2px lightgoldenrodyellow;
+    font-weight: 900;
 
 }
 
