@@ -10,15 +10,6 @@ body{
 body::-webkit-scrollbar {
     display: none;
 }
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
 
 /* nav bar start */
 
@@ -49,12 +40,10 @@ a {
 }
 
 .topic h1 {
-    padding: 10px 0 0 40px;
-    font-family: 'Kanit', sans-serif;
+    padding: 20px 0 0 40px;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 25px;
-    color: #FE9227;
-
 }
 
 .topic1 {
@@ -135,15 +124,16 @@ a {
     min-width: 120px;
     z-index: 1;
     margin: 10px;
-    background-color: lightgray;
+    background-color: #ededed;
     border-radius: 9px;
     background-position: center;
 }
 
-.dropdown-content a {
+.dropdown .dropdown-content a {
     color: black;
     padding: 12px 2px;
     text-decoration: none;
+    font-size: 14px;
     display: block;
 }
 

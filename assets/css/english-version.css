@@ -1,25 +1,8 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200&display=swap'); */
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
 
-
-}
-
-body {
-    /* font-family: 'Kanit', sans-serif; */
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
 }
 
 body::-webkit-scrollbar {
@@ -48,7 +31,7 @@ body::-webkit-scrollbar {
 
 /* nav bar start */
 .totalnav {
-    height: 110px;
+    height: 100px;
     position: sticky;
     z-index: 10;
     top: 0px;
@@ -63,41 +46,27 @@ body::-webkit-scrollbar {
 }
 
 .topic h1 {
-    padding: 10px 0 0 40px;
-    font-family: 'Kanit', sans-serif;
+    padding: 20px 0 0 40px;
+    font-family: 'Courier New', Courier, monospace;
     font-weight: 900;
     font-size: 25px;
-    color: #FE9227;
-
 }
 
 .topic1 {
     display: flex;
-
+    padding: 7px 200px 0 0;
 
 }
 
 .topic1 p a {
     color: black;
-    font-size: 13px;
-    padding-right: 10px;
-    text-decoration: none;
 }
 
 .topic1 p {
     padding-left: 10px;
 }
 
-#navbarSupportedContent ul li {
-    font-weight: 900;
-    color: black;
-}
-
-nav form {
-    margin-left: 20%;
-}
-
-/* .input {
+.input {
     margin-left: 20%;
     margin-top: 10px;
 }
@@ -148,9 +117,9 @@ nav form {
     transform: scale(1.1);
 
 }
-s */
+
 /* dropdown menu*/
-/* .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
     bottom: 20px;
@@ -186,7 +155,7 @@ s */
 
 .dropdown:hover .dropdown-content {
     display: block;
-} */
+}
 
 /* section 1 start */
 .section1 {
@@ -216,24 +185,24 @@ s */
 }
 
 .section1 button {
-    /* border-radius: 10px;
+    border-radius: 10px;
     width: 200px;
     padding: 12px;
     margin-top: 25px;
     background-color: #ffffff1A;
-    border: 2px outset black; */
+    border: 2px outset black;
 }
 
 .section1 button:hover {
-    /* transform: scale(1.1);
+    transform: scale(1.1);
     transition: 0.5s;
-    background-color: #B1B2FF; */
+    background-color: #B1B2FF;
 }
 
 .section1 button a {
-    /* text-decoration: none;
+    text-decoration: none;
     font-size: 22px;
-    color: black; */
+    color: black;
 }
 
 .section2 {
@@ -264,7 +233,6 @@ s */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
 
 }
 
@@ -272,85 +240,81 @@ s */
     font-size: 22px;
     padding: 10px;
 }
-
-.sideimage img {
-    width: 500px;
-    height: 305px
+.sideimage img{
+   width:500px ;
+   height:305px 
 }
-
 .section3 {
-    background-image: url('../images/essecial/learning-gc49fa0086_1920.jpg');
+    background-image: url('../images/learning-gc49fa0086_1920.jpg');
     height: 600px;
     margin-top: 100px;
 
 }
 
 .section3 .content {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 100px; */
+    padding-top: 100px;
 }
 
 .section3 .content p {
-    /* text-align: center;
+    text-align: center;
     color: brown;
     padding-bottom: 30px;
     font-size: 22px;
-    font-weight: 700; */
+    font-weight: 700;
 }
 
 .section3 h1 {
-    /* padding-bottom: 30px;
+    padding-bottom: 30px;
     font-size: 52px;
-    font-weight: 900; */
+    font-weight: 900;
 }
 
 .section3 h2 {
-    /* text-align: center;
+    text-align: center;
     font-weight: 600;
     font-size: 22px;
-    padding-bottom: 30px; */
+    padding-bottom: 30px;
 }
 
 .section3 button {
-    /* padding: 10px;
-    border-radius: 15px; */
-    /* font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    font-size: 20px;
     width: 200px;
     background-color: #ffffff1A;
-    border: 2px outset black; */
+    border: 2px outset black;
 
-}
+} 
 
 .section3 button:hover {
-    /* transform: scale(1.1);
+    transform: scale(1.1);
     transition: 0.5s;
     background-color: #B1B2FF;
-    color: #ffffff; */
+    color: #ffffff;
 
 }
 
 .section3 button a {
     text-decoration: none;
-    /* color: black; */
+    color: black;
 
 }
 
 .section4 {
-    /* display: flex;
-    flex-direction: row; */
+    display: flex;
+    flex-direction: row;
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
     justify-content: space-around;
     width: 60%;
     height: 150px;
     margin-left: 21%;
-    /* bottom: 80px; */
-    position: relative;
-    top: 100px;
+    bottom: 80px;
     background-color: aliceblue;
-    /* margin-top: 150px; */
+    margin-top: 150px;
 
 }
 
@@ -457,11 +421,9 @@ s */
     width: 250px;
     height: 370px;
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
-    /* margin: 50px; */
+    margin: 50px;
     border-radius: 8px;
-    /* margin-left: 42%; */
-    /* display: flex;
-    justify-content: center; */
+    margin-left: 42%;
 
 }
 
@@ -481,7 +443,6 @@ s */
 .list1 h3 {
     text-align: center;
     padding: 20px 0 20px 0;
-    font-size: 20px;
 }
 
 .list1 button {
@@ -520,8 +481,8 @@ s */
     height: 370px;
     box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
     border-radius: 8px;
-    /* animation-duration: 3s;
-    animation-name: slidein; */
+    animation-duration: 3s;
+    animation-name: slidein;
     /* animation-iteration-count: infinite */
 }
 
@@ -553,7 +514,6 @@ s */
 .list2 h3 {
     text-align: center;
     padding: 20px 0 20px 0;
-    font-size: 20px;
 }
 
 .list2 button {
@@ -597,20 +557,20 @@ s */
 }
 
 .joinbox h1 {
-    /* font-size: 52px;
-    color: black; */
+    font-size: 52px;
+    color: black;
 }
 
 .joinbox input {
-    /* padding: 10px;
+    padding: 10px;
     width: 400px;
     font-size: 22px;
     margin: 30px 0 30px 0;
-    color: black; */
+    color: black;
 }
 
 .joinbox button a {
-    /* padding: 10px;
+    padding: 10px;
     text-decoration: none;
     width: 200px;
     border: none;
@@ -618,7 +578,7 @@ s */
     border-radius: 10px;
     color: black;
     font-size: 22px;
-    margin-top: 10px; */
+    margin-top: 10px;
 
 }
 
@@ -884,7 +844,6 @@ th {
     border-collapse: collapse;
     margin-left: 24%;
     margin-bottom: 30px;
-    /* width: 60%; */
 }
 
 .datelist table thead {
@@ -894,7 +853,7 @@ th {
 
 .datelist table td {
     padding: 20px;
-    /* border: 2px solid gray; */
+    border: 2px solid gray;
 }
 
 .pastleaders tr:nth-child(even) {
@@ -961,7 +920,7 @@ th {
 
 .governer table td {
     padding: 20px;
-    /* border: 2px solid gray; */
+    border: 2px solid gray;
     background-color: #ffffff1A;
     color: black;
     font-weight: 700;
