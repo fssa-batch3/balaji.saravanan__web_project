@@ -55,13 +55,18 @@
         width: 20em;
     }
 
-    .section4 .project {
+    .section4 .project{
         display: none;
     }
 
     .section4 {
         position: relative;
         bottom: 800px;
+        width: 85%;
+        /* margin: 0%; */
+        text-align: center;
+        display: flex;
+        align-items: center;
     }
 
     .news {
@@ -73,8 +78,11 @@
     }
 
     .news1 {
-        width: 100%;
+        width: 85%;
         margin-top: 10%;
+    }
+    .news .news1 .img-fluid{
+        margin: 10px 0 0 0;
     }
 
     .footer {
@@ -88,11 +96,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0;
+        width: 100%;
+        
 
     }
 
     .parties-main {
-        margin: 30px;
+        margin-top: 60px;
     }
 
     /* portfolio */
@@ -102,10 +113,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin:30px 0 0 0;
     }
 
     .list2 {
-        margin-left: 0%;
+        margin: 0%;
     }
 
     .piechart {
@@ -155,7 +167,7 @@
     }
 
     .pastleaders table td {
-        padding: 0%;
+        padding: 50px 0 0 0;
     }
 
     .pastleaders table .date {
