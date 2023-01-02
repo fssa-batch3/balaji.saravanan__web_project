@@ -25,6 +25,7 @@
         background-image: url("../images/essecial/istockphoto-1133933954-612x612.jpg");
         background-position: center;
         background-size: cover;
+
     }
 
     nav form {
@@ -161,7 +162,7 @@
 
     /* pastleaders */
 
-    .pastleaders table {
+    /* .pastleaders table {
         margin: 0%;
         padding: 0;
     }
@@ -172,7 +173,7 @@
 
     .pastleaders table .date {
         display: none;
-    }
+    } */
 
     /* manifesto */
 
@@ -262,3 +263,13 @@
 
 
 }
+
+/* @media screen and (max-width: 900px) {
+
+   nav {
+    background-color: aqua;
+   }
+    
+} */
+
+

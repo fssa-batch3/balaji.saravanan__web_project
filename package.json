@@ -1,0 +1,22 @@
+{
+  "name": "politifact",
+  "version": "1.0.0",
+  "description": "the main thing is manifesto clarification for normal peoples my website update manifesto lists.<br>  My website give a political knowledge for normal people and children and create a awareness of politics<br>  learn history you create mistry this learn all leader in life and leaders achievements all though things <br>",
+  "main": "main.js",
+  "scripts": {
+    "dev": "http-server ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/balaji.saravanan__web_project.git"
+  },
+  "author": "balajis5531",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/balaji.saravanan__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/balaji.saravanan__web_project#readme",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
