@@ -16,4 +16,4 @@ flow chart:              https://drive.google.com/file/d/1SwNTXvAMWMkr1ggnMS1kwA
 wire framing :           https://drive.google.com/file/d/1Xf0dAGK7TlTKlub9sVsr4T8w6eNtzHyf/view?usp=sharing
 
 
-live link:    https://balajis5531.github.io/POLITIFACT/
+live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
