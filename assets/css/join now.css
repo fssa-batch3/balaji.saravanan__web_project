@@ -226,13 +226,14 @@ nav form {
     margin-left: 20%;
     background-color: #EEF1FF;
 
-    
+
 }
 
 .joinpage h1 {
     text-align: start;
     padding: 20px 0 40px 20px;
 }
+
 /* 
 .joinpage form {
     margin-left: 20%;
@@ -332,4 +333,50 @@ nav form {
     transition: 0.5s;
     background-color: #B1B2FF;
     border-radius: 10px;
+}
+
+@media screen and (max-width :900px) {
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .headvideo1 {
+        display: none;
+    }
+
+    .totalnav {
+        background-image: url("../images/essecial/istockphoto-1133933954-612x612.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    nav {
+        background-image: url("../images/essecial/istockphoto-1133933954-612x612.jpg");
+        background-position: center;
+        background-size: cover;
+
+    }
+
+    nav form {
+        width: 250px;
+        margin: 0%;
+    }
+
+    .joinpage form {
+        width: 100%;
+        margin: 0;
+    }
+
+    .joinpage {
+        margin: 0;
+        width: 100%;
+    }
+
+    .footer {
+        display: none;
+    }
 }
