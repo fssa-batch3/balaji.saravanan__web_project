@@ -545,17 +545,7 @@ nav form {
 }
 
 .fontside p {
-    /* background-color: rgb(251, 209, 117);
-    background-color: rgba(248, 211, 141, 0.4); */
-    /* background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
-  background: -o-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
-  background: -moz-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
-  background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */
-    /* color: #fff;
-    background: -webkit-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -webkit-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
-    background: -o-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -o-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
-    background: -moz-linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), -moz-radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);
-    background: linear-gradient(110deg, #a60af3 40%, rgba(0, 0, 0, 0) 30%), radial-gradient(farthest-corner at 0% 0%, #7a00cc 70%, #c03fff 70%);*/
+ 
     text-align: center;
     /* background: -webkit-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
     background: -o-linear-gradient(70deg, #ff6464 40%, #5ac8fa 40%);
@@ -2155,7 +2145,6 @@ td .name-img {
     opacity: 0;
     transform: translateY(50px);
     transition: 0.5s;
-    margin-top: 0;
 }
 
 .lists1 .card:hover .contentBx a {
