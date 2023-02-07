@@ -144,13 +144,13 @@
                 1. வரும் தேர்தலில் நீங்கள் வாக்களிக்க எவ்வளவு வாய்ப்பு உள்ளது?:
             </label>
 
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Enter your opinion</option>
-                <option value="1">100%</option>
-                <option value="2">75%</option>
-                <option value="3">50%</option>
-                <option value="3">25%</option>
-                <option value="3">0%</option>
+            <select class="form-select" aria-label="Default select example" id="percentage">
+                <option>Enter your opinion</option>
+                <option value="100%">100%</option>
+                <option value="75%">75%</option>
+                <option value="30%">50%</option>
+                <option value="25%">25%</option>
+                <option value="0%">0%</option>
             </select>
 
             <label for="">
@@ -206,10 +206,10 @@
             </label><br>
 
 
-            <select class="form-select" aria-label="Default select example">
-                <option selected>Enter your opinion</option>
-                <option value="1">Yes</option>
-                <option value="2">No</option>
+            <select class="form-select" aria-label="Default select example" id="dropdown">
+                <option value="Enter Your opinion">Enter your opinion</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
             </select><br>
 
             <label for="">
@@ -298,7 +298,7 @@
 
         <div class="foot1 foot2">
             <h1>instagram </h1>
-            <p>இந்தப் பக்கத்திற்குக் கிடைக்கவில்லை</p>
+            <p class="balaji">இந்தப் பக்கத்திற்குக் கிடைக்கவில்லை</p>
         </div>
 
     </div>
@@ -307,6 +307,22 @@
 
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script>
+       let selection = document.querySelector("#percentage");
+
+       selection.addEventListener('change', () => {
+
+        let value_selected = selection.options[selection.selectedIndex].value;
+
+        let value1="";
+
+         value1=value1+value_selected;
+        document.querySelector(".balaji").append(value1);
+
+       });
+    </script>
 
 
 </body>

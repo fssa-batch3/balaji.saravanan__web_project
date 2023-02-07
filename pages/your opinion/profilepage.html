@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="first_name"></h1>
+    <h1 id="last_name"></h1>
+    <h1 id="password"></h1>
+    <h1 id="email_id"></h1>
+    <h1 id="mobile_number"></h1>
+    
+
+
+
+
+    <script>
+
+        const fname=localStorage.getItem("first_name");
+        const lname=localStorage.getItem("last_name");
+        const number=localStorage.getItem("mobile_number");
+        const email_id=localStorage.getItem("email_id");
+        const password=localStorage.getItem("password");
+
+        console.log("first_name");
+        console.log("last_name");
+        console.log("mobile_number");
+        console.log("email_id");
+        console.log("password");
+        
+                                                                                                                                                                                                               
+        document.getElementById("first_name").innerText = fname;
+        document.getElementById("last_name").innerText = lname;
+        document.getElementById("password").innerText = password;
+        document.getElementById("email_id").innerText = email_id;
+        document.getElementById("mobile_number").innerText = password;
+
+    </script>
+</body>
+</html>
