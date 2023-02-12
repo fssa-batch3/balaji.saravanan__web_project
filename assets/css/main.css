@@ -71,6 +71,13 @@ body::-webkit-scrollbar {
 
 }
 
+.topic1 p a img{
+    width: 25px;
+    height: 25px;
+    border: 2px solid orange;
+    border-radius: 5px;
+}
+
 .topic1 p a {
     color: black;
     font-size: 13px;
@@ -1180,7 +1187,7 @@ nav form {
     background-color: rgba(253, 167, 75, 0.4);
     /* background-color: rgb(251, 209, 117);
     background-color: rgba(248, 211, 141, 0.4); */
-    background: -webkit-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
+    background-color:#ffed4b;
     /* background: -o-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
     background: -moz-linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);
     background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%); */

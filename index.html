@@ -6,42 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/join now.css">
-    <title>Document</title>
-    <style>
-       
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" sizes="60x32" href="assets/images/icons/p logo.jpg">
+    <title>politifact</title>
+
 </head>
 
 <body>
-
-
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-
-
             <form id="register">
                 <h1>Create Account</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a> -->
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                 </div>
                 <span>or use your email for registration</span>
-                <input type="text" id="exampleInputname" placeholder="Name" />
-                <input type="number" id="exampleInputnumber" placeholder="number" />
-                <input type="email" id="exampleInputEmail1" placeholder="Email" />
-                <input type="password" id="exampleInputPassword" placeholder="Password" />
+
+                <input type="text" id="first_name" placeholder="Name" minlength="6" pattern="[A-Za-z]{1,32}"
+                    maxlength="20" title="please insert only alphabet value" required />
+
+                <input type="text" id="last_name" placeholder="last Name" minlength="1" pattern="[A-Za-z]{1,32}"
+                    maxlength="20" required />
+
+                <input type="tel" id="mobile_number" required title="please enter a valid mobile number" minlength="10"
+                    placeholder="Mobile Number" />
+
+
+                <input type="email" id="regemail" spellcheck="@" placeholder="Email" required
+                    title="please use @ symbol, not use space" />
+
+
+                <input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required id="regpassword"
+                    minlength="8" maxlength="12" placeholder="Password" />
+
                 <button type="submit" class="btn btn-success">Submit</button>
-
-
             </form>
-
-
-
         </div>
 
+
         <div class="form-container sign-in-container">
-            <form  id="checkregister">
+            <form id="checkregister">
                 <h1>Sign in</h1>
                 <div class="social-container">
                     <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -49,105 +55,45 @@
                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your account</span>
-                <input type="email" id="username" placeholder="Email" />
-                <input type="password" id="password" placeholder="Password" />
+
+                <input type="email" id="username" spellcheck="@" placeholder="Email" required
+                    title="please use @ symbol" />
+
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required
+                    id="password" placeholder="Password" />
+
                 <a href="#">Forgot your password?</a>
+
                 <button type="submit">Sign In</button>
+
             </form>
+
         </div>
+
         <div class="overlay-container">
+
             <div class="overlay">
+
                 <div class="overlay-panel overlay-left">
                     <h1>Hello futures</h1>
                     <p>To keep connected with us please login with your personal info</p>
                     <button class="ghost" id="signIn">Sign In</button>
                 </div>
+
                 <div class="overlay-panel overlay-right">
                     <h1>Welcome To Politifact</h1>
                     <p>Enter your personal details and start journey with us</p>
                     <button class="ghost" id="signUp">Sign Up</button>
+
                 </div>
+
             </div>
+
         </div>
+
     </div>
 
-
-    <script>
-
-
-        const registerr = document.getElementById("register");
-
-        registerr.onsubmit = e => {
-
-
-
-            const fname = (document.getElementById("exampleInputname").value);
-            //   const lname = (document.getElementById("exampleInputlname").value);
-            const number = (document.getElementById("exampleInputnumber").value);
-            const email = (document.getElementById("exampleInputEmail1").value);
-            const password = (document.getElementById("exampleInputPassword").value);
-
-            let record = [];
-
-
-            let user = {};
-
-
-            user["first_name"] = fname,
-                // user["last_name"] = lname,
-                user["mobile_number"] = number,
-                user["email"] = email,
-                user["password"] = password;
-
-
-
-            let users = JSON.parse(localStorage.getItem('users')) || record;
-            users.push(user);
-            localStorage.setItem('users', JSON.stringify(users));
-        }
-
-        const checkr = document.getElementById("checkregister");
-
-        checkr.onsubmit = e => {
-
-            let email = document.getElementById("username").value;
-            let password = document.getElementById("password").value;
-            let localUsers = JSON.parse(localStorage.getItem("users"));
-
-            if (!localUsers) {
-                alert("Login Failure");
-                return;
-            }
-
-            let Success = false;
-            for (let i = 0; i < localUsers.length; i++) {
-                if (localUsers[i].email === email && localUsers[i].password === password) {
-                    Success = true;
-                    break;
-                }
-            }
-
-            if (Success) {
-                alert("Login Success");
-            } else {
-                alert("Login Failure");
-            }
-        }
-        const signUpButton = document.getElementById('signUp');
-        const signInButton = document.getElementById('signIn');
-        const container = document.getElementById('container');
-
-        signUpButton.addEventListener('click', () => {
-            container.classList.add("right-panel-active");
-        });
-
-        signInButton.addEventListener('click', () => {
-            container.classList.remove("right-panel-active");
-        });
-
-    //   window.location.href = "profilepage.html"
-
-    </script>
+        <script src="assets/javascript/index.js"></script>
 </body>
 
 </html>
