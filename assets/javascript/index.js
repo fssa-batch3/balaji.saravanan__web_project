@@ -41,7 +41,7 @@ const registerFromValidation = () => {
     else {
         const user = {}
 
-        user["f_name"] = f_name_value,
+        user["f_name"] = f_name_value
             user["l_name"] = l_name_value,
             user["mobile"] = mobile_value,
             user["email"] = regemail_value,

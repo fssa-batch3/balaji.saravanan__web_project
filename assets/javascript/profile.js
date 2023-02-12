@@ -406,7 +406,7 @@ if (found) {
     document.querySelector(".cm-total-content").prepend(profile_nav);
 
 
-    let cmcontent_div, birth_div, topic, describe, educatiion_div, topic_education, describe_education, family_div, topic_family, describe_family, movie_div, topic_movie, describe_movie, politics_div, topic_politics, describe_politics, income_div, topic_income, assets_div, table, table_row, table_data_row1, table_data1, table_row1, table_data_row2, table_data2, table_row2, table_data_row3, table_data3, table_row3, table_datarow4, table_data4, assets1_div, assets1_describe, assets_cm_div, total_assets_div, loan_describe;
+    let cmcontent_div, birth_div, topic, describe, education_div, topic_education, describe_education, family_div, topic_family, describe_family, movie_div, topic_movie, describe_movie, politics_div, topic_politics, describe_politics, income_div, topic_income, assets_div, table, table_row, table_data_row1, table_data1, table_row1, table_data_row2, table_data2, table_row2, table_data_row3, table_data3, table_row3, table_data_row4, table_data4, assets1_div, assets1_describe, assets_cm_div, total_assets_div, loan_describe;
 
 
 
@@ -530,9 +530,9 @@ if (found) {
     table_row2 = document.createElement("tr");
     table.append(table_row2);
 
-    table_data_row2 = document.createElement("td")
-    table_data_row2.innerText = "வாரந்தோறும்";
-    table_row2.append(table_data_row2);
+    table_data_row3 = document.createElement("td")
+    table_data_row3.innerText = "வாரந்தோறும்";
+    table_row2.append(table_data_row3);
 
     table_data3 = document.createElement("td");
     table_data3.innerText = "₹" + 2.05 + "Lakh";
@@ -541,9 +541,9 @@ if (found) {
     table_row3 = document.createElement("tr");
     table.append(table_row3);
 
-    table_data_row3 = document.createElement("td")
-    table_data_row3.innerText = "தினசரி";
-    table_row3.append(table_data_row3);
+    table_data_row4 = document.createElement("td")
+    table_data_row4.innerText = "தினசரி";
+    table_row3.append(table_data_row4);
 
     table_data4 = document.createElement("td");
     table_data4.innerText = "₹" + 2.05 + "Lakh";

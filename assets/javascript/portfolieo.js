@@ -345,7 +345,7 @@ let position;
 let role_name;
 
 let anchor5;
-for (let i = 0; i < minister_name.length; i++) {
+for (const minister of minister_name) {
 
     //card_div
     card_div = document.createElement("div");
@@ -359,8 +359,8 @@ for (let i = 0; i < minister_name.length; i++) {
 
     //image
     image5 = document.createElement("img");
-    image5.setAttribute("src", minister_name[i]["img"]["sourse"]);
-    image5.setAttribute("alt", minister_name[i]["img"]["alter"]);
+    image5.setAttribute("src", minister["img"]["sourse"]);
+    image5.setAttribute("alt", minister["img"]["alter"]);
     imgBx_div.append(image5);
 
     //contentBx
@@ -370,7 +370,7 @@ for (let i = 0; i < minister_name.length; i++) {
 
     //title
     title = document.createElement("p");
-    title.innerText = "பெயர் : " + minister_name[i]["tname"];
+    title.innerText = "பெயர் : " + minister["tname"];
     contentBx.append(title);
 
     //size_div
@@ -380,7 +380,7 @@ for (let i = 0; i < minister_name.length; i++) {
 
     //name
     namee = document.createElement("h3");
-    namee.innerText = "NAME : " + minister_name[i]["ename"];
+    namee.innerText = "NAME : " + minister["ename"];
     size_div.append(namee);
 
     //position
@@ -390,13 +390,13 @@ for (let i = 0; i < minister_name.length; i++) {
 
     //role_name
     role_name = document.createElement("h3");
-    role_name.innerText = "பதவி : " + minister_name[i]["position"];
+    role_name.innerText = "பதவி : " + minister["position"];
     position.append(role_name);
 
 
     //anchor
     anchor5 = document.createElement("a");
-    anchor5.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister_name[i]["ename"]);
+    anchor5.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister["ename"]);
     anchor5.innerText = "vief port folio"
     contentBx.append(anchor5);
 
