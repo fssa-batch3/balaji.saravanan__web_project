@@ -47,6 +47,10 @@
             padding: 5px 10px;
             color: #000;
         }
+        .card-body table th{
+            width: 30%;
+        }
+
     </style>
 </head>
 
@@ -87,28 +91,29 @@
                         </div>
                         <div class="card-body pt-0">
                             <table class="table table-bordered">
+                                <caption>profile_page</caption>
                                 <tr>
-                                    <th width="30%">Gmail</th>
+                                    <th>Gmail</th>
                                     <td width="2%">:</td>
                                     <td id="email"></td>
                                 </tr>
                                 <tr>
-                                    <th width="30%">Age </th>
+                                    <th>Age </th>
                                     <td width="2%">:</td>
                                     <td><input type="text"></td>
                                 </tr>
                                 <tr>
-                                    <th width="30%">Gender</th>
+                                    <th>Gender</th>
                                     <td width="2%">:</td>
                                     <td><input type="text"></td>
                                 </tr>
                                 <tr>
-                                    <th width="30%">Address</th>
+                                    <th>Address</th>
                                     <td width="2%">:</td>
                                     <td><input type="text"></td>
                                 </tr>
                                 <tr>
-                                    <th width="30%">State</th>
+                                    <th>State</th>
                                     <td width="2%">:</td>
                                     <td><input type="text"></td>
                                 </tr>
@@ -142,6 +147,7 @@
                 document.getElementById("mobile").innerText = arrayvalue[i].mobile;
                 document.getElementById("email").innerText = arrayvalue[i].email;
                 // document.getElementById("ditails").innerHTML ="";
+                // window.location.href="../home/home.html"
 
                 break;
             }

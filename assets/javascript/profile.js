@@ -270,7 +270,7 @@ let found = false;
 let i;
 for (i = 0; i < minister_name.length; i++) {
 
-    if (username === minister_name[i].ename) {
+    if (username == minister_name[i].ename) {
         found = true;
         break;
     }
@@ -582,5 +582,5 @@ if (found) {
 
 
 } else {
-    // do something else
+    alert("not match ministers")
 }
