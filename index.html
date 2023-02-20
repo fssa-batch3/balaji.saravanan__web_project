@@ -18,7 +18,7 @@
             <form id="register">
                 <h1>Create Account</h1>
                 <div class="social-container">
-                
+
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                 </div>
                 <span>or use your email for registration</span>
@@ -40,7 +40,7 @@
                 <input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required id="regpassword"
                     minlength="8" maxlength="12" placeholder="Password" />
 
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" id="submit" class="btn btn-success">Submit</button>
             </form>
         </div>
 
@@ -80,7 +80,7 @@
                 </div>
 
                 <div class="overlay-panel overlay-right">
-                    <h1>Welcome To Politifact</h1>
+                    <h1>Welcome</h1>
                     <p>Enter your personal details and start journey with us</p>
                     <button class="ghost" id="signUp">Sign Up</button>
 
@@ -92,7 +92,116 @@
 
     </div>
 
-        <script src="assets/javascript/index.js"></script>
+    <script src="assets/javascript/index.js"></script>
+
+    <!-- <script>
+
+        //    register starts
+
+
+
+        const form = document.getElementById("register");
+
+        const f_name = document.getElementById("first_name");
+
+        const l_name = document.getElementById("last_name");
+
+        const mobilenumber = document.getElementById("mobile_number");
+
+        const regemail = document.getElementById("regemail");
+
+        const regpassword = document.getElementById("regpassword");
+
+
+        form.addEventListener('submit', e => {
+
+            e.preventDefault();
+            submit();
+        });
+
+
+
+
+        function submit() {
+
+            const user_data = JSON.parse(localStorage.getItem("users"));
+
+            const f_name_value = f_name.value.trim();
+            const l_name_value = l_name.value.trim();
+            const mobile_value = mobilenumber.value.trim();
+            const reg_email_value = regemail.value.trim();
+            const reg_pass_value = regpassword.value.trim();
+
+            // empty array
+            let record = [];
+
+            // empty object
+            let user = {};
+
+
+
+                user["first_name"] = f_name_value,
+                user["last_name"] = l_name_value,
+                user["mobile_number"] = mobile_value,
+                user["email"] = reg_email_value,
+                user["password"] = reg_pass_value;
+
+
+            let check;
+
+            user_data.find(element => {
+
+                const emailValue = element["email"];
+                const mobilenumberValue = element["mobie_number"];
+
+                if ((emailValue == reg_email_value) && (mobilenumberValue == mobile_value)) {
+
+                    return check = true;
+
+                }
+
+                else {
+                    return check = false;
+                }
+
+            })
+
+            if (check == true) {
+                alert("Already Have a account");
+            }
+
+            else {
+
+                let users = JSON.parse(localStorage.getItem('users')) ?? record;
+
+                users.push(user);
+
+                localStorage.setItem('users', JSON.stringify(users));
+
+                alert("Account created successfully");
+
+            }
+
+        }
+
+
+
+
+
+
+        const signUpButton = document.getElementById('signUp');
+        const signInButton = document.getElementById('signIn');
+        const container = document.getElementById('container');
+
+        signUpButton.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
+        });
+
+        signInButton.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
+        });
+    </script> -->
+
 </body>
 
 </html>

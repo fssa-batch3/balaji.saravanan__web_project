@@ -202,7 +202,7 @@ const minister_name = [
             "alter": "anitharadhakirishanan"
         },
         "tname": "அனிதா ராதாகிருஷ்ணன்",
-        "rname": "Anitha R. Radhakrishnan",
+        "ename": "Anitha R. Radhakrishnan",
         "position": "கால்நடை பராமரிப்பு"
     },
     {
@@ -211,7 +211,7 @@ const minister_name = [
             "alter": "sivakumar"
         },
         "tname": "S .சிவகுமார்",
-        "ename1": "S S. Sivakumar",
+        "ename": "S S. Sivakumar",
         "position": "போக்குவரத்து"
     },
     {
@@ -345,6 +345,7 @@ let position;
 let role_name;
 
 let anchor5;
+
 for (const minister of minister_name) {
 
     //card_div
@@ -402,3 +403,104 @@ for (const minister of minister_name) {
 
     document.querySelector("div.lists1").append(card_div)
 }
+
+
+
+
+
+
+
+
+const searchInput = document.getElementById("searchbar");
+const searchResults = document.getElementById("search_result");
+
+// Function to create a card for a minister
+
+
+function createMinisterCard(minister) {
+
+    const card = document.createElement("div");
+    card.setAttribute("class", "card");
+
+    const name = document.createElement("h2");
+    name.textContent = minister.ename;
+    card.appendChild(name);
+
+    const position = document.createElement("p");
+    position.textContent = minister.position;
+    card.appendChild(position);
+
+    return card;
+}
+
+
+
+searchInput.addEventListener("input", function () {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+    searchResults.innerHTML = '';
+    let hasResults = false;
+
+    for (let i = 0; i < minister_name.length; i++) {
+        const minister = minister_name[i];
+        const ministerName = minister.ename.trim().toLowerCase();
+
+        if (ministerName.includes(searchTerm)) {
+            const card_div = createMinisterCard(minister);
+            searchResults.appendChild(card_div);
+            hasResults = true;
+        }
+    }
+
+    if (!hasResults) {
+        const li = document.createElement("li");
+        li.textContent = "No results found.";
+        searchResults.appendChild(li);
+    }
+});
+
+
+
+
+// function createMinisterCard(minister, searchTerm) {
+//     const card = document.createElement("div");
+//     card.setAttribute("class", "card");
+
+//     const name = document.createElement("h2");
+//     name.textContent = minister.ename;
+//     card.appendChild(name);
+
+//     const position = document.createElement("p");
+//     position.textContent = minister.position;
+//     card.appendChild(position);
+
+//     const searchTermElem = document.createElement("p");
+//     searchTermElem.textContent = "Search term: " + searchTerm;
+//     card.appendChild(searchTermElem);
+
+//     return card;
+// }
+
+// searchInput.addEventListener("input", function () {
+//     const searchTerm = searchInput.value.trim().toLowerCase();
+//     searchResults.innerHTML = '';
+
+
+//     let hasResults = false;
+
+//     for (let i = 0; i < minister_name.length; i++) {
+//         const minister = minister_name[i];
+//         const ministerName = minister.ename.trim().toLowerCase();
+
+//         if (ministerName.includes(searchTerm)) {
+//             const card_div = createMinisterCard(minister, searchTerm);
+//             searchResults.appendChild(card_div);
+//             hasResults = true;
+//         }
+//     }
+
+//     if (!hasResults) {
+//         const li = document.createElement("li");
+//         li.textContent = "No results found.";
+//         searchResults.appendChild(li);
+//     }
+// });

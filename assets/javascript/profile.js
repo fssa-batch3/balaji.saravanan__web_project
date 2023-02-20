@@ -429,9 +429,6 @@ if (found) {
 
 
 
-
-
-
     education_div = document.createElement("div");
     education_div.setAttribute("id", "educatiion");
     cmcontent_div.append(education_div);
@@ -443,9 +440,6 @@ if (found) {
     describe_education = document.createElement("p");
     describe_education.innerText = "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி."
     education_div.append(describe_education)
-
-
-
 
 
 
@@ -572,15 +566,10 @@ if (found) {
     assets_cm_div.append(loan_describe);
 
 
-
-
-
     document.querySelector(".cm-total-content").append(cmcontent_div)
-
-
-
-
 
 } else {
     alert("not match ministers")
 }
+
+

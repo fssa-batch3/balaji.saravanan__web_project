@@ -180,7 +180,7 @@ select:invalid {
 .overlay {
     background: #ffb641;
 
-    background: linear-gradient(to right, #f8860c, #fa970c);
+    /* background: linear-gradient(to right, #f8860c, #fa970c); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
@@ -214,6 +214,22 @@ select:invalid {
 
 .overlay-left {
     transform: translateX(-20%);
+    background-image: url("../images/icons/logo.png");
+    background-position: center;
+
+
+}
+.overlay-left p{
+    font-weight: 700;
+    text-shadow:-2px 2px black;
+
+
+}
+.overlay-right p{
+    font-weight: 700;
+    text-shadow:-2px 2px black;
+
+
 }
 
 .container.right-panel-active .overlay-left {
@@ -223,6 +239,11 @@ select:invalid {
 .overlay-right {
     right: 0;
     transform: translateX(0);
+    background-image: url("../images/icons/logo.png");
+    background-position: center;
+
+
+
 }
 
 .container.right-panel-active .overlay-right {

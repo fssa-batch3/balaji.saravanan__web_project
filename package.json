@@ -3,13 +3,11 @@
   "version": "1.0.0",
   "description": "the main thing is manifesto clarification for normal peoples my website update manifesto lists.<br>  My website give a political knowledge for normal people and children and create a awareness of politics<br>  learn history you create mistry this learn all leader in life and leaders achievements all though things <br>  <hr>",
   "main": "index.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-script-os",
     "start:win32": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js, !node_modules/**/*' --directory --port 1212 --browser \"C:\\Program Files\\Google\\chrome\\Application\\chrome.exe\""
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fssa-batch3/balaji.saravanan__web_project.git"
@@ -24,5 +22,8 @@
   "devDependencies": {
     "browser-sync": "^2.27.11",
     "run-script-os": "^1.1.6"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security"
   }
 }
