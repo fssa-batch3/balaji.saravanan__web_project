@@ -164,12 +164,12 @@ checkform.addEventListener("submit", (e) => {
 });
 
 
-const signup1 = document.getElementById("submit");
+// const signup1 = document.getElementById("submit");
 
 
-signup1.addEventListener('click', () => {
-    container.classList.remove("right-panel-active");
-});
+// signup1.addEventListener('click', () => {
+//     container.classList.remove("right-panel-active");
+// });
 
 
 const signUpButton = document.getElementById('signUp');
