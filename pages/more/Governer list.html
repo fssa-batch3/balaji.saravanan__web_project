@@ -11,9 +11,16 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>governer</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;800;900&display=swap"
+        rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -103,42 +110,13 @@
 
     <!-- governer list -->
 
+    
+
     <div id="governer-list" class="governer">
         <h1>தமிழ்நாடு ஆளுநர்களின் பட்டியல்
         </h1>
-        <table>
-            <script>
-                let table, table_ror_head, table_row,table_head1, tavle_head2, table_head3, table4, table_data1, table_data2, table_data3, table_data4;
-
-                table = document.createElement("table");
-
-                table_row_head= document.createElement("tr");
-                table.append(table_ror_head);
-
-                table_head1= document.createElement("th");
-                table_head1.innerText="fghjkl;";
-                table_ror_head.append(table_head1);
-
-                table_head2= document.createElement("th");
-                table_head2.innerText="dfghjkl;"
-                table_ror_head.append(table_head2);
-
-                table_head3= document.createElement("th");
-                table_head3.innerText="dfghjkl;"
-                table_ror_head.append(table_head3);
-
-                table_head3= document.createElement("th");
-                table_head3.innerText="dfghjkl;"
-                table_ror_head.append(table_head3);
-
-
-                table_row= document.createElement("tr");
-                table.append(table_row);
-
-                
-
-
-            </script>
+        <!-- <table>
+            
             <tr>
                 <th>Sl.No</th>
                 <th>Governor</th>
@@ -1108,10 +1086,91 @@
                 <td>6 May 1946</td>
                 <td>September 7, 1948</td>
             </tr>
-        </table>
+        </table> -->
     </div>
 
+    <script>
 
+        let table, table_row_head, table_heading1, table_heading2, table_hading3, table_heading4, table_row, table_data1, table_data2, data2_div_profile, div_parties, div_fontside, name_div, position_div, backside_div, image_div, button_div, anc_link_div, table_data3, table_data4;
+
+        table = document.createElement("table");
+
+        table_row_head = document.createElement("tr");
+        table.append(table_row_head);
+
+        table_heading1 = document.createElement("th");
+        table_heading1.innerText = "Sl.No";
+        table_row_head.append(table_heading1);
+
+        table_heading2 = document.createElement("th");
+        table_heading2.innerText = "Governor";
+        table_row_head.append(table_heading2);
+
+        table_heading3 = document.createElement("th");
+        table_heading3.innerText = "இருந்து";
+        table_row_head.append(table_heading3);
+
+        table_heading4 = document.createElement("th");
+        table_heading4.innerText = "வரை";
+        table_row_head.append(table_heading4);
+
+        table_row = document.createElement("tr");
+        table.append(table_row);
+
+        table_data1 = document.createElement("td");
+        table_data1.innerText = 1;
+        table_row.append(table_data1);
+
+        table_data2 = document.createElement("td");
+        table_row.append(table_data2);
+
+        data2_div_profile = document.createElement("div");
+        data2_div_profile.setAttribute("class", "profile-main");
+        table_data2.append(data2_div_profile);
+
+        div_parties = document.createElement("div");
+        div_parties.setAttribute("class", "parties");
+        data2_div_profile.append(div_parties);
+
+        div_fontside = document.createElement("div");
+        div_fontside.setAttribute("class", "fontsidepro");
+        div_parties.append(div_fontside);
+
+        name_div = document.createElement("p");
+        name_div.innerText = "ஆர்.என்.ரவி";
+        div_fontside.append(name_div);
+
+        position_div = document.createElement("p")
+        position_div.innerText = "ஆளுநர்";
+        div_fontside.append(position_div);
+
+        backside_div = document.createElement("div");
+        backside_div.setAttribute("class", "backsidepro");
+        div_parties.append(backside_div);
+
+        image_div = document.createElement("img");
+        image_div.setAttribute("src", "../../assets/images/ministers/ravi-gover.jpg");
+        image_div.setAttribute("alt", "error image");
+        backside_div.append(image_div);
+
+        button_div = document.createElement("button");
+        backside_div.append(button_div);
+
+        anc_link_div = document.createElement("a");
+        anc_link_div.setAttribute("href", "governer-profile/governer-ravi.html");
+        anc_link_div.innerText="view profile"
+        button_div.append(anc_link_div);
+
+        table_data3= document.createElement("td");
+        table_data3.innerText="10 September 2021";
+        table_row.append(table_data3);
+
+        table_data4= document.createElement("td");
+        table_data4.innerText="Present Governor";
+        table_row.append(table_data4)
+
+        document.querySelector(".governer").append(table);
+    </script>
 
     <!-- footer  section-->
     <div class="footer">

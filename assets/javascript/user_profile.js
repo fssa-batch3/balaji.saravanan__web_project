@@ -15,12 +15,15 @@ if (user) {
 
 
 
+
 let editButton = document.getElementById("edit");   // this all set values is button values
 let saveButton = document.getElementById("save")
 let inputs = document.querySelectorAll("input");    // this is input field select purpase code
 let deleteButton = document.getElementById("delete");
 
-editButton.addEventListener("click", e => {         // edit button function you can press edit button this code activate and enable the input button
+editButton.addEventListener("click", e => {  
+    e.preventDefault();
+           // edit button function you can press edit button this code activate and enable the input button
     inputs.forEach(input => {
         if (input.type == "email") {
             input.disabled = true;
@@ -28,14 +31,23 @@ editButton.addEventListener("click", e => {         // edit button function you 
             input.disabled = false;
         }
     });
+
+
     editButton.disabled = true;
+
     saveButton.disabled = false;
 });
 
+
+
 saveButton.addEventListener("click", e => {    // save button function this button save the values of user object
+
+    
     inputs.forEach(input => {
         input.disabled = true;
     });
+
+
     editButton.disabled = false;
     saveButton.disabled = true;
     user.first_name = document.getElementById("first_name").value;
@@ -46,7 +58,14 @@ saveButton.addEventListener("click", e => {    // save button function this butt
     user.city = document.getElementById("city").value;
     user.gender = document.getElementById("gender").value;
     localStorage.setItem('users', JSON.stringify(users));
+
+
+    e.preventDefault();
+
 });
+
+
+
 
 deleteButton.addEventListener("click", e => {                   // this isdelete button user want delete user pres and account delete 
     let index = users.findIndex(user => user.email === profile_check);// thisis frofile check and delete
@@ -60,5 +79,9 @@ deleteButton.addEventListener("click", e => {                   // this isdelete
         window.location.href = "../../index.html";
 
         alert("User deleted successfully.");
+
     }
+    e.preventDefault();
 });
+
+

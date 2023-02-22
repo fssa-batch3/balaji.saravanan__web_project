@@ -533,6 +533,8 @@ nav form {
 
 .parties2:hover {
     transform: rotatey(180deg);
+    transition: all 0.7s;
+
 }
 
 .fontside {
@@ -996,7 +998,7 @@ nav form {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin: 5% 0 0 5%;
+    /* margin: 5% 0 0 5%; */
     width: 60%;
 }
 
@@ -1049,9 +1051,9 @@ nav form {
 .cmcontent {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    /* width: 90%; */
     height: 400px;
-    margin: 4% 0 0 5%;
+    /* margin: 4% 0 0 5%; */
     line-height: 1.5;
     overflow: scroll;
 }
@@ -1066,7 +1068,7 @@ nav form {
     min-height: auto;
 
     line-height: 1.7;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 #birth h2,
@@ -1080,7 +1082,7 @@ nav form {
     /* min-height: 350px; */
     min-height: auto;
     line-height: 1.7;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 #educatiion h2,
@@ -1095,7 +1097,7 @@ nav form {
     min-height: auto;
 
     line-height: 1.7;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 #family h2,
@@ -1109,7 +1111,7 @@ nav form {
     /* min-height: 350px; */
     min-height: auto;
     line-height: 1.7;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 #movie h2,
@@ -1124,7 +1126,7 @@ nav form {
     min-height: auto;
 
     line-height: 1.7;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 #politics h2,
@@ -1143,7 +1145,7 @@ nav form {
     min-height: auto;
 
     line-height: 1.7;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 #income h2,
@@ -1156,7 +1158,7 @@ nav form {
     width: 90%;
     min-height: 500px;
     line-height: 1.7;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 #job-detail h2,
@@ -2164,3 +2166,14 @@ td .name-img {
   } */
 
   
+
+  .totalnav #search_result{
+    width: 50%;
+    height: 400px;
+    overflow: scroll;
+   margin: 0 20%;
+  }
+
+  #search_result::-webkit-scrollbar {
+    display: none;
+}

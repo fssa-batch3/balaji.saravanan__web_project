@@ -49,6 +49,7 @@ const registerFromValidation = () => {
 
     let check = true;
 
+
     if (user_data !== null) {
 
 
@@ -125,34 +126,45 @@ const checkregisterFromValidation = () => {
     const password_value = password.value.trim();
 
 
-    if (!username_value || !password_value) {
+    // if (!username_value || !password_value) {
 
-        alert("Please Fill All Required Field");
+    //     alert("Please Fill All Required Field");
 
-    }
+    // }
 
-
-
-    const email_check = user_data.filter(obj => obj.email == username_value && obj.password == password_value)
-
-    if (email_check.length >= 1) {
-
-        let profile_email = username_value;
-
-        console.log(profile_email);
-
-        localStorage.setItem("profile_email", profile_email);
-        window.location.href = "pages/home/home.html"
-        alert("Successfully Login");
-
-        checkform.reset();
-
-
-
+    if (user_data === null) {
+        alert("you first sinup next you come and try")
 
     } else {
-        alert("Email or Password Incorrect");
+
+        const email_check = user_data.filter(obj => obj.email == username_value && obj.password == password_value)
+
+        if (email_check.length >= 1) {
+
+            let profile_email = username_value;
+
+            console.log(profile_email);
+
+            localStorage.setItem("profile_email", profile_email);
+
+            window.location.href = "pages/home/home.html"
+            alert("Successfully Login");
+
+            checkform.reset();
+
+
+
+
+        }
+        else {
+            alert("Email or Password Incorrect");
+        }
+
+
     }
+
+
+
 
 }
 

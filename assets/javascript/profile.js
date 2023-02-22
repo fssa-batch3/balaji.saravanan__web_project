@@ -304,27 +304,27 @@ if (found) {
     // position
 
     position = document.createElement("p");
-    position.innerText = minister_name[i]["tname"];
+    position.innerText ="பதவி : " +minister_name[i]["position"];
     cm_name.append(position);
 
     position1 = document.createElement("p");
-    position1.innerText = minister_name[i]["ename"];
+    position1.innerText ="பெயர் : "+ minister_name[i]["tname"];
     cm_name.append(position1);
 
     position2 = document.createElement("p");
-    position2.innerText = minister_name[i]["position"];
+    position2.innerText = "NAME : " +minister_name[i]["ename"];
     cm_name.append(position2);
 
     position3 = document.createElement("p");
-    position3.innerText = minister_name[i]["ename"];
+    position3.innerText ="PARTY : "+ "திராவிட முன்னேற்றக் கழகம்"
     cm_name.append(position3);
 
     position4 = document.createElement("p");
-    position4.innerText = minister_name[i]["tname"];
+    position4.innerText ="அரசியல் :" + 45 +"வருடம்";
     cm_name.append(position4);
 
     position5 = document.createElement("p");
-    position5.innerText = minister_name[i]["tname"];
+    position5.innerText ="தொழில் : " +"அரசியல்";
     cm_name.append(position5);
 
 
