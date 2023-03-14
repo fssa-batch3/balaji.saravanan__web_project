@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Comment Section using Local Storage</title>
+</head>
+
+<body>
+    <h1>Comment Section</h1>
+    <ul id="comments-list"></ul>
+    <form id="comment-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="comment">Comment:</label>
+        <textarea id="comment" name="comment"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const comment = document.getElementById('comment').value;
+            const timestamp = new Date().getTime();
+            const commentObject = { name, comment, timestamp };
+            let comments = JSON.parse(localStorage.getItem('comments')) ?? [];
+            comments.push(commentObject);
+            localStorage.setItem('comments', JSON.stringify(comments));
+            displayComments();
+            document.getElementById('comment-form').reset();
+        }
+
+        function displayComments() {
+            let comments = JSON.parse(localStorage.getItem('comments')) ?? [];
+            const commentsList = document.getElementById('comments-list');
+            commentsList.innerHTML = '';
+            comments.forEach(comment => {
+                const li = document.createElement('li');
+                const date = new Date(comment.timestamp).toLocaleString();
+                li.innerHTML = `<strong>${comment.name}</strong> said on ${date}:<br>${comment.comment}`;
+                commentsList.appendChild(li);
+            });
+        }
+
+        document.getElementById('comment-form').addEventListener('submit', handleFormSubmit);
+        window.onload = displayComments;
+    </script>
+</body>
+
+</html>
+
+
+

@@ -1,410 +1,219 @@
 
-let list1_div;
 
-let image;
+const minister_values = JSON.parse(localStorage.getItem("politician_data"));
 
-let para1;
-
-let para2;
-
-let para3;
-
-let button;
-
-let anchor;
+// const delete_button1 = document.getElementById("deleteButton");
 
 
-//list1_div
-list1_div = document.createElement("div");
-list1_div.setAttribute("class", "list1");
+// let card_div;
 
-//image
+// let imgBx_div;
 
-image = document.createElement("img")
-image.setAttribute("src", "../../assets/images/ministers/mk stalin.png");
-image.setAttribute("alt", "m k stalin image");
-list1_div.append(image);
+// let image5;
 
-//para1
+// let contentBx;
 
-para1 = document.createElement("p");
-para1.innerText = "மு. க. ஸ்டாலின்";
-list1_div.append(para1);
+// let title;
 
-//para2
+// let size_div;
 
-para2 = document.createElement("p");
-para2.innerText = "M. K. Stalin";
-list1_div.append(para2);
+// let name;
 
-//para3
+// let position;
 
-para3 = document.createElement("p");
-para3.innerText = "பதவி: முதலமைச்சர்";
-list1_div.append(para3);
+// let role_name;
 
-//button
+// let anchor5;
 
-button = document.createElement("button");
-list1_div.append(button);
+// let edit_button;
 
-//anchor
-
-anchor = document.createElement("a");
-anchor.setAttribute("class", "text-decoration-none text-dark");
-anchor.setAttribute("href", "./profile/profile.html");
-anchor.innerText = "view profile";
-button.append(anchor);
+// let delete_button;
 
 
-document.querySelector("div.lists").append(list1_div);
+// for (let minister of minister_values) {
 
-const minister_name = [
-
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/udhayanithi.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "உதயநிதி ஸ்டாலின்",
-        "ename": "Udhayanidhi Stalin",
-        "position": "விளையாட்டுத்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/duraimurugan.jpg",
-            "alter": "DURAIMURUGAN"
-        },
-        "tname": "துரைமுருகன்",
-        "ename": "Durai Murugan",
-        "position": "பொதுச்செயலாளர்"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/kn neru.jpg",
-            "alter": "KN NERU IMAGE"
-        },
-        "tname": "கே. என். நேரு",
-        "ename": "K. N. Nehru",
-        "position": "நகர்ப்புற வளர்ச்சித்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/periyasami.jpg",
-            "alter": "PERIYASAMI IMAGE"
-        },
-        "tname": "ஐ. பெரியசாமி ",
-        "ename": "I. Periyasamy",
-        "position": "கூட்டுறவுத்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/ponkmudi.jpg",
-            "alter": "PONMUDI IMAGE"
-        },
-        "tname": "க. பொன்முடி",
-        "ename": "K. Ponmudy",
-        "position": "உயர் கல்வி "
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/velu.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "எ. வ. வேலு",
-        "ename": "E. V. Velu",
-        "position": "உணவுத் துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/pannerselvam.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "ஆர். கே. பன்னீர்செல்வம்",
-        "ename": "M. R. K. Panneerselvam",
-        "position": "சமூக நலத்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/tanarasu.jpg",
-            "alter": "thangam thennarasu"
-        },
-        "tname": "தங்கம் தென்னரசு",
-        "ename": "Thangam Thennarasu",
-        "position": "தொல்லியல்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/ranachanran.jpg",
-            "alter": "ramachandiran"
-        },
-        "tname": "ஆர்.ராமச்சந்திரன்",
-        "ename": "Ramachandran",
-        "position": "தமிழக வருவாய் துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/regubathy.jpg",
-            "alter": "ragupahty"
-        },
-        "tname": "எஸ். ரகுபதி",
-        "ename": "S. Regupathy",
-        "posoiton": "சட்டத்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/muthusamy.jpg",
-            "alter": "muthusaami"
-        },
-        "tname": "சு. முத்துசாமி",
-        "ename": "S. Muthusamy",
-        "position": "வீட்டு வசதித்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/periyakaruppan.jpg",
-            "alter": "periyasami"
-        },
-        "tname": "கே. ஆர். பெரியகருப்பன்",
-        "ename": "K.R.Periyakaruppan",
-        "position": "ஊரகவளர்ச்சி"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/anbarasan.jpg",
-            "alter": "anbarasan"
-        },
-        "tname": "தா. மோ. அன்பரசன்",
-        "ename": "T. M. Anbarasan",
-        "position": "ஊரக தொழிற்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/saminathan.jpg",
-            "alter": "saaminathan"
-        },
-        "tname": "மு. பெ. சாமிநாதன்",
-        "ename": "M. P. Saminathan",
-        "position": "பதவி: செய்தித்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/geeth.jpg",
-            "alter": "keetha jeevan"
-        },
-        "tname": "பெ. கீதா ஜீவன்",
-        "ename": "Geetha Jeevan",
-        "position": "மகளிர் உரிமைத்துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/anith.jpg",
-            "alter": "anitharadhakirishanan"
-        },
-        "tname": "அனிதா ராதாகிருஷ்ணன்",
-        "ename": "Anitha R. Radhakrishnan",
-        "position": "கால்நடை பராமரிப்பு"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/sivakumar.jpg",
-            "alter": "sivakumar"
-        },
-        "tname": "S .சிவகுமார்",
-        "ename": "S S. Sivakumar",
-        "position": "போக்குவரத்து"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/ramachandran.jpg",
-            "alter": "ramachanran"
-        },
-        "tname": "K.இராமச்சந்திரன்",
-        "ename": "K. Ramachandran",
-        "position": "வனவிலங்கு"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/sakkaraporni.jpg",
-            "alter": "sakrabaani"
-        },
-        "tname": "அர. சக்கரபாணி",
-        "ename": "R. Sakkarapani",
-        "position": "உணவுத் துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/sendil balji.jpg",
-            "alter": "sendhilbalaji"
-        },
-        "tname": "வே. செந்தில்பாலாஜி",
-        "ename": "V. Senthilbalaji",
-        "position": "மின்சாரம்"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/rs ganthi.jpg",
-            "alter": "rs gandhi"
-        },
-        "tname": "ஆர். காந்தி",
-        "ename": "R. Gandhi",
-        "position": "கைத்தறி"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/subramani.jpg",
-            "alter": "subramaniyan"
-        },
-        "tname": "மா. சுப்பிரமணியம்",
-        "ename": "M. Subramaniam",
-        "position": "மக்கள் நல்வாழ்வு"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/mirthi.jpg",
-            "alter": "moorhty p image"
-        },
-        "tname": "பி. மூர்த்தி",
-        "ename": "Moorthy P",
-        "position": "வணிகவரி"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/rajakannapan.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "இராஜ கண்ணப்பன்",
-        "ename": "R. S. Raja Kannappan",
-        "position": "பிற்படுத்தப்பட்டோர்"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/segar babu.jpg",
-            "alter": "segar babu"
-        },
-        "tname": "பி. கே. சேகர் பாபு",
-        "ename": "P. K. Sekar Babu",
-        "position": "அறநிலையத் துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/palanivel.jpg",
-            "alter": "palanivel thigarajan"
-        },
-        "tname": "பழனிவேல் தியாகராஜன்",
-        "ename": "Palanivel Thiagarajan",
-        "position": "நிதித்துறை அமைச்சர்"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/nasar.jpg",
-            "alter": "s m nasar"
-        },
-        "tname": "சா. மு. நாசர்",
-        "ename": " S. M. Nasar",
-        "position": "பால் பண்ணை வளர்ச்சி"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/magesh.jpg",
-            "alter": "Anbil Mahesh Poyyamozhi"
-        },
-        "tname": "அன்பில் மகேஷ்",
-        "ename": "Anbil Mahesh Poyyamozhi",
-        "position": "பள்ளிக் கல்வித் துறை"
-    },
-    {
-        "img": {
-            "sourse": "../../assets/images/ministers/mano.jpg",
-            "alter": "mano thangaraj"
-        },
-        "tname": "மனோ தங்கராஜ்",
-        "ename": "T. Mano Thangaraj",
-        "position": "தொழில்நுட்பத்துறை"
-    },
-]
+//     //card_div
+//     card_div = document.createElement("div");
+//     card_div.setAttribute("class", "card");
 
 
 
-let card_div;
+//     //imgBx_div
 
-let imgBx_div;
-
-let image5;
-
-let contentBx;
-
-let title;
-
-let size_div;
-
-let namee;
-
-let position;
-
-let role_name;
-
-let anchor5;
-
-for (const minister of minister_name) {
-
-    //card_div
-    card_div = document.createElement("div");
-    card_div.setAttribute("class", "card");
-
-    //imgBx_div
-
-    imgBx_div = document.createElement("div");
-    imgBx_div.setAttribute("class", "imgBx");
-    card_div.append(imgBx_div);
-
-    //image
-    image5 = document.createElement("img");
-    image5.setAttribute("src", minister["img"]["sourse"]);
-    image5.setAttribute("alt", minister["img"]["alter"]);
-    imgBx_div.append(image5);
-
-    //contentBx
-    contentBx = document.createElement("div");
-    contentBx.setAttribute("class", "contentBx");
-    card_div.append(contentBx);
-
-    //title
-    title = document.createElement("p");
-    title.innerText = "பெயர் : " + minister["tname"];
-    contentBx.append(title);
-
-    //size_div
-    size_div = document.createElement("div");
-    size_div.setAttribute("class", "size");
-    contentBx.append(size_div);
-
-    //name
-    namee = document.createElement("h3");
-    namee.innerText = "NAME : " + minister["ename"];
-    size_div.append(namee);
-
-    //position
-    position = document.createElement("div");
-    position.setAttribute("class", "color");
-    contentBx.append(position);
-
-    //role_name
-    role_name = document.createElement("h3");
-    role_name.innerText = "பதவி : " + minister["position"];
-    position.append(role_name);
+//     imgBx_div = document.createElement("div");
+//     imgBx_div.setAttribute("class", "imgBx");
+//     card_div.append(imgBx_div);
 
 
-    //anchor
-    anchor5 = document.createElement("a");
-    anchor5.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister["ename"]);
-    anchor5.innerText = "vief port folio"
-    contentBx.append(anchor5);
-
-    document.querySelector("div.lists1").append(card_div)
-}
 
 
+
+//     //image
+//     image5 = document.createElement("img");
+//     image5.setAttribute("src", minister["img"]["sourse"]);
+//     image5.setAttribute("alt", minister["img"]["alter"]);
+//     imgBx_div.append(image5);
+
+//     //contentBx
+//     contentBx = document.createElement("div");
+//     contentBx.setAttribute("class", "contentBx");
+//     card_div.append(contentBx);
+
+
+//     //title
+//     title = document.createElement("p");
+//     title.innerText = "பெயர் : " + minister.name["tname"];
+//     contentBx.append(title);
+
+//     //size_div
+//     size_div = document.createElement("div");
+//     size_div.setAttribute("class", "size");
+//     contentBx.append(size_div);
+
+//     //name
+//     name = document.createElement("h3");
+//     name.innerText = "NAME : " + minister.name["ename"];
+//     size_div.append(name);
+
+//     //position
+//     position = document.createElement("div");
+//     position.setAttribute("class", "color");
+//     contentBx.append(position);
+
+//     //role_name
+//     role_name = document.createElement("h3");
+//     role_name.innerText = "பதவி : " + minister["position"];
+//     position.append(role_name);
+
+
+//     // delete_button = document.createElement("a");
+//     // delete_button.setAttribute("id", "deleteButton");
+//     // delete_button.setAttribute("href", "../admin/delete_politician.html?name=" + minister.name.ename + "&data=" + encodeURIComponent(JSON.stringify(minister)));
+//     // delete_button.innerText = "delete";
+//     // contentBx.append(delete_button);
+
+//     // Create the delete button
+//     // Create the delete button
+//     // Create the delete button
+//     delete_button = document.createElement("a");
+//     delete_button.setAttribute("id", "deleteButton");
+//     delete_button.innerText = "delete";
+
+//     // Add the onclick event to the delete button
+//     delete_button.onclick = function () {
+//         // Get the name of the minister to delete
+//         const name = this.parentElement.querySelector(".name").textContent();
+
+//         // Call the deleteButton function with the name as argument
+//         deleteButton(name);
+//     };
+
+//     // Add the delete button to the content box
+//     contentBx.append(delete_button);
+
+//     // Function to handle the delete action
+//     function deleteButton(name) {
+//         // Find the index of the minister to delete
+//         const index = minister_values.findIndex(minister => minister.name.ename === name);
+
+//         // Remove the minister from the minister_values array
+//         minister_values.splice(index, 1);
+
+//         // Update localStorage with the modified array
+//         localStorage.setItem("politician_data", JSON.stringify(minister_values));
+
+//         // Show a success message to the user
+//         // Notify.success("Product Deleted");
+//         alert("delete success fully");
+
+//         // Reload the current page to reflect the changes
+//         window.location.reload();
+//     }
+
+
+
+//     //anchor
+//     anchor5 = document.createElement("a");
+//     anchor5.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister.name["ename"]);
+//     anchor5.innerText = "vief port folio"
+//     contentBx.append(anchor5);
+
+
+
+//     document.querySelector("div.lists1").append(card_div)
+// }
+
+// const deleteButton = document.getElementById("deleteButton");
+
+// <td onclick="deleteButton(${index})"><i class="fa-solid fa-trash"></i></td>
+// function deleteButton(index) {
+
+//     created_products.splice(index, 1);
+
+//     localStorage.setItem("product_list", JSON.stringify(created_products));
+
+//     Notify.success("Product Deleted");
+
+//     self.location.assign(window.location);
+
+// }
+
+
+// deleteButton.onclick = function () {
+//     const confirmed = confirm("Are you sure you want to delete this leader?");
+//     if (!confirmed) {
+//         return false; // prevent the default behavior of following the link
+//     }
+// }
+// const deleteButton= document.getElementById("deleteButton")
+// const urlParams = new URLSearchParams(window.location.search);
+//         const username = urlParams.get("name");
+
+// delete_button.addEventListener("click", function (e) {                   // this isdelete button user want delete user pres and account delete 
+//     let index =minister_values.findIndex(user=>user.name.ename===username);// thisis frofile check and delete
+
+//     if (index !== -1) {     // this is condition not equal to -one 
+
+//         users = [...users.slice(0, index), ...users.slice(index + 1)];  //slice operator
+
+//         localStorage.setItem('politician_data', JSON.stringify(users));   // this is object all of the resotre the collect annother value.
+
+//         window.location.href = "../../index.html";
+
+//         alert("User deleted successfully.");
+
+//     }
+//     e.preventDefault();
+// });
+
+
+// // Get the modal
+// const modal = document.getElementById("editModal");
+
+// // Get the <span> element that closes the modal
+// const span = document.getElementsByClassName("close")[0];
+
+// // Get the form and input elements
+// const form = document.querySelector("form");
+// const nameInput = document.getElementById("name");
+// const positionInput = document.getElementById("position");
+
+// // Add an event listener to the edit button
+// edit_button.addEventListener("click", function () {
+//     // Set the initial values of the form inputs to the current values of the card
+//     nameInput.value = minister.name["tname"];
+//     positionInput.value = minister["position"];
+
+//     // Show the modal
+//     modal.style.display = "block";
+// });
+
+// // When the user clicks on <span> (x), close the modal
+// span.addEventListener("click", function () {
+//     modal.style.display = "none";
+// });
+
+// When
 
 
 
@@ -416,22 +225,22 @@ const searchResults = document.getElementById("search_result");
 
 // Function to create a card for a minister
 
-    function createMinisterCard(minister) {
+function createMinisterCard(minister) {
 
-        const card = document.createElement("div");
-        card.setAttribute("class", "card");
+    const card = document.createElement("div");
+    card.setAttribute("class", "card");
 
-        const name = document.createElement("a");
-        name.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister["ename"]);
-        name.innerText = minister.ename;
-        card.appendChild(name);
+    const name = document.createElement("a");
+    name.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister["ename"]);
+    name.innerText = minister.name.ename;
+    card.appendChild(name);
 
-        const position = document.createElement("p");
-        position.innerText = minister.position;
-        card.appendChild(position);
+    const position = document.createElement("p");
+    position.innerText = minister.position;
+    card.appendChild(position);
 
-        return card;
-    }
+    return card;
+}
 
 
 
@@ -481,18 +290,22 @@ const searchResults = document.getElementById("search_result");
 //     return card;
 // }
 
+
+
 searchInput.addEventListener("input", function (e) {
     const searchTerm = searchInput.value.trim().toLowerCase();
     searchResults.innerHTML = '';
 
+    if (searchTerm === "") {
+        return; // do not display any search results
+    }
 
-
-    const filteredMinisters = minister_name.filter(function (minister) { //this is filter function using this function used to filter the json .
-        const ministerName = minister.ename.trim().toLowerCase();    // all value change in lowercase
+    const filteredMinisters = minister_values.filter(function (minister) { //this is filter function using this function used to filter the json .
+        const ministerName = minister.name.ename.trim().toLowerCase();    // all value change in lowercase
         return ministerName.includes(searchTerm);            // return filter value and sertterm condition check this line
     });
 
-    
+
     if (filteredMinisters.length > 0) {        // card create if condition
         filteredMinisters.forEach(function (minister) {       //for each function this line use this check for minister name ;
             const card_div = createMinisterCard(minister);   // already card create this card call this line
@@ -507,5 +320,42 @@ searchInput.addEventListener("input", function (e) {
 });
 
 
+const addbutton = document.getElementById("addbutton");
+addbutton.addEventListener("click", function () {
+    window.location.href = "../portfolio/profile/profile.html";
+})
 
+
+
+
+
+// function deleteButton(minister) {
+//     // Find the index of the minister to delete
+//     const index = minister_values.findIndex(m => m.name.ename === minister.name.ename);
+
+//     // Remove the minister from the minister_values array
+//     minister_values.splice(index, 1);
+
+//     // Update localStorage with the modified array
+//     localStorage.setItem("politician_data", JSON.stringify(minister_values));
+
+//     // Show a success message to the user
+//     const conform= confirm("Successfully deleted minister: " + minister.name.ename);
+
+//     // Reload the current page to reflect the changes
+//     window.location.reload();
+// }
+// function deleteButton(ministerCard) {
+//     // Find the parent element of the minister card
+//     const parent = ministerCard.card_div;
+
+//     // Remove the minister card from the parent element
+//     parent.removeChild(ministerCard);
+
+//     // Show a success message to the user
+//     const conform = confirm("Successfully deleted minister.");
+
+//     // You can still update the localStorage with the modified array if needed
+//     // localStorage.setItem("politician_data", JSON.stringify(minister_values));
+// }
 

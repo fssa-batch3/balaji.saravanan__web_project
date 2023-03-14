@@ -1,4 +1,4 @@
-const minister_name = [
+let minister_name = [
 
     {
         "image": {
@@ -261,7 +261,12 @@ const minister_name = [
         "ename": "T. Mano Thangaraj",
         "position": "தொழில்நுட்பத்துறை"
     },
-]
+];
+
+
+
+
+
 const url = window.location.search;
 const urlParams = new URLSearchParams(url);
 const username = urlParams.get("name");
@@ -270,7 +275,7 @@ let found = false;
 let i;
 for (i = 0; i < minister_name.length; i++) {
 
-    if (username == minister_name[i].ename) {
+    if (username == minister_name[i].name.ename) {
         found = true;
         break;
     }
@@ -283,18 +288,18 @@ if (found) {
 
 
 
-    // cmImage
-    cmImage = document.createElement("div");
-    cmImage.setAttribute("class", "cm-image");
+    // // cmImage
+    // cmImage = document.createElement("div");
+    // cmImage.setAttribute("class", "cm-image");
 
 
-    //cmPicture
+    // //cmPicture
 
-    cmPicture = document.createElement("img");
-    cmPicture.setAttribute("src", minister_name[i].image.sourse);
-    cmImage.append(cmPicture);
+    // cmPicture = document.createElement("img");
+    // cmPicture.setAttribute("src", minister_name[i].image.sourse);
+    // cmImage.append(cmPicture);
 
-    document.querySelector(".headprofile").append(cmImage);
+    // document.querySelector(".headprofile").append(cmImage);
 
     // cm_name
     cm_name = document.createElement("div");
@@ -331,79 +336,79 @@ if (found) {
     document.querySelector("div.headprofile").append(cm_name);
 
 
-    let profile_nav, unorderlist, list1, link_anchor1, list2, link_anchor2, list3, link_anchor3, list4, link_anchor4, list5, link_anchor5, list6, link_anchor6;
+    // let profile_nav, unorderlist, list1, link_anchor1, list2, link_anchor2, list3, link_anchor3, list4, link_anchor4, list5, link_anchor5, list6, link_anchor6;
 
 
 
-    //profile_nav
-    profile_nav = document.createElement("div");
-    profile_nav.setAttribute("class", "profile-nav");
+    // //profile_nav
+    // profile_nav = document.createElement("div");
+    // profile_nav.setAttribute("class", "profile-nav");
 
-    //unorderlist
-    unorderlist = document.createElement("ul")
-    profile_nav.append(unorderlist);
+    // //unorderlist
+    // unorderlist = document.createElement("ul")
+    // profile_nav.append(unorderlist);
 
-    //list1
-    list1 = document.createElement("li");
-    unorderlist.append(list1);
-    // link_anchor
-    link_anchor1 = document.createElement("a");
-    link_anchor1.setAttribute("href", "#birth");
-    link_anchor1.innerText = "பிறப்பு"
-    list1.append(link_anchor1);
-
-
-    //list1
-    list2 = document.createElement("li");
-    unorderlist.append(list2);
-    // link_anchor
-    link_anchor2 = document.createElement("a");
-    link_anchor2.setAttribute("href", "#education");
-    link_anchor2.innerText = "கல்வி"
-    list2.append(link_anchor2);
+    // //list1
+    // list1 = document.createElement("li");
+    // unorderlist.append(list1);
+    // // link_anchor
+    // link_anchor1 = document.createElement("a");
+    // link_anchor1.setAttribute("href", "#birth");
+    // link_anchor1.innerText = "பிறப்பு"
+    // list1.append(link_anchor1);
 
 
-    //list1
-    list3 = document.createElement("li");
-    unorderlist.append(list3);
-    // link_anchor
-    link_anchor3 = document.createElement("a");
-    link_anchor3.setAttribute("href", "#movie");
-    link_anchor3.innerText = "திரைப்படம்"
-    list3.append(link_anchor3);
+    // //list1
+    // list2 = document.createElement("li");
+    // unorderlist.append(list2);
+    // // link_anchor
+    // link_anchor2 = document.createElement("a");
+    // link_anchor2.setAttribute("href", "#education");
+    // link_anchor2.innerText = "கல்வி"
+    // list2.append(link_anchor2);
 
 
-    //list1
-    list4 = document.createElement("li");
-    unorderlist.append(list4);
-    // link_anchor
-    link_anchor4 = document.createElement("a");
-    link_anchor4.setAttribute("href", "#politics");
-    link_anchor4.innerText = "அரசியல்"
-    list4.append(link_anchor4);
+    // //list1
+    // list3 = document.createElement("li");
+    // unorderlist.append(list3);
+    // // link_anchor
+    // link_anchor3 = document.createElement("a");
+    // link_anchor3.setAttribute("href", "#movie");
+    // link_anchor3.innerText = "திரைப்படம்"
+    // list3.append(link_anchor3);
 
 
-    //list1
-    list5 = document.createElement("li");
-    unorderlist.append(list5);
-    // link_anchor
-    link_anchor5 = document.createElement("a");
-    link_anchor5.setAttribute("href", "#family");
-    link_anchor5.innerText = "குடும்பம்"
-    list5.append(link_anchor5);
+    // //list1
+    // list4 = document.createElement("li");
+    // unorderlist.append(list4);
+    // // link_anchor
+    // link_anchor4 = document.createElement("a");
+    // link_anchor4.setAttribute("href", "#politics");
+    // link_anchor4.innerText = "அரசியல்"
+    // list4.append(link_anchor4);
 
 
-    //list1
-    list6 = document.createElement("li");
-    unorderlist.append(list6);
-    // link_anchor
-    link_anchor6 = document.createElement("a");
-    link_anchor6.setAttribute("href", "#income");
-    link_anchor6.innerText = "வருமானம்"
-    list6.append(link_anchor6);
+    // //list1
+    // list5 = document.createElement("li");
+    // unorderlist.append(list5);
+    // // link_anchor
+    // link_anchor5 = document.createElement("a");
+    // link_anchor5.setAttribute("href", "#family");
+    // link_anchor5.innerText = "குடும்பம்"
+    // list5.append(link_anchor5);
 
 
-    document.querySelector(".cm-total-content").prepend(profile_nav);
+    // //list1
+    // list6 = document.createElement("li");
+    // unorderlist.append(list6);
+    // // link_anchor
+    // link_anchor6 = document.createElement("a");
+    // link_anchor6.setAttribute("href", "#income");
+    // link_anchor6.innerText = "வருமானம்"
+    // list6.append(link_anchor6);
+
+
+    // document.querySelector(".cm-total-content").prepend(profile_nav);
 
 
     let cmcontent_div, birth_div, topic, describe, education_div, topic_education, describe_education, family_div, topic_family, describe_family, movie_div, topic_movie, describe_movie, politics_div, topic_politics, describe_politics, income_div, topic_income, assets_div, table, table_row, table_data_row1, table_data1, table_row1, table_data_row2, table_data2, table_row2, table_data_row3, table_data3, table_row3, table_data_row4, table_data4, assets1_div, assets1_describe, assets_cm_div, total_assets_div, loan_describe;

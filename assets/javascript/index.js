@@ -40,57 +40,73 @@ const registerFromValidation = () => {
     let users = JSON.parse(localStorage.getItem('users')) ?? record;
 
 
-
     user["first_name"] = f_name_value,
         user["last_name"] = l_name_value,
         user["mobile_number"] = mobile_value,
         user["email"] = reg_email_value,
         user["password"] = reg_pass_value;
 
-    let check = true;
+    // let check = true;
 
 
-    if (user_data !== null) {
+    // if (user_data !== null) {
 
 
-        for (let i = 0; i < user_data.length; i++) {
+        //     for (let i = 0; i < user_data.length; i++) {
 
-            if (user_data[i].email === reg_email_value) {
 
-                check = false;
+        //         if (user_data[i].email === reg_email_value) {
+        //             check = false;
 
-            }
+        //         }
 
-            else if (user_data[i].mobile_number === mobile_value) {
+        //         else if (user_data[i].mobile_number === mobile_value) {
 
-                check = false;
+        //             check = false;
 
-                break;
-            }
+        //             break;
+        //         }
 
+        //     }
+
+
+
+        // }
+
+        const isDuplicate = users.find(
+            (user) => user.email === reg_email_value || user.mobile_number === mobile_value
+        );
+
+        if (isDuplicate) {
+            Notify.error("You already have an account");
+        } else {
+            users.push(user);
+            localStorage.setItem("users", JSON.stringify(users));
+            Notify.success("Account created successfully");
         }
 
 
 
-    }
 
 
-
-    if (check) {
-
-        users.push(user);
-
-        localStorage.setItem('users', JSON.stringify(users));
+    
 
 
-        alert("Account created successfully");
+    // if (check) {
+
+    //     users.push(user);
+
+    //     localStorage.setItem('users', JSON.stringify(users));
 
 
-    }
+    //     Notify.success("Account created successfully");
 
-    else {
-        alert("Already Have a account");
-    }
+
+    // }
+
+    // else {
+    //     Notify.error("You Already Have a account");
+    // }
 
 
 }
@@ -133,13 +149,13 @@ const checkregisterFromValidation = () => {
     // }
 
     if (user_data === null) {
-        alert("you first sinup next you come and try")
+        Notify.error("you first sinup next you come and try")
 
     } else {
 
         const email_check = user_data.filter(obj => obj.email == username_value && obj.password == password_value)
 
-        if (email_check.length >= 1) {
+        if (email_check.length == 1) {
 
             let profile_email = username_value;
 
@@ -148,7 +164,8 @@ const checkregisterFromValidation = () => {
             localStorage.setItem("profile_email", profile_email);
 
             window.location.href = "pages/home/home.html"
-            alert("Successfully Login");
+
+            Notify.success("Successfully Login");
 
             checkform.reset();
 
@@ -157,7 +174,7 @@ const checkregisterFromValidation = () => {
 
         }
         else {
-            alert("Email or Password Incorrect");
+            Notify.error("Email or Password Incorrect");
         }
 
 

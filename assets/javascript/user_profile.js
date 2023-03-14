@@ -21,9 +21,9 @@ let saveButton = document.getElementById("save")
 let inputs = document.querySelectorAll("input");    // this is input field select purpase code
 let deleteButton = document.getElementById("delete");
 
-editButton.addEventListener("click", e => {  
+editButton.addEventListener("click", e => {
     e.preventDefault();
-           // edit button function you can press edit button this code activate and enable the input button
+    // edit button function you can press edit button this code activate and enable the input button
     inputs.forEach(input => {
         if (input.type == "email") {
             input.disabled = true;
@@ -36,13 +36,19 @@ editButton.addEventListener("click", e => {
     editButton.disabled = true;
 
     saveButton.disabled = false;
-});
-
-
-
-saveButton.addEventListener("click", e => {    // save button function this button save the values of user object
-
     
+});
+let addres_value = {
+    address: document.getElementById("address").value,
+    occuption: document.getElementById("pin_code").value,
+    city: document.getElementById("city").value,
+    gender: document.getElementById("gender").value
+}
+
+
+saveButton.addEventListener("submit", e => {    // save button function this button save the values of user object
+
+
     inputs.forEach(input => {
         input.disabled = true;
     });
@@ -53,10 +59,8 @@ saveButton.addEventListener("click", e => {    // save button function this butt
     user.first_name = document.getElementById("first_name").value;
     user.last_name = document.getElementById("last_name").value;
     user.mobile_number = document.getElementById("mobile").value;
-    user.address = document.getElementById("address").value;
-    user.pin_code = document.getElementById("pin_code").value;
-    user.city = document.getElementById("city").value;
-    user.gender = document.getElementById("gender").value;
+
+    user.address=addres_value;
     localStorage.setItem('users', JSON.stringify(users));
 
 
@@ -67,7 +71,7 @@ saveButton.addEventListener("click", e => {    // save button function this butt
 
 
 
-deleteButton.addEventListener("click", e => {                   // this isdelete button user want delete user pres and account delete 
+deleteButton.addEventListener("click", function (e) {                   // this isdelete button user want delete user pres and account delete 
     let index = users.findIndex(user => user.email === profile_check);// thisis frofile check and delete
 
     if (index !== -1) {     // this is condition not equal to -one 

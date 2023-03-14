@@ -58,21 +58,21 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-6"><input type="text" class="form-control" id="first_name"
-                                    placeholder="first name" disabled></div>
+                                    placeholder="first name" disabled pattern="[A-Za-z]{1,32}"></div>
                             <div class="col-md-6"><input type="text" id="last_name" class="form-control" value="Doe"
-                                    placeholder="Doe" disabled>
+                                    placeholder="Doe" disabled pattern="[A-Za-z]{1,32}">
                             </div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-6"><input type="email" class="form-control" id="email"
                                     placeholder="Email" disabled></div>
-                            <div class="col-md-6"><input type="text" id="mobile" class="form-control"
-                                    placeholder="Phone number" disabled></div>
+                            <div class="col-md-6"><input type="tel" id="mobile" required class="form-control"
+                                    placeholder="Phone number" disabled minlength="10" maxlength="10"></div>
                         </div>
                         <div class="row mt-3">
                             <div class="col-md-6"><input type="text" id="address" class="form-control"
                                     placeholder="address" value="address" disabled></div>
-                            <div class="col-md-6"><input type="tel" id="pin_code" class="form-control"
+                            <div class="col-md-6"><input type="tel" maxlength="6" id="pin_code" class="form-control"
                                     placeholder="pincode" disabled>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                             <div class="col-md-6"><input type="text" id="city" class="form-control" placeholder="city"
                                     value="" disabled></div>
                             <div class="col-md-6"><input type="text" id="gender" class="form-control" value="male"
-                                    placeholder="gender" disabled></div>
+                                    placeholder="gender" disabled pattern="[A-Za-z]{1,32}"></div>
                         </div>
                         <div class="d-flex flex-row justify-content-between">
 
@@ -88,7 +88,7 @@
                                     type="submit">Save
                                     Profile</button></div>
                             <div class="mt-5 text-right"><button id="delete" class="btn btn-primary profile-button"
-                                    type="submit">Delete Account</button>
+                                    type="">Delete Account</button>
                             </div>
                         </div>
 
@@ -98,15 +98,13 @@
         </div>
     </div>
 
-    <script src="../../assets/javascript/user_profile.js">
+    <script src="../../assets/javascript/user_profile.js">    </script>
 
 
 
 
 
 
-
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+/* @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800'); */
 
 * {
     box-sizing: border-box;
@@ -263,4 +263,19 @@ select:invalid {
     margin: 0 5px;
     height: 40px;
     width: 40px;
+}
+
+
+@media screen and (max-width:600) {
+    form{
+       width:100%;
+    }
+    .overlay-container{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+        
+    }
+    
 }

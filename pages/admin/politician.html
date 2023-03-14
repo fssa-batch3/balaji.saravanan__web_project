@@ -12,61 +12,24 @@
 <body>
 
     <div class="container" id="container">
-    
 
-
-        <form id="politician">
+        <form id="leader-form">
             <h1>Insert your Data</h1>
             <div class="social-container">
-                
+
             </div>
             <span>please give true value</span>
-            <input type="text" id="url" placeholder="pleace insert your picture url">
-            <input type="text" id="tname" placeholder="tamil_Name" />
+            <input type="text" id="tname" value="name" placeholder="tamil_Name" />
             <input type="text" id="ename" placeholder="english_name" />
+            <input type="text" id="url" placeholder="pleace insert your picture url">
             <input type="text" id="position" placeholder="position" />
+            <input type="text" id="party_name" placeholder="party name">
             <textarea name="" id="describe" cols="90" rows="7" placeholder="pleace insert your description"></textarea>
-            <button type="submit">Submit</button>
-
-
+            <button type="submit" id="submit_button">Submit</button>
         </form>
 
 
-
-        <script>
-        
-        const leaderdata= document.getElementById("politician");
-        leaderdata.onsubmit = e =>{
-            const img_url= (document.getElementById("url").value);
-            const tamil_name= (document.getElementById("tname").value);
-            const english_name= (document.getElementById("ename").value);
-            const position= (document.getElementById("position").value);
-            const description= (document.getElementById("describe").value);
-
-
-            let leaderdata={};
-
-            leaderdata["img_url"]=img_url,
-            leaderdata["tamil_name"]=tamil_name,
-            leaderdata["english_name"]=english_name,
-            leaderdata["position"]=position,
-            leaderdata["description"]=description;
-
-            let leaderstore=[];
-
-            let ledergetdata= JSON.parse(localStorage.getItem("politician_data")) || leaderstore;
-
-            ledergetdata.push(leaderdata);
-
-            localStorage.setItem("politician_data", JSON.stringify(ledergetdata));
-
-
-
-
-        }
-        </script>
-
-
+        <script src="../../assets/javascript/leader_profile_create.js"></script>
     </div>
 
 </body>

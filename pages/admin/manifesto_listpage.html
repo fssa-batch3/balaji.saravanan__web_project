@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Lato:300,900);
+
+        body {
+            font-family: Lato;
+           background-color: #333333;
+        }
+
+        p.title {
+            text-align: center;
+            font-size: 45px;
+            color: #efdeff;
+        }
+
+        b {
+            color: #FFFFFF;
+            font-size: 55px;
+        }
+
+        p.remarks,
+        a {
+            text-align: center;
+            margin-top: 100px;
+            color: #FFFFFF;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            min-width: 300px;
+            margin: 0 auto;
+            padding: 0 5vh;
+        }
+
+        /* accordion-1 */
+        #accordion-1 {
+            position: relative;
+            box-shadow: 0px 1px 7px #DBDBDB;
+        }
+
+        #accordion-1 .head {
+            background-color: #FFFFFF;
+            color: #563e6e;
+            padding: 20px 30px;
+            cursor: pointer;
+            transition: 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #accordion-1 .arrow {
+            color: #563e6e;
+            font-size: 60px;
+            transition: 0.25s ease;
+            opacity: 0.3;
+            transform: rotate(-180deg);
+        }
+
+        #accordion-1 .head:hover .arrow {
+            opacity: 1;
+        }
+
+        #accordion-1 .head:hover,
+        #accordion-1 .active {
+            background-color: #FFE77AFF;
+        }
+
+        #accordion-1 .arrow-animate {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+        #accordion-1 .content {
+            background-color: #FFFFFF;
+            display: none;
+            padding: 20px 30px;
+            color: #333333;
+        }
+
+        /* accordion-2 */
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <!-- <div id="accordion-1">
+            <div class="head">
+                <h2>1. Simple Accordion</h2>
+                <i class="fas fa-angle-down arrow"></i>
+            </div>
+            <div class="content">
+                <p>An accordion is used to show and hide content. It can be usuall=rtyuiopcvbnm,.section.</p>
+                <button>complete</button>
+            </div>
+            
+        </div> -->
+
+    </div>
+    <script>
+        // Create the accordion container element
+        const accordion = document.createElement('div');
+        accordion.setAttribute('id', 'accordion-1');
+
+        // Create the head element
+        const head = document.createElement('div');
+        head.setAttribute('class', 'head');
+
+        // Create the h2 element
+        const h2 = document.createElement('h2');
+        h2.textContent = '1. Simple Accordion';
+        head.appendChild(h2);
+
+        // Create the arrow icon element
+        const arrow = document.createElement('i');
+        arrow.setAttribute('class', 'fas fa-angle-down arrow');
+        head.appendChild(arrow);
+
+        // Create the content element
+        const content = document.createElement('div');
+        content.setAttribute('class', 'content');
+        content.style.display = 'none'; // hide content by default
+        content.innerHTML = `
+  <p>An accordion is used to show and hide content. It can be usually a section.</p>
+  <button>complete</button>
+`;
+
+        // Append the head and content elements to the accordion
+        accordion.appendChild(head);
+        accordion.appendChild(content);
+
+        // Add the accordion to the document
+        document.querySelector(".container").append(accordion);
+
+        // Add click functionality to the accordion
+        head.addEventListener('click', function () {
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                arrow.classList.remove('fa-angle-down');
+                arrow.classList.add('fa-angle-up');
+            } else {
+                content.style.display = 'none';
+                arrow.classList.remove('fa-angle-up');
+                arrow.classList.add('fa-angle-down');
+            }
+        });
+    </script>
+
+</body>
+
+</html>

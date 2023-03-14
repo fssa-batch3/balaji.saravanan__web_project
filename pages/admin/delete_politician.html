@@ -1,0 +1,67 @@
+<!-- delete.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <title>Delete Leader</title>
+    <button onclick="openDeleteLeaderPopup()">Open Delete Leader Popup</button>
+
+    <script>
+        function openDeleteLeaderPopup() {
+            window.open("../portfolio/potfolio.html", "width=400,height=400");
+        }
+    </script>
+    <script>
+
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("name");
+
+        function deleteLeader() {
+            const confirmed = confirm("Are you sure you want to delete this leader?");
+            if (confirmed) {
+                const minister_name5 = JSON.parse(localStorage.getItem("politician_data"));
+                const updatedMinisters = minister_name5.filter(function (leader) {
+                    return username !== leader.name.ename;
+                });
+
+                localStorage.setItem("politician_data", JSON.stringify(updatedMinisters));
+                // alert("Leader deleted successfully!");
+                window.location.href = "../portfolio/potfolio.html";
+            }
+        }
+        const deleteButton = document.getElementById("deleteButton");
+
+        deleteButton.addEventListener("click", function (event) {
+            event.preventDefault(); // prevent the default behavior of following the link
+
+            const confirmed = confirm("Are you sure you want to delete this leader?");
+
+            if (confirmed) {
+                deleteLeader();
+            }
+        });
+
+        function cancel() {
+            window.location.href = "index.html";
+        }
+        const confirmed = confirm("Are you sure you want to delete this leader?");
+        // if (confirmed) {
+        //     alert("Leader deleted successfully!");
+        // } else {
+        //     window.location.href = "../portfolio/potfolio.html"; //redirect to portfolio page if user cancels deletion
+        // }
+    </script>
+
+    <h1>Delete Leader</h1>
+    <p>Are you sure you want to delete this leader?</p>
+    <button onclick="deleteLeader()">Yes, Delete</button>
+    <button onclick="cancel()">Cancel</button>
+</body>
+
+</html>

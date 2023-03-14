@@ -1,71 +1,132 @@
+{/* <table class="table table-hover">  
+
+<thead>      
+    <tr>     
+        <th class="text-center">வ.எண்</th>  
+        <th class="text-center">தொகுதி பெயர்</th>   
+        <th class="text-center">வேட்பாளர் பெயர்</th>   
+        <th class="text-center">கட்சிகள்</th>          
+        <th class="text-center">வாக்குகள்</th>         
+        <th class="text-center">வாக்கு வித்தியாசம்</th>   
+        <th class="text-center">வாக்கு விகிதம் %</th>       
+    </tr>
+
+</thead>
+
+<tbody>       
+    <tr>   
+        <td>1</td>    
+        <td><a href="" target="_blank" title="கும்மிடிப்பூண்டி">கும்மிடிப்பூண்டி</a></td>   
+        <td>டி ஜெ கோவிந்தராசன்</td>   
+        <td>                            
+            <div class="name-img">      
+                <img src="../../assets/images/flages/dmk-logo.png" alt="error image"> table_data4_div_img
+                <p>திமுக</p>  
+            </div>
+        </td>
+        <td>126,452</td> 
+        <td>50,938</td>   table_data6
+        <td>56.94 %</td>     table_data7
+    </tr> */}
+
+let table_div, table_head, table_head_row, table_heading1, table_heading2, table_heading3, table_heading4, table_heading5, table_heading6, table_heading7, table_body, table_data_row, table_data1, table_data2, name_link, table_data3, table_data4, table_data4_div, table_data4_img, table_data4_div_desc, table_data5, table_data6, table_data7;
 
 
-    let table, table_row_head, table_heading1, table_heading2, table_hading3, table_heading4, table_row, table_data1, table_data2, data2_div_profile, div_parties, div_fontside, name_div, position_div, backside_div, image_div, button_div, anc_link_div; 
+table_div = document.createElement("table");
+table_div.setAttribute("class", "table");
 
-    table = document.createElement("table");
 
-    table_row_head= document.createElement("tr");
-    table.append(table_row_head);
+table_head = document.createElement("thead");
+table_div.append(table_head);
 
-    table_heading1= document.createElement("th");
-    table_heading1.innerText="Sl.No";
-    table_row_head.append(table_heading1);
+table_head_row = document.createElement("tr");
+table_head.append(table_head_row);
 
-    table_heading2= document.createElement("th");
-    table_heading2.innerText="Governor";
-    table_row_head.append(table_heading2);
+table_heading1 = document.createElement("th");
+table_heading1.setAttribute("class", "text-center");
+table_heading1.innerText = "வ.எண்";
+table_head_row.append(table_heading1);
 
-    table_heading3= document.createElement("th");
-    table_heading3.innerText="இருந்து";
-    table_row_head.append(table_heading3);
+table_heading2 = document.createElement("th");
+table_heading2.setAttribute("class", "text-center");
+table_heading2.innerText = "தொகுதி பெயர்";
+table_head_row.append(table_heading2);
 
-    table_heading4= document.createElement("th");
-    table_heading4.innerText="வரை";
-    table_row_head.append(table_heading4);
+table_heading3 = document.createElement("th");
+table_heading3.setAttribute("class", "text-center");
+table_heading3.innerText = "வேட்பாளர் பெயர்";
+table_head_row.append(table_heading3);
 
-    table_row= document.createElement("tr");
-    table.append(table_row);
+table_heading4 = document.createElement("th");
+table_heading4.setAttribute("class", "text-center");
+table_heading4.innerText = "கட்சிகள்";
+table_head_row.append(table_heading4);
 
-    table_data1= document.createElement("td");
-    table_data1.innerText=1;
-    table_row.append(table_data1);
+table_heading5 = document.createElement("th");
+table_heading5.setAttribute("class", "text-center");
+table_heading5.innerText = "வாக்குகள்";
+table_head_row.append(table_heading5);
 
-    table_data2= document.createElement("td");
-    table_row.append(table_data2);
+table_heading6 = document.createElement("th");
+table_heading6.setAttribute("class", "text-center");
+table_heading6.innerText = "வாக்கு வித்தியாசம்";
+table_head_row.append(table_heading6);
 
-    data2_div_profile=document.createElement("div");
-    data2_div_profile.setAttribute("class", "profile-main");
-    table_data2.append(data2_div_profile);
+table_heading7 = document.createElement("th");
+table_heading7.setAttribute("class", "text-center");
+table_heading7.innerText = "வாக்கு விகிதம் %";
+table_head_row.append(table_heading7);
 
-    div_parties= document.createElement("div");
-    div_parties.setAttribute("class", "parties");
-    data2_div_profile.append(div_parties);
+table_body = document.createElement("tbody");
+table_div.append(table_body);
 
-    div_fontside= document.createElement("div");
-    div_fontside.setAttribute("class", "fontsidepro");
-    div_parties.append(div_fontside);
+table_data_row = document.createElement("tr");
+table_div.append(table_data_row);
 
-    name_div= document.createElement("p");
-    name_div.innerText="ஆர்.என்.ரவி";
-    div_fontside.append(name_div);
+table_data1 = document.createElement("td");
+table_data1.innerText = "1";
+table_data_row.append(table_data1)
 
-    position_div= document.createElement("p")
-    position_div.innerText="ஆளுநர்";
-    div_fontside.append(position_div);
+table_data2 = document.createElement("td");
+table_data_row.append(table_data2)
 
-    backside_div= document.createElement("div");
-    backside_div.setAttribute("class", "backsidepro");
-    div_parties.append(backside_div);
+name_link = document.createElement("a");
+name_link.setAttribute("href", "../../assets");
+name_link.setAttribute("title", "கும்மிடிப்பூண்டி");
+name_link.innerText = "gumudipundi";
+table_data2.append(name_link);
 
-    image_div= document.createElement("img");
-    image_div.setAttribute("src", "../../assets/images/ministers/ravi-gover.jpg");
-    image_div.setAttribute("alt", "error image");
+table_data3 = document.createElement("td");
+table_data3.innerText = "1";
+table_data_row.append(table_data3)
 
-    button_div= document.createElement("button");
-    backside_div.append(button_div);
+table_data4 = document.createElement("td");
+table_data_row.append(table_data4);
 
-    anc_link_div= document.createElement("a");
-    anc_link_div.setAttribute("href", "governer-profile/governer-ravi.html");
-    button_div.append(anc_link_div);
+table_data4_div = document.createElement("div");
+table_data4_div.setAttribute("class", "name-img");
+table_data4.append(table_data4_div);
 
-    document.querySelector(".governer").append(table);
+table_data4_img = document.createElement("img");
+table_data4_img.setAttribute("src", "../../assets/images/flages/dmk-logo.png")
+table_data4_img.setAttribute("alt", "error Image");
+table_data4_div.append(table_data4_img)
+
+
+table_data4_div_desc = document.createElement("p");
+table_data4_div_desc.innerText = "dmk";
+table_data4_div.append(table_data4_div_desc);
+
+table_data5 = document.createElement("td");
+table_data5.innerText = "1";
+table_data_row.append(table_data5)
+
+table_data6 = document.createElement("td");
+table_data6.innerText = "1";
+table_data_row.append(table_data6)
+
+table_data7 = document.createElement("td");
+table_data7.innerText = "1";
+table_data_row.append(table_data7)
+
+document.querySelector(".governer").append(table_div);
