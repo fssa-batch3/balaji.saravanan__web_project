@@ -16,7 +16,7 @@ const regpassword = document.getElementById("regpassword");
 
 
 
-const registerFromValidation = () => {
+const registerFromValidation = () => {       // this is a register page star and this store the value in localstorage 
 
 
     const user_data = JSON.parse(localStorage.getItem("users"));
@@ -45,33 +45,9 @@ const registerFromValidation = () => {
         user["mobile_number"] = mobile_value,
         user["email"] = reg_email_value,
         user["password"] = reg_pass_value;
+        user["id"]=users.length;
 
-    // let check = true;
-
-
-    // if (user_data !== null) {
-
-
-        //     for (let i = 0; i < user_data.length; i++) {
-
-
-        //         if (user_data[i].email === reg_email_value) {
-        //             check = false;
-
-        //         }
-
-        //         else if (user_data[i].mobile_number === mobile_value) {
-
-        //             check = false;
-
-        //             break;
-        //         }
-
-        //     }
-
-
-
-        // }
+  
 
         const isDuplicate = users.find(
             (user) => user.email === reg_email_value || user.mobile_number === mobile_value
@@ -84,29 +60,6 @@ const registerFromValidation = () => {
             localStorage.setItem("users", JSON.stringify(users));
             Notify.success("Account created successfully");
         }
-
-
-
-
-
-    
-
-
-    // if (check) {
-
-    //     users.push(user);
-
-    //     localStorage.setItem('users', JSON.stringify(users));
-
-
-    //     Notify.success("Account created successfully");
-
-
-    // }
-
-    // else {
-    //     Notify.error("You Already Have a account");
-    // }
 
 
 }
@@ -140,13 +93,6 @@ const checkregisterFromValidation = () => {
 
     const username_value = username.value.trim();
     const password_value = password.value.trim();
-
-
-    // if (!username_value || !password_value) {
-
-    //     alert("Please Fill All Required Field");
-
-    // }
 
     if (user_data === null) {
         Notify.error("you first sinup next you come and try")
@@ -186,19 +132,10 @@ const checkregisterFromValidation = () => {
 }
 
 
-
 checkform.addEventListener("submit", (e) => {
     e.preventDefault();
     checkregisterFromValidation();
 });
-
-
-// const signup1 = document.getElementById("submit");
-
-
-// signup1.addEventListener('click', () => {
-//     container.classList.remove("right-panel-active");
-// });
 
 
 const signUpButton = document.getElementById('signUp');

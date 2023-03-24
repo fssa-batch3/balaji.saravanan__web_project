@@ -1,268 +1,268 @@
-let minister_name = [
+// const minister_name = [
 
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/udhayanithi.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "உதயநிதி ஸ்டாலின்",
-        "ename": "Udhayanidhi Stalin",
-        "position": "விளையாட்டுத்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/duraimurugan.jpg",
-            "alter": "DURAIMURUGAN"
-        },
-        "tname": "துரைமுருகன்",
-        "ename": "Durai Murugan",
-        "ppsition": "பொதுச்செயலாளர்"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/kn neru.jpg",
-            "alter": "KN NERU IMAGE"
-        },
-        "tname": "கே. என். நேரு",
-        "ename": "K. N. Nehru",
-        "position": "நகர்ப்புற வளர்ச்சித்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/periyasami.jpg",
-            "alter": "PERIYASAMI IMAGE"
-        },
-        "tname": "ஐ. பெரியசாமி ",
-        "ename": "I. Periyasamy",
-        "position": "கூட்டுறவுத்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/ponkmudi.jpg",
-            "alter": "PONMUDI IMAGE"
-        },
-        "tname": "க. பொன்முடி",
-        "ename": "K. Ponmudy",
-        "position": "உயர் கல்வி "
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/velu.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "எ. வ. வேலு",
-        "ename": "E. V. Velu",
-        "position": "உணவுத் துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/pannerselvam.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "ஆர். கே. பன்னீர்செல்வம்",
-        "ename": "M. R. K. Panneerselvam",
-        "position": "சமூக நலத்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/tanarasu.jpg",
-            "alter": "thangam thennarasu"
-        },
-        "tname": "தங்கம் தென்னரசு",
-        "ename": "Thangam Thennarasu",
-        "position": "தொல்லியல்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/ranachanran.jpg",
-            "alter": "ramachandiran"
-        },
-        "tname": "ஆர்.ராமச்சந்திரன்",
-        "ename": "Ramachandran",
-        "position": "தமிழக வருவாய் துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/regubathy.jpg",
-            "alter": "ragupahty"
-        },
-        "tname": "எஸ். ரகுபதி",
-        "ename": "S. Regupathy",
-        "posoiton": "சட்டத்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/muthusamy.jpg",
-            "alter": "muthusaami"
-        },
-        "tname": "சு. முத்துசாமி",
-        "ename": "S. Muthusamy",
-        "position": "வீட்டு வசதித்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/periyakaruppan.jpg",
-            "alter": "periyasami"
-        },
-        "tname": "கே. ஆர். பெரியகருப்பன்",
-        "ename": "K.R.Periyakaruppan",
-        "position": "ஊரகவளர்ச்சி"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/anbarasan.jpg",
-            "alter": "anbarasan"
-        },
-        "tname": "தா. மோ. அன்பரசன்",
-        "ename": "T. M. Anbarasan",
-        "position": "ஊரக தொழிற்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/saminathan.jpg",
-            "alter": "saaminathan"
-        },
-        "tname": "மு. பெ. சாமிநாதன்",
-        "ename": "M. P. Saminathan",
-        "position": "பதவி: செய்தித்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/geeth.jpg",
-            "alter": "keetha jeevan"
-        },
-        "tname": "பெ. கீதா ஜீவன்",
-        "ename": "Geetha Jeevan",
-        "position": "மகளிர் உரிமைத்துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/anith.jpg",
-            "alter": "anitharadhakirishanan"
-        },
-        "tname": "அனிதா ராதாகிருஷ்ணன்",
-        "ename": "Anitha R. Radhakrishnan",
-        "position": "கால்நடை பராமரிப்பு"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/sivakumar.jpg",
-            "alter": "sivakumar"
-        },
-        "tname": "S .சிவகுமார்",
-        "ename": "S S. Sivakumar",
-        "position": "போக்குவரத்து"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/ramachandran.jpg",
-            "alter": "ramachanran"
-        },
-        "tname": "K.இராமச்சந்திரன்",
-        "ename": "K. Ramachandran",
-        "position": "வனவிலங்கு"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/sakkaraporni.jpg",
-            "alter": "sakrabaani"
-        },
-        "tname": "அர. சக்கரபாணி",
-        "ename": "R. Sakkarapani",
-        "position": "உணவுத் துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/sendil balji.jpg",
-            "alter": "sendhilbalaji"
-        },
-        "tname": "வே. செந்தில்பாலாஜி",
-        "ename": "V. Senthilbalaji",
-        "position": "மின்சாரம்"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/rs ganthi.jpg",
-            "alter": "rs gandhi"
-        },
-        "tname": "ஆர். காந்தி",
-        "ename": "R. Gandhi",
-        "position": "கைத்தறி"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/subramani.jpg",
-            "alter": "subramaniyan"
-        },
-        "tname": "மா. சுப்பிரமணியம்",
-        "ename": "M. Subramaniam",
-        "position": "மக்கள் நல்வாழ்வு"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/mirthi.jpg",
-            "alter": "moorhty p image"
-        },
-        "tname": "பி. மூர்த்தி",
-        "ename": "Moorthy P",
-        "position": "வணிகவரி"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/rajakannapan.jpg",
-            "alter": "udhayanithi stalin"
-        },
-        "tname": "இராஜ கண்ணப்பன்",
-        "ename": "R. S. Raja Kannappan",
-        "position": "பிற்படுத்தப்பட்டோர்"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/segar babu.jpg",
-            "alter": "segar babu"
-        },
-        "tname": "பி. கே. சேகர் பாபு",
-        "ename": "P. K. Sekar Babu",
-        "position": "அறநிலையத் துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/palanivel.jpg",
-            "alter": "palanivel thigarajan"
-        },
-        "tname": "பழனிவேல் தியாகராஜன்",
-        "ename": "Palanivel Thiagarajan",
-        "position": "நிதித்துறை அமைச்சர்"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/nasar.jpg",
-            "alter": "s m nasar"
-        },
-        "tname": "சா. மு. நாசர்",
-        "ename": " S. M. Nasar",
-        "position": "பால் பண்ணை வளர்ச்சி"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/magesh.jpg",
-            "alter": "Anbil Mahesh Poyyamozhi"
-        },
-        "tname": "அன்பில் மகேஷ்",
-        "ename": "Anbil Mahesh Poyyamozhi",
-        "position": "பள்ளிக் கல்வித் துறை"
-    },
-    {
-        "image": {
-            "sourse": "../../../assets/images/ministers/mano.jpg",
-            "alter": "mano thangaraj"
-        },
-        "tname": "மனோ தங்கராஜ்",
-        "ename": "T. Mano Thangaraj",
-        "position": "தொழில்நுட்பத்துறை"
-    },
-];
-
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/udhayanithi.jpg",
+//             "alter": "udhayanithi stalin"
+//         },
+//         "tname": "உதயநிதி ஸ்டாலின்",
+//         "ename": "Udhayanidhi Stalin",
+//         "position": "விளையாட்டுத்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/duraimurugan.jpg",
+//             "alter": "DURAIMURUGAN"
+//         },
+//         "tname": "துரைமுருகன்",
+//         "ename": "Durai Murugan",
+//         "ppsition": "பொதுச்செயலாளர்"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/kn neru.jpg",
+//             "alter": "KN NERU IMAGE"
+//         },
+//         "tname": "கே. என். நேரு",
+//         "ename": "K. N. Nehru",
+//         "position": "நகர்ப்புற வளர்ச்சித்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/periyasami.jpg",
+//             "alter": "PERIYASAMI IMAGE"
+//         },
+//         "tname": "ஐ. பெரியசாமி ",
+//         "ename": "I. Periyasamy",
+//         "position": "கூட்டுறவுத்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/ponkmudi.jpg",
+//             "alter": "PONMUDI IMAGE"
+//         },
+//         "tname": "க. பொன்முடி",
+//         "ename": "K. Ponmudy",
+//         "position": "உயர் கல்வி "
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/velu.jpg",
+//             "alter": "udhayanithi stalin"
+//         },
+//         "tname": "எ. வ. வேலு",
+//         "ename": "E. V. Velu",
+//         "position": "உணவுத் துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/pannerselvam.jpg",
+//             "alter": "udhayanithi stalin"
+//         },
+//         "tname": "ஆர். கே. பன்னீர்செல்வம்",
+//         "ename": "M. R. K. Panneerselvam",
+//         "position": "சமூக நலத்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/tanarasu.jpg",
+//             "alter": "thangam thennarasu"
+//         },
+//         "tname": "தங்கம் தென்னரசு",
+//         "ename": "Thangam Thennarasu",
+//         "position": "தொல்லியல்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/ranachanran.jpg",
+//             "alter": "ramachandiran"
+//         },
+//         "tname": "ஆர்.ராமச்சந்திரன்",
+//         "ename": "Ramachandran",
+//         "position": "தமிழக வருவாய் துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/regubathy.jpg",
+//             "alter": "ragupahty"
+//         },
+//         "tname": "எஸ். ரகுபதி",
+//         "ename": "S. Regupathy",
+//         "posoiton": "சட்டத்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/muthusamy.jpg",
+//             "alter": "muthusaami"
+//         },
+//         "tname": "சு. முத்துசாமி",
+//         "ename": "S. Muthusamy",
+//         "position": "வீட்டு வசதித்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/periyakaruppan.jpg",
+//             "alter": "periyasami"
+//         },
+//         "tname": "கே. ஆர். பெரியகருப்பன்",
+//         "ename": "K.R.Periyakaruppan",
+//         "position": "ஊரகவளர்ச்சி"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/anbarasan.jpg",
+//             "alter": "anbarasan"
+//         },
+//         "tname": "தா. மோ. அன்பரசன்",
+//         "ename": "T. M. Anbarasan",
+//         "position": "ஊரக தொழிற்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/saminathan.jpg",
+//             "alter": "saaminathan"
+//         },
+//         "tname": "மு. பெ. சாமிநாதன்",
+//         "ename": "M. P. Saminathan",
+//         "position": "பதவி: செய்தித்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/geeth.jpg",
+//             "alter": "keetha jeevan"
+//         },
+//         "tname": "பெ. கீதா ஜீவன்",
+//         "ename": "Geetha Jeevan",
+//         "position": "மகளிர் உரிமைத்துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/anith.jpg",
+//             "alter": "anitharadhakirishanan"
+//         },
+//         "tname": "அனிதா ராதாகிருஷ்ணன்",
+//         "ename": "Anitha R. Radhakrishnan",
+//         "position": "கால்நடை பராமரிப்பு"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/sivakumar.jpg",
+//             "alter": "sivakumar"
+//         },
+//         "tname": "S .சிவகுமார்",
+//         "ename": "S S. Sivakumar",
+//         "position": "போக்குவரத்து"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/ramachandran.jpg",
+//             "alter": "ramachanran"
+//         },
+//         "tname": "K.இராமச்சந்திரன்",
+//         "ename": "K. Ramachandran",
+//         "position": "வனவிலங்கு"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/sakkaraporni.jpg",
+//             "alter": "sakrabaani"
+//         },
+//         "tname": "அர. சக்கரபாணி",
+//         "ename": "R. Sakkarapani",
+//         "position": "உணவுத் துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/sendil balji.jpg",
+//             "alter": "sendhilbalaji"
+//         },
+//         "tname": "வே. செந்தில்பாலாஜி",
+//         "ename": "V. Senthilbalaji",
+//         "position": "மின்சாரம்"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/rs ganthi.jpg",
+//             "alter": "rs gandhi"
+//         },
+//         "tname": "ஆர். காந்தி",
+//         "ename": "R. Gandhi",
+//         "position": "கைத்தறி"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/subramani.jpg",
+//             "alter": "subramaniyan"
+//         },
+//         "tname": "மா. சுப்பிரமணியம்",
+//         "ename": "M. Subramaniam",
+//         "position": "மக்கள் நல்வாழ்வு"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/mirthi.jpg",
+//             "alter": "moorhty p image"
+//         },
+//         "tname": "பி. மூர்த்தி",
+//         "ename": "Moorthy P",
+//         "position": "வணிகவரி"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/rajakannapan.jpg",
+//             "alter": "udhayanithi stalin"
+//         },
+//         "tname": "இராஜ கண்ணப்பன்",
+//         "ename": "R. S. Raja Kannappan",
+//         "position": "பிற்படுத்தப்பட்டோர்"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/segar babu.jpg",
+//             "alter": "segar babu"
+//         },
+//         "tname": "பி. கே. சேகர் பாபு",
+//         "ename": "P. K. Sekar Babu",
+//         "position": "அறநிலையத் துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/palanivel.jpg",
+//             "alter": "palanivel thigarajan"
+//         },
+//         "tname": "பழனிவேல் தியாகராஜன்",
+//         "ename": "Palanivel Thiagarajan",
+//         "position": "நிதித்துறை அமைச்சர்"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/nasar.jpg",
+//             "alter": "s m nasar"
+//         },
+//         "tname": "சா. மு. நாசர்",
+//         "ename": " S. M. Nasar",
+//         "position": "பால் பண்ணை வளர்ச்சி"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/magesh.jpg",
+//             "alter": "Anbil Mahesh Poyyamozhi"
+//         },
+//         "tname": "அன்பில் மகேஷ்",
+//         "ename": "Anbil Mahesh Poyyamozhi",
+//         "position": "பள்ளிக் கல்வித் துறை"
+//     },
+//     {
+//         "image": {
+//             "sourse": "../../../assets/images/ministers/mano.jpg",
+//             "alter": "mano thangaraj"
+//         },
+//         "tname": "மனோ தங்கராஜ்",
+//         "ename": "T. Mano Thangaraj",
+//         "position": "தொழில்நுட்பத்துறை"
+//     },
+// ];
+const minister_name = JSON.parse(localStorage.getItem("politician_data"))
 
 
 
@@ -284,16 +284,16 @@ for (i = 0; i < minister_name.length; i++) {
 
 if (found) {
 
-    let cmImage, cmPicture, cm_name, position, position1, position2, position3, position4, position5;
+    let cmImage, cm_name, position, position1, position2, position3, position4, position5;
 
 
 
-    // // cmImage
-    // cmImage = document.createElement("div");
-    // cmImage.setAttribute("class", "cm-image");
+    // cmImage
+    cmImage = document.createElement("div");
+    cmImage.setAttribute("class", "cm-image");
 
 
-    // //cmPicture
+    //cmPicture
 
     // cmPicture = document.createElement("img");
     // cmPicture.setAttribute("src", minister_name[i].image.sourse);
@@ -301,7 +301,7 @@ if (found) {
 
     // document.querySelector(".headprofile").append(cmImage);
 
-    // cm_name
+    // // cm_name
     cm_name = document.createElement("div");
     cm_name.setAttribute("class", "cm-name");
 
@@ -309,106 +309,102 @@ if (found) {
     // position
 
     position = document.createElement("p");
-    position.innerText ="பதவி : " +minister_name[i]["position"];
+    position.innerText = "பதவி : " + minister_name[i]["position"];
     cm_name.append(position);
 
     position1 = document.createElement("p");
-    position1.innerText ="பெயர் : "+ minister_name[i]["tname"];
+    position1.innerText = "பெயர் : " + minister_name[i].name.tname;
     cm_name.append(position1);
 
     position2 = document.createElement("p");
-    position2.innerText = "NAME : " +minister_name[i]["ename"];
+    position2.innerText = "NAME : " + minister_name[i].name.ename;
     cm_name.append(position2);
 
     position3 = document.createElement("p");
-    position3.innerText ="PARTY : "+ "திராவிட முன்னேற்றக் கழகம்"
+    position3.innerText = "PARTY : " + "திராவிட முன்னேற்றக் கழகம்"
     cm_name.append(position3);
 
     position4 = document.createElement("p");
-    position4.innerText ="அரசியல் :" + 45 +"வருடம்";
+    position4.innerText = "அரசியல் :" + 45 + "வருடம்";
     cm_name.append(position4);
 
     position5 = document.createElement("p");
-    position5.innerText ="தொழில் : " +"அரசியல்";
+    position5.innerText = "தொழில் : " + "அரசியல்";
     cm_name.append(position5);
 
 
     document.querySelector("div.headprofile").append(cm_name);
 
 
-    // let profile_nav, unorderlist, list1, link_anchor1, list2, link_anchor2, list3, link_anchor3, list4, link_anchor4, list5, link_anchor5, list6, link_anchor6;
+    let title, unorderList, list, list1img, list1, anchorlink1, list2, anchorlink2, list3, anchorlink3, list4, anchorlink4, list5, anchorlink5, list6, anchorlink6;
+
+                title= document.createElement("div");
+                title.setAttribute("class", "title");
+                title.innerText="side bar";
+                document.querySelector("#sidebar");
+
+                unorderList= document.createElement("ul");
+                unorderList.setAttribute("class", "list-items");
+
+                list= document.createElement("li");
+                unorderList.append(list);
+
+                list1img= document.createElement("img");
+                list1img.setAttribute("src", minister_name[i].img.sourse);
+                list1img.setAttribute("alt", "error image")
+                list.append(list1img);
+
+                list1= document.createElement("li");
+                unorderList.append(list1);
+
+                anchorlink1=document.createElement("a");
+                anchorlink1.setAttribute("href", "#")
+                anchorlink1.innerText="home";
+                list1.append(anchorlink1);
+
+                list2= document.createElement("li");
+                unorderList.append(list2);
+
+                anchorlink2=document.createElement("a");
+                anchorlink2.setAttribute("href", "#")
+                anchorlink2.innerText="home";
+                list2.append(anchorlink2);
+
+                list3= document.createElement("li");
+                unorderList.append(list3);
+
+                anchorlink3=document.createElement("a");
+                anchorlink3.setAttribute("href", "#")
+                anchorlink3.innerText="home";
+                list3.append(anchorlink3);
 
 
+                list4= document.createElement("li");
+                unorderList.append(list4);
 
-    // //profile_nav
-    // profile_nav = document.createElement("div");
-    // profile_nav.setAttribute("class", "profile-nav");
+                anchorlink4=document.createElement("a");
+                anchorlink4.setAttribute("href", "#")
+                anchorlink4.innerText="home";
+                list4.append(anchorlink4);
 
-    // //unorderlist
-    // unorderlist = document.createElement("ul")
-    // profile_nav.append(unorderlist);
+                list5= document.createElement("li");
+                unorderList.append(list5);
 
-    // //list1
-    // list1 = document.createElement("li");
-    // unorderlist.append(list1);
-    // // link_anchor
-    // link_anchor1 = document.createElement("a");
-    // link_anchor1.setAttribute("href", "#birth");
-    // link_anchor1.innerText = "பிறப்பு"
-    // list1.append(link_anchor1);
+                anchorlink5=document.createElement("a");
+                anchorlink5.setAttribute("href", "#")
+                anchorlink5.innerText="home";
+                list5.append(anchorlink5);
 
+                list6= document.createElement("li");
+                unorderList.append(list6);
 
-    // //list1
-    // list2 = document.createElement("li");
-    // unorderlist.append(list2);
-    // // link_anchor
-    // link_anchor2 = document.createElement("a");
-    // link_anchor2.setAttribute("href", "#education");
-    // link_anchor2.innerText = "கல்வி"
-    // list2.append(link_anchor2);
+                anchorlink6=document.createElement("a");
+                anchorlink6.setAttribute("href", "#")
+                anchorlink6.innerText="home";
+                list6.append(anchorlink6);
 
+                document.querySelector("#sidebar").append(unorderList);
 
-    // //list1
-    // list3 = document.createElement("li");
-    // unorderlist.append(list3);
-    // // link_anchor
-    // link_anchor3 = document.createElement("a");
-    // link_anchor3.setAttribute("href", "#movie");
-    // link_anchor3.innerText = "திரைப்படம்"
-    // list3.append(link_anchor3);
-
-
-    // //list1
-    // list4 = document.createElement("li");
-    // unorderlist.append(list4);
-    // // link_anchor
-    // link_anchor4 = document.createElement("a");
-    // link_anchor4.setAttribute("href", "#politics");
-    // link_anchor4.innerText = "அரசியல்"
-    // list4.append(link_anchor4);
-
-
-    // //list1
-    // list5 = document.createElement("li");
-    // unorderlist.append(list5);
-    // // link_anchor
-    // link_anchor5 = document.createElement("a");
-    // link_anchor5.setAttribute("href", "#family");
-    // link_anchor5.innerText = "குடும்பம்"
-    // list5.append(link_anchor5);
-
-
-    // //list1
-    // list6 = document.createElement("li");
-    // unorderlist.append(list6);
-    // // link_anchor
-    // link_anchor6 = document.createElement("a");
-    // link_anchor6.setAttribute("href", "#income");
-    // link_anchor6.innerText = "வருமானம்"
-    // list6.append(link_anchor6);
-
-
-    // document.querySelector(".cm-total-content").prepend(profile_nav);
 
 
     let cmcontent_div, birth_div, topic, describe, education_div, topic_education, describe_education, family_div, topic_family, describe_family, movie_div, topic_movie, describe_movie, politics_div, topic_politics, describe_politics, income_div, topic_income, assets_div, table, table_row, table_data_row1, table_data1, table_row1, table_data_row2, table_data2, table_row2, table_data_row3, table_data3, table_row3, table_data_row4, table_data4, assets1_div, assets1_describe, assets_cm_div, total_assets_div, loan_describe;

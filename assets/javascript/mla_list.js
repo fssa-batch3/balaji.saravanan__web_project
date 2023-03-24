@@ -1,33 +1,4 @@
-{/* <table class="table table-hover">  
 
-<thead>      
-    <tr>     
-        <th class="text-center">வ.எண்</th>  
-        <th class="text-center">தொகுதி பெயர்</th>   
-        <th class="text-center">வேட்பாளர் பெயர்</th>   
-        <th class="text-center">கட்சிகள்</th>          
-        <th class="text-center">வாக்குகள்</th>         
-        <th class="text-center">வாக்கு வித்தியாசம்</th>   
-        <th class="text-center">வாக்கு விகிதம் %</th>       
-    </tr>
-
-</thead>
-
-<tbody>       
-    <tr>   
-        <td>1</td>    
-        <td><a href="" target="_blank" title="கும்மிடிப்பூண்டி">கும்மிடிப்பூண்டி</a></td>   
-        <td>டி ஜெ கோவிந்தராசன்</td>   
-        <td>                            
-            <div class="name-img">      
-                <img src="../../assets/images/flages/dmk-logo.png" alt="error image"> table_data4_div_img
-                <p>திமுக</p>  
-            </div>
-        </td>
-        <td>126,452</td> 
-        <td>50,938</td>   table_data6
-        <td>56.94 %</td>     table_data7
-    </tr> */}
 
 let table_div, table_head, table_head_row, table_heading1, table_heading2, table_heading3, table_heading4, table_heading5, table_heading6, table_heading7, table_body, table_data_row, table_data1, table_data2, name_link, table_data3, table_data4, table_data4_div, table_data4_img, table_data4_div_desc, table_data5, table_data6, table_data7;
 

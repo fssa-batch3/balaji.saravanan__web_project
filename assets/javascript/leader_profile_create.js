@@ -33,6 +33,7 @@ const leaderForm = document.getElementById("leader-form");
 // function createLeader() {
     const registerFromValidation = () =>  {
         // e.preventDefault();
+        let ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
 
         const img_url = document.getElementById("url").value;
         const tamil_name = document.getElementById("tname").value;
@@ -53,9 +54,9 @@ const leaderForm = document.getElementById("leader-form");
             position: position,
             description: description,
             party_name: party_name,
+            id:ministersData.length,
             status:true
         };
-        let ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
 
         ministersData.push(leaderdata);
 
