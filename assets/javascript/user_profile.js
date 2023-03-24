@@ -11,10 +11,6 @@ if (user) {
     document.getElementById("last_name").value = user.last_name;
     document.getElementById("mobile").value = user.mobile_number;
     document.getElementById("email").value = user.email;
-    // document.getElementById("age").value = user.address.address;
-    // document.getElementById("occupation").value = user.address.occuption;
-    // document.getElementById("city").value = user.address.city;
-    // document.getElementById("gender").value = user.address.gender;
 }
 
 
@@ -80,7 +76,6 @@ deleteButton.addEventListener("click", function (e) {                   // this 
 
     if (index !== -1) {     // this is condition not equal to -one 
 
-        // users = [...users.slice(0, index), ...users.slice(index + 1)];  //slice operator
 
         localStorage.removeItem("profile_email");
 

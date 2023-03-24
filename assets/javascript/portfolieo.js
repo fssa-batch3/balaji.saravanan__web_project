@@ -39,7 +39,7 @@ const minister_values = JSON.parse(
 
 minister_values.filter(function (obj) {
 
-  if (obj.status == true) {
+  if (obj.status) {
 
     list_leaders(obj);
 
@@ -116,20 +116,6 @@ function list_leaders(minister) {
   role_name.innerText = "பதவி : " + minister["position"];
   position.append(role_name);
 
-  // create edit button
-  // let edit_button = document.createElement("a");
-  // edit_button.setAttribute("id", "editButton");
-  // edit_button.innerText = "edit";
-
-  // // add onclick event to edit button
-  // edit_button.onclick = function () {
-  //   updateLeader(minister);
-  //   popup.style.display = "flex";
-  // };
-
-  // add edit button to content box
-  // contentBx.append(edit_button);
-
   // create view portfolio anchor
   const anchor5 = document.createElement("a");
   anchor5.setAttribute("href","stick.html?name=" + minister.name["ename"]);
@@ -138,11 +124,6 @@ function list_leaders(minister) {
 
   // append card div to list container
   document.querySelector("div.lists1").append(card_div);
-
-  // let minister_id = minister["id"];
-  // console.log(minister_id);
-
-  // add eventlister for fav
 
   heartButton.addEventListener('click', function (e) {
 
@@ -154,12 +135,12 @@ function list_leaders(minister) {
 
         if (minister.id == obj.min_id) {
 
-          return fav_check = true;
+         fav_check = true;
 
         }
 
       }
-
+      return fav_check;
     });
 
     if (fav_check) {

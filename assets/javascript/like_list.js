@@ -20,9 +20,11 @@ fav_list.find(function(obj){
 
   if(user_id == obj.user_id){
 
-    return user_like_check = true;
+    user_like_check = true;
 
   }
+  
+  return user_like_check;
 
 });
 
