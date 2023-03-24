@@ -11,10 +11,10 @@ if (user) {
     document.getElementById("last_name").value = user.last_name;
     document.getElementById("mobile").value = user.mobile_number;
     document.getElementById("email").value = user.email;
-    document.getElementById("address").value = user.address.address;
-    document.getElementById("pin_code").value = address.occuption;
-    document.getElementById("city").value = address.city;
-    document.getElementById("gender").value = address.gender;
+    // document.getElementById("age").value = user.address.address;
+    // document.getElementById("occupation").value = user.address.occuption;
+    // document.getElementById("city").value = user.address.city;
+    // document.getElementById("gender").value = user.address.gender;
 }
 
 
@@ -60,8 +60,8 @@ saveButton.addEventListener("submit", e => {    // save button function this but
     user.mobile_number = document.getElementById("mobile").value;
     let addres_value = {
 
-        address: document.getElementById("address").value,
-        occuption: document.getElementById("pin_code").value,
+        address: document.getElementById("age").value,
+        occuption: document.getElementById("occupation").value,
         city: document.getElementById("city").value,
         gender: document.getElementById("gender").value
     }
@@ -80,7 +80,9 @@ deleteButton.addEventListener("click", function (e) {                   // this 
 
     if (index !== -1) {     // this is condition not equal to -one 
 
-        users = [...users.slice(0, index), ...users.slice(index + 1)];  //slice operator
+        // users = [...users.slice(0, index), ...users.slice(index + 1)];  //slice operator
+
+        localStorage.removeItem("profile_email");
 
         localStorage.setItem('users', JSON.stringify(users));   // this is object all of the resotre the collect annother value.
 

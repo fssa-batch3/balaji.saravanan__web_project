@@ -9,7 +9,6 @@
     <style>
         body {
             background-color: #DDF0FF;
-            /* font-family: "tenso", sans-serif; */
             color: #586791;
         }
 
@@ -22,7 +21,6 @@
 
         h1 {
             color: #55648E;
-            /* font-family: Lato; */
             font-weight: 300;
             text-align: center;
             font-size: 35px;
@@ -30,7 +28,6 @@
 
         input {
             width: 100%;
-            /* font-family: tenso; */
         }
 
         select {
@@ -41,19 +38,14 @@
 
             padding: 10px 30px;
             border-radius: 8px;
-            /* background: white; */
             border: none;
             -webkit-box-shadow: 2px 1px 39px 16px rgba(198, 225, 244, 0.86);
             -moz-box-shadow: 2px 1px 39px 16px rgba(198, 225, 244, 0.86);
             box-shadow: 2px 1px 39px 16px rgba(198, 225, 244, 0.86);
 
-
-            /* -webkit-appearance: none;
-            /* -moz-appearance: none; */
         }
 
-        /* font-family:tenso;
-        } */
+       
 
         option {
             padding: 20px 30px;
@@ -63,30 +55,6 @@
         .dropdown {
             margin: 40px 20px;
         }
-
-        /* select:hover {
-            cursor: pointer;
-        }
-
-        select:focus {
-            outline: none;
-        } */
-
-        /* select.minimal {
-            background-image:
-                linear-gradient(45deg, transparent 50%, gray 50%),
-                linear-gradient(135deg, gray 50%, transparent 50%),
-                linear-gradient(to right, #fff, #fff);
-            background-position:
-                calc(100% - 30px) calc(1.4em + 2px),
-                calc(100% - 25px) calc(1.4em + 2px),
-                calc(100% - 2.5em) 0.9em;
-            background-size:
-                5px 5px,
-                5px 5px,
-                1px 1.5em;
-            background-repeat: no-repeat;
-        } */
 
 
         input {
@@ -155,21 +123,21 @@
             <div class="col-sm-6">
                 <form id="menifesto_form">
                     Title of Menifesto:<br>
-                    <input type="text" id="menifest_title" placeholder="Title of Menifesto">
+                    <input type="text" id="menifest_title" placeholder="Title of Menifesto" required >
             </div>
             <div class="col-sm-6">
                 stage of Menifesto:<br>
-                <input type="text" id="status_stage" placeholder="the status of the stage">
+                <input type="text" id="status_stage" placeholder="the status of the stage" required>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6">
                 category:<br>
-                <input type="text" id="category" style="color: black;" placeholder="catogery EX: agriculture">
+                <input type="text" id="category" style="color: black;" placeholder="catogery EX: agriculture" required>
             </div>
             <div class="col-sm-6">
                 status:
-                <select class="form-select" aria-label="Default select example" id="mainfesto-status">
+                <select class="form-select" aria-label="Default select example" id="mainfesto-status" required pattern="[A-Za-z]">
                     <option selected>Enter your opinion</option>
                     <option value="complete">complte</option>
                     <option value="bending">bending</option>
@@ -185,6 +153,7 @@
                 <input type="submit" value="Submit" class="submit">
 
                 </form>
+
             </div>
         </div>
 
@@ -233,6 +202,8 @@
 
             e.preventDefault(); // prevent default form submission behavior
             createmenifesto();
+
+            window.location.href="../admin/manifesto_listpage.html"
         });
 
     </script>
