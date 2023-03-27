@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>profile</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
     <style>
         * {
@@ -16,11 +16,7 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* body {
-            display: flex;
-            justify-content: space-between;
-
-        } */
+      
 
         .wrapper {
             height: 100%;
@@ -28,27 +24,6 @@
             position: relative;
         }
 
-        /* .wrapper .menu-btn {
-            position: absolute;
-            left: 20px;
-            top: 10px;
-            background: #4a4a4a;
-            color: #fff;
-            height: 45px;
-            width: 45px;
-            z-index: 9999;
-            border: 1px solid #333;
-            border-radius: 5px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        } */
-
-        /* #btn:checked~.menu-btn {
-            left: 247px;
-        } */
 
         .wrapper .menu-btn i {
             position: absolute;
@@ -66,25 +41,14 @@
             transform: rotate(-180deg);
         }
 
-        /* #btn:checked~.menu-btn i.fa-bars {
-            opacity: 0;
-            transform: rotate(180deg);
-        } */
 
         #sidebar {
             position: fixed;
             background: #404040;
             height: 100%;
             width: 270px;
-            /* overflow: hidden; */
-            /* left: -270px; */
             transition: all 0.3s ease;
         }
-
-        /* 
-        #btn:checked~#sidebar {
-            left: 0;
-        } */
 
         #sidebar .title {
             line-height: 65px;
@@ -172,28 +136,8 @@
         .content {
             margin-left: 20%;
         }
+        
 
-        /* 
-        .content {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #202020;
-            z-index: -1;
-            width: 100%;
-            text-align: center;
-        } */
-
-        /* .content .header {
-            font-size: 45px;
-            font-weight: 700;
-        } */
-/* 
-        .content p {
-            font-size: 40px;
-            font-weight: 700;
-        } */
     </style>
 
 
@@ -201,29 +145,8 @@
 
 <body>
     <div class="wrapper">
-        <!-- <input type="checkbox" id="btn" hidden> -->
-        <!-- <label for="btn" class="menu-btn">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-times"></i>
-        </label> -->
         <nav id="sidebar">
-            <!-- <div class="title">
-                Side Menu
-            </div>
-
-            <ul class="list-items">
-                <li><img src="assets/images/ministers/duraimurugan.jpg" alt=""></li>
-                <br>
-                <br>
-                <br>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Clients</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">About us</a></li>
-                <!-<li><a href="#"><i class="fas fa-globe-asia"></i>Languages</a></li>
-                <li><a href="#"><i class="fas fa-envelope"></i>Contact us</a></li> -->
+     
                 <div class="icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -234,31 +157,10 @@
         </nav>
     </div>
     <div class="content">
-        <!-- <div class="header"></div> -->
+     
 
         <div class="headprofile">
 
-            <!-- cm image put on header -->
-
-
-
-            <!-- 
-            <div class="cm-name">
-
-
-                <p><strong> பதவி:</strong>நகர்ப்புற வளர்ச்சித்துறை</p>
-                <p><strong>பெயர்:</strong>கே. என். நேரு</p>
-                <p><strong>NAME:</strong>K. N. Nehru</p>
-                <p><strong>PARTY:</strong>திராவிட முன்னேற்றக் கழகம்</p>
-                <p><strong>அரசியல்:</strong>32 வருடம்</p>
-                <p><strong>தொழில்</strong>அரசியல்</p>
-
-            </div> -->
-
-            <!-- <div class="cm-image">
-                <img src="../../../assets/images/ministers/kn neru.jpg" alt="error image">
-            </div>
-     -->
         </div>
 
 
@@ -269,138 +171,7 @@
 
 
 
-            <!-- <div class="profile-nav">
-    
-                <ul>
-    
-                    <li><a href="#birth">பிறப்பு</a></li>
-                    <li><a href="#educatiion">கல்வி</a></li>
-                    <li><a href="#movie"></a>அரசியல்</li>
-                    <li><a href="#politics">அரசியல்</a></li>
-                    <li><a href="#family">குடும்பம்</a></li>
-                    <li><a href="#income">வருமானம்</a></li>
-    
-    
-                </ul>
-            </div> -->
-
-
-            <!-- <div class="cmcontent">
-
-                <div id="birth">
-
-                    <h2><strong>பிறப்பு:</strong></h2>
-                    <p>1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார்
-                        தளபதி
-                        என
-                        எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க. ஸ்டாலின். ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக
-                        ஸ்டாலின்
-                        எனப்
-                        பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி. தளபதி உடன் பிறந்தோர், முத்து, அழகிரி,
-                        செல்வி,
-                        தமிழரசு
-                        மற்றும் கனிமொழி.</p>
-                </div>
-
-
-                <div id="educatiion">
-                    <h2><strong>கல்வி</strong></h2>
-                    <p>எம்.கே.ஸ்டாலின் சென்னை கிறிஸ்டியன் கல்லூரி மேல்நிலைப் பள்ளியில் பள்ளிப் படிப்பை முடித்தார்.
-                        பின்னர்
-                        விவேகானந்தா கல்லூரியில் பல்கலைக்கழகத்திற்கு முந்தைய படிப்பை எடுத்தார். பின்னர், ஸ்டாலின்
-                        பி.ஏ. 1973
-                        இல்
-                        சென்னை பல்கலைக்கழகத்தில் உள்ள பிரசிடென்சி கல்லூரியில் வரலாற்றில் பட்டம் பெற்றார்.</p>
-                </div>
-
-
-                <div id="family">
-                    <h2><strong>குடும்பம்:</strong></h2>
-                    <p>மு.க.ஸ்டாலின், ஆகஸ்ட் 25, 1975-இல் துர்கா (என்கிற சாந்தாவை) என்பவரைத் திருமணம் செய்து
-                        கொண்டார்,
-                        இவர்களுக்கு உதயநிதி ஸ்டாலின் என்ற மகனும் செந்தாமரை என்ற மகளும் உள்ளனர்.</p><br>
-                    <p>அவரது மகன் உதயநிதி ஸ்டாலின் நடிகரும் அரசியல்வாதியும் ஆவார், அவர் தமிழ் திரைப்பட இயக்குனர்
-                        கிருத்திகா
-                        என்பவரைத் திருமணம் செய்து கொண்டார்.</p><br>
-                    <p>அவரது மகள் செந்தாமரை சபரீசன் தொழில்முனைவோராகவும், கல்வியாளராகவும் மற்றும் சென்னை சன்ஷைன்
-                        பள்ளிகளின்
-                        இயக்குநராக உள்ளார். அவர் தொழிலதிபர் மற்றும் அரசியல் வியூகவாதி சபரீசன் வேதமூர்த்தியை
-                        மணந்தார்.</p>
-                </div>
-
-                <div id="movie">
-
-                    <h2>திரைப்படம்:</h2>
-                    <p>தளபதி ஸ்டாலின் அவர்கள் சமூக நலக் கருத்துக்களை வலியுறுத்தும் சில திரைப்படங்களிலும்,
-                        தொலைக்காட்சி
-                        தொடர்களிலும் நடித்துள்ளார். ஒரே ரத்தம்(1988), மக்கள் ஆணையிட்டால்(1988), குறிஞ்சி
-                        மலர்(நெடுந்தொடர்)
-                        ஆகிய
-                        படைப்புகளில் கதாநாயகனாக நடித்துள்ளார்.
-                    </p>
-                </div>
-
-                <div id="politics">
-                    <h2>அரசியல்</h2>
-                    <p>இளைஞரணி அமைப்பு ரீதியாக 1980 இல் மதுரையிலே உள்ள சான்சிராணி பூங்காவிலே தொடங்கப்பட்டது 1982 இல்
-                        திருச்சியிலே 2ம் ஆண்டு விழாவில் 7 பேரை கொண்ட ஒரு அமைப்புக் குழு உருவாக்கப்பட்டது. அந்த
-                        அமைப்புக்
-                        குழுவில் தளபதி மு.க.ஸ்டாலின் ஒரு அமைப்பாளராக நியமிக்கப்பட்டார்.</p><br>
-                    <p>2003இல் நடைபெற்ற திமுகவின் பொதுக்கூட்டத்தில், துணை பொதுச்செயலாளராக ஸ்டாலின்
-                        அறிவிக்கப்பட்டார்.</p>
-                    <p>2008 ம் ஆண்டு திமுகவின் பொருளாளர் பதவிக்கு தேர்ந்தெடுக்கப்பட்டார்.</p>
-
-
-                </div>
-
-                <div id="income">
-                    <h2>வருமானம்</h2>
-
-                    <div class="assets">
-
-                        <table>
-
-                            <tr>
-                                <td>
-                                    ஆண்டு
-                                </td>
-                                <td>₹24.60 Lakh</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    மாதாந்திர</td>
-                                <td>₹2.05 Lakh</td>
-                            </tr>
-                            <tr>
-                                <td>வாரந்தோறும்</td>
-                                <td>₹51 Lakh</td>
-                            </tr>
-                            <tr>
-                                <td>தினசரி</td>
-                                <td>Rs. 6k</td>
-                            </tr>
-
-                        </table>
-
-                    </div>
-
-
-                    <div class="assets1">
-                        <p>நிகர மதிப்பு ₹8.89 CRORE</p>
-
-                        <div class="assetscm">
-                            <p>சொத்துக்கள் ₹8.89 CRORE</p>
-                            <p>கடன்கள் ₹ N/A</p>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-
-
-            </div> -->
+        
 
         </div>
         <h1>Comment Section</h1>
