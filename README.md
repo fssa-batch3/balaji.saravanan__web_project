@@ -19,3 +19,45 @@ wire framing :           https://drive.google.com/file/d/1Xf0dAGK7TlTKlub9sVsr4T
 
 
 live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
+
+
+# Blog
+
+## user
+
+### Create an account
+- Scenario 1: Successfully create an account
+    - Steps:
+        1. Navigate to the registration page.
+        2. Enter the required information such as name, email, and password.
+        3. Click the "Create Account" button.
+    - Expected Result:
+        - The user is redirected to the login page.
+
+### Create an account
+- Scenario 1: Successfully login in to account
+    - Steps:
+        1. Navigate to the login page.
+        2. Enter the required information such as email, and password.
+        3. Click the "login" button.
+    - Expected Result:
+        - The user is redirected to home page.
+
+
+### View leader profile/leaders
+- Scenario 1: Successfully view profile leader/items
+    - Steps:
+        1. Log in as a user.
+        2. Navigate to the leader profile listing page.
+        3. View the list of available products/items.
+    - Expected Result:
+        - The user can view the list of available leader profile .
+
+### View leader profile details
+- Scenario 1: Successfully view profile leader details/item details
+    - Steps:
+        1. Log in as a user.
+        2. Navigate to the leader profile detailes page.
+        3. Select a leader profile to view its details.
+    - Expected Result:
+        - The user can view the details of the selected leader profile details.
