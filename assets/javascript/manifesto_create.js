@@ -1,43 +1,43 @@
-const menifesto_form = document.getElementById("menifesto_form");
 
-const createmenifesto = () => {
-    // Get the existing manifesto data from local storage
-    let menifesto_data = JSON.parse(localStorage.getItem("menifesto_data")) ?? [];
+const manifestoForm = document.getElementById("manifesto_form");
 
-    // Get the values of the form inputs
-    const title = document.getElementById("menifest_title").value;
-    const stage = document.getElementById("status_stage").value;
-    const category = document.getElementById("category").value;
-    const status = document.getElementById("mainfesto-status").value;
+const createManifesto = () => {
+  // Get the existing manifesto data from local storage
+  const manifestoData = JSON.parse(localStorage.getItem("manifesto_data")) ?? [];
 
-    // Create a new manifesto object with a unique ID
-    const newManifesto = {
-        id: menifesto_data.length,
-        title,
-        stage,
-        category,
-        status,
-        delete: true,
-        time: new Date().getTime()
-    };
+  // Get the values of the form inputs
+  const title = document.getElementById("manifesto_title").value;
+  const stage = document.getElementById("status_stage").value;
+  const category = document.getElementById("category").value;
+  const status = document.getElementById("manifesto-status").value;
 
-    // Add the new manifesto object to the existing manifesto data
+  // Create a new manifesto object with a unique ID
+  const newManifesto = {
+    id: manifestoData.length,
+    title,
+    stage,
+    category,
+    status,
+    delete: true,
+    time: new Date().getTime()
+  };
 
-    menifesto_data.push(newManifesto);
+  // Add the new manifesto object to the existing manifesto data
+  addManifesto(newManifesto, manifestoData);
 
-    // Store the updated manifesto data in local storage
-    
-    localStorage.setItem("menifesto_data", JSON.stringify(menifesto_data));
+  // Store the updated manifesto data in local storage
+  localStorage.setItem("manifesto_data", JSON.stringify(manifestoData));
 
-    // Reset the form
-    document.getElementById("menifesto_form").reset();
+  // Reset the form
+  document.getElementById("manifesto_form").reset();
 };
 
+const addManifesto = (newManifesto, manifestoData) => {
+  manifestoData.push(newManifesto);
+};
 
-menifesto_form.addEventListener("submit", e => {
-
-    e.preventDefault(); // prevent default form submission behavior
-    createmenifesto();
-
-    window.location.href="../admin/manifesto_listpage.html"
+manifestoForm.addEventListener("submit", e => {
+  e.preventDefault(); // prevent default form submission behavior
+  createManifesto();
+  window.location.href = "../admin/manifesto_listpage.html";
 });

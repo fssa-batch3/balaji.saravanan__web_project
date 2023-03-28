@@ -3,10 +3,10 @@ const closeBtn = document.getElementById('closeBtn');
 
 closeBtn.addEventListener('click', function () {
 
-    popup.style.display = 'none'; // hide the form
+    popup.style.display = 'none'; //hide the manifesto popup
 });
 
-const manifesto = JSON.parse(localStorage.getItem("menifesto_data"));
+let manifesto = JSON.parse(localStorage.getItem("manifesto_data"));
 
 for (const menifesto_value of manifesto) {
 
@@ -30,14 +30,6 @@ for (const menifesto_value of manifesto) {
     arrow.setAttribute('class', 'fas fa-angle-down arrow');
     head.appendChild(arrow);
 
-    // Create the content element
-    // const content = document.createElement('div');
-    // content.setAttribute('class', 'content');
-    // content.style.display = 'none'; // hide content by default
-    // content.innerHTML = `
-    //  <p>An accordion is used to show and hide content. It can be usually a section.</p>
-    //  <button></button>`;
-
     const content = document.createElement('div');
     content.setAttribute('class', 'content');
     content.style.display = 'none'; // hide content by default
@@ -51,26 +43,26 @@ for (const menifesto_value of manifesto) {
     content.appendChild(paragraph);
     content.appendChild(button);
 
-    const delete4 = document.createElement('button');
-    // delete4.setAttribute('class', 'arrow');
-    delete4.innerHTML = "update"
-    delete4.onclick = function () {
+    const updateButton = document.createElement('button');
+    // updateButton.setAttribute('class', 'arrow');
+    updateButton.innerHTML = "update"
+    updateButton.onclick = function () {
         popup.style.display = 'block';
 
         updateMenifesto(menifesto_value);
     }
-    content.appendChild(delete4);
+    content.appendChild(updateButton);
 
 
-    const delete5 = document.createElement('button');
+    let deleteButton = document.createElement('button');
     // delete4.setAttribute('class', 'arrow');
-    delete5.innerHTML = "delete"
-    delete5.onclick = function () {
+    deleteButton.innerHTML = "delete"
+    deleteButton.onclick = function () {
         // popup.style.display = 'block';
 
         deleteLeader(menifesto_value);
     }
-    content.appendChild(delete5);
+    content.appendChild(deleteButton);
 
     // Append the head and content elements to the accordion
     accordion.appendChild(head);
@@ -95,16 +87,17 @@ for (const menifesto_value of manifesto) {
 let manifestoId = null;
 const menifestoForm = document.getElementById("menifesto_form");
 
-const manifesto_value = JSON.parse(localStorage.getItem("menifesto_data")) ?? [];
+const manifesto_value = JSON.parse(localStorage.getItem("manifesto_data")) ?? [];
 
 // Function to update leader data
-function updateMenifesto(menifesto) {
+function updateMenifesto(manifesto) {
     // Set form values to current leader data
-    document.getElementById("menifest_title").value = menifesto.title;
-    document.getElementById("status_stage").value = menifesto.stage;
-    document.getElementById("catogery").value = menifesto.catogery;
-    document.getElementById("mainfesto-status").value = menifesto.status;
-    manifestoId = menifesto.id;
+    document.getElementById("menifest_title").value = manifesto.title;
+    document.getElementById("status_stage").value = manifesto.stage;
+    document.getElementById("catogery").value = manifesto.catogery;
+    document.getElementById("mainfesto-status").value = manifesto.status;
+    manifestoId = manifesto.id;
+
     console.log(manifestoId);
 
 
@@ -132,7 +125,7 @@ function handleSubmit(e) {
     };
 
     // Find index of current leader in ministersData
-    const index = manifesto_value.findIndex((menifesto5) => menifesto5.id == manifestoId);
+    const index = manifesto_value.findIndex((menifesto5) => menifesto5.id === manifestoId);
 
     // If leader is found, update their data and save to localStorage
     if (index !== -1) {
@@ -140,7 +133,7 @@ function handleSubmit(e) {
         manifesto_value[index] = menifesto;
 
         alert("menifesto updated successfully!");
-        localStorage.setItem("menifesto_data", JSON.stringify(manifesto_value));
+        localStorage.setItem("manifesto_data", JSON.stringify(manifesto_value));
         window.location.reload();
     }
 
@@ -150,14 +143,14 @@ function handleSubmit(e) {
 menifestoForm.addEventListener("submit", handleSubmit);
 
 function deleteLeader(menifesto1) {
-    const menifesto_value = JSON.parse(localStorage.getItem("menifesto_data")) ?? [];
+    const menifesto_value = JSON.parse(localStorage.getItem("manifesto_data")) ?? [];
 
     const index = menifesto_value.findIndex((manifesto) => manifesto.title === menifesto1.title);
 
     // If leader is found, update their status to false and save to localStorage
     if (index !== -1) {
         menifesto_value[index].delete = true;
-        localStorage.setItem("menifesto_data", JSON.stringify(menifesto_value));
+        localStorage.setItem("manifesto_data", JSON.stringify(menifesto_value));
         alert("manifesto successfully!");
         window.location.reload();
     }

@@ -118,7 +118,7 @@ function list_leaders(minister) {
 
   // create view portfolio anchor
   const anchor5 = document.createElement("a");
-  anchor5.setAttribute("href","stick.html?name=" + minister.name["ename"]);
+  anchor5.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
   anchor5.innerText = "view portfolio";
   contentBx.append(anchor5);
 
@@ -131,11 +131,11 @@ function list_leaders(minister) {
 
     favorite_minister.find(function (obj) {
 
-      if (user_id == obj.user_id) {
+      if (user_id === obj.user_id) {
 
-        if (minister.id == obj.min_id) {
+        if (minister.id === obj.min_id) {
 
-         fav_check = true;
+          fav_check = true;
 
         }
 
@@ -174,72 +174,72 @@ function list_leaders(minister) {
 }
 
 
-const leaderForm = document.getElementById("leader-form");
+// const leaderForm = document.getElementById("leader-form");
 
 let ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
 
 // Function to update leader data
-function updateLeader(leader) {
-  // Set form values to current leader data
-  document.getElementById("url").value = leader.img.source;
+// function updateLeader(leader) {
+//   // Set form values to current leader data
+//   document.getElementById("url").value = leader.img.source;
 
-  document.getElementById("tname").value = leader.name.tname;
+//   document.getElementById("tname").value = leader.name.tname;
 
-  document.getElementById("ename").value = leader.name.ename;
+//   document.getElementById("ename").value = leader.name.ename;
 
-  document.getElementById("position").value = leader.position;
+//   document.getElementById("position").value = leader.position;
 
-  document.getElementById("describe").value = leader.description;
+//   document.getElementById("describe").value = leader.description;
 
-  document.getElementById("party_name").value = leader.party_name;
-}
+//   document.getElementById("party_name").value = leader.party_name;
+// }
 
 // Function to handle form submission
-function handleSubmit(e) {
-  e.preventDefault();
-  const img_url = document.getElementById("url").value;
+// function handleSubmit(e) {
+//   e.preventDefault();
+//   const img_url = document.getElementById("url").value;
 
-  const tamil_name = document.getElementById("tname").value;
+//   const tamil_name = document.getElementById("tname").value;
 
-  const english_name = document.getElementById("ename").value;
+//   const english_name = document.getElementById("ename").value;
 
-  const position = document.getElementById("position").value;
+//   const position = document.getElementById("position").value;
 
-  const description = document.getElementById("describe").value;
+//   const description = document.getElementById("describe").value;
 
-  const party_name = document.getElementById("party_name").value;
+//   const party_name = document.getElementById("party_name").value;
 
-  const leaderdata = {
-    name: {
-      tname: tamil_name,
-      ename: english_name,
-    },
-    img: {
-      source: img_url,
-      alter: english_name,
-    },
-    position: position,
-    description: description,
-    party_name: party_name,
-    status: true,
-  };
+//   const leaderdata = {
+//     name: {
+//       tname: tamil_name,
+//       ename: english_name,
+//     },
+//     img: {
+//       source: img_url,
+//       alter: english_name,
+//     },
+//     position: position,
+//     description: description,
+//     party_name: party_name,
+//     status: true,
+//   };
 
-  // Find index of current leader in ministersData
-  const index = ministersData.findIndex((leader) => leader.name.ename === english_name);
+//   // Find index of current leader in ministersData
+//   const index = ministersData.findIndex((leader) => leader.name.ename === english_name);
 
-  // If leader is found, update their data and save to localStorage
-  if (index !== -1) {
+//   // If leader is found, update their data and save to localStorage
+//   if (index !== -1) {
 
-    ministersData[index] = leaderdata;
+//     ministersData[index] = leaderdata;
 
-    localStorage.setItem("politician_data", JSON.stringify(ministersData));
-    alert("Leader updated successfully!");
-    window.location.reload();
-  }
-}
+//     localStorage.setItem("politician_data", JSON.stringify(ministersData));
+//     alert("Leader updated successfully!");
+//     window.location.reload();
+//   }
+// }
 
-// Add event listener to form submission
-leaderForm.addEventListener("submit", handleSubmit);
+// // Add event listener to form submission
+// leaderForm.addEventListener("submit", handleSubmit);
 
 
 
@@ -270,9 +270,11 @@ function createMinisterCard(minister) {
 
 searchInput.addEventListener("input", function (e) {
   const searchTerm = searchInput.value.trim().toLowerCase();
+  searchResults.style.display='block';
   searchResults.innerHTML = '';
 
   if (searchTerm === "") {
+    searchResults.style.display='none';
     return; // do not display any search results
   }
 

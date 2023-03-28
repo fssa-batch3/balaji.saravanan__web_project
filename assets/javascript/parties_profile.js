@@ -1,5 +1,5 @@
 
-for (let i = 0; i < 4; i++) {
+
 
     const name_list = [
 
@@ -66,7 +66,7 @@ for (let i = 0; i < 4; i++) {
 
     let anchor;
 
-
+    for (let i = 0; i < name_list.length; i++) {
 
     // parties_main_div
     parties_main_div = document.createElement("div");
