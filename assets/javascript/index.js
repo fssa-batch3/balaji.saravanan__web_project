@@ -92,7 +92,7 @@ const checkregisterFromValidation = () => {
     const password_value = password.value.trim();
 
     if (user_data === null) {
-        Notify.error("you first sinup next you come and try")
+        // Notify.error("you first sinup next you come and try")
 
     } else {
 
@@ -108,7 +108,7 @@ const checkregisterFromValidation = () => {
 
             window.location.href = "pages/home/home.html"
 
-            Notify.success("Successfully Login");
+            // Notify.success("Successfully Login");
 
             checkform.reset();
 
@@ -117,7 +117,7 @@ const checkregisterFromValidation = () => {
 
         }
         else {
-            Notify.error("Email or Password Incorrect");
+            // Notify.error("Email or Password Incorrect");
         }
 
 
