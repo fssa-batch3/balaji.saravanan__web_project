@@ -25,7 +25,7 @@ live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
 
 ## user
 
-### Create an account
+### Create an account(complete)
 - Scenario 1: Successfully create an account
     - Steps:
         1. Navigate to the registration page.
@@ -34,7 +34,7 @@ live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
     - Expected Result:
         - The user is redirected to the login page.
 
-### Create an account
+### Create an account (complete)
 - Scenario 1: Successfully login in to account
     - Steps:
         1. Navigate to the login page.
@@ -44,7 +44,7 @@ live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
         - The user is redirected to home page.
 
 
-### View leader profile/leaders
+### View leader profile/leaders (complete)
 - Scenario 1: Successfully view profile leader/items
     - Steps:
         1. Log in as a user.
@@ -53,7 +53,7 @@ live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
     - Expected Result:
         - The user can view the list of available leader profile .
 
-### View leader profile details
+### View leader profile details (complete)
 - Scenario 1: Successfully view profile leader details/item details
     - Steps:
         1. Log in as a user.
@@ -62,7 +62,7 @@ live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
     - Expected Result:
         - The user can view the details of the selected leader profile details.
 
-### favorite list/item to like list
+### favorite list/item to like list (complete)
 - Scenario 1: Successfully add product/item to cart
     - Steps:
         1. Log in as a user.
@@ -72,7 +72,7 @@ live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
     - Expected Result:
         - The product/item is added to the user's cart.
 
-### View Favorite lish page 
+### View Favorite lish page  (complete)
 - Scenario 1: Successfully view view favorite profile list
     - Steps:
         1. Log in as a user.
