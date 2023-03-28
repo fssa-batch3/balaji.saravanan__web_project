@@ -61,3 +61,24 @@ live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
         3. Select a leader profile to view its details.
     - Expected Result:
         - The user can view the details of the selected leader profile details.
+
+### favorite list/item to like list
+- Scenario 1: Successfully add product/item to cart
+    - Steps:
+        1. Log in as a user.
+        2. Navigate to the product listing page.
+        3. Select a product/item to add to cart.
+        4. Click the "Add to Cart" button.
+    - Expected Result:
+        - The product/item is added to the user's cart.
+
+### View Favorite lish page 
+- Scenario 1: Successfully view view favorite profile list
+    - Steps:
+        1. Log in as a user.
+        2. Navigate to the fovorite page.
+        3. View the list of items in the favorite page.
+    - Expected Result:
+        - The user can view the list of  leader profile favorite list.
+
+

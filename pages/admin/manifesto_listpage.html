@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <title>Document</title>
     <style>
-
         p.title {
             text-align: center;
             font-size: 45px;
@@ -88,7 +87,7 @@
             color: #586791;
         }
 
-     
+
 
         h1 {
             color: #55648E;
@@ -97,7 +96,7 @@
             font-size: 35px;
         }
 
-      
+
 
         select {
             width: 50%;
@@ -114,7 +113,7 @@
 
         }
 
-      
+
         option {
             padding: 20px 30px;
         }
@@ -179,28 +178,27 @@
         }
 
         .popup {
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 20%;
-    }
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 20%;
+        }
 
-    /* Popup content */
-    .popup-content {
-      background-color: #f9f9f9;
-      padding: 20px;
-      border-radius: 5px;
-    }
+        /* Popup content */
+        .popup-content {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
 
-    /* Close button */
-   
+        /* Close button */
     </style>
 </head>
 
@@ -253,7 +251,7 @@
                 </div>
             </div>
             <div class="row">
-                
+
                 <div class="col-sm-6">
                     <input type="submit" value="Submit" class="submit">
 
@@ -289,7 +287,7 @@
 
             // Create the h2 element
             const h2 = document.createElement('h2');
-            h2.textContent = '1. Simple Accordion';
+            h2.textContent = menifesto_value.title;
             head.appendChild(h2);
 
             // Create the arrow icon element
@@ -298,15 +296,28 @@
             head.appendChild(arrow);
 
             // Create the content element
+            // const content = document.createElement('div');
+            // content.setAttribute('class', 'content');
+            // content.style.display = 'none'; // hide content by default
+            // content.innerHTML = `
+            //  <p>An accordion is used to show and hide content. It can be usually a section.</p>
+            //  <button></button>`;
+
             const content = document.createElement('div');
             content.setAttribute('class', 'content');
             content.style.display = 'none'; // hide content by default
-            content.innerHTML = `
-             <p>An accordion is used to show and hide content. It can be usually a section.</p>
-             <button>complete</button>`;
 
-            const delete4 = document.createElement('i');
-            delete4.setAttribute('class', 'arrow');
+            const paragraph = document.createElement('p');
+            paragraph.textContent = menifesto_value.stage;
+
+            const button = document.createElement('button');
+            button.innerText=menifesto_value.status;
+
+            content.appendChild(paragraph);
+            content.appendChild(button);
+
+            const delete4 = document.createElement('button');
+            // delete4.setAttribute('class', 'arrow');
             delete4.innerHTML = "update"
             delete4.onclick = function () {
                 popup.style.display = 'block';
@@ -314,6 +325,17 @@
                 updateMenifesto(menifesto_value);
             }
             content.appendChild(delete4);
+
+            
+            const delete5 = document.createElement('button');
+            // delete4.setAttribute('class', 'arrow');
+            delete5.innerHTML = "delete"
+            delete5.onclick = function () {
+                // popup.style.display = 'block';
+
+                deleteLeader(menifesto_value);
+            }
+            content.appendChild(delete5);
 
             // Append the head and content elements to the accordion
             accordion.appendChild(head);
@@ -379,7 +401,9 @@
 
             // If leader is found, update their data and save to localStorage
             if (index !== -1) {
+
                 manifesto_value[index] = menifesto;
+                
                 alert("menifesto updated successfully!");
                 localStorage.setItem("menifesto_data", JSON.stringify(manifesto_value));
                 window.location.reload();
@@ -397,9 +421,9 @@
 
             // If leader is found, update their status to false and save to localStorage
             if (index !== -1) {
-                ministersData[index].status = false;
-                localStorage.setItem("politician_data", JSON.stringify(ministersData));
-                alert("Leader status changed successfully!");
+                menifesto_value[index].delete = true;
+                localStorage.setItem("menifesto_data", JSON.stringify(menifesto_value));
+                alert("manifesto successfully!");
                 window.location.reload();
             }
         }
