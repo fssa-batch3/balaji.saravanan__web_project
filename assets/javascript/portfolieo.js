@@ -125,7 +125,7 @@ function list_leaders(minister) {
   // append card div to list container
   document.querySelector("div.lists1").append(card_div);
 
-  heartButton.addEventListener('click', function (e) {
+  heartButton.addEventListener('click', function () {
 
     let fav_check = false;
 

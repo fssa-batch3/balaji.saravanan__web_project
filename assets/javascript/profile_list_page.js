@@ -7,7 +7,8 @@ closeBtn.addEventListener('click', function () {
     popup.style.display = 'none'; // hide the form
 });
 const minister_list = JSON.parse(localStorage.getItem("politician_data"));
-const timestamp = new Date().getTime();
+
+// const timestamp = new Date().getTime();
 
 // create HTML elements
 

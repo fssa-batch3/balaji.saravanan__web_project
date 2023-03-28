@@ -18,9 +18,6 @@ const regpassword = document.getElementById("regpassword");
 
 const registerFromValidation = () => {       // this is a register page star and this store the value in localstorage 
 
-
-    const user_data = JSON.parse(localStorage.getItem("users"));
-
     const f_name_value = f_name.value.trim();
     const l_name_value = l_name.value.trim();
     const mobile_value = mobilenumber.value.trim();
