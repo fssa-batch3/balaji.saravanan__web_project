@@ -51,11 +51,11 @@ const registerFromValidation = () => {       // this is a register page star and
         );
 
         if (isDuplicate) {
-            Notify.error("You already have an account");
+            // Notify.error("You already have an account");
         } else {
             users.push(user);
             localStorage.setItem("users", JSON.stringify(users));
-            Notify.success("Account created successfully");
+            // Notify.success("Account created successfully");
         }
 
 
