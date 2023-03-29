@@ -20,65 +20,200 @@ wire framing :           https://drive.google.com/file/d/1Xf0dAGK7TlTKlub9sVsr4T
 
 live link:    https://fssa-batch3.github.io/balaji.saravanan__web_project/
 
+INFORMATION BLOG
 
-# Blog
 
-## user
+FEATURES :
 
-### Create an account(complete)
-- Scenario 1: Successfully create an account
-    - Steps:
-        1. Navigate to the registration page.
-        2. Enter the required information such as name, email, and password.
-        3. Click the "Create Account" button.
-    - Expected Result:
-        - The user is redirected to the login page.
+USER:
 
-### Create an account (complete)
-- Scenario 1: Successfully login in to account
-    - Steps:
+ACCOUNT CREATING :  ( COMPLETED )
+
+* Sign-up
+* Sign-in
+* View profile
+* Edit profile
+* Sign-out
+
+LEADER PROFILE LIST :  ( COMPLETED )
+
+* View leaders list
+* View leaders detail
+* like leaders list
+
+
+WISHLIST :  ( COMPLETED )
+
+* Add leaders
+* Remove leader
+
+
+LEADER PROFILE :  ( COMPLETED )
+
+* Upload product
+* View product list
+* View product detail
+* Edit product detail
+* Remove product from product list
+* Add product to the product list
+* Delete product
+
+
+
+MANIFESTO LIST :  ( COMPLETED )
+
+* Upload Manifesto
+* View Manifesto list
+* Edit Manifesto
+* Delete Manifesto
+
+
+USER STORY :
+
+USER :
+
+CREATE AN ACCOUNT :  ( COMPLETED )
+
+* Scenario 1: Successfully created an account
+    * Steps :
+        1. Navigate to the sign-up page.
+        2. Fill the required details such as name, phone number and password.
+        3. Click the "Submit" button.
+    * Expected result :
+        * The user is redirected to the login page.
+
+CREATE AN ACCOUNT :  ( COMPLETED )
+    
+* Scenario 1: Successfully logged in to your account
+    * steps :
         1. Navigate to the login page.
-        2. Enter the required information such as email, and password.
-        3. Click the "login" button.
-    - Expected Result:
-        - The user is redirected to home page.
+        2. Fill the required informations such as email id and password.
+        3. Click the "Submit" button.
+    * Expected result :
+        * The user is redirected to the profile page.
 
+VIEW PROFILE :  ( COMPLETED ) 
 
-### View leader profile/leaders (complete)
-- Scenario 1: Successfully view profile leader/items
-    - Steps:
-        1. Log in as a user.
+* Scenario 1: Create a profile
+    * steps :
+        1. Login as a user.
+        2. Navigate to the profile page.
+        3. View the user details such as name and phone number.
+    * Expected result :
+        * The user can view their profile details.
+
+EDIT PROFILE :  ( COMPLETED )
+
+* Scenario 1: Edit the profile
+    * steps :
+        1. Login as a user.
+        2. Navigate to the profile page.
+        3. Click edit button.
+        4. Update the user details.
+        5. Click "Save" button to save the details.
+    * Expected result :
+        * The details of the user has been updated.
+
+VIEW LEADER PROFILE :  ( COMPLETED )
+
+* Scenario 1: Successfully view Leader profile
+    * Steps :
+        1. Login as a user.
         2. Navigate to the leader profile listing page.
-        3. View the list of available products/items.
-    - Expected Result:
-        - The user can view the list of available leader profile .
+        3. View the list of available leader profile list.
+    * Expected result :
+        * The user can view the list of available leader profile list.
 
-### View leader profile details (complete)
-- Scenario 1: Successfully view profile leader details/item details
-    - Steps:
-        1. Log in as a user.
-        2. Navigate to the leader profile detailes page.
-        3. Select a leader profile to view its details.
-    - Expected Result:
-        - The user can view the details of the selected leader profile details.
+VIEW LEADER PROFILE DETAIL :  ( COMPLETED )
 
-### favorite list/item to like list (complete)
-- Scenario 1: Successfully add product/item to cart
-    - Steps:
-        1. Log in as a user.
-        2. Navigate to the product listing page.
-        3. Select a product/item to add to cart.
-        4. Click the "Add to Cart" button.
-    - Expected Result:
-        - The product/item is added to the user's cart.
+* Scenario 1: Successfully view leader detail details
+    * Steps:
+        1. Login as a user.
+        2. Select a leader profile to view its details.
+    * Expected result:
+        * The user can view the details of the selected leader profile details. 
 
-### View Favorite lish page  (complete)
-- Scenario 1: Successfully view view favorite profile list
-    - Steps:
-        1. Log in as a user.
-        2. Navigate to the fovorite page.
-        3. View the list of items in the favorite page.
-    - Expected Result:
-        - The user can view the list of  leader profile favorite list.
+ADD LEADER PROFILE TO THE WISHLIST :  ( COMPLETED )
 
+* Scenario 1: Successfully add leader profile to the wishlist
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the profile list page.
+        3. Select the leader to view its list.
+        4. Click the "Wishlist" button to add the leader to the wishlist.
+    * Expected result :
+        * The user is redirected to the wishlist page.
+        * The profile  is added to the wishlist.
+
+REMOVE LEADER PROFILE FROM THE WISHLIST :  ( COMPLETD )
+
+* Scenario 1: Remove the product/item from the wishlist
+    * steps :
+        1. Login as a user.
+        2. Navigate to the wishlist page.
+        3. Remove the selected list from the leader.
+        4. Click the "Delete" icon to remove the selected item.
+    * Expected Result:
+        * The item is removed from the user's wishlist.
+
+
+UPLOAD NEW LEADER PROFILE TO VIEW :  ( COMPLETD )
+
+* Scenario 1: Successfully uploaded the nEW LEADER PROFILE
+    * Steps :
+        1. Login as a USER.
+        2. Navigate to the My products page to ADD the new LEADER PROFILE.
+        3. Click "Add Leader" button to upload the new LEADER PROFILE.
+        4. Enter the required leader profile details such as name, description, and position.
+        5. Click the "submit" button to submit the new LEADER PROFILE.
+    * Expected result :
+        * The new product is created and added to the new profile leader.
+
+VIEW THE LIST OF LEADER PROFILE :  ( COMPLETD )
+
+* Scenario 1: Successfully view list of leader profiles
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the profile list page.
+        3. View the list.
+    * Expected result :
+        * The user can view the list of leader frofile.
+
+EDIT THE LEADER PROFILE :  ( COMPLETD )
+
+* Scenario 1: Successfully edit the LEADER PROFILE details
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the leader profile page page.
+        3. Select a leader to update.
+        4. Click the "update" button.
+        5. Update the product details.
+        6. Click the "Save" button to update the leader details.
+    * Expected result:
+        * The profile details are updated.
+
+DELETE THE LEADER KEY :  ( COMPLETED )
+
+* Scenario 1: Update: Successfully deleted the KEY
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the leader list page page.
+        3. Select the leaders to delete.
+        4. Click the "Delete" button to  not delete but not show in main page key status only change the selected leader.
+    * Expected result :
+        * The product is deleted status key changed in json from the profile list page page.
+
+
+
+UPLOAD NEW MANIFESTO TO VIEW :  ( COMPLETD )
+
+* Scenario 1: Successfully uploaded the new MANIFESTO
+    * Steps :
+        1. Login as a USER.
+        2. Navigate to the My products page to ADD the new Manifesto.
+        3. Click "Add Leader" button to upload the new Manifesto.
+        4. Enter the required leader profile details such as title, stage, and status.
+        5. Click the "submit" button to submit the new Manifeso.
+    * Expected result :
+        * The new product is created and added to the new manifesto.
 

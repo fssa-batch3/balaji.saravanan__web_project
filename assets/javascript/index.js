@@ -52,6 +52,9 @@ const registerFromValidation = () => {       // this is a register page star and
         } else {
             users.push(user);
             localStorage.setItem("users", JSON.stringify(users));
+
+            container.classList.remove("right-panel-active");
+            
             Notify.success("Account created successfully");
         }
 
@@ -103,7 +106,7 @@ const checkregisterFromValidation = () => {
 
             localStorage.setItem("profile_email", profile_email);
 
-            window.location.href = "pages/home/home.html"
+            window.location.href = "pages/your opinion/profilepage.html"
 
             Notify.success("Successfully Login");
 
@@ -133,10 +136,13 @@ checkform.addEventListener("submit", (e) => {
 
 
 const signUpButton = document.getElementById('signUp');
+
 const signInButton = document.getElementById('signIn');
+
 const container = document.getElementById('container');
 
 signUpButton.addEventListener('click', () => {
+
     container.classList.add("right-panel-active");
 });
 
