@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <style>
         body {
@@ -19,10 +20,18 @@
             background: #F5F9FB;
             border-top-left-radius: 6px;
             border-bottom-left-radius: 6px;
+
+
+        }
+
+        .card {
+            box-shadow: -1px 9px 14px 7px rgba(26, 22, 26, 0.53);
+
         }
 
         .horizontal-card-btn-container {
             width: 140px;
+
         }
 
         /* form page start*/
@@ -93,16 +102,152 @@
             background-color: #3e8e41;
         }
 
-        .horizontal-card-bg-img img{
+        .horizontal-card-bg-img img {
             width: 100%;
             height: 100%;
+        }
+
+        .custom-select {
+            display: block;
+            width: 20%;
+            height: 3rem;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .custom-select:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+        }
+
+        .custom-select option {
+            font-weight: 400;
+            background-color: #fff;
+            color: #495057;
+        }
+
+        .select {
+            display: flex;
+
         }
     </style>
     <title>Document</title>
 </head>
 
 <body>
+
+
+    <div class="totalnav">
+
+        <div class="headvideo1">
+            <video autoplay muted loop id="myVideo">
+                <source src="../../assets/images/essecial/Pattern - 85590.mp4" type="video/mp4">
+                <track default />
+            </video>
+        </div>
+
+        <!-- navbar -->
+
+        <div class="navbar">
+
+            <div class="topic">
+                <h1>POLITIFACT</h1>
+            </div>
+
+            <div class="topic1">
+                <p class="contact"><a href="#">தொடர்பு</a></p>
+                <p class="contact">|</p>
+                <p class="contact"><a href="#">பின்னூட்டம்</a></p>
+                <p><a href="../../English-version/manifesto/bending-english.html">English</a></p>
+                <p>|</p>
+                <p><a href="bending.html">தமிழ்</a></p>
+            </div>
+
+        </div>
+
+        <!-- navbar1 -->
+
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item pe-5">
+                            <a class="nav-link active" aria-current="page" href="../home/home.html">முகப்பு</a>
+                        </li>
+                        <li class="nav-item pe-5">
+                            <a class="nav-link" href="../portfolio/parties-profile.html">விவரம்</a>
+                        </li>
+                        <li class="nav-item dropdown pe-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                அறிக்கைகள்
+                            </a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><a class="dropdown-item" href="bending.html">நிலுவை</a></li>
+                                <li><a class="dropdown-item" href="complte.html">நிறைவு</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item pe-5">
+                            <a class="nav-link" href="../passt leaders/past leaders.html">தலைவர்கள்</a>
+                        </li>
+                        <li class="nav-item dropdown pe-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                மேலும்
+                            </a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><a class="dropdown-item" href="../more/Governer list.html">ஆளுநர்கள்</a></li>
+                                <li><a class="dropdown-item" href="../more/mla.html">பிரதிநிதிகள்</a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="select">
+
+
+        <select class="custom-select" id="">
+            <option selected>Choose an option</option>
+            <option value="CM">CM</option>
+            <option value="MP">MLA</option>
+            <option value="MLA">MP</option>
+        </select>
+        <select class="custom-select" id="">
+            <option selected>Choose an option</option>
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+        </select>
+        <select class="custom-select" id="">
+            <option selected>Choose an option</option>
+            <option value="">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+        </select>
+
+    </div>
     <div class="container">
+
 
     </div>
     <div class="popup" id="leader-popup" style="display: none;">
@@ -136,7 +281,7 @@
     </div>
 
 
-   <script src="../../assets/javascript/profile_list_page.js"></script>
+    <script src="../../assets/javascript/profile_list_page.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 

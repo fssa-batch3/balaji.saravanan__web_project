@@ -11,9 +11,16 @@
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <title>manifesto</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;800;900&display=swap"
+        rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -107,7 +114,8 @@
 
 
     <div class="manisurvey">
-        <img src="../../assets/images/piecharts/நிறைவு.svg" width="768px" height="500px" class="img-fluid" alt="error image">
+        <img src="../../assets/images/piecharts/நிறைவு.svg" width="768px" height="500px" class="img-fluid"
+            alt="error image">
     </div>
 
 
@@ -162,11 +170,11 @@
                             <li><a class="dropdown-item" href="#aggriculture">வேளாண்மை</a></li>
                             <li><a class="dropdown-item" href="#water">நீர் மேலாண்மை</a></li>
                             <li><a class="dropdown-item" href="#fishers">மீனவர் நலன்</a></li>
-                            <li><a class="dropdown-item"href="#education">கல்வி</a></li>
+                            <li><a class="dropdown-item" href="#education">கல்வி</a></li>
                             <li><a class="dropdown-item" href="#employment">வேலைவாய்ப்பு </a></li>
                             <li><a class="dropdown-item" href="#electricity">மின்சாரம்</a></li>
                             <li><a class="dropdown-item" href="#transport">போக்குவரத்து</a></li>
-                            <li><a class="dropdown-item"  href="#disabilities">மாற்று திறனாளி நலன்</a></li>
+                            <li><a class="dropdown-item" href="#disabilities">மாற்று திறனாளி நலன்</a></li>
                             <li><a class="dropdown-item" href="#woman">மகளிர் நலன்</a></li>
                             <li><a class="dropdown-item" href="#citizens">முதியோர் நலன்</a></li>
                             <li><a class="dropdown-item" href="#law">நீதித்துறை</a></li>
@@ -183,7 +191,7 @@
             </div>
             <!-- rules page start -->
 
-            <div id="aggriculture" class="rules">
+            <!-- <div id="aggriculture" class="rules">
                 <h2># விவசாயச் சட்டங்களை திமுக ரத்து செய்யும்.</h2>
                 <hr>
                 <button>நிறைவு</button>
@@ -526,10 +534,53 @@
                     முறையில் பராமரிக்கப்படும். இந்த விவகாரங்கள் குறித்து விசாரணை நடத்த தனி பிரிவுகள்
                     உருவாக்கப்படும்.தகவல் சரியாக பராமரிப்பதில்லை
                 </p>
-            </div>
+            </div> -->
+
+
+            <script>
+
+                const manifesto = JSON.parse(localStorage.getItem("manifesto_data"))
+
+                manifesto.filter(function (manifesto) {
+                    if (manifesto.delete == false && manifesto.status == "complete") {
+                        // Create a new div element
+                        const aggriculture = document.createElement("div");
+                        aggriculture.setAttribute("id", "aggriculture");
+                        aggriculture.setAttribute("class", "rules");
+
+                        // Create a new h2 element
+                        const h2 = document.createElement("h2");
+                        h2.textContent = manifesto.title;
+
+                        // Create a new hr element
+                        const hr = document.createElement("hr");
+
+                        // Create a new button element
+                        const button = document.createElement("button");
+                        button.setAttribute("class", "rulescolor");
+                        button.textContent = "நிறைவு";
+
+                        // Create a new p element
+                        const p = document.createElement("p");
+                        const strong = document.createElement("strong");
+                        strong.textContent = "status:";
+                        p.appendChild(strong);
+                        p.appendChild(document.createTextNode("விவசாழி நலன் இன்றும் சரியில்லாமல் தான் இருக்கிறது. இந்த அறிக்கை இறுக்கிறதா என்று கூட தெரியவில்லை"));
+
+                        // Append child elements to the parent div
+                        aggriculture.appendChild(h2);
+                        aggriculture.appendChild(hr);
+                        aggriculture.appendChild(button);
+                        aggriculture.appendChild(p);
+
+                        document.querySelector(".complete").append(aggriculture)
+
+                    }
+                })
 
 
 
+            </script>
         </div>
 
 

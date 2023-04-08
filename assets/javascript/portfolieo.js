@@ -187,7 +187,7 @@ function createMinisterCard(minister) {
   card.setAttribute("class", "card");
 
   const name = document.createElement("a");
-  name.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister["ename"]);
+  name.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
   name.innerText = minister.name.ename;
   card.appendChild(name);
 
@@ -229,11 +229,12 @@ searchInput.addEventListener("input", function (e) {
 });
 
 
-const addbutton = document.getElementById("addbutton");
-addbutton.addEventListener("click", function () {
-})
+// const addbutton = document.getElementById("addbutton");
+// addbutton.addEventListener("click", function () {
+// })
 
 
-
-
-
+let button= document.createElement("a");
+button.setAttribute("href", "../admin/politician.html?name="+"");
+button.innerText="add";
+document.querySelector(".create").append(button);

@@ -6,7 +6,7 @@ closeBtn.addEventListener('click', function () {
     popup.style.display = 'none'; //hide the manifesto popup
 });
 
-let manifesto = JSON.parse(localStorage.getItem("manifesto_data"));
+const manifesto = JSON.parse(localStorage.getItem("manifesto_data"));
 
 for (const menifesto_value of manifesto) {
 

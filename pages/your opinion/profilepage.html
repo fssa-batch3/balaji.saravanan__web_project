@@ -11,7 +11,9 @@
 
     <style>
         body {
-            background: #100413;
+            /* background: #100413; */
+            box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
+
         }
 
         .form-control:focus {
@@ -29,16 +31,26 @@
             color: #682773;
             cursor: pointer;
         }
+        .img_div{
+            box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
+            border-radius: 20px;
+            margin-top: 75px;
+            
+        }
+        .img_div img{
+            width: 150px;
+            height: 150px;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container rounded bg-white mt-5">
-        <div class="row d-flex flex-column align-items-center justify-content-center">
+        <div class="row">
             <div class="col-md-4 border-right">
-                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5"
-                        src="https://lh6.googleusercontent.com/sixRDdVV_O-OdBsjyuwfD1WdcbedO8oFFUaw0AAShbFD6Ib2-1S2OWAvk1mNlqPApy8=w1200-h630-p"
+                <div class="img_div d-flex flex-column align-items-center text-center p-3 py-5"><img
+                        src="../../assets/images/ministers/anith.jpg"
                         width="90">
                     <span class="font-weight-bold"></span><span class="text-black-50">23456789</span><span>United
                         States</span>

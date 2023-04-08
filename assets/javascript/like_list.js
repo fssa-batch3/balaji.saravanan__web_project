@@ -23,7 +23,7 @@
 //     user_like_check = true;
 
 //   }
-  
+
 //   return user_like_check;
 
 // });
@@ -99,25 +99,62 @@ if (user_like_check) {
 
 function list_likes(item) {
   // create the elements
-  let cardDiv = document.createElement("div");
-  let cardImageDiv = document.createElement("div");
-  let cardImage = document.createElement("img");
-  let cardTitleDiv = document.createElement("div");
-  let cardTitle = document.createElement("p");
+  let cardLink = document.createElement('a');
+  cardLink.href = "#";
+  cardLink.classList.add('card');
 
-  // set the attributes
-  cardDiv.classList.add("card");
-  cardImageDiv.classList.add("card_image");
-  cardImage.setAttribute("src", item.image.sourse);
-  cardTitleDiv.classList.add("card_title", "title-white");
+  let cardBottom = document.createElement('div');
+  cardBottom.classList.add('card-bottom');
 
-  // set the text content
-  cardTitle.textContent = item.name.tname;
+  let cardText = document.createElement('div');
+  cardText.classList.add('card-text');
 
-  // append the elements
-  cardImageDiv.appendChild(cardImage);
-  cardTitleDiv.appendChild(cardTitle);
-  cardDiv.appendChild(cardImageDiv);
-  cardDiv.appendChild(cardTitleDiv);
-  document.querySelector(".cards-list").appendChild(cardDiv);
+  let cardContents = document.createElement('div');
+  cardContents.classList.add('card-contents');
+
+  let cardTitle = document.createElement('p');
+  cardTitle.classList.add('card-title');
+  cardTitle.textContent = item.name.ename;
+
+  let cardText2 = document.createElement('button');
+  cardText2.classList.add('card-text');
+  cardText2.textContent = "delete";
+  cardText2.onclick = function () {
+    deleteLeader(item)
+  }
+
+
+
+  cardContents.appendChild(cardTitle);
+  cardContents.appendChild(cardText2);
+  cardText.appendChild(cardContents);
+  cardBottom.appendChild(cardText);
+
+  let cardTop = document.createElement('div');
+  cardTop.classList.add('card-top', 'card1');
+
+  let image = document.createElement('img');
+  image.setAttribute("src", item.image.sourse);
+  image.setAttribute("alt", item.name.ename);
+  cardTop.append(image);
+
+  cardLink.appendChild(cardBottom);
+  cardLink.appendChild(cardTop);
+
+
+  document.querySelector(".card-container").appendChild(cardLink);
+}
+
+function deleteLeader(minister) {
+  const ministersData = JSON.parse(localStorage.getItem("fav_minister")) ?? [];
+
+  const index = ministersData.findIndex((leader) => leader.name.ename === minister.name.ename);
+
+  // If leader is found, delete the object from the array and save to localStorage
+  if (index !== -1) {
+    ministersData.splice(index, 1);
+    localStorage.setItem("fav_minister", JSON.stringify(ministersData));
+    alert("Leader deleted successfully!");
+    window.location.reload();
+  }
 }

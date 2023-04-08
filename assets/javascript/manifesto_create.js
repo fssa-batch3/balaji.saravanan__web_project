@@ -18,7 +18,7 @@ const createManifesto = () => {
     stage,
     category,
     status,
-    delete: true,
+    delete: false,
     time: new Date().getTime()
   };
 

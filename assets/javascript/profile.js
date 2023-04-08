@@ -262,17 +262,20 @@
 //         "position": "தொழில்நுட்பத்துறை"
 //     },
 // ];
-const minister_name = JSON.parse(localStorage.getItem("politician_data"))
-
+const minister_name = JSON.parse(localStorage.getItem("politician_data"));
 
 
 
 const url = window.location.search;
+
 const urlParams = new URLSearchParams(url);
+
 const username = urlParams.get("name");
 
 let found = false;
+
 let i;
+
 for (i = 0; i < minister_name.length; i++) {
 
     if (username == minister_name[i].name.ename) {
@@ -317,6 +320,7 @@ if (found) {
     cm_name.append(position1);
 
     position2 = document.createElement("p");
+    position2.setAttribute("id", "minister-name")
     position2.innerText = "NAME : " + minister_name[i].name.ename;
     cm_name.append(position2);
 
@@ -338,72 +342,72 @@ if (found) {
 
     let title, unorderList, list, list1img, list1, anchorlink1, list2, anchorlink2, list3, anchorlink3, list4, anchorlink4, list5, anchorlink5, list6, anchorlink6;
 
-                title= document.createElement("div");
-                title.setAttribute("class", "title");
-                title.innerText="side bar";
-                document.querySelector("#sidebar");
+    title = document.createElement("div");
+    title.setAttribute("class", "title");
+    title.innerText = "side bar";
+    document.querySelector("#sidebar");
 
-                unorderList= document.createElement("ul");
-                unorderList.setAttribute("class", "list-items");
+    unorderList = document.createElement("ul");
+    unorderList.setAttribute("class", "list-items");
 
-                list= document.createElement("li");
-                unorderList.append(list);
+    list = document.createElement("li");
+    unorderList.append(list);
 
-                list1img= document.createElement("img");
-                list1img.setAttribute("src", minister_name[i].img.sourse);
-                list1img.setAttribute("alt", "error image")
-                list.append(list1img);
+    list1img = document.createElement("img");
+    list1img.setAttribute("src", minister_name[i].img.sourse);
+    list1img.setAttribute("alt", "error image")
+    list.append(list1img);
 
-                list1= document.createElement("li");
-                unorderList.append(list1);
+    list1 = document.createElement("li");
+    unorderList.append(list1);
 
-                anchorlink1=document.createElement("a");
-                anchorlink1.setAttribute("href", "#")
-                anchorlink1.innerText="home";
-                list1.append(anchorlink1);
+    anchorlink1 = document.createElement("a");
+    anchorlink1.setAttribute("href", "#")
+    anchorlink1.innerText = "home";
+    list1.append(anchorlink1);
 
-                list2= document.createElement("li");
-                unorderList.append(list2);
+    list2 = document.createElement("li");
+    unorderList.append(list2);
 
-                anchorlink2=document.createElement("a");
-                anchorlink2.setAttribute("href", "#")
-                anchorlink2.innerText="home";
-                list2.append(anchorlink2);
+    anchorlink2 = document.createElement("a");
+    anchorlink2.setAttribute("href", "#")
+    anchorlink2.innerText = "home";
+    list2.append(anchorlink2);
 
-                list3= document.createElement("li");
-                unorderList.append(list3);
+    list3 = document.createElement("li");
+    unorderList.append(list3);
 
-                anchorlink3=document.createElement("a");
-                anchorlink3.setAttribute("href", "#")
-                anchorlink3.innerText="home";
-                list3.append(anchorlink3);
+    anchorlink3 = document.createElement("a");
+    anchorlink3.setAttribute("href", "#")
+    anchorlink3.innerText = "home";
+    list3.append(anchorlink3);
 
 
-                list4= document.createElement("li");
-                unorderList.append(list4);
+    list4 = document.createElement("li");
+    unorderList.append(list4);
 
-                anchorlink4=document.createElement("a");
-                anchorlink4.setAttribute("href", "#")
-                anchorlink4.innerText="home";
-                list4.append(anchorlink4);
+    anchorlink4 = document.createElement("a");
+    anchorlink4.setAttribute("href", "#")
+    anchorlink4.innerText = "home";
+    list4.append(anchorlink4);
 
-                list5= document.createElement("li");
-                unorderList.append(list5);
+    list5 = document.createElement("li");
+    unorderList.append(list5);
 
-                anchorlink5=document.createElement("a");
-                anchorlink5.setAttribute("href", "#")
-                anchorlink5.innerText="home";
-                list5.append(anchorlink5);
+    anchorlink5 = document.createElement("a");
+    anchorlink5.setAttribute("href", "#")
+    anchorlink5.innerText = "home";
+    list5.append(anchorlink5);
 
-                list6= document.createElement("li");
-                unorderList.append(list6);
+    list6 = document.createElement("li");
+    unorderList.append(list6);
 
-                anchorlink6=document.createElement("a");
-                anchorlink6.setAttribute("href", "#")
-                anchorlink6.innerText="home";
-                list6.append(anchorlink6);
+    anchorlink6 = document.createElement("a");
+    anchorlink6.setAttribute("href", "#")
+    anchorlink6.innerText = "home";
+    list6.append(anchorlink6);
 
-                document.querySelector("#sidebar").append(unorderList);
+    document.querySelector("#sidebar").append(unorderList);
 
 
 
@@ -573,4 +577,7 @@ if (found) {
     alert("not match ministers")
 }
 
+// position2 = document.createElement("p");
+// position2.innerText = "NAME : " + minister_name[i].name.ename;
+// cm_name.append(position2);
 

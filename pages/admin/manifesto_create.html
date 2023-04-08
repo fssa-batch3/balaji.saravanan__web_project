@@ -36,6 +36,7 @@
             background-color: #586791;
             letter-spacing: .04em;
 
+            margin: 20px 0px 20px 0px;
             padding: 10px 30px;
             border-radius: 8px;
             border: none;
@@ -132,8 +133,21 @@
         </div>
         <div class="row">
             <div class="col-sm-6">
-                category:<br>
-                <input type="text" id="category" style="color: black;" placeholder="catogery EX: agriculture" required>
+                category:
+                <select class="form-select" aria-label="Default select example" id="category" required pattern="[A-Za-z]">
+                    <option selected>Enter your opinion</option>
+                    <option value="aggriculture">aggriculture</option>
+                    <option value="water">water</option>
+                    <option value="fishers">fishers</option>
+                    <option value="education">education</option>
+                    <option value="employment">employment</option>
+                    <option value="electricity">electricity</option>
+                    <option value="transport">transport</option>
+                    <option value="disabilities">disabilities</option>
+                    <option value="woman">woman</option>
+                    <option value="law">law</option>
+
+                </select>
             </div>
             <div class="col-sm-6">
                 status:

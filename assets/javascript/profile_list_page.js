@@ -83,7 +83,7 @@ for (const minister of minister_list) {
     document.querySelector('.container').append(row);
 }
 
-
+let profile_leder_id= null;
 const leaderForm = document.getElementById("leader-form");
 
 const ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
@@ -102,6 +102,8 @@ function updateLeader(leader) {
     document.getElementById("describe").value = leader.description;
 
     document.getElementById("party_name").value = leader.party_name;
+
+    profile_leder_id= leader.id;
 }
 
 // Function to handle form submission
@@ -132,10 +134,11 @@ function handleSubmit(e) {
         description: description,
         party_name: party_name,
         status: true,
+        id:profile_leder_id,
     };
 
     // Find index of current leader in ministersData
-    const index = ministersData.findIndex((leader) => leader.name.ename === english_name);
+    const index = ministersData.findIndex((leader) => leader.id === profile_leder_id);
 
     // If leader is found, update their data and save to localStorage
     if (index !== -1) {

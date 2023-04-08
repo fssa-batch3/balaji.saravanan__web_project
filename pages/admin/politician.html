@@ -5,8 +5,114 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/css/join now.css">
+    <link rel="stylesheet" href="#">
     <title>Document</title>
+    <style>
+        /* Style for the form container */
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Style for the form */
+        #leader-form {
+            width: 50%;
+            padding: 50px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style for the form title */
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        /* Style for the form inputs */
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            /* display: none; */
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the form select */
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the form radio buttons */
+        label {
+            margin-right: 10px;
+        }
+
+        /* Style for the form submit button */
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Style for the form main divs */
+        .maindiv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left,
+        .right {
+            width: 45%;
+        }
+
+        /* Style for the form textareas */
+        textarea {
+            resize: none;
+        }
+
+        /* Style for the form description textareas */
+        #description,
+        #description1,
+        #description2,
+        #description3,
+        #description4,
+        #description5 {
+            display: none;
+        }
+
+        /* Style for the form error messages */
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,22 +121,155 @@
 
         <form id="leader-form">
             <h1>Insert your Data</h1>
-            <div class="social-container">
 
+            <div class="maindiv">
+
+
+                <div class="left">
+                    <label for="politics_radio">Tamil name</label>
+                    <input type="text" id="tname" value="name" placeholder="Tamil Name" required />
+                    <label for="politics_radio">English name</label>
+                    <input type="text" id="ename" placeholder="English Name" required/>
+                    <label for="politics_radio">Image URL</label>
+                    <input type="text" id="url" placeholder="Please insert your picture URL" required>
+
+                    <div class="col-sm-6">
+                        Position:
+                        <select class="form-select" aria-label="Default select example" id="position" required
+                            pattern="[A-Za-z]" required>
+                            <option selected>Enter your opinion</option>
+                            <option value="CM">CM</option>
+                            <option value="MP">MP</option>
+                            <option value="MLA">MLA</option>
+                            <option value="GOVERNER">GOVERNER</option>
+
+                        </select>
+                    </div>
+                    <div class="from_date" style="display:block;">
+                        <label for="">from_date</label>
+                        <input type="date" id="date_f" required>
+                    </div>
+
+                    <div>
+                        <label for="movie_radio" id="movie">Movie</label>
+
+                        <input type="radio" name="desc_radio" id="movie_radio" value="movie"
+                            onclick="showDescription()" />
+                        <textarea name="" id="description" cols="90" rows="7" style="display:none;" required></textarea>
+                    </div>
+
+
+                    <div>
+                        <label for="politics_radio">Politics</label>
+                        <input type="radio" name="desc_radio" id="politics_radio" value="politics"
+                            onclick="showDescription()" />
+                        <div>
+                            <textarea name="" id="description1" cols="90" rows="7" style="display:none;" required></textarea>
+                        </div>
+
+                    </div>
+
+
+                    <div>
+                        <label for="income_radio">Income</label>
+                        <input type="radio" name="desc_radio" id="income_radio" value="income"
+                            onclick="showDescription()" />
+                        <textarea name="" id="description2" cols="90" rows="7" style="display:none;" required></textarea>
+                    </div>
+                </div>
+                <div class="right">
+
+                    <label for="politics_radio">Role</label>
+                    <input type="text" id="role" placeholder="role" required>
+                    <label for="politics_radio">Party name</label>
+                    <input type="text" id="party_name" placeholder="Party Name" required>
+                    <label for="politics_radio">Occupation</label>
+                    <input type="text" id="occupation" placeholder="occupation" required>
+                    <label for="politics_radio">Politics Experiance</label>
+                    <input type="number" id="experiance" placeholder="experiance" required>
+                    <div class="from_date" style="display:block;">
+                        <label for="">To_date</label>
+                        <input type="date" id="date_t" required>
+                    </div>
+
+
+                    <div>
+                        <label for="birth_radio">Birth</label>
+                        <input type="radio" name="desc_radio" id="birth_radio" value="birth"
+                            onclick="showDescription()" />
+
+                        <textarea name="" id="description3" cols="90" rows="7" style="display:none;" required></textarea>
+                    </div>
+                    <div>
+                        <label for="education_radio">Education</label>
+                        <input type="radio" name="desc_radio" id="education_radio" value="education"
+                            onclick="showDescription()" />
+                        <textarea name="" id="description4" cols="90" rows="7" style="display:none;"></textarea>
+                    </div>
+
+
+
+                    <div>
+                        <label for="family_radio">Family</label>
+                        <input type="radio" name="desc_radio" id="family_radio" value="family"
+                            onclick="showDescription()" />
+                        <textarea name="" id="description5" cols="90" rows="7" style="display:none;"></textarea>
+                    </div>
+
+                </div>
             </div>
-            <span>please give true value</span>
-            <input type="text" id="tname" value="name" placeholder="tamil_Name" />
-            <input type="text" id="ename" placeholder="english_name" />
-            <input type="text" id="url" placeholder="pleace insert your picture url">
-            <input type="text" id="position" placeholder="position" />
-            <input type="text" id="party_name" placeholder="party name">
-            <textarea name="" id="describe" cols="90" rows="7" placeholder="pleace insert your description"></textarea>
+
+
             <button type="submit" id="submit_button">Submit</button>
+
+
         </form>
 
 
-        <script src="../../assets/javascript/leader_profile_create.js"></script>
     </div>
+
+    <script>
+
+        function showDescription() {
+            const radios = document.getElementsByName("desc_radio");
+            let descriptions = document.querySelectorAll("textarea[id^='description']");
+
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    const description = descriptions[i];
+                    description.style.display = "block";
+                    description.placeholder = `Please insert your ${radios[i].value} information`;
+                }
+
+            }
+        }
+
+        const from_date = document.getElementById("date_f");
+        const to_date = document.getElementById("date_t");
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get("name");
+        console.log(username);
+
+        if (username === "") {
+            from_date.style.display = "none";
+            to_date.style.display = "none";
+
+        } else {
+            from_date.style.display = "block";
+            to_date.style.display = "block";
+
+        }
+
+
+       
+    </script>
+
+
+
+    <script src="../../assets/javascript/leader_profile_create.js"></script>
+    </div>
+
 
 </body>
 

@@ -106,7 +106,7 @@ const checkregisterFromValidation = () => {
 
             localStorage.setItem("profile_email", profile_email);
 
-            window.location.href = "pages/your opinion/profilepage.html"
+            window.location.href = "pages/home/home.html"
 
             Notify.success("Successfully Login");
 
