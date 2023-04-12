@@ -217,3 +217,38 @@ UPLOAD NEW MANIFESTO TO VIEW :  ( COMPLETD )
     * Expected result :
         * The new product is created and added to the new manifesto.
 
+
+
+VIEW THE LIST OF MANIFESTO :  ( COMPLETD )
+
+* Scenario 1: Successfully view list of leader profiles
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the MANIFESTO list page.
+        3. View the list.
+    * Expected result :
+        * The user can view the list of leader frofile.
+
+EDIT THE LEADER PROFILE :  ( COMPLETD )
+
+* Scenario 1: Successfully edit the LEADER PROFILE details
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the manifesto list pae.
+        3. Select a manifesto to update.
+        4. Click the "update" button.
+        5. Update the product details.
+        6. Click the "Save" button to update the leader details.
+    * Expected result:
+        * The profile details are updated.
+
+DELETE THE MANIFESTO KEY :  ( COMPLETED )
+
+* Scenario 1: Update: Successfully deleted the KEY
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the manifesto list page.
+        3. Select the manifesto to delete.
+        4. Click the "Delete" button to  not delete but not show in main page key status only change the selected leader.
+    * Expected result :
+        * The product is deleted status key changed in json from the manifesto json page.
