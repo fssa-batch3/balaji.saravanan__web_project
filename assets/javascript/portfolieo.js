@@ -235,6 +235,6 @@ searchInput.addEventListener("input", function (e) {
 
 
 let button= document.createElement("a");
-button.setAttribute("href", "../admin/politician.html?name="+"");
+button.setAttribute("href", "../admin/politician.html?name="+"minister");
 button.innerText="add";
 document.querySelector(".create").append(button);
