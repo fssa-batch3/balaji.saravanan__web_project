@@ -1,3 +1,5 @@
+const root = window.location.origin;
+
 //    register starts
 
 const form = document.getElementById("register");
@@ -39,24 +41,24 @@ const registerFromValidation = () => {       // this is a register page star and
         user["mobile_number"] = mobile_value,
         user["email"] = reg_email_value,
         user["password"] = reg_pass_value;
-        user["id"]=users.length;
+    user["id"] = users.length;
 
 
 
-        const isDuplicate = users.find(
-            (user) => user.email === reg_email_value || user.mobile_number === mobile_value
-        );
+    const isDuplicate = users.find(
+        (user) => user.email === reg_email_value || user.mobile_number === mobile_value
+    );
 
-        if (isDuplicate) {
-            Notify.error("You already have an account");
-        } else {
-            users.push(user);
-            localStorage.setItem("users", JSON.stringify(users));
+    if (isDuplicate) {
+        Notify.error("You already have an account");
+    } else {
+        users.push(user);
+        localStorage.setItem("users", JSON.stringify(users));
 
-            container.classList.remove("right-panel-active");
-            
-            Notify.success("Account created successfully");
-        }
+        container.classList.remove("right-panel-active");
+
+        Notify.success("Account created successfully");
+    }
 
 
 }
@@ -73,6 +75,8 @@ form.addEventListener("submit", e => {
 
 
 
+
+
 //    login starts
 
 const checkform = document.getElementById("checkregister");
@@ -86,6 +90,9 @@ const password = document.getElementById("password");
 const checkregisterFromValidation = () => {
 
 
+    let admin_email = "admin@gmail.com";
+    let admin_password = "Admin@55";
+
     const user_data = JSON.parse(localStorage.getItem("users"));
 
     const username_value = username.value.trim();
@@ -94,7 +101,15 @@ const checkregisterFromValidation = () => {
     if (user_data === null) {
         Notify.error("you first sinup next you come and try")
 
-    } else {
+    }
+    if (admin_email === username_value && admin_password === password_value) {
+        localStorage.setItem("admin_login", admin_email);
+        Notify.success("admin entry");
+        window.location.href = `${root}/../index.html`;
+        checkform.reset();
+
+    }
+    else {
 
         const email_check = user_data.filter(obj => obj.email === username_value && obj.password === password_value)
 
@@ -102,11 +117,9 @@ const checkregisterFromValidation = () => {
 
             let profile_email = username_value;
 
-            console.log(profile_email);
-
             localStorage.setItem("profile_email", profile_email);
 
-            window.location.href = "pages/home/home.html"
+            window.location.href = `${root}/../index.html`
 
             Notify.success("Successfully Login");
 

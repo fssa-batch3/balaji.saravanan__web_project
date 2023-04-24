@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>mla profile</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+
+    <link href="../../assets/css/main.css" rel="stylesheet">
+
+    <link rel="icon" type="image/jpg" sizes="60x32" href="../../assets/images/icons/p logo.jpg">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+
+        .wrapper {
+            height: 100%;
+            width: 300px;
+            position: relative;
+        }
+
+
+        .wrapper .menu-btn i {
+            position: absolute;
+            transform: scale(0.9);
+            font-size: 23px;
+            transition: all 0.3s ease;
+        }
+
+        .wrapper .menu-btn i.fa-times {
+            opacity: 0;
+        }
+
+        #btn:checked~.menu-btn i.fa-times {
+            opacity: 1;
+            transform: rotate(-180deg);
+        }
+
+
+        #sidebar {
+            position: fixed;
+            background: #404040;
+            height: 100%;
+            width: 270px;
+            transition: all 0.3s ease;
+        }
+
+        #sidebar .title {
+            line-height: 65px;
+            text-align: center;
+            background: #333;
+            font-size: 25px;
+            font-weight: 600;
+            color: #f2f2f2;
+            border-bottom: 1px solid #222;
+        }
+
+        #sidebar .list-items {
+            position: relative;
+            background: #404040;
+            width: 100%;
+            height: 100%;
+            list-style: none;
+        }
+
+        #sidebar .list-items li {
+            /* padding-left: 40px;  */
+            padding: ;
+            line-height: 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid #333;
+            transition: all 0.3s ease;
+        }
+
+        #sidebar .list-items li img {
+            width: 200px;
+            height: 250px;
+            padding: 20px 10px;
+        }
+
+        #sidebar .list-items li:hover {
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            box-shadow: 0 0px 10px 3px #222;
+        }
+
+        #sidebar .list-items li:first-child {
+            border-top: none;
+        }
+
+        #sidebar .list-items li a {
+            color: #f2f2f2;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            height: 100%;
+            width: 100%;
+            display: block;
+        }
+
+        #sidebar .list-items li a i {
+            margin-right: 20px;
+        }
+
+        #sidebar .list-items .icons {
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            position: absolute;
+            bottom: 100px;
+            line-height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #sidebar .list-items .icons a {
+            height: 100%;
+            width: 40px;
+            display: block;
+            margin: 0 5px;
+            font-size: 18px;
+            color: #f2f2f2;
+            background: #4a4a4a;
+            border-radius: 5px;
+            border: 1px solid #383838;
+            transition: all 0.3s ease;
+        }
+
+        #sidebar .list-items .icons a:hover {
+            background: #404040;
+        }
+
+        .list-items .icons a:first-child {
+            margin-left: 0px;
+        }
+
+        .content {
+            margin-left: 20%;
+        }
+
+        /* commend start */
+
+        .cmd {
+            font-size: 20px;
+            text-align: center;
+            padding: 10px;
+            font-weight: 700;
+        }
+
+        #comments-list {
+            list-style: none;
+            padding: 0;
+
+
+        }
+
+        #comments-list li {
+            margin-bottom: 20px;
+            border-radius: 20px;
+            padding: 20px;
+            background-image: linear-gradient(95.2deg, rgba(173, 252, 234, 1) 26.8%, rgba(192, 229, 246, 1) 64%);
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            position: relative;
+        }
+
+        #comments-list li:before {
+            content: "";
+            position: absolute;
+            right: 100%;
+            top: 50%;
+            border-style: solid;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent #c0e5f6 transparent transparent;
+            transform: translateY(-50%);
+        }
+
+
+        #comments-list li .comment-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        #comments-list li .comment-header h3 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #comments-list li .comment-header span {
+            font-size: 0.8em;
+            color: #999;
+        }
+
+        #comments-list li p {
+            margin-top: 5px;
+            color: #333;
+        }
+
+
+
+        #comment-form {
+            margin-top: 20px;
+            width: 50%;
+        }
+
+        #comment-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        #comment-form input[type="text"],
+        #comment-form textarea {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        #comment-form input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        #comment-form input[type="submit"]:hover {
+            background-color: #0069d9;
+        }
+
+        #comment-form input[type="submit"]:active {
+            background-color: #005cbf;
+        }
+
+        #comment-form input[type="submit"]:focus {
+            outline: none;
+        }
+    </style>
+    <style>
+        /*
+   general styles
+*/
+        .center-block-horiz {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .set-margin-cicis-menu-to-go {
+            margin: 20px;
+        }
+
+        .set-padding-cicis-menu-to-go {
+            padding: 20px;
+        }
+
+        .set-border-cicis-menu-to-go {
+            border: 5px inset #4f4f4f;
+        }
+
+        .set-box-shadow-cicis-menu-to-go {
+            -webkit-box-shadow: 4px 4px 14px #4f4f4f;
+            -moz-box-shadow: 4px 4px 14px #4f4f4f;
+            box-shadow: 4px 4px 14px #4f4f4f;
+        }
+
+        /* css commmon to all iframes */
+
+        .responsive-wrapper {
+            position: relative;
+            height: 0;
+            overflow: hidden;
+
+        }
+
+        .responsive-wrapper img,
+        .responsive-wrapper object,
+        .responsive-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            border-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /*
+    css particular to this iframe
+*/
+
+        #Iframe-Cicis-Menu-To-Go {
+            max-width: 666.67px;
+            max-height: 600px;
+            overflow: hidden;
+        }
+
+        /*
+   padding-bottom = h/w as %
+*/
+        .responsive-wrapper-padding-bottom-90pct {
+            padding-bottom: 90%;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+
+            <!-- <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+
+
+        <div class="headprofile">
+
+        </div>
+        <!-- <div id="Iframe-Cicis-Menu-To-Go"
+            class="set-margin-cicis-menu-to-go set-padding-cicis-menu-to-go set-border-cicis-menu-to-go set-box-shadow-cicis-menu-to-go center-block-horiz">
+            <div class="responsive-wrapper 
+           responsive-wrapper-padding-bottom-90pct" style="-webkit-overflow-scrolling: touch; overflow: auto;">
+                <iframe src="https://drive.google.com/file/d/1zTTzPu0NyVDHI3mWt00O-VZRkpsKNju8/preview">
+                    <p style="font-size: 110%;"><em><strong>ERROR: </strong>
+                            An &#105;frame should be displayed here but your browser version does not support
+                            &#105;frames.</em> Please update your browser to its most recent version and try again, or
+                        access the file <a href="https://drive.google.com/file/d/0BxrMaW3xINrsR3h2cWx0OUlwRms/preview"
+                            with this link.</a></p>
+                </iframe>
+            </div>
+        </div> -->
+
+
+        <!-- cm content page  -->
+
+
+        <div class="cm-total-content">
+
+
+
+
+
+        </div>
+
+
+        <h1 class="cmd">Comment Section</h1>
+        <ul id="comments-list"></ul>
+        <form id="comment-form">
+            <!-- <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br> -->
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required name="comment"></textarea><br>
+            <input type="submit" id="submit_btn" value="Submit">
+        </form>
+
+
+
+
+    </div>
+
+
+    <script src="../../main.js"></script>
+
+    <script src="../../assets/javascript/mla_profile.js"></script>
+
+    <script>
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const users = JSON.parse(localStorage.getItem("users"));
+
+            const minister = JSON.parse(localStorage.getItem("mla_ditails"));
+
+            const loginEmail = localStorage.getItem("profile_email");
+            const currentUser = users.find(user => user.email === loginEmail);
+            const currentUserName = currentUser.first_name;
+
+            const ministerName = document.getElementById("minister-name").innerText
+                .replace("NAME : ", "")
+                .trim();
+
+            const ministerId = minister.find(m => m.candidate_Name=== ministerName).mla_id;
+
+            const comment = document.getElementById("comment").value;
+            const timestamp = new Date().getTime();
+            const commentObject = {
+                user_id: currentUserName,
+                comment,
+                timestamp,
+                ministerId,
+            };
+
+
+            let comments = JSON.parse(localStorage.getItem("comments")) ?? [];
+            comments.push(commentObject);
+            localStorage.setItem("comments", JSON.stringify(comments));
+
+            const filteredComments = comments.filter(
+                comment => comment.ministerId === ministerId
+            );
+            displayComments(filteredComments)
+
+            document.getElementById("comment-form").reset();
+        }
+
+
+        function displayComments(comments) {
+
+            let comments1 = JSON.parse(localStorage.getItem("comments")) ?? [];
+
+            const minister = JSON.parse(localStorage.getItem("mla_ditails"))
+
+            const ministerName = document.getElementById("minister-name").innerText
+                .replace("NAME : ", "")
+                .trim();
+            const ministerId = minister.find(m => m.candidate_Name=== ministerName).mla_id;
+                 console.log(ministerId);
+            const commentsList = document.getElementById("comments-list");
+
+            commentsList.innerHTML = "";
+
+            for (let comment of comments1) {
+
+                if (comment.ministerId === ministerId) {
+
+                    const li = document.createElement("li");
+                    const date = new Date(comment.timestamp).toLocaleString();
+                    li.innerHTML = `<strong>${comment.user_id}</strong> said on ${date}:<br>${comment.comment}`;
+                    commentsList.appendChild(li);
+                }
+            }
+
+        }
+
+
+
+        document.getElementById('comment-form').addEventListener('submit', handleFormSubmit)
+
+        window.onload = displayComments;
+
+
+        let submit_btn = document.getElementById("submit_btn");
+
+        let loginEmail = localStorage.getItem("profile_email");
+
+        if (loginEmail !== null) {
+            submit_btn.style.display = "block"
+        } else {
+            submit_btn.style.display = "none"
+        }
+
+    </script>
+
+
+    <!-- script for bootstrap -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- script for bootstrap -->
+</body>
+
+</html>

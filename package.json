@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "fs": "^0.0.1-security",
+    "google-translate-api": "^2.3.0",
     "mysql2": "^3.2.0",
     "uuid": "^9.0.0"
   }

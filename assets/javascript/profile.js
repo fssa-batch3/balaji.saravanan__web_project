@@ -271,6 +271,7 @@ const url = window.location.search;
 const urlParams = new URLSearchParams(url);
 
 const username = urlParams.get("name");
+console.log(username);
 
 let found = false;
 
@@ -337,7 +338,44 @@ if (found) {
     cm_name.append(position5);
 
 
+    // create a div element
+    const div = document.createElement("div");
+    div.id = "Iframe-Cicis-Menu-To-Go";
+    div.classList.add("set-margin-cicis-menu-to-go", "set-padding-cicis-menu-to-go", "set-border-cicis-menu-to-go", "set-box-shadow-cicis-menu-to-go", "center-block-horiz");
+
+    // create a div for responsive wrapper
+    const responsiveDiv = document.createElement("div");
+    responsiveDiv.classList.add("responsive-wrapper", "responsive-wrapper-padding-bottom-90pct");
+    responsiveDiv.style.overflow = "auto";
+    responsiveDiv.style.webkitOverflowScrolling = "touch";
+
+    // create the iframe element
+    const iframe = document.createElement("iframe");
+    iframe.src = "https://drive.google.com/file/d/1CizE-ZahGikKp6f4bSTJRgv0Y6bT9iYR/preview";
+
+    // create the error message element
+    const p = document.createElement("p");
+    p.style.fontSize = "110%";
+    p.innerHTML = '<em><strong>ERROR: </strong>An &#105;frame should be displayed here but your browser version does not support &#105;frames. Please update your browser to its most recent version and try again, or access the file <a href="https://drive.google.com/file/d/0BxrMaW3xINrsR3h2cWx0OUlwRms/preview">with this link.</a></em>';
+
+    // append the elements to the parent container
+    responsiveDiv.appendChild(iframe);
+    div.appendChild(responsiveDiv);
+    div.appendChild(p);
+
+    // add the parent container to the document
+    // document.body.appendChild(div);
     document.querySelector("div.headprofile").append(cm_name);
+
+
+    document.querySelector(".headprofile").append(div)
+
+
+
+
+
+
+
 
 
     let title, unorderList, list, list1img, list1, anchorlink1, list2, anchorlink2, list3, anchorlink3, list4, anchorlink4, list5, anchorlink5, list6, anchorlink6;
@@ -362,24 +400,24 @@ if (found) {
     unorderList.append(list1);
 
     anchorlink1 = document.createElement("a");
-    anchorlink1.setAttribute("href", "#")
-    anchorlink1.innerText = "home";
+    anchorlink1.setAttribute("href", "#birth")
+    anchorlink1.innerText = "பிறப்பு";
     list1.append(anchorlink1);
 
     list2 = document.createElement("li");
     unorderList.append(list2);
 
     anchorlink2 = document.createElement("a");
-    anchorlink2.setAttribute("href", "#")
-    anchorlink2.innerText = "home";
+    anchorlink2.setAttribute("href", "#education")
+    anchorlink2.innerText = "கல்வி";
     list2.append(anchorlink2);
 
     list3 = document.createElement("li");
     unorderList.append(list3);
 
     anchorlink3 = document.createElement("a");
-    anchorlink3.setAttribute("href", "#")
-    anchorlink3.innerText = "home";
+    anchorlink3.setAttribute("href", "#movie")
+    anchorlink3.innerText = "திரைப்படம்";
     list3.append(anchorlink3);
 
 
@@ -387,24 +425,24 @@ if (found) {
     unorderList.append(list4);
 
     anchorlink4 = document.createElement("a");
-    anchorlink4.setAttribute("href", "#")
-    anchorlink4.innerText = "home";
+    anchorlink4.setAttribute("href", "#politics")
+    anchorlink4.innerText = "அரசியல்";
     list4.append(anchorlink4);
 
     list5 = document.createElement("li");
     unorderList.append(list5);
 
     anchorlink5 = document.createElement("a");
-    anchorlink5.setAttribute("href", "#")
-    anchorlink5.innerText = "home";
+    anchorlink5.setAttribute("href", "#family")
+    anchorlink5.innerText = "குடும்பம்";
     list5.append(anchorlink5);
 
     list6 = document.createElement("li");
     unorderList.append(list6);
 
     anchorlink6 = document.createElement("a");
-    anchorlink6.setAttribute("href", "#")
-    anchorlink6.innerText = "home";
+    anchorlink6.setAttribute("href", "#income")
+    anchorlink6.innerText = "வருமானம்";
     list6.append(anchorlink6);
 
     document.querySelector("#sidebar").append(unorderList);
@@ -573,8 +611,6 @@ if (found) {
 
     document.querySelector(".cm-total-content").append(cmcontent_div)
 
-} else {
-    alert("not match ministers")
 }
 
 // position2 = document.createElement("p");

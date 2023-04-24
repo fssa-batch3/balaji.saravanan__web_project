@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    html,
+    body {
+      background: #1a1a1a;
+      font-family: 'Lato', sans-serif;
+    }
+
+    /* ------------ Document Styling End ------- */
+
+    .card-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 150px;
+    }
+
+    .card {
+      height: 200px;
+      width: 400px;
+      display: inline-flex;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .card-top {
+      border-radius: 8px;
+      width: 400px;
+      background: white;
+      height: 200px;
+      position: absolute;
+      z-index: 8;
+      transition: transform .5s;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .card1 img{
+      background-size: cover;
+      border: 3px solid white;
+      border-radius: 10px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .card:hover .card-top {
+      transform: translateY(-120px);
+    }
+
+    .card-bottom {
+      background: #FAF9F6;
+      width: 100%;
+      height: 200px;
+      border-radius: 8px;
+    }
+
+    .card-contents {
+      color: black;
+      padding: 90px 20px 0px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card-contents p {
+      margin: 7px 0px;
+    }
+
+    .card-title {
+      font-weight: bold;
+      font-size: 1.3em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card-container">
+   
+  </div>
+  <script src="../../assets/javascript/like_list.js"></script>
+
+  <!-- script for bootstrap -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- script for bootstrap -->
+</body>
+
+</html>

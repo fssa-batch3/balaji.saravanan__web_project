@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+
+
+    <style>
+        /* Style for the form container */
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Style for the form */
+        #leader-form {
+            width: 90%;
+            padding: 50px;
+            /* background-color: ; */
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style for the form title */
+        h3 {
+            text-align: center;
+            /* margin-bottom: 50px; */
+        }
+
+        /* Style for the form inputs */
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            /* display: none; */
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the form select */
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the form radio buttons */
+        label {
+            margin-right: 10px;
+        }
+
+        /* Style for the form submit button */
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Style for the form main divs */
+        .maindiv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left,
+        .right {
+            width: 45%;
+        }
+
+        /* Style for the form textareas */
+        textarea {
+            resize: none;
+        }
+
+        /* Style for the form description textareas */
+        #description,
+        #description1,
+        #description2,
+        #description3,
+        #description4,
+        #description5 {
+            display: none;
+        }
+
+        /* Style for the form error messages */
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- Dashboard -->
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary">
+        <!-- Vertical Navbar -->
+        <nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg"
+            id="navbarVertical">
+            <div class="container-fluid">
+                <!-- Toggler -->
+                <button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Brand -->
+                <a class="navbar-brand py-lg-2 mb-lg-5 px-lg-6 me-0" href="#">
+                    POITIFACT
+                </a>
+                <!-- User menu (mobile) -->
+                <div class="navbar-user d-lg-none">
+                    <!-- Dropdown -->
+                    <div class="dropdown">
+                        <!-- Toggle -->
+                        <a href="#" id="sidebarAvatar" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <div class="avatar-parent-child">
+                                <img alt="Image Placeholder"
+                                    src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                                    class="avatar avatar- rounded-circle">
+                                <span class="avatar-child avatar-badge bg-success"></span>
+                            </div>
+                        </a>
+                        <!-- Menu -->
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarAvatar">
+                            <a href="#" class="dropdown-item">Profile</a>
+
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Collapse -->
+                <div class="collapse navbar-collapse" id="sidebarCollapse">
+                    <!-- Navigation -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-house"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-bar-chart"></i> create list
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-chat"></i> comments
+                                <span
+                                    class="badge bg-soft-primary text-primary rounded-pill d-inline-flex align-items-center ms-auto">6</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-bookmarks"></i> manifesto
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-people"></i> bloger
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-people"></i> users
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- Divider -->
+                    <hr class="navbar-divider my-5 opacity-20">
+
+                    <!-- Push content down -->
+                    <div class="mt-auto"></div>
+                    <!-- User (md) -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-person-square"></i> Account
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-box-arrow-left"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+            <!-- Header -->
+            <header class="bg-surface-primary border-bottom pt-6">
+                <div class="container-fluid">
+                    <div class="mb-npx">
+                        <div class="row align-items-center">
+                            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                                <!-- Title -->
+                                <h1 class="h2 mb-0 ls-tight">Application</h1>
+                            </div>
+                            <!-- Actions -->
+                            <div class="col-sm-6 col-12 text-sm-end">
+                                <div class="mx-n1">
+                                    <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
+                                        <span class=" pe-2">
+                                            <i class="bi bi-pencil"></i>
+                                        </span>
+                                        <span>Edit</span>
+                                    </a>
+                                    <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
+                                        <span class=" pe-2">
+                                            <i class="bi bi-plus"></i>
+                                        </span>
+                                        <span>Create</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nav -->
+                        <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link active">All files</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link font-regular">Shared</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link font-regular">File requests</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- Main -->
+            <main class="py-6 bg-surface-secondary">
+                <div class="container-fluid">
+                    <!-- Card stats -->
+
+                    <div class="card shadow border-0 mb-7">
+                        <div class="card-header">
+                            <h5 class="mb-0">Pages</h5>
+                        </div>
+                        <!-- <div class="table-responsive">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Candidate Name</th>
+                                        <th scope="col">Position</th>
+                                        <th scope="col">Patry Name</th>
+                                        <th scope="col">experiance</th>
+                                        <th scope="col">status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div> -->
+                        <div class="container" id="container">
+
+                            <form id="leader-form">
+
+                                <h3>Insert your Data</h3>
+                                <div class="maindiv">
+
+
+                                    <div class="left">
+                                        <label for="politics_radio">Tamil name</label>
+                                        <input type="text" id="tname" value="name" placeholder="Tamil Name" required />
+                                        <label for="politics_radio">English name</label>
+                                        <input type="text" id="ename" placeholder="English Name" required />
+                                        <label for="politics_radio">Image URL</label>
+                                        <input type="text" id="url" placeholder="Please insert your picture URL"
+                                            required>
+
+                                        <div class="col-sm-6">
+                                            Position:
+                                            <select class="form-select" aria-label="Default select example"
+                                                id="position" required pattern="[A-Za-z]" required>
+                                                <option selected>Enter your opinion</option>
+                                                <option value="CM">CM</option>
+                                                <option value="MP">MP</option>
+                                                <option value="MLA">MLA</option>
+                                                <option value="GOVERNER">GOVERNER</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="from_date" style="display:block;">
+                                            <label for="">from_date</label>
+                                            <input type="date" id="date_f" required>
+                                        </div>
+
+                                        <div>
+                                            <label for="movie_radio" id="movie">Movie</label>
+
+                                            <input type="radio" name="desc_radio" id="movie_radio" value="movie"
+                                                onclick="showDescription()" />
+                                            <textarea name="" id="description" cols="90" rows="7" style="display:none;"
+                                                required></textarea>
+                                        </div>
+
+
+                                        <div>
+                                            <label for="politics_radio">Politics</label>
+                                            <input type="radio" name="desc_radio" id="politics_radio" value="politics"
+                                                onclick="showDescription()" />
+                                            <div>
+                                                <textarea name="" id="description1" cols="90" rows="7"
+                                                    style="display:none;" required></textarea>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div>
+                                            <label for="income_radio">Income</label>
+                                            <input type="radio" name="desc_radio" id="income_radio" value="income"
+                                                onclick="showDescription()" />
+                                            <textarea name="" id="description2" cols="90" rows="7" style="display:none;"
+                                                required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+
+                                        <label for="politics_radio">Role</label>
+                                        <input type="text" id="role" placeholder="role" required>
+                                        <label for="politics_radio">Party name</label>
+                                        <input type="text" id="party_name" placeholder="Party Name" required>
+                                        <label for="politics_radio">Occupation</label>
+                                        <input type="text" id="occupation" placeholder="occupation" required>
+                                        <label for="politics_radio">Politics Experiance</label>
+                                        <input type="number" id="experiance" placeholder="experiance" required>
+                                        <div class="from_date" style="display:block;">
+                                            <label for="">To_date</label>
+                                            <input type="date" id="date_t" required>
+                                        </div>
+
+
+                                        <div>
+                                            <label for="birth_radio">Birth</label>
+                                            <input type="radio" name="desc_radio" id="birth_radio" value="birth"
+                                                onclick="showDescription()" />
+
+                                            <textarea name="" id="description3" cols="90" rows="7" style="display:none;"
+                                                required></textarea>
+                                        </div>
+                                        <div>
+                                            <label for="education_radio">Education</label>
+                                            <input type="radio" name="desc_radio" id="education_radio" value="education"
+                                                onclick="showDescription()" />
+                                            <textarea name="" id="description4" cols="90" rows="7"
+                                                style="display:none;"></textarea>
+                                        </div>
+
+
+
+                                        <div>
+                                            <label for="family_radio">Family</label>
+                                            <input type="radio" name="desc_radio" id="family_radio" value="family"
+                                                onclick="showDescription()" />
+                                            <textarea name="" id="description5" cols="90" rows="7"
+                                                style="display:none;"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                                <button type="submit" id="submit_button">Submit</button>
+
+
+                            </form>
+
+
+                        </div>
+
+                        <script>
+
+                            function showDescription() {
+                                const radios = document.getElementsByName("desc_radio");
+                                let descriptions = document.querySelectorAll("textarea[id^='description']");
+
+                                for (let i = 0; i < radios.length; i++) {
+                                    if (radios[i].checked) {
+                                        const description = descriptions[i];
+                                        description.style.display = "block";
+                                        description.placeholder = `Please insert your ${radios[i].value} information`;
+                                    }
+
+                                }
+                            }
+
+                            const from_date = document.getElementById("date_f");
+                            const to_date = document.getElementById("date_t");
+
+                            const urlParams = new URLSearchParams(window.location.search);
+                            const username = urlParams.get("name");
+                            console.log(username);
+
+                            if (username === "") {
+                                from_date.style.display = "none";
+                                to_date.style.display = "none";
+
+                            } else {
+                                from_date.style.display = "block";
+                                to_date.style.display = "block";
+
+                            }
+                        </script>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+<!-- 
+    <script>
+        let ministers_value = JSON.parse(localStorage.getItem("politician_data"));
+
+        for (let values of ministers_value) {
+
+            // Create the table row element
+            const tr = document.createElement('tr');
+
+            // Create the first table data element for the avatar and name
+            const td1 = document.createElement('td');
+            const avatar = document.createElement('img');
+            avatar.setAttribute('alt', values.name.ename);
+            avatar.setAttribute('src', values.img.sourse);
+            avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
+            const nameLink = document.createElement('a');
+            nameLink.setAttribute('href', '#');
+            nameLink.classList.add('text-heading', 'font-semibold');
+            nameLink.textContent = values.name.ename;
+            td1.appendChild(avatar);
+            td1.appendChild(nameLink);
+
+            // Create the second table data element for the date
+            const td2 = document.createElement('td');
+            td2.textContent = values.position;
+
+            // Create the third table data element for the logo and company name
+            const td3 = document.createElement('td');
+            const logo = document.createElement('img');
+            logo.setAttribute('alt', '...');
+            logo.setAttribute('src', '#');
+            logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
+            const companyLink = document.createElement('a');
+            companyLink.setAttribute('href', '#');
+            companyLink.classList.add('text-heading', 'font-semibold');
+            companyLink.textContent = values.party_name;
+            td3.appendChild(logo);
+            td3.appendChild(companyLink);
+
+            // Create the fourth table data element for the amount
+            const td4 = document.createElement('td');
+            td4.textContent = values.experiance;
+
+            // Create the fifth table data element for the status badge
+            const td5 = document.createElement('td');
+            const badge = document.createElement('span');
+            badge.classList.add('badge', 'badge-lg', 'badge-dot');
+            const badgeIcon = document.createElement('i');
+            badgeIcon.classList.add('bg-success');
+            badge.appendChild(badgeIcon);
+            badge.appendChild(document.createTextNode(values.status));
+            td5.appendChild(badge);
+
+            // Create the sixth table data element for the action buttons
+            const td6 = document.createElement('td');
+            const viewButton = document.createElement('a');
+            viewButton.setAttribute('href', '#');
+            viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
+            viewButton.textContent = 'View';
+            const deleteButton = document.createElement('button');
+            deleteButton.setAttribute('type', 'button');
+            deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
+            const deleteIcon = document.createElement('i');
+            deleteIcon.classList.add('bi', 'bi-trash');
+            deleteButton.appendChild(deleteIcon);
+            td6.appendChild(viewButton);
+            td6.appendChild(deleteButton);
+
+            // Add all the table data elements to the row element
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+            tr.appendChild(td5);
+            tr.appendChild(td6);
+
+            // Add the row element to the table body
+            const tableBody = document.querySelector('tbody');
+            tableBody.appendChild(tr);
+        }
+
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../../assets/js/leader_profile_create.js"></script>
+</body>
+
+</html>

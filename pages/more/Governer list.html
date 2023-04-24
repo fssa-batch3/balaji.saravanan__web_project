@@ -8,19 +8,13 @@
     <link href="../../assets/css/main.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="../../assets/css/responsive.css"> -->
     <link rel="icon" type="image/jpg" sizes="60x32" href="../../assets/images/icons/p logo.jpg">
-    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+
     <title>governer</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@300;400;500;600;800;900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,600&display=swap"
-        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 
@@ -28,89 +22,9 @@
 <body>
     <!-- navbar all -->
 
-    <div class="totalnav">
-
-        <div class="headvideo1">
-            <video autoplay muted loop id="myVideo">
-                <source src="../../assets/images/essecial/Pattern - 85590.mp4" type="video/mp4">
-                <track default />
-            </video>
-        </div>
-
-        <!-- navbar -->
-
-        <div class="navbar">
-
-            <div class="topic">
-                <h1>POLITIFACT</h1>
-            </div>
-
-            <div class="topic1">
-                <p class="contact"><a href="pages/your opinion/join now.html">தொடர்பு</a></p>
-                <p class="contact">|</p>
-                <p class="contact"><a href="pages/your opinion/your opnion.html">பின்னூட்டம்</a></p>
-                <p><a href="../../English-version/more/Governer list-english.html">English</a></p>
-                <p>|</p>
-                <p><a href="Governer list.html">தமிழ்</a></p>
-            </div>
-
-        </div>
-
-        <!-- navbar1 -->
-
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item pe-5">
-                            <a class="nav-link active" aria-current="page" href="../home/home.html">முகப்பு</a>
-                        </li>
-                        <li class="nav-item pe-5">
-                            <a class="nav-link" href="../portfolio/parties-profile.html">விவரம்</a>
-                        </li>
-                        <li class="nav-item dropdown pe-5">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                அறிக்கைகள்
-                            </a>
-                            <ul class="dropdown-menu bg-light">
-                                <li><a class="dropdown-item" href="../manifesto/bending.html">நிலுவை</a></li>
-                                <li><a class="dropdown-item" href="../manifesto/complte.html">நிறைவு</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item pe-5">
-                            <a class="nav-link" href="../passt leaders/past leaders.html">தலைவர்கள்</a>
-                        </li>
-                        <li class="nav-item dropdown pe-5">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                மேலும்
-                            </a>
-                            <ul class="dropdown-menu bg-light">
-                                <li><a class="dropdown-item" href="Governer list.html">ஆளுநர்கள்</a></li>
-                                <li><a class="dropdown-item" href="mla.html">பிரதிநிதிகள்</a></li>
-
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-
 
     <!-- governer list -->
 
-    
 
     <div id="governer-list" class="governer">
         <h1>தமிழ்நாடு ஆளுநர்களின் பட்டியல்
@@ -1086,140 +1000,27 @@
                 <td>6 May 1946</td>
                 <td>September 7, 1948</td>
             </tr>
-        </table> -->
+        </table> --> -->
     </div>
 
-    <script>
-
-        let table, table_row_head, table_heading1, table_heading2, table_hading3, table_heading4, table_row, table_data1, table_data2, data2_div_profile, div_parties, div_fontside, name_div, position_div, backside_div, image_div, button_div, anc_link_div, table_data3, table_data4;
-
-        table = document.createElement("table");
-
-        table_row_head = document.createElement("tr");
-        table.append(table_row_head);
-
-        table_heading1 = document.createElement("th");
-        table_heading1.innerText = "Sl.No";
-        table_row_head.append(table_heading1);
-
-        table_heading2 = document.createElement("th");
-        table_heading2.innerText = "Governor";
-        table_row_head.append(table_heading2);
-
-        table_heading3 = document.createElement("th");
-        table_heading3.innerText = "இருந்து";
-        table_row_head.append(table_heading3);
-
-        table_heading4 = document.createElement("th");
-        table_heading4.innerText = "வரை";
-        table_row_head.append(table_heading4);
-
-        table_row = document.createElement("tr");
-        table.append(table_row);
-
-        table_data1 = document.createElement("td");
-        table_data1.innerText = 1;
-        table_row.append(table_data1);
-
-        table_data2 = document.createElement("td");
-        table_row.append(table_data2);
-
-        data2_div_profile = document.createElement("div");
-        data2_div_profile.setAttribute("class", "profile-main");
-        table_data2.append(data2_div_profile);
-
-        div_parties = document.createElement("div");
-        div_parties.setAttribute("class", "parties");
-        data2_div_profile.append(div_parties);
-
-        div_fontside = document.createElement("div");
-        div_fontside.setAttribute("class", "fontsidepro");
-        div_parties.append(div_fontside);
-
-        name_div = document.createElement("p");
-        name_div.innerText = "ஆர்.என்.ரவி";
-        div_fontside.append(name_div);
-
-        position_div = document.createElement("p")
-        position_div.innerText = "ஆளுநர்";
-        div_fontside.append(position_div);
-
-        backside_div = document.createElement("div");
-        backside_div.setAttribute("class", "backsidepro");
-        div_parties.append(backside_div);
-
-        image_div = document.createElement("img");
-        image_div.setAttribute("src", "../../assets/images/ministers/ravi-gover.jpg");
-        image_div.setAttribute("alt", "error image");
-        backside_div.append(image_div);
-
-        button_div = document.createElement("button");
-        backside_div.append(button_div);
-
-        anc_link_div = document.createElement("a");
-        anc_link_div.setAttribute("href", "governer-profile/governer-ravi.html");
-        anc_link_div.innerText="view profile"
-        button_div.append(anc_link_div);
-
-        table_data3= document.createElement("td");
-        table_data3.innerText="10 September 2021";
-        table_row.append(table_data3);
-
-        table_data4= document.createElement("td");
-        table_data4.innerText="Present Governor";
-        table_row.append(table_data4)
-
-        document.querySelector(".governer").append(table);
-    </script>
 
     <!-- footer  section-->
-    <div class="footer">
-
-        <div class="foot">
-
-            <h1>politic</h1>
-            <p>
 
 
-                வலி மிகவும் முக்கியமானது, நோயாளியின் வலிப்புத்தாக்கத்தின் விளைவு, ஆனால் அது உழைப்பு மற்றும் வலியை
-                ஏற்படுத்தும் ஒரு நேரத்தில் அதைச் செய்யட்டும்.
-            </p>
-            <img src="../../assets/images/icons/icon-facebook.svg" alt="error image">
-            <img src="../../assets/images/icons/icon-instagram.svg" alt="error image">
-            <img src="../../assets/images/icons/icon-pinterest.svg" alt="error image">
-            <img src="../../assets/images/icons/icon-twitter.svg" alt="error image">
+<script src="../../assets/javascript/governer_list.js"></script>
 
-        </div>
 
-        <div class="foot1">
-            <h1>முக்கியமான தகவல்</h1>
-            <p>
-                எங்களை பற்றி</p>
-            <p>ஆண்டு அறிக்கைs</p>
-            <p>எங்கள் அணுகுமுறை</p>
-            <p>புள்ளிவிவரங்கள்</p>
-        </div>
 
-        <div class="foot1">
-            <h1>முக்கியமான தகவல்</h1>
-            <p>
-                விரைவான தொடர்பு</p>
-            <p>
-                தன்னார்வ படிவம்</p>
-            <p>பதிவர்</p>
-        </div>
+    <script src="../../main.js"></script>
 
-        <div class="foot1">
-            <h1>instagram </h1>
-            <p>இந்தப் பக்கத்திற்குக் கிடைக்கவில்லை</p>
-        </div>
 
-    </div>
+    <!-- script for bootstrap -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- script for bootstrap -->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../../assets/javascript/translate.js"></script>
 
 
 </body>

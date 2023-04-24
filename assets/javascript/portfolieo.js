@@ -24,10 +24,10 @@ const popup = document.getElementById("leader-popup");
 
 const closeBtn = document.getElementById("closeBtn");
 
-closeBtn.addEventListener("click", function () {
+// closeBtn.addEventListener("click", function () {
 
-  popup.style.display = "none"; // hide the form
-});
+//   popup.style.display = "none"; // hide the form
+// });
 
 // Get minister data from localStorage
 const minister_values = JSON.parse(
@@ -57,12 +57,13 @@ function list_leaders(minister) {
   let multiButton = document.createElement("div");
   multiButton.className = "multi-button";
 
-  let heartButton = document.createElement("button");
-  heartButton.className = "fas fa-heart";
-  multiButton.appendChild(heartButton);
-
   let commentButton = document.createElement("button");
-  commentButton.className = "fas fa-comment";
+  commentButton.className = "	fa fa-comment";
+
+  commentButton.onclick = function () {
+
+    window.location.href = "stick.html?name=" + minister.name["ename"]
+  }
   multiButton.appendChild(commentButton);
 
   let shareButton = document.createElement("button");
@@ -72,6 +73,11 @@ function list_leaders(minister) {
   let trashButton = document.createElement("button");
   trashButton.className = "fas fa-trash";
   multiButton.appendChild(trashButton);
+
+  let heartButton = document.createElement("button");
+  heartButton.className = "fa fa-heart";
+  multiButton.appendChild(heartButton);
+
 
   card_div.append(multiButton);
 
@@ -118,12 +124,18 @@ function list_leaders(minister) {
 
   // create view portfolio anchor
   const anchor5 = document.createElement("a");
+  anchor5.setAttribute("class", "rederect_button")
   anchor5.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
   anchor5.innerText = "view portfolio";
   contentBx.append(anchor5);
 
   // append card div to list container
   document.querySelector("div.lists1").append(card_div);
+
+  function commend(minister) {
+    window.location.href = "stick.html?name=" + minister.name["ename"]
+
+  }
 
   heartButton.addEventListener('click', function () {
 
@@ -201,11 +213,11 @@ function createMinisterCard(minister) {
 
 searchInput.addEventListener("input", function (e) {
   const searchTerm = searchInput.value.trim().toLowerCase();
-  searchResults.style.display='block';
+  searchResults.style.display = 'block';
   searchResults.innerHTML = '';
 
   if (searchTerm === "") {
-    searchResults.style.display='none';
+    searchResults.style.display = 'none';
     return; // do not display any search results
   }
 
@@ -234,7 +246,7 @@ searchInput.addEventListener("input", function (e) {
 // })
 
 
-let button= document.createElement("a");
-button.setAttribute("href", "../admin/politician.html?name="+"minister");
-button.innerText="add";
-document.querySelector(".create").append(button);
+// let button= document.createElement("a");
+// button.setAttribute("href", "../admin/politician.html?name="+"minister");
+// button.innerText="add";
+// document.querySelector(".create").append(button);

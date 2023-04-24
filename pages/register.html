@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../assets/css/join now.css">
+    <link rel="stylesheet" href="../../assets/css/notify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" sizes="60x32" href="assets/images/icons/p logo.jpg">
+    <title>politifact</title>
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="register">
+                <h1>Sign up</h1>
+                <div class="social-container">
+
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+                <span>or use your email for registration</span>
+
+                <input type="text" id="first_name" placeholder="Name" minlength="6" pattern="[A-Za-z]{1,32}"
+                    maxlength="20" title="please insert only alphabet value" required />
+
+                <input type="text" id="last_name" placeholder="last Name" minlength="1" pattern="[A-Za-z]{1,32}"
+                    maxlength="20" required />
+
+                <input type="tel" id="mobile_number" required title="please enter a valid mobile number" minlength="10"
+                    maxlength="10" placeholder="Mobile Number" />
+
+
+                <input type="email" id="regemail" spellcheck="@" placeholder="Email" required
+                    title="please use @ symbol, not use space" />
+
+
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required
+                    id="regpassword" minlength="8" maxlength="12" placeholder="Password" />
+
+                <button type="submit" id="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+
+
+        <div class="form-container sign-in-container">
+            <form id="checkregister">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <span>or use your account</span>
+
+                <input type="email" id="username" spellcheck="@" placeholder="Email" required
+                    title="please use @ symbol" />
+
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required
+                    id="password" maxlength="12" minlength="8" placeholder="Password" />
+
+                <a href="#">Forgot your password?</a>
+
+                <button type="submit">Sign In</button>
+
+            </form>
+
+        </div>
+
+        <div class="overlay-container">
+
+            <div class="overlay">
+
+                <div class="overlay-panel overlay-left">
+                    <h1>Hello futures</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../assets/javascript/index.js"></script>
+    <script src="../../assets/javascript/notify.js"></script>
+    <script>
+        let minister_name = [
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/mk stalin.png",
+                    "alter": "udhayanithi stalin"
+                },
+                "name": {
+                    "tname": "உதயநிதி ஸ்டாலின்",
+                    "ename": "Udhayanidhi Stalin"
+                },
+
+                "position": "முதலமைச்சர்",
+                status: true,
+                "id": 1
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/udhayanithi.jpg",
+                    "alter": "udhayanithi stalin"
+                },
+                "name": {
+                    "tname": "உதயநிதி ஸ்டாலின்",
+                    "ename": "Udhayanidhi Stalin"
+                },
+
+                "position": "விளையாட்டுத்துறை",
+                status: true,
+                "id": 2
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/duraimurugan.jpg",
+                    "alter": "DURAIMURUGAN"
+                },
+                "name": {
+                    "tname": "துரைமுருகன்",
+                    "ename": "Durai Murugan"
+                },
+
+                "position": "பொதுச்செயலாளர்",
+                status: true,
+                "id": 3
+
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/kn neru.jpg",
+                    "alter": "KN NERU IMAGE"
+                },
+                "name": {
+                    "tname": "கே. என். நேரு",
+                    "ename": "K. N. Nehru"
+                },
+
+                "position": "நகர்ப்புற வளர்ச்சித்துறை",
+                status: true,
+                "id": 4
+            },
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/periyasami.jpg",
+                    "alter": "PERIYASAMI IMAGE"
+                },
+                "name": {
+                    "tname": "ஐ. பெரியசாமி ",
+                    "ename": "I. Periyasamy"
+                },
+
+                "position": "கூட்டுறவுத்துறை",
+                status: true,
+                "id": 5
+            },
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/ponkmudi.jpg",
+                    "alter": "PONMUDI IMAGE"
+                },
+                "name": {
+                    "tname": "க. பொன்முடி",
+                    "ename": "K. Ponmudy"
+                },
+
+                "position": "உயர் கல்வி ",
+                status: true,
+                "id": 6
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/velu.jpg",
+                    "alter": "udhayanithi stalin"
+                },
+                "name": {
+                    "tname": "எ. வ. வேலு",
+                    "ename": "E. V. Velu"
+                },
+
+                "position": "உணவுத் துறை",
+                status: true,
+                "id": 7
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/pannerselvam.jpg",
+                    "alter": "udhayanithi stalin"
+                },
+                "name": {
+                    "tname": "ஆர். கே. பன்னீர்செல்வம்",
+                    "ename": "M. R. K. Panneerselvam"
+                },
+
+                "position": "சமூக நலத்துறை",
+                status: true,
+                "id": 8
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/tanarasu.jpg",
+                    "alter": "thangam thennarasu"
+                },
+                "name": {
+                    "tname": "தங்கம் தென்னரசு",
+                    "ename": "Thangam Thennarasu"
+                },
+
+                "position": "தொல்லியல்துறை",
+                status: true,
+                "id": 9
+            },
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/ranachanran.jpg",
+                    "alter": "ramachandiran"
+                },
+                "name": {
+                    "tname": "ஆர்.ராமச்சந்திரன்",
+                    "ename": "Ramachandran"
+                },
+
+                "position": "தமிழக வருவாய் துறை",
+                status: true,
+                "id": 10
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/regubathy.jpg",
+                    "alter": "ragupahty"
+                },
+                "name": {
+                    "tname": "எஸ். ரகுபதி",
+                    "ename": "S. Regupathy"
+                },
+
+                "position": "சட்டத்துறை",
+                status: true,
+                "id": 11
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/muthusamy.jpg",
+                    "alter": "muthusaami"
+                },
+                "name": {
+                    "tname": "சு. முத்துசாமி",
+                    "ename": "S. Muthusamy"
+                },
+
+                "position": "வீட்டு வசதித்துறை",
+                status: true,
+                "id": 12
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/periyakaruppan.jpg",
+                    "alter": "periyasami"
+                },
+                "name": {
+                    "tname": "கே. ஆர். பெரியகருப்பன்",
+                    "ename": "K.R.Periyakaruppan"
+                },
+
+                "position": "ஊரகவளர்ச்சி",
+                status: true,
+                "id": 13
+            },
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/anbarasan.jpg",
+                    "alter": "anbarasan"
+                },
+                "name": {
+                    "tname": "தா. மோ. அன்பரசன்",
+                    "ename": "T. M. Anbarasan"
+                },
+
+                "position": "ஊரக தொழிற்துறை",
+                status: true,
+                "id": 14
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/saminathan.jpg",
+                    "alter": "saaminathan"
+                },
+                "name": {
+                    "tname": "மு. பெ. சாமிநாதன்",
+                    "ename": "M. P. Saminathan"
+                },
+
+                "position": "பதவி: செய்தித்துறை",
+                status: true,
+                "id": 15
+            },
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/geeth.jpg",
+                    "alter": "keetha jeevan"
+                },
+                "name": {
+                    "tname": "பெ. கீதா ஜீவன்",
+                    "ename": "Geetha Jeevan"
+                },
+
+                "position": "மகளிர் உரிமைத்துறை",
+                status: true,
+                "id": 16
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/anith.jpg",
+                    "alter": "anitharadhakirishanan"
+                },
+                "name": {
+                    "tname": "அனிதா ராதாகிருஷ்ணன்",
+                    "ename": "Anitha R. Radhakrishnan"
+                },
+
+                "position": "கால்நடை பராமரிப்பு",
+                status: true,
+                "id": 17
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/sivakumar.jpg",
+                    "alter": "sivakumar"
+                },
+                "name": {
+                    "tname": "S .சிவகுமார்",
+                    "ename": "S S. Sivakumar"
+                },
+
+                "position": "போக்குவரத்து",
+                status: true,
+                "id": 18
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/ramachandran.jpg",
+                    "alter": "ramachanran"
+                },
+                "name": {
+                    "tname": "K.இராமச்சந்திரன்",
+                    "ename": "K. Ramachandran"
+                },
+
+                "position": "வனவிலங்கு",
+                status: true,
+                "id": 19
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/sakkaraporni.jpg",
+                    "alter": "sakrabaani"
+                },
+                "name": {
+                    "tname": "அர. சக்கரபாணி",
+                    "ename": "R. Sakkarapani"
+                },
+
+                "position": "உணவுத் துறை",
+                status: true,
+                "id": 20
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/sendil balji.jpg",
+                    "alter": "sendhilbalaji"
+                },
+                "name": {
+                    "tname": "வே. செந்தில்பாலாஜி",
+                    "ename": "V. Senthilbalaji"
+                },
+
+                "position": "மின்சாரம்",
+                status: true,
+                "id": 21
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/rs ganthi.jpg",
+                    "alter": "rs gandhi"
+                },
+                "name": {
+                    "tname": "ஆர். காந்தி",
+                    "ename": "R. Gandhi"
+                },
+
+                "position": "கைத்தறி",
+                status: true,
+                "id": 22
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/subramani.jpg",
+                    "alter": "subramaniyan"
+                },
+                "name": {
+                    "tname": "மா. சுப்பிரமணியம்",
+                    "ename": "M. Subramaniam"
+                },
+
+                "position": "மக்கள் நல்வாழ்வு",
+                status: true,
+                "id": 23
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/mirthi.jpg",
+                    "alter": "moorhty p image"
+                },
+                "name": {
+                    "tname": "பி. மூர்த்தி",
+                    "ename": "Moorthy P",
+                },
+
+                "position": "வணிகவரி",
+                status: true,
+                "id": 24
+            },
+
+            {
+
+                "img": {
+                    "sourse": "../../assets/images/ministers/rajakannapan.jpg",
+                    "alter": "udhayanithi stalin"
+                },
+                "name": {
+                    "tname": "இராஜ கண்ணப்பன்",
+                    "ename": "R. S. Raja Kannappan"
+                },
+
+                "position": "பிற்படுத்தப்பட்டோர்",
+                status: true,
+                "id": 25
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/segar babu.jpg",
+                    "alter": "segar babu"
+                },
+                "name": {
+                    "tname": "பி. கே. சேகர் பாபு",
+                    "ename": "P. K. Sekar Babu"
+                },
+
+                "position": "அறநிலையத் துறை",
+                status: true,
+                "id": 26
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/palanivel.jpg",
+                    "alter": "palanivel thigarajan"
+                },
+                "name": {
+                    "tname": "பழனிவேல் தியாகராஜன்",
+                    "ename": "Palanivel Thiagarajan"
+                },
+
+                "position": "நிதித்துறை அமைச்சர்",
+                status: true,
+                "id": 27
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/nasar.jpg",
+                    "alter": "s m nasar"
+                },
+                "name": {
+                    "tname": "சா. மு. நாசர்",
+                    "ename": " S. M. Nasar"
+                },
+
+                "position": "பால் பண்ணை வளர்ச்சி",
+                status: true,
+                "id": 28
+            },
+
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/magesh.jpg",
+                    "alter": "Anbil Mahesh Poyyamozhi"
+                },
+                "name": {
+                    "tname": "அன்பில் மகேஷ்",
+                    "ename": "Anbil Mahesh Poyyamozhi"
+                },
+
+                "position": "பள்ளிக் கல்வித் துறை",
+                status: true,
+                "id": 29
+            },
+            {
+                "img": {
+                    "sourse": "../../assets/images/ministers/mano.jpg",
+                    "alter": "mano thangaraj"
+                },
+                "name": {
+                    "tname": "மனோ தங்கராஜ்",
+                    "ename": "T. Mano Thangaraj"
+                },
+
+                "position": "தொழில்நுட்பத்துறை",
+                status: true,
+                id: 30
+            },
+        ];
+
+        localStorage.setItem("politician_data", JSON.stringify(minister_name));
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

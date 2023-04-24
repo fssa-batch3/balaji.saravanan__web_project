@@ -11,6 +11,12 @@ if (user) {
     document.getElementById("last_name").value = user.last_name;
     document.getElementById("mobile").value = user.mobile_number;
     document.getElementById("email").value = user.email;
+    if (user.address) {
+        document.getElementById("age").value = user.address.address;
+        document.getElementById("occupation").value = user.address.occuption;
+        document.getElementById("city").value = user.address.city;
+        document.getElementById("gender").value = user.address.gender;
+    }
 }
 
 
@@ -63,11 +69,9 @@ saveButton.addEventListener("submit", e => {    // save button function this but
     }
     user.address = addres_value;
     localStorage.setItem('users', JSON.stringify(users));
-
     e.preventDefault();
 
 });
-
 
 
 
