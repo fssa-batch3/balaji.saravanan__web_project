@@ -297,14 +297,6 @@ if (found) {
     cmImage.setAttribute("class", "cm-image");
 
 
-    //cmPicture
-
-    // cmPicture = document.createElement("img");
-    // cmPicture.setAttribute("src", minister_name[i].image.sourse);
-    // cmImage.append(cmPicture);
-
-    // document.querySelector(".headprofile").append(cmImage);
-
     // // cm_name
     cm_name = document.createElement("div");
     cm_name.setAttribute("class", "cm-name");

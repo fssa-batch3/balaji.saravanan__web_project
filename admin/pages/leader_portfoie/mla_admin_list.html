@@ -337,7 +337,7 @@
                                 <a href="#" class="nav-link active">Mp list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="mla_admin_list.html" class="nav-link font-regular">MLA list</a>
+                                <a href="#" class="nav-link font-regular" onclick="mlalist()">MLA list</a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link font-regular">Governer list</a>
@@ -363,10 +363,11 @@
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col">Candidate Name</th>
-                                        <th scope="col">Position</th>
+                                        <th scope="col">constituency_Name
+                                        </th>
                                         <th scope="col">Patry Name</th>
-                                        <th scope="col">experiance</th>
-                                        <th scope="col">status</th>
+                                        <th scope="col">margin</th>
+                                        <th scope="col">votes</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -540,7 +541,7 @@
 
 
     <script>
-        let ministers_value = JSON.parse(localStorage.getItem("politician_data"));
+        let ministers_value = JSON.parse(localStorage.getItem("mla_ditails"));
 
         for (let values of ministers_value) {
 
@@ -550,19 +551,19 @@
             // Create the first table data element for the avatar and name
             const td1 = document.createElement('td');
             const avatar = document.createElement('img');
-            avatar.setAttribute('alt', values.name.ename);
-            avatar.setAttribute('src', values.img.sourse);
+            avatar.setAttribute('alt', values.candidate_Name);
+            avatar.setAttribute('src', '#');
             avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
             const nameLink = document.createElement('a');
             nameLink.setAttribute('href', '#');
             nameLink.classList.add('text-heading', 'font-semibold');
-            nameLink.textContent = values.name.ename;
+            nameLink.textContent = values.candidate_Name;
             td1.appendChild(avatar);
             td1.appendChild(nameLink);
 
             // Create the second table data element for the date
             const td2 = document.createElement('td');
-            td2.textContent = values.position;
+            td2.textContent = values.constituency_Name;
 
             // Create the third table data element for the logo and company name
             const td3 = document.createElement('td');
@@ -573,13 +574,13 @@
             const companyLink = document.createElement('a');
             companyLink.setAttribute('href', '#');
             companyLink.classList.add('text-heading', 'font-semibold');
-            companyLink.textContent = values.party_name;
+            companyLink.textContent = values.party;
             td3.appendChild(logo);
             td3.appendChild(companyLink);
 
             // Create the fourth table data element for the amount
             const td4 = document.createElement('td');
-            td4.textContent = values.experiance;
+            td4.textContent = values.margin;
 
             // Create the fifth table data element for the status badge
             const td5 = document.createElement('td');
@@ -588,7 +589,7 @@
             const badgeIcon = document.createElement('i');
             badgeIcon.classList.add('bg-success');
             badge.appendChild(badgeIcon);
-            badge.appendChild(document.createTextNode(values.status));
+            badge.appendChild(document.createTextNode(values.votes));
             td5.appendChild(badge);
 
             // Create the sixth table data element for the action buttons
@@ -656,16 +657,17 @@
         // Function to update leader data
         function updateLeader(leader) {
             // Set form values to current leader data
-            document.getElementById("url").value = leader.img.sourse;
 
-            document.getElementById("tname").value = leader.name.tname;
+            document.getElementById("tname").value = leader.candidate_Name;
 
-            document.getElementById("ename").value = leader.name.ename;
+            document.getElementById("ename").value = leader.constituency_Name;
 
-            document.getElementById("position").value = leader.position;
+            document.getElementById("position").value = leader.party;
 
-            document.getElementById("party_name").value = leader.party_name;
+            document.getElementById("party_name").value = leader.margin;
             if (leader.movie) {
+
+                document.getElementById("url").value = leader.img.sourse;
 
                 document.getElementById("description").value = leader.movie.movie_description;
 
@@ -735,13 +737,10 @@
 
 
             const leaderdata = {
-                name: {
-                    tname: tamil_name,
-                    ename: english_name,
-                },
+               candidate_Name: tamil_name,
                 img: {
                     source: img_url,
-                    alter: english_name,
+                    alter: tamil_name,
                 },
                 position: position,
                 movie: {
