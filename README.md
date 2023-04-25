@@ -166,31 +166,30 @@ UPLOAD NEW LEADER PROFILE TO VIEW :  ( COMPLETD )
     * Steps :
         1. Login as a admin.
         2. Navigate to the admin dash board page click create.
-        3. Click "Add Leader" button to upload the new LEADER PROFILE.
-        4. Enter the required leader profile details such as name, description, and position.
-        5. Click the "submit" button to submit the new LEADER PROFILE.
+        3. Enter the required leader profile details such as name, description, and position.
+        4. Click the "submit" button to submit the new LEADER PROFILE.
     * Expected result :
-        * The new product is created and added to the new profile leader.
+        * The new product is created and added to the new MP list.
 
 VIEW THE LIST OF LEADER PROFILE :  ( COMPLETD )
 
 * Scenario 1: Successfully view list of leader profiles
     * Steps :
-        1. Login as a user.
-        2. Navigate to the profile list page.
+        1. Login as a admin.
+        2. Navigate to the mp list list page.
         3. View the list.
     * Expected result :
-        * The user can view the list of leader frofile.
+        * The user can view the list of leader profile.
 
 EDIT THE LEADER PROFILE :  ( COMPLETD )
 
 * Scenario 1: Successfully edit the LEADER PROFILE details
     * Steps :
-        1. Login as a user.
-        2. Navigate to the leader profile page page.
+        1. Login as a admin.
+        2. Navigate to the leader from with details page page.
         3. Select a leader to update.
-        4. Click the "update" button.
-        5. Update the product details.
+        4. Click the "edit" button.
+        5. Update the leader details details.
         6. Click the "Save" button to update the leader details.
     * Expected result:
         * The profile details are updated.
@@ -199,35 +198,20 @@ DELETE THE LEADER KEY :  ( COMPLETED )
 
 * Scenario 1: Update: Successfully deleted the KEY
     * Steps :
-        1. Login as a user.
+        1. Login as a admin.
         2. Navigate to the leader list page page.
         3. Select the leaders to delete.
         4. Click the "Delete" button to  not delete but not show in main page key status only change the selected leader.
     * Expected result :
         * The product is deleted status key changed in json from the profile list page page.
 
-ADMIN :
 
 
-EDIT THE LEADER PROFILE :  ( COMPLETD )
-
-* Scenario 1: Successfully edit the LEADER PROFILE details
-    * Steps :
-        1. Login as a user.
-        2. Navigate to the manifesto list pae.
-        3. Select a manifesto to update.
-        4. Click the "update" button.
-        5. Update the product details.
-        6. Click the "Save" button to update the leader details.
-    * Expected result:
-        * The profile details are updated.
-
-
-        UPLOAD NEW MANIFESTO TO VIEW :  ( not yet)
+ UPLOAD NEW MANIFESTO TO VIEW :  ( not yet start)
 
 * Scenario 1: Successfully uploaded the new MANIFESTO
     * Steps :
-        1. Login as a USER.
+        1. Login as a admin.
         2. Navigate to the My products page to ADD the new Manifesto.
         3. Click "Add Leader" button to upload the new Manifesto.
         4. Enter the required leader profile details such as title, stage, and status.
@@ -247,7 +231,7 @@ VIEW THE LIST OF MANIFESTO :  ( not yet )
     * Expected result :
         * The user can view the list of leader frofile.
 
-DELETE THE MANIFESTO KEY :  ( COMPLETED )
+DELETE THE MANIFESTO KEY :  ( not yet start )
 
 * Scenario 1: Update: Successfully deleted the KEY
     * Steps :
