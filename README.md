@@ -90,7 +90,7 @@ CREATE AN ACCOUNT :  ( COMPLETED )
         2. Fill the required informations such as email id and password.
         3. Click the "Submit" button.
     * Expected result :
-        * The user is redirected to the profile page.
+        * The user is redirected to the home page.
 
 VIEW PROFILE :  ( COMPLETED ) 
 
@@ -113,6 +113,7 @@ EDIT PROFILE :  ( COMPLETED )
         5. Click "Save" button to save the details.
     * Expected result :
         * The details of the user has been updated.
+        * The user add other values.
 
 VIEW LEADER PROFILE :  ( COMPLETED )
 
@@ -157,12 +158,14 @@ REMOVE LEADER PROFILE FROM THE WISHLIST :  ( COMPLETD )
         * The item is removed from the user's wishlist.
 
 
+ADMIN :
+
 UPLOAD NEW LEADER PROFILE TO VIEW :  ( COMPLETD )
 
 * Scenario 1: Successfully uploaded the nEW LEADER PROFILE
     * Steps :
-        1. Login as a USER.
-        2. Navigate to the My products page to ADD the new LEADER PROFILE.
+        1. Login as a admin.
+        2. Navigate to the admin dash board page click create.
         3. Click "Add Leader" button to upload the new LEADER PROFILE.
         4. Enter the required leader profile details such as name, description, and position.
         5. Click the "submit" button to submit the new LEADER PROFILE.
@@ -203,31 +206,8 @@ DELETE THE LEADER KEY :  ( COMPLETED )
     * Expected result :
         * The product is deleted status key changed in json from the profile list page page.
 
+ADMIN :
 
-
-UPLOAD NEW MANIFESTO TO VIEW :  ( COMPLETD )
-
-* Scenario 1: Successfully uploaded the new MANIFESTO
-    * Steps :
-        1. Login as a USER.
-        2. Navigate to the My products page to ADD the new Manifesto.
-        3. Click "Add Leader" button to upload the new Manifesto.
-        4. Enter the required leader profile details such as title, stage, and status.
-        5. Click the "submit" button to submit the new Manifeso.
-    * Expected result :
-        * The new product is created and added to the new manifesto.
-
-
-
-VIEW THE LIST OF MANIFESTO :  ( COMPLETD )
-
-* Scenario 1: Successfully view list of leader profiles
-    * Steps :
-        1. Login as a user.
-        2. Navigate to the MANIFESTO list page.
-        3. View the list.
-    * Expected result :
-        * The user can view the list of leader frofile.
 
 EDIT THE LEADER PROFILE :  ( COMPLETD )
 
@@ -241,6 +221,31 @@ EDIT THE LEADER PROFILE :  ( COMPLETD )
         6. Click the "Save" button to update the leader details.
     * Expected result:
         * The profile details are updated.
+
+
+        UPLOAD NEW MANIFESTO TO VIEW :  ( not yet)
+
+* Scenario 1: Successfully uploaded the new MANIFESTO
+    * Steps :
+        1. Login as a USER.
+        2. Navigate to the My products page to ADD the new Manifesto.
+        3. Click "Add Leader" button to upload the new Manifesto.
+        4. Enter the required leader profile details such as title, stage, and status.
+        5. Click the "submit" button to submit the new Manifeso.
+    * Expected result :
+        * The new product is created and added to the new manifesto.
+
+
+
+VIEW THE LIST OF MANIFESTO :  ( not yet )
+
+* Scenario 1: Successfully view list of leader profiles
+    * Steps :
+        1. Login as a user.
+        2. Navigate to the MANIFESTO list page.
+        3. View the list.
+    * Expected result :
+        * The user can view the list of leader frofile.
 
 DELETE THE MANIFESTO KEY :  ( COMPLETED )
 
