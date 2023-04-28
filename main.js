@@ -83,7 +83,7 @@ const header = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
                 Language
                     </a>
                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                         <li><a class="dropdown-item text-dark" href=#"">Tamil</a></li>
+                         <li><a class="dropdown-item text-dark" href="#" id="lang_ta">Tamil</a></li>
                          <li><button class="dropdown-item text-dark" id="lang_eng">English</button></li>
                      </ul>
              </li>
@@ -2313,9 +2313,9 @@ let mla_values = [
     }
 ]
 
-if(JSON.parse(localStorage.getItem("mla_ditails"))){
+if (JSON.parse(localStorage.getItem("mla_ditails"))) {
 
-}else{
+} else {
     localStorage.setItem("mla_ditails", JSON.stringify(
         [
             {
@@ -4432,7 +4432,7 @@ if(JSON.parse(localStorage.getItem("mla_ditails"))){
 
 
 if (JSON.parse(localStorage.getItem("politician_data"))) {
-    
+
 }
 else {
     localStorage.setItem("politician_data", JSON.stringify([

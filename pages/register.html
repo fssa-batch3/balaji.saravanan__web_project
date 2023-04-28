@@ -25,18 +25,18 @@
                 </div>
                 <span>or use your email for registration</span>
 
-                <input type="text" id="first_name" placeholder="Name" minlength="6" pattern="[A-Za-z]{1,32}"
+                <input type="text" id="first_name" placeholder="Name" minlength="6" pattern="^[A-Za-z]+$"
                     maxlength="20" title="please insert only alphabet value" required />
 
-                <input type="text" id="last_name" placeholder="last Name" minlength="1" pattern="[A-Za-z]{1,32}"
+                <input type="text" id="last_name" placeholder="last Name" minlength="1" pattern="^[A-Za-z]+$"
                     maxlength="20" required />
 
                 <input type="tel" id="mobile_number" required title="please enter a valid mobile number" minlength="10"
-                    maxlength="10" placeholder="Mobile Number" />
+                    maxlength="10" placeholder="Mobile Number" pattern="^[6-9][0-9]{9}$" />
 
 
                 <input type="email" id="regemail" spellcheck="@" placeholder="Email" required
-                    title="please use @ symbol, not use space" />
+                    title="please use @ symbol, not use space" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
 
 
                 <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required
@@ -58,7 +58,7 @@
                 <span>or use your account</span>
 
                 <input type="email" id="username" spellcheck="@" placeholder="Email" required
-                    title="please use @ symbol" />
+                    title="please use @ symbol" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" />
 
                 <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required
                     id="password" maxlength="12" minlength="8" placeholder="Password" />

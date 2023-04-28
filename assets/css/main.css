@@ -1318,7 +1318,7 @@ ul {
 }
 
 .governer table td {
-    padding: 20px;
+    padding: 15px;
     color: black;
     font-weight: 700;
 
@@ -1351,7 +1351,7 @@ ul {
     text-decoration: none;
     color: black;
     font-weight: 800;
-    font-size: 22px;
+    font-size: 15px;
 
 }
 
@@ -1944,12 +1944,13 @@ td .name-img {
 
 } */
 
-.totalnav #search_result {
+#search_result {
     width: 50%;
     height: 400px;
     overflow: scroll;
     margin: 0 20%;
     display: none;
+    
 }
 
 #search_result::-webkit-scrollbar {

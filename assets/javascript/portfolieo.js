@@ -39,7 +39,7 @@ const minister_values = JSON.parse(
 
 minister_values.filter(function (obj) {
 
-  if (obj.status) {
+  if (obj.status && obj) {
 
     list_leaders(obj);
 
