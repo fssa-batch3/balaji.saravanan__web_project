@@ -3,7 +3,7 @@ let root = window.location.origin;
 
 const logged_email = localStorage.getItem("admin_login");
 
-let nav= document.getElementById("nave_side");
+let nav = document.getElementById("nave_side");
 
 let header = `<nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg"
 id="navbarVertical">
@@ -100,10 +100,16 @@ id="navbarVertical">
 </div>
 </nav>`;
 
+
+
 if (logged_email !== null) {
-    nav.insertAdjacentHTML("beforebegin", header);
-} else {
+
     nav.insertAdjacentHTML("afterbegin", header);
+
+} else {
+
+    nav.insertAdjacentHTML("afterbegin", header);
+
 }
 
 
