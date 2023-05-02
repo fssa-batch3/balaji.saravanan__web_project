@@ -12,7 +12,7 @@ const createManifesto = () => {
   const status = document.getElementById("manifesto-status").value;
 
   // Create a new manifesto object with a unique ID
-  const newManifesto = {
+  const manifesto_values = {
     id: manifestoData.length,
     title,
     stage,
@@ -22,22 +22,16 @@ const createManifesto = () => {
     time: new Date().getTime()
   };
 
-  // Add the new manifesto object to the existing manifesto data
-  addManifesto(newManifesto, manifestoData);
+  manifestoData.push(manifesto_values)
 
-  // Store the updated manifesto data in local storage
+  alert("ooooooooooooooooooooo")
   localStorage.setItem("manifesto_data", JSON.stringify(manifestoData));
 
-  // Reset the form
+  window.location.href = "../admin/manifesto_listpage.html";
   document.getElementById("manifesto_form").reset();
-};
-
-const addManifesto = (newManifesto, manifestoData) => {
-  manifestoData.push(newManifesto);
 };
 
 manifestoForm.addEventListener("submit", e => {
   e.preventDefault(); // prevent default form submission behavior
   createManifesto();
-  window.location.href = "../admin/manifesto_listpage.html";
 });

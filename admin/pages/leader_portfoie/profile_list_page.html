@@ -29,7 +29,6 @@
 
         #leader-form input[type="text"],
         #leader-form textarea {
-            /* width: 100%; */
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
@@ -247,10 +246,10 @@
                                 <a href="mla_admin_list.html" class="nav-link font-regular">MLA list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Governer list</a>
+                                <a href="governer_list.html" class="nav-link font-regular">Governer list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Past leaders</a>
+                                <a href="past_leader.html" class="nav-link font-regular">Past leaders</a>
                             </li>
                         </ul>
                     </div>
@@ -277,7 +276,7 @@
                                         <th></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="mp_container">
 
                                 </tbody>
                             </table>
@@ -305,20 +304,13 @@
                                             <select class="form-select" aria-label="Default select example"
                                                 id="position" required pattern="[A-Za-z]" required>
                                                 <option selected>Enter your opinion</option>
-                                                <option value="CM">CM</option>
-                                                <option value="MP">MP</option>
-                                                <option value="MLA">MLA</option>
-                                                <option value="GOVERNER">GOVERNER</option>
-
+                                                <option value="முதல் அமைச்சர்">முதல் அமைச்சர்</option>
+                                                <option value="நாடாளுமன்ற உறுப்பினர்">நாடாளுமன்ற உறுப்பினர்</option>
                                             </select>
-                                        </div>
-                                        <div class="from_date" style="display:block;">
-                                            <label for="">from_date</label>
-                                            <input type="date" id="date_f" required>
                                         </div>
 
                                         <div>
-                                            <label for="movie_radio" id="movie">Movie</label>
+                                            <label for="movie_radio" id="movie">past </label>
 
                                             <input type="radio" name="desc_radio" id="movie_radio" value="movie"
                                                 onclick="showDescription()" />
@@ -357,10 +349,7 @@
                                         <input type="text" id="occupation" placeholder="occupation" required>
                                         <label for="politics_radio">Politics Experiance</label>
                                         <input type="number" id="experiance" placeholder="experiance" required>
-                                        <div class="from_date" style="display:block;">
-                                            <label for="">To_date</label>
-                                            <input type="date" id="date_t" required>
-                                        </div>
+
 
 
                                         <div>
@@ -420,23 +409,6 @@
 
                                 }
                             }
-
-                            const from_date = document.getElementById("date_f");
-                            const to_date = document.getElementById("date_t");
-
-                            const urlParams = new URLSearchParams(window.location.search);
-                            const username = urlParams.get("name");
-                            console.log(username);
-
-                            if (username === "") {
-                                from_date.style.display = "none";
-                                to_date.style.display = "none";
-
-                            } else {
-                                from_date.style.display = "block";
-                                to_date.style.display = "block";
-
-                            }
                         </script>
 
                     </div>
@@ -449,92 +421,98 @@
     <script>
         let ministers_value = JSON.parse(localStorage.getItem("politician_data"));
 
-        for (let values of ministers_value) {
+        function loadMp() {
 
-            // Create the table row element
-            const tr = document.createElement('tr');
+            const mp_container = document.getElementById("mp_container");
+            mp_container.innerHTML = "";
 
-            // Create the first table data element for the avatar and name
-            const td1 = document.createElement('td');
-            const avatar = document.createElement('img');
-            avatar.setAttribute('alt', values.name.ename);
-            avatar.setAttribute('src', values.img.sourse);
-            avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
-            const nameLink = document.createElement('a');
-            nameLink.setAttribute('href', '#');
-            nameLink.classList.add('text-heading', 'font-semibold');
-            nameLink.textContent = values.name.ename;
-            td1.appendChild(avatar);
-            td1.appendChild(nameLink);
+            for (let values of ministers_value) {
 
-            // Create the second table data element for the date
-            const td2 = document.createElement('td');
-            td2.textContent = values.position;
+                // Create the table row element
+                const tr = document.createElement('tr');
 
-            // Create the third table data element for the logo and company name
-            const td3 = document.createElement('td');
-            const logo = document.createElement('img');
-            logo.setAttribute('alt', '...');
-            logo.setAttribute('src', '#');
-            logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
-            const companyLink = document.createElement('a');
-            companyLink.setAttribute('href', '#');
-            companyLink.classList.add('text-heading', 'font-semibold');
-            companyLink.textContent = values.party_name;
-            td3.appendChild(logo);
-            td3.appendChild(companyLink);
+                // Create the first table data element for the avatar and name
+                const td1 = document.createElement('td');
+                const avatar = document.createElement('img');
+                avatar.setAttribute('alt', values.name.ename);
+                avatar.setAttribute('src', values.img.sourse);
+                avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
+                const nameLink = document.createElement('a');
+                nameLink.setAttribute('href', '#');
+                nameLink.classList.add('text-heading', 'font-semibold');
+                nameLink.textContent = values.name.ename;
+                td1.appendChild(avatar);
+                td1.appendChild(nameLink);
 
-            // Create the fourth table data element for the amount
-            const td4 = document.createElement('td');
-            td4.textContent = values.experiance;
+                // Create the second table data element for the date
+                const td2 = document.createElement('td');
+                td2.textContent = values.position;
 
-            // Create the fifth table data element for the status badge
-            const td5 = document.createElement('td');
-            const badge = document.createElement('span');
-            badge.classList.add('badge', 'badge-lg', 'badge-dot');
-            const badgeIcon = document.createElement('i');
-            badgeIcon.classList.add('bg-success');
-            badge.appendChild(badgeIcon);
-            badge.appendChild(document.createTextNode(values.status));
-            td5.appendChild(badge);
+                // Create the third table data element for the logo and company name
+                const td3 = document.createElement('td');
+                const logo = document.createElement('img');
+                logo.setAttribute('alt', '...');
+                logo.setAttribute('src', '#');
+                logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
+                const companyLink = document.createElement('a');
+                companyLink.setAttribute('href', '#');
+                companyLink.classList.add('text-heading', 'font-semibold');
+                companyLink.textContent = values.party_name;
+                td3.appendChild(logo);
+                td3.appendChild(companyLink);
 
-            // Create the sixth table data element for the action buttons
-            const td6 = document.createElement('td');
+                // Create the fourth table data element for the amount
+                const td4 = document.createElement('td');
+                td4.textContent = values.experiance;
 
-            const viewButton = document.createElement('a');
-            viewButton.setAttribute('href', '#');
-            viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
-            viewButton.textContent = 'Edit';
-            viewButton.onclick = function () {
-                updateLeader(values);
-                container_div.style.display = 'flex';
-                table_content.style.display = "none";
+                // Create the fifth table data element for the status badge
+                const td5 = document.createElement('td');
+                const badge = document.createElement('span');
+                badge.classList.add('badge', 'badge-lg', 'badge-dot');
+                const badgeIcon = document.createElement('i');
+                badgeIcon.classList.add('bg-success');
+                badge.appendChild(badgeIcon);
+                badge.appendChild(document.createTextNode(values.status));
+                td5.appendChild(badge);
 
+                // Create the sixth table data element for the action buttons
+                const td6 = document.createElement('td');
+
+                const viewButton = document.createElement('a');
+                viewButton.setAttribute('href', '#');
+                viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
+                viewButton.textContent = 'Edit';
+                viewButton.onclick = function () {
+                    updateLeader(values);
+                    container_div.style.display = 'flex';
+                    table_content.style.display = "none";
+
+                }
+                const deleteButton = document.createElement('button');
+                deleteButton.setAttribute('type', 'button');
+                deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
+                const deleteIcon = document.createElement('i');
+                deleteIcon.classList.add('bi', 'bi-trash');
+                deleteButton.appendChild(deleteIcon);
+                deleteButton.onclick = function () {
+                    deleteLeader(values);
+
+                }
+                td6.appendChild(viewButton);
+                td6.appendChild(deleteButton);
+
+                // Add all the table data elements to the row element
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                tr.appendChild(td5);
+                tr.appendChild(td6);
+
+                // Add the row element to the table body
+                const tableBody = document.querySelector('tbody');
+                tableBody.appendChild(tr);
             }
-            const deleteButton = document.createElement('button');
-            deleteButton.setAttribute('type', 'button');
-            deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
-            const deleteIcon = document.createElement('i');
-            deleteIcon.classList.add('bi', 'bi-trash');
-            deleteButton.appendChild(deleteIcon);
-            deleteButton.onclick = function () {
-                deleteLeader(values);
-
-            }
-            td6.appendChild(viewButton);
-            td6.appendChild(deleteButton);
-
-            // Add all the table data elements to the row element
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            tr.appendChild(td4);
-            tr.appendChild(td5);
-            tr.appendChild(td6);
-
-            // Add the row element to the table body
-            const tableBody = document.querySelector('tbody');
-            tableBody.appendChild(tr);
         }
 
         const container_div = document.getElementById("container");
@@ -557,9 +535,6 @@
         let profile_leder_id = null;
 
         const leaderForm = document.getElementById("leader-form");
-
-        const ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
-
         // Function to update leader data
         function updateLeader(leader) {
             // Set form values to current leader data
@@ -585,10 +560,6 @@
                 document.getElementById("description4").value = leader.education.education_description;
 
                 document.getElementById("description5").value = leader.family.family_description;
-
-                document.getElementById("date_f").value = leader.from_date;
-
-                document.getElementById("date_t").value = leader.to_date;
 
                 document.getElementById("experiance").value = leader.experiance;
             }
@@ -632,10 +603,6 @@
             const family = document.getElementById("family_radio").value;
 
             const family_description = document.getElementById("description5").value;
-
-            const from_date = document.getElementById("date_f").value;
-
-            const to_date = document.getElementById("date_t").value;
 
             const experiance = document.getElementById("experiance").value;
 
@@ -681,10 +648,6 @@
 
                 status: true,
 
-                from_date: from_date,
-
-                to_date: to_date,
-
                 experiance: experiance,
 
 
@@ -692,14 +655,14 @@
 
 
             // Find index of current leader in ministersData
-            const index = ministersData.findIndex((leader) => leader.id === profile_leder_id);
+            const index = ministers_value.findIndex((leader) => leader.id === profile_leder_id);
 
             // If leader is found, update their data and save to localStorage
             if (index !== -1) {
-                ministersData[index] = leaderdata;
-                localStorage.setItem("politician_data", JSON.stringify(ministersData));
+                ministers_value[index] = leaderdata;
+                localStorage.setItem("politician_data", JSON.stringify(ministers_value));
                 alert("Leader updated successfully!");
-                window.location.reload();
+                loadMp();
             }
 
         }
@@ -709,20 +672,22 @@
 
 
         function deleteLeader(minister) {
-            const ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
 
-            const index = ministersData.findIndex((leader) => leader.name.ename === minister.name.ename);
+            const index = ministers_value.findIndex((leader) => leader.name.ename === minister.name.ename);
 
             // If leader is found, update their status to false and save to localStorage
             if (index !== -1) {
-                ministersData[index].status = false;
-                localStorage.setItem("politician_data", JSON.stringify(ministersData));
+                ministers_value[index].status = false;
+                localStorage.setItem("politician_data", JSON.stringify(ministers_value));
                 alert("Leader status changed successfully!");
-                window.location.reload();
+                loadMp();
             }
         }
 
 
+       window.onload= function (){
+        loadMp();
+       }
 
 
     </script>

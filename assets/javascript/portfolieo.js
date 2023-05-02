@@ -5,17 +5,18 @@ let login_email = localStorage.getItem("profile_email");
 
 let user_id;
 
-users.find(function (obj) {
+if (users != null) {
+  users.find(function (obj) {
 
-  if (login_email == obj.email) {
+    if (login_email == obj.email) {
 
-    user_id = obj.id;
+      user_id = obj.id;
 
-    return user_id;
-  }
+      return user_id;
+    }
 
-});
-
+  });
+}
 
 let favorite_minister =
   JSON.parse(localStorage.getItem("fav_minister")) ?? [];

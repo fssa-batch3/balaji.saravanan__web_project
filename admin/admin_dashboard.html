@@ -31,8 +31,8 @@
                             <!-- Actions -->
                             <div class="col-sm-6 col-12 text-sm-end">
                                 <div class="mx-n1">
-                                    <a href="pages/leader_portfoie/politicin_create.html"
-                                        class="btn d-inline-flex btn-sm btn-primary mx-1">
+                                    <a href="pages/leader_portfoie/politicin_create.html?name=none"
+                                        class="btn d-inline-flex btn-sm btn-primary mx-1" id="direct_to_create">
                                         <span class=" pe-2">
                                             <i class="bi bi-plus"></i>
                                         </span>
@@ -89,85 +89,84 @@
         </div>
     </div>
 
-    <!-- <script>
+    <script>
+
+        // // Create the table row element
+        // const tr = document.createElement('tr');
+
+        // // Create the first table data element for the avatar and name
+        // const td1 = document.createElement('td');
+        // const avatar = document.createElement('img');
+        // avatar.setAttribute('alt', '...');
+        // avatar.setAttribute('src', 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80');
+        // avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
+        // const nameLink = document.createElement('a');
+        // nameLink.setAttribute('href', '#');
+        // nameLink.classList.add('text-heading', 'font-semibold');
+        // nameLink.textContent = 'Robert Fox';
+        // td1.appendChild(avatar);
+        // td1.appendChild(nameLink);
+
+        // // Create the second table data element for the date
+        // const td2 = document.createElement('td');
+        // td2.textContent = 'Feb 15, 2021';
+
+        // // Create the third table data element for the logo and company name
+        // const td3 = document.createElement('td');
+        // const logo = document.createElement('img');
+        // logo.setAttribute('alt', '...');
+        // logo.setAttribute('src', 'https://preview.webpixels.io/web/img/other/logos/logo-1.png');
+        // logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
+        // const companyLink = document.createElement('a');
+        // companyLink.setAttribute('href', '#');
+        // companyLink.classList.add('text-heading', 'font-semibold');
+        // companyLink.textContent = 'Dribbble';
+        // td3.appendChild(logo);
+        // td3.appendChild(companyLink);
+
+        // // Create the fourth table data element for the amount
+        // const td4 = document.createElement('td');
+        // td4.textContent = '$3.500';
+
+        // // Create the fifth table data element for the status badge
+        // const td5 = document.createElement('td');
+        // const badge = document.createElement('span');
+        // badge.classList.add('badge', 'badge-lg', 'badge-dot');
+        // const badgeIcon = document.createElement('i');
+        // badgeIcon.classList.add('bg-success');
+        // badge.appendChild(badgeIcon);
+        // badge.appendChild(document.createTextNode('Scheduled'));
+        // td5.appendChild(badge);
+
+        // // Create the sixth table data element for the action buttons
+        // const td6 = document.createElement('td');
+        // const viewButton = document.createElement('a');
+        // viewButton.setAttribute('href', '#');
+        // viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
+        // viewButton.textContent = 'View';
+        // const deleteButton = document.createElement('button');
+        // deleteButton.setAttribute('type', 'button');
+        // deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
+        // const deleteIcon = document.createElement('i');
+        // deleteIcon.classList.add('bi', 'bi-trash');
+        // deleteButton.appendChild(deleteIcon);
+        // td6.appendChild(viewButton);
+        // td6.appendChild(deleteButton);
+
+        // // Add all the table data elements to the row element
+        // tr.appendChild(td1);
+        // tr.appendChild(td2);
+        // tr.appendChild(td3);
+        // tr.appendChild(td4);
+        // tr.appendChild(td5);
+        // tr.appendChild(td6);
+
+        // // Add the row element to the table body
+        // const tableBody = document.querySelector('tbody');
+        // tableBody.appendChild(tr);
 
 
-        // Create the table row element
-        const tr = document.createElement('tr');
-
-        // Create the first table data element for the avatar and name
-        const td1 = document.createElement('td');
-        const avatar = document.createElement('img');
-        avatar.setAttribute('alt', '...');
-        avatar.setAttribute('src', 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80');
-        avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
-        const nameLink = document.createElement('a');
-        nameLink.setAttribute('href', '#');
-        nameLink.classList.add('text-heading', 'font-semibold');
-        nameLink.textContent = 'Robert Fox';
-        td1.appendChild(avatar);
-        td1.appendChild(nameLink);
-
-        // Create the second table data element for the date
-        const td2 = document.createElement('td');
-        td2.textContent = 'Feb 15, 2021';
-
-        // Create the third table data element for the logo and company name
-        const td3 = document.createElement('td');
-        const logo = document.createElement('img');
-        logo.setAttribute('alt', '...');
-        logo.setAttribute('src', 'https://preview.webpixels.io/web/img/other/logos/logo-1.png');
-        logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
-        const companyLink = document.createElement('a');
-        companyLink.setAttribute('href', '#');
-        companyLink.classList.add('text-heading', 'font-semibold');
-        companyLink.textContent = 'Dribbble';
-        td3.appendChild(logo);
-        td3.appendChild(companyLink);
-
-        // Create the fourth table data element for the amount
-        const td4 = document.createElement('td');
-        td4.textContent = '$3.500';
-
-        // Create the fifth table data element for the status badge
-        const td5 = document.createElement('td');
-        const badge = document.createElement('span');
-        badge.classList.add('badge', 'badge-lg', 'badge-dot');
-        const badgeIcon = document.createElement('i');
-        badgeIcon.classList.add('bg-success');
-        badge.appendChild(badgeIcon);
-        badge.appendChild(document.createTextNode('Scheduled'));
-        td5.appendChild(badge);
-
-        // Create the sixth table data element for the action buttons
-        const td6 = document.createElement('td');
-        const viewButton = document.createElement('a');
-        viewButton.setAttribute('href', '#');
-        viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
-        viewButton.textContent = 'View';
-        const deleteButton = document.createElement('button');
-        deleteButton.setAttribute('type', 'button');
-        deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
-        const deleteIcon = document.createElement('i');
-        deleteIcon.classList.add('bi', 'bi-trash');
-        deleteButton.appendChild(deleteIcon);
-        td6.appendChild(viewButton);
-        td6.appendChild(deleteButton);
-
-        // Add all the table data elements to the row element
-        tr.appendChild(td1);
-        tr.appendChild(td2);
-        tr.appendChild(td3);
-        tr.appendChild(td4);
-        tr.appendChild(td5);
-        tr.appendChild(td6);
-
-        // Add the row element to the table body
-        const tableBody = document.querySelector('tbody');
-        tableBody.appendChild(tr);
-
-
-    </script> -->
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="admin_main.js"></script>

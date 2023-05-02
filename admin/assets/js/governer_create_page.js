@@ -1,23 +1,15 @@
-// const { stringify } = require("uuid");
-
 const leaderForm = document.getElementById("leader-form");
 
 const registerFromValidation = () => {
 
-    let ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
-
-    let governer_data = JSON.parse(localStorage.getItem("governer_data")) ?? [];
+    let governer_data = JSON.parse(localStorage.getItem("governer_details")) ?? [];
 
 
     const img_url = document.getElementById("url").value;
 
     const tamil_name = document.getElementById("tname").value;
 
-    const english_name = document.getElementById("ename").value;
-
     const position = document.getElementById("position").value;
-
-    const party_name = document.getElementById("party_name").value;
 
     const movie = document.getElementById("movie_radio").value;
 
@@ -49,25 +41,28 @@ const registerFromValidation = () => {
 
     const experiance = document.getElementById("experiance").value;
 
+    const state = document.getElementById("state").value;
 
-    const leaderdata = {
-        name: {
-            tname: tamil_name,
-            ename: english_name,
-        },
+
+    const governer = {
+        governor_name: tamil_name,
+
         img: {
             source: img_url,
-            alter: english_name,
+            alter: tamil_name,
         },
+
         position: position,
         movie: {
             name: movie,
             description: movie_description
         },
+
         politics: {
             name: politics,
             description: politics_description
         },
+
         income: {
             name: income,
             description: income_description
@@ -84,25 +79,24 @@ const registerFromValidation = () => {
             name: education,
             description: education_description
         },
-        party_name: party_name,
 
-        id: ministersData.length,
+        id: governer_data.length+1,
 
         status: true,
 
-        from_date: from_date,
+        from: from_date,
 
-        to_date: to_date,
+        to: to_date,
 
-        experiance: experiance
+        experiance: experiance,
+
+        state: state
     };
 
-    ministersData.push(leaderdata);
-    localStorage.setItem("politician_data", JSON.stringify(ministersData));
-    alert("Leader created successfully!");
-    window.location.href = "profile_list_page.html";
-
-
+    governer_data.push(governer);
+    localStorage.setItem("governer_details", JSON.stringify(governer_data));
+    alert("Governer created successfully!");
+    window.location.href = "../governer_list.html";
 
 };
 

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="menifesto_form">
+        Title of Menifesto:<br>
+
+        <input type="text" id="menifest_title" placeholder="Title of Menifesto">
+
+        <button type="submit">submit</button>
+    </form>
+
+    <div id="manifesto_container">
+
+    </div>
+    <!-- <script>
+        let manifesto_value = JSON.parse(localStorage.getItem("manifesto_data")) || [];
+
+        // Function to load manifesto cards
+        function loadManifestos() {
+            const manifesto = JSON.parse(localStorage.getItem("manifesto_data"));
+            const manifestoContainer = document.getElementById("manifesto_container");
+
+            // Clear existing cards
+            manifestoContainer.innerHTML = "";
+
+            // Create and append new cards for each manifesto
+            for (const manifesto_value of manifesto) {
+                const card = document.createElement("div");
+                card.setAttribute("class", "card");
+
+                const title = document.createElement("p");
+                title.innerHTML = manifesto_value.title;
+                card.append(title);
+
+                const updateButton = document.createElement("button");
+                updateButton.textContent = "Update";
+                updateButton.addEventListener("click", function () {
+                    updateMenifesto(manifesto_value);
+                });
+                card.appendChild(updateButton);
+
+                manifestoContainer.appendChild(card);
+            }
+        }
+
+        let manifestoIndex = null;
+
+        // Function to handle form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+
+            const title = document.getElementById("menifest_title").value;
+
+            if (manifestoIndex !== null) { // Update existing manifesto
+                manifesto_value[manifestoIndex].title = title;
+                alert("Manifesto updated successfully!");
+            } else { // Add new manifesto
+                const manifesto = {
+                    "title": title,
+                    "id": manifesto_value.length + 1 // Assign new ID based on array length
+                };
+                manifesto_value.push(manifesto);
+                alert("Manifesto added successfully!");
+            }
+
+            // Save updated manifesto data to localStorage
+            localStorage.setItem("manifesto_data", JSON.stringify(manifesto_value));
+
+            // Reload manifesto cards
+            loadManifestos();
+
+            // Clear form fields and reset manifestoIndex
+            document.getElementById("menifest_title").value = "";
+            manifestoIndex = null;
+        }
+
+        const menifestoForm = document.getElementById("menifesto_form");
+        menifestoForm.addEventListener("submit", handleSubmit);
+
+        function updateMenifesto(manifesto) {
+            // Set form values to current manifesto data
+            document.getElementById("menifest_title").value = manifesto.title;
+            manifestoIndex = manifesto_value.findIndex(m => m.id === manifesto.id);
+        }
+
+        window.onload = function () {
+            loadManifestos();
+        }
+    </script> -->
+
+
+    <script>
+
+        let manifesto_value = JSON.parse(localStorage.getItem("manifesto_data")) || [];
+
+        // Function to load manifesto cards
+        function loadManifestos() {
+            const manifesto = JSON.parse(localStorage.getItem("manifesto_data"));
+            const manifestoContainer = document.getElementById("manifesto_container");
+
+            // Clear existing cards
+            manifestoContainer.innerHTML = "";
+
+            // Create and append new cards for each manifesto
+            for (const manifesto_value of manifesto) {
+                const card = document.createElement("div");
+                card.setAttribute("class", "card");
+
+                const title = document.createElement("p");
+                title.innerHTML = manifesto_value.title;
+                card.append(title);
+
+                const updateButton = document.createElement("button");
+                updateButton.textContent = "Update";
+                updateButton.addEventListener("click", function () {
+                    updateMenifesto(manifesto_value);
+                });
+                card.appendChild(updateButton);
+
+                manifestoContainer.appendChild(card);
+            }
+        }
+
+        let manifestoId = null;
+
+        // Function to handle form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+
+            const title = document.getElementById("menifest_title").value;
+
+            if (manifestoId) { // Update existing manifesto
+                const manifestoIndex = manifesto_value.findIndex(m => m.id === manifestoId);
+                manifesto_value[manifestoIndex].title = title;
+                alert("Manifesto updated successfully!");
+            } else { // Display error message
+                alert("New manifestos cannot be added. Please update an existing manifesto or delete it and create a new one.");
+            }
+
+            // Save updated manifesto data to localStorage
+            localStorage.setItem("manifesto_data", JSON.stringify(manifesto_value));
+
+            // Reload manifesto cards
+            loadManifestos();
+
+            // Clear form fields and reset manifestoId
+            document.getElementById("menifest_title").value = "";
+            manifestoId = null;
+        }
+
+
+        const menifestoForm = document.getElementById("menifesto_form");
+        menifestoForm.addEventListener("submit", handleSubmit);
+
+        function updateMenifesto(manifesto) {
+            // Set form values to current manifesto data
+            document.getElementById("menifest_title").value = manifesto.title;
+            manifestoId = manifesto.id;
+        }
+
+        window.onload = function () {
+            loadManifestos();
+        }
+
+    </script>
+
+</body>
+
+
+
+</html>

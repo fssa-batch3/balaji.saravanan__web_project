@@ -245,10 +245,10 @@
                                     list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="governer_list.html" class="nav-link font-regular">Governer list</a>
+                                <a href="governer_list.html" class="nav-link active">Governer list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="past_leader.html" class="nav-link active">Past leaders</a>
+                                <a href="past_leader.html" class="nav-link font-regular">Past leaders</a>
                             </li>
                         </ul>
                     </div>
@@ -276,7 +276,7 @@
                                         <th></th>
                                     </tr>
                                 </thead>
-                                <tbody id="past_container">
+                                <tbody id="governor_container">
 
                                 </tbody>
                             </table>
@@ -286,7 +286,7 @@
 
                             <form id="leader-form">
 
-                                <h3>Insert your Data</h3>
+                                <h3>Insert Governer Data</h3>
                                 <div class="maindiv">
 
 
@@ -294,11 +294,6 @@
                                         <label for="politics_radio">Tamil name</label>
                                         <input type="text" id="tname" value="name" placeholder="Tamil Name" required
                                             pattern="[\u0B80-\u0BFF]+" />
-
-
-
-                                        <label for="politics_radio">English name</label>
-                                        <input type="text" id="ename" placeholder="English Name" required />
 
 
                                         <label for="politics_radio">Image URL</label>
@@ -310,7 +305,7 @@
                                             <select class="form-select" aria-label="Default select example"
                                                 id="position" required pattern="[A-Za-z]" required>
                                                 <option selected>Enter your opinion</option>
-                                                <option value="முன்னாள் முதல் அமைச்சர்">முன்னாள் முதல் அமைச்சர்</option>
+                                                <option value="ஆளுநர்">ஆளுநர்</option>
 
                                             </select>
                                         </div>
@@ -324,7 +319,7 @@
                                         </div>
 
                                         <div>
-                                            <label for="movie_radio" id="movie">life achievement</label>
+                                            <label for="movie_radio" id="movie">work experience</label>
 
                                             <input type="radio" name="desc_radio" id="movie_radio" value="movie"
                                                 onclick="showDescription()" />
@@ -355,18 +350,19 @@
                                         </div>
                                     </div>
                                     <div class="right">
-                                        <label for="politics_radio">constuency Name</label>
-                                        <input type="text" id="constuency_name" placeholder="contuency Nmae" required />
+
+                                        <label for="politics_radio">Occupation</label>
+
+                                        <input type="text" id="occupation" placeholder="occupation" required
+                                            pattern="[\u0B80-\u0BFF]+">
+
+                                        <label for="politics_radio">state</label>
+
+                                        <input type="text" id="state" placeholder="state" required
+                                            pattern="[\u0B80-\u0BFF]+">
 
 
-                                        <label for="politics_radio">How many times wining</label>
-                                        <input type="text" id="count_winning" placeholder="winning aount" required />
-
-                                        <label for="politics_radio">Party name</label>
-                                        <input type="text" id="party_name" placeholder="Party Name"
-                                            pattern="[\u0B80-\u0BFF]+" required>
-
-                                        <label for="politics_radio">Politics Experiance</label>
+                                        <label for="politics_radio">Experiance</label>
                                         <input type="number" id="experiance" placeholder="experiance" required>
 
 
@@ -408,6 +404,7 @@
 
                                 <button type="submit" id="submit_button">Submit</button>
                                 <div class="close-what" id="closeBtn">&times;</div>
+
                             </form>
 
 
@@ -440,15 +437,17 @@
         </div>
     </div>
     <script>
-        let past_leader = JSON.parse(localStorage.getItem("past_leader"));
+        let governer_values = JSON.parse(localStorage.getItem("governor_details"));
 
-        function loadPast() {
+        function loadGoverner() {
 
-            const past_container = document.getElementById("past_container");
 
-            past_container.innerHTML = ""
 
-            for (let values of past_leader) {
+            const governor_container = document.getElementById("governor_container");
+
+            governor_container.innerHTML = ""
+
+            for (let values of governer_values) {
 
                 // Create the table row element
                 const tr = document.createElement('tr');
@@ -456,19 +455,19 @@
                 // Create the first table data element for the avatar and name
                 const td1 = document.createElement('td');
                 const avatar = document.createElement('img');
-                avatar.setAttribute('alt', values.name);
+                avatar.setAttribute('alt', values.governor_name);
                 avatar.setAttribute('src', '#');
                 avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
                 const nameLink = document.createElement('a');
                 nameLink.setAttribute('href', '#');
                 nameLink.classList.add('text-heading', 'font-semibold');
-                nameLink.textContent = values.name;
+                nameLink.textContent = values.governor_name;
                 td1.appendChild(avatar);
                 td1.appendChild(nameLink);
 
                 // Create the second table data element for the date
                 const td2 = document.createElement('td');
-                td2.textContent = values.party_name;
+                td2.textContent = values.position;
 
                 // Create the third table data element for the logo and company name
                 const td3 = document.createElement('td');
@@ -479,13 +478,13 @@
                 const companyLink = document.createElement('a');
                 companyLink.setAttribute('href', '#');
                 companyLink.classList.add('text-heading', 'font-semibold');
-                companyLink.textContent = values.to;
+                companyLink.textContent = values.from;
                 td3.appendChild(logo);
                 td3.appendChild(companyLink);
 
                 // Create the fourth table data element for the amount
                 const td4 = document.createElement('td');
-                td4.textContent = values.from;
+                td4.textContent = values.to;
 
                 // Create the fifth table data element for the status badge
                 const td5 = document.createElement('td');
@@ -532,7 +531,7 @@
                 tr.appendChild(td6);
 
                 // Add the row element to the table body
-                past_container.appendChild(tr);
+                governor_container.appendChild(tr);
             }
         }
 
@@ -542,11 +541,22 @@
 
         const closeBtn = document.getElementById("closeBtn");
 
+        const submit_button= document.getElementById("submit_button")
+
         closeBtn.addEventListener('click', function () {
             // leaderForm.style.display = 'none';
             table_content.style.display = 'flex'; // hide the form
             container_div.style.display = "none"
         });
+
+        submit_button.addEventListener("click", function (){
+            table_content.style.display = 'block'; // hide the form
+            container_div.style.display = "none"
+
+            
+        })
+
+
 
         let profile_leder_id = null;
 
@@ -556,18 +566,15 @@
         function updateLeader(leader) {
             // Set form values to current leader data
 
-            document.getElementById("tname").value = leader.name;
+            document.getElementById("tname").value = leader.governor_name;
 
-            document.getElementById("ename").value = leader.name;
+            document.getElementById("position").value = leader.position;
 
             document.getElementById("date_f").value = leader.from;
 
             document.getElementById("date_t").value = leader.to;
 
-            document.getElementById("party_name").value = leader.party_name;
-
             if (leader.movie) {
-                document.getElementById("position").value = leader.position;
 
                 document.getElementById("occupation").value = leader.occupation;
 
@@ -588,10 +595,6 @@
                 document.getElementById("description5").value = leader.family.family_description;
 
                 document.getElementById("experiance").value = leader.experiance;
-
-                document.getElementById("constuency_name").value = leader.constuency_name;
-
-                document.getElementById("count_winning").value = leader.count_winning;
             }
 
             profile_leder_id = leader.id;
@@ -601,16 +604,11 @@
         function handleSubmit(e) {
             e.preventDefault();
 
-
             const img_url = document.getElementById("url").value;
 
             const tamil_name = document.getElementById("tname").value;
 
-            const english_name = document.getElementById("ename").value;
-
             const position = document.getElementById("position").value;
-
-            const party_name = document.getElementById("party_name").value;
 
             const movie = document.getElementById("movie_radio").value;
 
@@ -640,31 +638,31 @@
 
             const to_date = document.getElementById("date_t").value;
 
-            const constuency_name = document.getElementById("constuency_name").value;
-
-            const count_winning = document.getElementById("count_winning")
-
             const experiance = document.getElementById("experiance").value;
 
+            const state = document.getElementById("state").value;
 
-            const past_leader_up = {
-                name: {
-                    tname: tamil_name,
-                    ename: english_name,
-                },
+            const occupation = document.getElementById("occupation").value
+
+            const governer = {
+                governor_name: tamil_name,
+
                 img: {
                     source: img_url,
-                    alter: english_name,
+                    alter: tamil_name,
                 },
+
                 position: position,
                 movie: {
                     name: movie,
                     description: movie_description
                 },
+
                 politics: {
                     name: politics,
                     description: politics_description
                 },
+
                 income: {
                     name: income,
                     description: income_description
@@ -681,59 +679,57 @@
                     name: education,
                     description: education_description
                 },
-                party_name: party_name,
 
                 status: true,
 
-                from_date: from_date,
+                from: from_date,
 
-                to_date: to_date,
+                to: to_date,
 
                 experiance: experiance,
 
-                constuency_name: constuency_name,
+                state: state,
 
-                count_winning: count_winning,
+                occupation: occupation,
 
                 id: profile_leder_id,
             };
 
 
             // Find index of current leader in ministersData
-            const index = past_leader.findIndex((leader) => leader.id === profile_leder_id);
-
+            const index = governer_values.findIndex((leader) => leader.id === profile_leder_id);
+            let balaji = 0;
             // If leader is found, update their data and save to localStorage
             if (index !== -1) {
-                past_leader[index] = past_leader_up;
-                localStorage.setItem("past_leader", JSON.stringify(past_leader));
+                governer_values[index] = governer;
+                localStorage.setItem("governor_details", JSON.stringify(governer_values));
                 alert("Governer updated successfully!");
-                loadPast()
+                loadGoverner();
             }
-
         }
+
 
         // Add event listener to form submission
         leaderForm.addEventListener("submit", handleSubmit);
-
-
         function deleteLeader(minister) {
-            const ministersData = JSON.parse(localStorage.getItem("past_leader")) ?? [];
 
-            const index = ministersData.findIndex((leader) => leader.name
-                === minister.name
+            const index = governer_values.findIndex((leader) => leader.governor_name
+                === minister.governor_name
             );
 
             // If leader is found, update their status to false and save to localStorage
             if (index !== -1) {
-                past_leader[index].status = false;
-                localStorage.setItem("past_leader", JSON.stringify(ministersData));
-                alert("past_leader status changed successfully!");
-                loadPast()
+                governer_values[index].status = false;
+                localStorage.setItem("governor_details", JSON.stringify(governer_values));
+                alert("governer status changed successfully!");
+                loadGoverner();
             }
         }
 
+
+
         window.onload = function () {
-            loadPast()
+            loadGoverner()
         }
 
 

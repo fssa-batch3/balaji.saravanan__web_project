@@ -27,6 +27,8 @@ const saveButton = document.getElementById("profile_user")
 const inputs = document.querySelectorAll("input");    // this is input field select purpase code
 const deleteButton = document.getElementById("delete");
 
+const select = document.querySelectorAll("select");
+
 editButton.addEventListener("click", e => {
     e.preventDefault();
     // edit button function you can press edit button this code activate and enable the input button
@@ -34,11 +36,15 @@ editButton.addEventListener("click", e => {
         if (input.type == "email") {
             input.disabled = true;
         } else {
-            input.disabled = false;
+            input.disabled = false
         }
     });
+    select.forEach(select=>{
+        select.disabled=false;
+    })
+    
 
-
+    
     editButton.disabled = true;
 
     saveButton.disabled = false;
@@ -52,6 +58,9 @@ saveButton.addEventListener("submit", e => {    // save button function this but
     inputs.forEach(input => {
         input.disabled = true;
     });
+    select.forEach(select=>{
+        select.disabled="true"
+    })
 
 
     editButton.disabled = false;

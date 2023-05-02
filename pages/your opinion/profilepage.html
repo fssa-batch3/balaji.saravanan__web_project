@@ -20,7 +20,8 @@
             border-color: #dcd8dc;
         }
 
-        .col-md-6 input {
+        .col-md-6 input,
+        select {
             border-radius: 5px;
             box-shadow: -1px 9px 14px 0px rgba(26, 22, 26, 0.53);
             margin-top: 15px;
@@ -90,7 +91,7 @@
                                 <label for="">First name :</label>
 
                                 <input type="text" class="form-control p-3" id="first_name" placeholder="first name"
-                                    disabled pattern="[A-Za-z]{1,32}">
+                                    disabled pattern="^[A-Za-z]+$">
 
                             </div>
                             <div class="col-md-6">
@@ -98,7 +99,7 @@
                                 <label for="">Last name :</label>
 
                                 <input type="text" id="last_name" class=" p-3 form-control" value="Doe"
-                                    placeholder="Doe" disabled pattern="[A-Za-z]{1,32}">
+                                    placeholder="Doe" disabled pattern="^[A-Za-z]+$">
 
                             </div>
 
@@ -113,26 +114,8 @@
                                 <input type="email" class="form-control p-3" id="email" placeholder="Email" disabled>
 
                             </div>
-                            <div class="col-md-6">
 
-                                <label for="">Mobile Number :</label>
-
-                                <input type="tel" id="mobile" required class="form-control p-3"
-                                    placeholder="Phone number" disabled minlength="10" maxlength="10">
-
-                            </div>
-                        </div>
-
-                        <div class="row mt-3">
-
-                            <div class="col-md-6">
-
-                                <label for="">Age :</label>
-
-                                <input type="number" id="age" class="form-control p-3" placeholder="age" value="age"
-                                    disabled>
-
-                            </div>
+                            
                             <div class="col-md-6">
 
                                 <label for="">Occupation :</label>
@@ -140,19 +123,55 @@
                                     placeholder="occupation" disabled>
                             </div>
                         </div>
+
+                        <div class="row mt-3">
+
+                            <div class="col-md-6">
+
+                                <label for="">Mobile Number :</label>
+
+                                <input type="tel" id="mobile" required class="form-control p-3"
+                                    placeholder="Phone number" disabled minlength="10" maxlength="10"
+                                    pattern="^[6-9][0-9]{9}$">
+
+                            </div>
+                            <div class="col-md-6">
+
+                                <label for="">Age :</label>
+
+                                <select class="form-select" aria-label="Default select example" id="age" required
+                                    required disabled>
+                                    <option selected>Enter your opinion</option>
+                                    <option value="10-18">10-18</option>
+                                    <option value="18-25">18-25</option>
+                                    <option value="25-40">25-40</option>
+                                    <option value="மேலும்">மேலும்</option>
+
+                                </select>
+
+                            </div>
+
+
+                            
+                        </div>
                         <div class="row mt-3">
                             <div class="col-md-6">
-                                <label for="">Occupation :</label>
+                                <label for="">city :</label>
 
                                 <input type="text" id="city" class="form-control p-3" placeholder="city" value=""
-                                    disabled>
+                                    disabled pattern="^[A-Za-z]+$">
 
                             </div>
                             <div class="col-md-6">
 
                                 <label for="">Gender :</label>
-                                <input type="text" id="gender" class="form-control p-3" value="male"
-                                    placeholder="gender" disabled pattern="[A-Za-z]{1,32}">
+                                <select class="form-select" aria-label="Default select example" id="gender" required
+                                    required disabled>
+                                    <option selected>Enter your opinion</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">female</option>
+                                    <option value="others">others</option>
+                                </select>
                             </div>
                         </div>
                         <div class="d-flex flex-row justify-content-between">
@@ -177,8 +196,8 @@
 
 
     <!-- script for bootstrap -->
-   
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- script for bootstrap -->
 
 </body>

@@ -1,21 +1,19 @@
-// const { stringify } = require("uuid");
-
 const leaderForm = document.getElementById("leader-form");
 
 const registerFromValidation = () => {
 
-    let ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
 
-    let governer_data = JSON.parse(localStorage.getItem("governer_data")) ?? [];
+    let mla_list = JSON.parse(localStorage.getItem("mla_ditails")) ?? [];
 
+    const constituency_Name=document.getElementById("constituency_Name").value;
 
     const img_url = document.getElementById("url").value;
 
     const tamil_name = document.getElementById("tname").value;
 
-    const english_name = document.getElementById("ename").value;
-
     const position = document.getElementById("position").value;
+
+    const role = document.getElementById("role").value;
 
     const party_name = document.getElementById("party_name").value;
 
@@ -43,23 +41,29 @@ const registerFromValidation = () => {
 
     const family_description = document.getElementById("description5").value;
 
-    const from_date = document.getElementById("date_f").value;
-
-    const to_date = document.getElementById("date_t").value;
-
     const experiance = document.getElementById("experiance").value;
+
+    const votes = parseFloat(document.getElementById("votes").value);
+
+    const margin = parseFloat(document.getElementById("margin").value);
+
+    const vote_rate = margin / votes * 100;
+
 
 
     const leaderdata = {
-        name: {
-            tname: tamil_name,
-            ename: english_name,
-        },
+
+        constituency_Name:constituency_Name,
+
+        candidate_Name:tamil_name,
+   
         img: {
             source: img_url,
             alter: english_name,
         },
         position: position,
+
+        role: role,
         movie: {
             name: movie,
             description: movie_description
@@ -84,28 +88,26 @@ const registerFromValidation = () => {
             name: education,
             description: education_description
         },
-        party_name: party_name,
+        party: party_name,
 
-        id: ministersData.length,
+        mla_id: mla_list.length,
 
         status: true,
 
-        from_date: from_date,
+        votes: votes,
 
-        to_date: to_date,
+        margin: margin,
+
+        vote_Rate: vote_rate,
 
         experiance: experiance
     };
 
-    ministersData.push(leaderdata);
-    localStorage.setItem("politician_data", JSON.stringify(ministersData));
+    mla_list.push(leaderdata);
+    localStorage.setItem("mla_ditails", JSON.stringify(mla_list));
     alert("Leader created successfully!");
-    window.location.href = "profile_list_page.html";
-
-
-
+    window.location.href = "../profile_list_page.html";
 };
-
 leaderForm.addEventListener("submit", (event) => {
     event.preventDefault();
     registerFromValidation();

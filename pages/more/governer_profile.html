@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>mla profile</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+
+    <link href="../../assets/css/main.css" rel="stylesheet">
+
+    <link rel="icon" type="image/jpg" sizes="60x32" href="../../assets/images/icons/p logo.jpg">
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/leader_profile.css">
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav id="sidebar">
+
+            <!-- <div class="icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div> -->
+            </ul>
+        </nav>
+    </div>
+    <div class="content">
+
+
+        <div class="headprofile">
+
+        </div>
+
+
+        <!-- cm content page  -->
+
+
+        <div class="cm-total-content">
+
+
+
+
+
+        </div>
+
+
+        <h1 class="cmd">Comment Section</h1>
+        <ul id="comments-list"></ul>
+        <form id="comment-form">
+            <!-- <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br> -->
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required name="comment"></textarea><br>
+            <input type="submit" id="submit_btn" value="Submit">
+        </form>
+
+
+
+
+    </div>
+
+
+    <script src="../../main.js"></script>
+
+    <script src="../../assets/javascript/governer_profile.js"></script>
+
+    <script>
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const users = JSON.parse(localStorage.getItem("users"));
+
+            const minister = JSON.parse(localStorage.getItem("mla_ditails"));
+
+            const loginEmail = localStorage.getItem("profile_email");
+            const currentUser = users.find(user => user.email === loginEmail);
+            const currentUserName = currentUser.first_name;
+
+            const ministerName = document.getElementById("minister-name").innerText
+                .replace("NAME : ", "")
+                .trim();
+
+            const ministerId = minister.find(m => m.governor_name === ministerName).id;
+
+            const comment = document.getElementById("comment").value;
+            const timestamp = new Date().getTime();
+            const commentObject = {
+                user_id: currentUserName,
+                comment,
+                timestamp,
+                ministerId,
+            };
+
+
+            let comments = JSON.parse(localStorage.getItem("comments")) ?? [];
+            comments.push(commentObject);
+            localStorage.setItem("comments", JSON.stringify(comments));
+
+            const filteredComments = comments.filter(
+                comment => comment.ministerId === ministerId
+            );
+            displayComments(filteredComments)
+
+            document.getElementById("comment-form").reset();
+        }
+
+
+        function displayComments(comments) {
+
+            let comments1 = JSON.parse(localStorage.getItem("comments")) ?? [];
+
+            const minister = JSON.parse(localStorage.getItem("mla_ditails"))
+
+            const ministerName = document.getElementById("minister-name").innerText
+                .replace("NAME : ", "")
+                .trim();
+            const ministerId = minister.find(m => m.governor_name === ministerName).id;
+            console.log(ministerId);
+            const commentsList = document.getElementById("comments-list");
+
+            commentsList.innerHTML = "";
+
+            for (let comment of comments1) {
+
+                if (comment.ministerId === ministerId) {
+
+                    const li = document.createElement("li");
+                    const date = new Date(comment.timestamp).toLocaleString();
+                    li.innerHTML = `<strong>${comment.user_id}</strong> said on ${date}:<br>${comment.comment}`;
+                    commentsList.appendChild(li);
+                }
+            }
+
+        }
+
+
+
+        document.getElementById('comment-form').addEventListener('submit', handleFormSubmit)
+
+        window.onload = displayComments;
+
+
+        let submit_btn = document.getElementById("submit_btn");
+
+        let loginEmail = localStorage.getItem("profile_email");
+
+        if (loginEmail !== null) {
+            submit_btn.style.display = "block"
+        } else {
+            submit_btn.style.display = "none"
+        }
+
+    </script>
+
+
+    <!-- script for bootstrap -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- script for bootstrap -->
+</body>
+
+</html>

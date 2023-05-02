@@ -1,12 +1,8 @@
-// const { stringify } = require("uuid");
-
 const leaderForm = document.getElementById("leader-form");
 
 const registerFromValidation = () => {
 
-    let ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
-
-    let governer_data = JSON.parse(localStorage.getItem("governer_data")) ?? [];
+    let past_leader = JSON.parse(localStorage.getItem("past_leader")) ?? [];
 
 
     const img_url = document.getElementById("url").value;
@@ -47,10 +43,14 @@ const registerFromValidation = () => {
 
     const to_date = document.getElementById("date_t").value;
 
+    const constuency_name= document.getElementById("constuency_name").value;
+
+    const count_winning= document.getElementById("count_winning")
+
     const experiance = document.getElementById("experiance").value;
 
 
-    const leaderdata = {
+    const governer = {
         name: {
             tname: tamil_name,
             ename: english_name,
@@ -86,7 +86,7 @@ const registerFromValidation = () => {
         },
         party_name: party_name,
 
-        id: ministersData.length,
+        id: past_leader.length+1,
 
         status: true,
 
@@ -94,13 +94,17 @@ const registerFromValidation = () => {
 
         to_date: to_date,
 
-        experiance: experiance
+        experiance: experiance,
+
+        constuency_name:constuency_name,
+
+        count_winning: count_winning
     };
 
-    ministersData.push(leaderdata);
-    localStorage.setItem("politician_data", JSON.stringify(ministersData));
+    past_leader.push(governer);
+    localStorage.setItem("past_leader", JSON.stringify(past_leader));
     alert("Leader created successfully!");
-    window.location.href = "profile_list_page.html";
+    window.location.href = "../past_leader.html";
 
 
 

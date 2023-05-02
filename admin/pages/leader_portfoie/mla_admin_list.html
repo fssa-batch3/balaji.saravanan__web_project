@@ -210,7 +210,7 @@
         <!-- Vertical Navbar -->
 
         <!-- Main content -->
-        <div class="h-screen flex-grow-1 overflow-y-lg-auto" >
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
             <!-- Header -->
             <header class="bg-surface-primary border-bottom pt-6">
                 <div class="container-fluid">
@@ -223,12 +223,7 @@
                             <!-- Actions -->
                             <div class="col-sm-6 col-12 text-sm-end">
                                 <div class="mx-n1">
-                                    <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
-                                        <span class=" pe-2">
-                                            <i class="bi bi-pencil"></i>
-                                        </span>
-                                        <span>Edit</span>
-                                    </a>
+
                                     <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
                                         <span class=" pe-2">
                                             <i class="bi bi-plus"></i>
@@ -241,16 +236,16 @@
                         <!-- Nav -->
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
-                                <a href="profile_list_page.html" class="nav-link active">Mp list</a>
+                                <a href="profile_list_page.html" class="nav-link font-regular">Mp list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular" onclick="mlalist()">MLA list</a>
+                                <a href="mla_admin_list.html" class="nav-link active">MLA list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Governer list</a>
+                                <a href="governer_list.html" class="nav-link font-regular">Governer list</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Past leaders</a>
+                                <a href="past_leader.html" class="nav-link font-regular">Past leaders</a>
                             </li>
                         </ul>
                     </div>
@@ -278,53 +273,59 @@
                                         <th></th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="mal_container">
 
                                 </tbody>
                             </table>
                         </div>
-
                         <div class="container" id="container" style="display: none;">
 
                             <form id="leader-form">
 
-                                <h3>Insert your Data</h3>
+                                <h3>Insert MLA ditails</h3>
                                 <div class="maindiv">
 
 
                                     <div class="left">
-                                        <label for="politics_radio">candidate Name</label>
+                                        <label for="politics_radio">candidate name</label>
                                         <input type="text" id="candidate_Name" value="name" placeholder="Tamil Name"
-                                            required />
+                                            required pattern=^[\u0B80-\u0BFF\s]+$ />
 
 
-                                        <label for="politics_radio">constituency_Name</label>
-                                        <input type="text" id="constituency_Name" placeholder="constituency Name"
-                                            required />
+                                        <label for="politics_radio">constituency Name
+                                        </label>
+                                        <input type="text" id="constituency_Name" value="name"
+                                            placeholder="constituency Name" required pattern=^[\u0B80-\u0BFF\s]+$ />
+
 
 
                                         <label for="politics_radio">Image URL</label>
                                         <input type="text" id="url" placeholder="Please insert your picture URL"
                                             required>
 
-
                                         <div class="col-sm-6">
                                             Position:
                                             <select class="form-select" aria-label="Default select example"
                                                 id="position" required pattern="[A-Za-z]" required>
                                                 <option selected>Enter your opinion</option>
-                                                <option value="MLA">MLA</option>
+                                                <option value="சட்டமன்ற உறுப்பினர்">சட்டமன்ற உறுப்பினர்</option>
 
                                             </select>
                                         </div>
 
+                                        <label for="politics_radio">Votes</label>
+                                        <input type="text" id="votes" placeholder="English Name" required />
+
+
+
+
                                         <div>
-                                            <label for="movie_radio" id="movie">Achievement</label>
+                                            <label for="movie_radio" id="movie">Movie</label>
 
                                             <input type="radio" name="desc_radio" id="movie_radio" value="movie"
                                                 onclick="showDescription()" />
                                             <textarea name="" id="description" cols="90" rows="7" style="display:none;"
-                                                required></textarea>
+                                                required pattern=^[\u0B80-\u0BFF\s]+$></textarea>
                                         </div>
 
 
@@ -334,7 +335,8 @@
                                                 onclick="showDescription()" />
                                             <div>
                                                 <textarea name="" id="description1" cols="90" rows="7"
-                                                    style="display:none;" required></textarea>
+                                                    style="display:none;" required
+                                                    pattern=^[\u0B80-\u0BFF\s]+$></textarea>
                                             </div>
 
                                         </div>
@@ -345,23 +347,32 @@
                                             <input type="radio" name="desc_radio" id="income_radio" value="income"
                                                 onclick="showDescription()" />
                                             <textarea name="" id="description2" cols="90" rows="7" style="display:none;"
-                                                required></textarea>
+                                                required pattern=^[\u0B80-\u0BFF\s]+$></textarea>
                                         </div>
                                     </div>
                                     <div class="right">
 
                                         <label for="politics_radio">Role</label>
-                                        <input type="text" id="role" placeholder="role" required>
+
+
+                                        <input type="text" id="role" placeholder="role" required
+                                            pattern=^[\u0B80-\u0BFF\s]+$>
+
+
                                         <label for="politics_radio">Party name</label>
-                                        <input type="text" id="party_name" placeholder="Party Name" required>
+                                        <input type="text" id="party_name" placeholder="Party Name"
+                                            pattern=^[\u0B80-\u0BFF\s]+$ required>
                                         <label for="politics_radio">Occupation</label>
-                                        <input type="text" id="occupation" placeholder="occupation" required>
-                                        <label for="politics_radio">Politics Experience</label>
+
+                                        <input type="text" id="occupation" placeholder="occupation" required
+                                            pattern=^[\u0B80-\u0BFF\s]+$>
+                                        <label for="politics_radio">Politics Experiance</label>
+
                                         <input type="number" id="experiance" placeholder="experiance" required>
-                                        <div class="from_date" style="display:block;">
-                                            <label for="">To_date</label>
-                                            <input type="date" id="date_t" required>
-                                        </div>
+
+                                        <label for="politics_radio">Margin</label>
+                                        <input type="text" id="margin" placeholder="English Name" required />
+
 
 
                                         <div>
@@ -370,7 +381,7 @@
                                                 onclick="showDescription()" />
 
                                             <textarea name="" id="description3" cols="90" rows="7" style="display:none;"
-                                                required></textarea>
+                                                pattern=^[\u0B80-\u0BFF\s]+$ required></textarea>
                                         </div>
                                         <div>
                                             <label for="education_radio">Education</label>
@@ -394,15 +405,16 @@
                                 </div>
 
 
+
                                 <button type="submit" id="submit_button">Submit</button>
-                                <input id="closeBtn" type="button" value="close">
+                                <!-- <input id="closeBtn" type="button" value="close"> -->
                                 <div class="close-what" id="closeBtn">&times;</div>
+
 
                             </form>
 
 
                         </div>
-
 
 
 
@@ -422,22 +434,6 @@
                                 }
                             }
 
-                            const from_date = document.getElementById("date_f");
-                            const to_date = document.getElementById("date_t");
-
-                            const urlParams = new URLSearchParams(window.location.search);
-                            const username = urlParams.get("name");
-                            console.log(username);
-
-                            if (username === "") {
-                                from_date.style.display = "none";
-                                to_date.style.display = "none";
-
-                            } else {
-                                from_date.style.display = "block";
-                                to_date.style.display = "block";
-
-                            }
                         </script>
 
                     </div>
@@ -450,92 +446,103 @@
     <script>
         let ministers_value = JSON.parse(localStorage.getItem("mla_ditails"));
 
-        for (let values of ministers_value) {
 
-            // Create the table row element
-            const tr = document.createElement('tr');
+        function loadMla() {
 
-            // Create the first table data element for the avatar and name
-            const td1 = document.createElement('td');
-            const avatar = document.createElement('img');
-            avatar.setAttribute('alt', values.candidate_Name);
-            avatar.setAttribute('src', '#');
-            avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
-            const nameLink = document.createElement('a');
-            nameLink.setAttribute('href', '#');
-            nameLink.classList.add('text-heading', 'font-semibold');
-            nameLink.textContent = values.candidate_Name;
-            td1.appendChild(avatar);
-            td1.appendChild(nameLink);
+            const mla = JSON.parse(localStorage.getItem("mla_ditails"));
 
-            // Create the second table data element for the date
-            const td2 = document.createElement('td');
-            td2.textContent = values.constituency_Name;
+            const mla_container = document.getElementById("mal_container");
 
-            // Create the third table data element for the logo and company name
-            const td3 = document.createElement('td');
-            const logo = document.createElement('img');
-            logo.setAttribute('alt', '...');
-            logo.setAttribute('src', '#');
-            logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
-            const companyLink = document.createElement('a');
-            companyLink.setAttribute('href', '#');
-            companyLink.classList.add('text-heading', 'font-semibold');
-            companyLink.textContent = values.party;
-            td3.appendChild(logo);
-            td3.appendChild(companyLink);
+            mla_container.innerHTML = "";
 
-            // Create the fourth table data element for the amount
-            const td4 = document.createElement('td');
-            td4.textContent = values.margin;
+            for (let values of mla) {
 
-            // Create the fifth table data element for the status badge
-            const td5 = document.createElement('td');
-            const badge = document.createElement('span');
-            badge.classList.add('badge', 'badge-lg', 'badge-dot');
-            const badgeIcon = document.createElement('i');
-            badgeIcon.classList.add('bg-success');
-            badge.appendChild(badgeIcon);
-            badge.appendChild(document.createTextNode(values.votes));
-            td5.appendChild(badge);
+                // Create the table row element
+                const tr = document.createElement('tr');
 
-            // Create the sixth table data element for the action buttons
-            const td6 = document.createElement('td');
+                // Create the first table data element for the avatar and name
+                const td1 = document.createElement('td');
+                const avatar = document.createElement('img');
+                avatar.setAttribute('alt', values.candidate_Name);
+                avatar.setAttribute('src', '#');
+                avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
+                const nameLink = document.createElement('a');
+                nameLink.setAttribute('href', '#');
+                nameLink.classList.add('text-heading', 'font-semibold');
+                nameLink.textContent = values.candidate_Name;
+                td1.appendChild(avatar);
+                td1.appendChild(nameLink);
 
-            const viewButton = document.createElement('a');
-            viewButton.setAttribute('href', '#');
-            viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
-            viewButton.textContent = 'Edit';
-            viewButton.onclick = function () {
-                updateLeader(values);
-                container_div.style.display = 'flex';
-                table_content.style.display = "none";
+                // Create the second table data element for the date
+                const td2 = document.createElement('td');
+                td2.textContent = values.constituency_Name;
 
+                // Create the third table data element for the logo and company name
+                const td3 = document.createElement('td');
+                const logo = document.createElement('img');
+                logo.setAttribute('alt', '...');
+                logo.setAttribute('src', '#');
+                logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
+                const companyLink = document.createElement('a');
+                companyLink.setAttribute('href', '#');
+                companyLink.classList.add('text-heading', 'font-semibold');
+                companyLink.textContent = values.party;
+                td3.appendChild(logo);
+                td3.appendChild(companyLink);
+
+                // Create the fourth table data element for the amount
+                const td4 = document.createElement('td');
+                td4.textContent = values.margin;
+
+                // Create the fifth table data element for the status badge
+                const td5 = document.createElement('td');
+                const badge = document.createElement('span');
+                badge.classList.add('badge', 'badge-lg', 'badge-dot');
+                const badgeIcon = document.createElement('i');
+                badgeIcon.classList.add('bg-success');
+                badge.appendChild(badgeIcon);
+                badge.appendChild(document.createTextNode(values.votes));
+                td5.appendChild(badge);
+
+                // Create the sixth table data element for the action buttons
+                const td6 = document.createElement('td');
+
+                const viewButton = document.createElement('a');
+                viewButton.setAttribute('href', '#');
+                viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
+                viewButton.textContent = 'Edit';
+                viewButton.onclick = function () {
+                    updateLeader(values);
+                    container_div.style.display = 'flex';
+                    table_content.style.display = "none";
+
+                }
+                const deleteButton = document.createElement('button');
+                deleteButton.setAttribute('type', 'button');
+                deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
+                const deleteIcon = document.createElement('i');
+                deleteIcon.classList.add('bi', 'bi-trash');
+                deleteButton.appendChild(deleteIcon);
+                deleteButton.onclick = function () {
+                    deleteLeader(values);
+
+                }
+                td6.appendChild(viewButton);
+                td6.appendChild(deleteButton);
+
+                // Add all the table data elements to the row element
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                tr.appendChild(td5);
+                tr.appendChild(td6);
+
+                // Add the row element to the table body
+                const tableBody = document.querySelector('tbody');
+                tableBody.appendChild(tr);
             }
-            const deleteButton = document.createElement('button');
-            deleteButton.setAttribute('type', 'button');
-            deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
-            const deleteIcon = document.createElement('i');
-            deleteIcon.classList.add('bi', 'bi-trash');
-            deleteButton.appendChild(deleteIcon);
-            deleteButton.onclick = function () {
-                deleteLeader(values);
 
-            }
-            td6.appendChild(viewButton);
-            td6.appendChild(deleteButton);
-
-            // Add all the table data elements to the row element
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            tr.appendChild(td4);
-            tr.appendChild(td5);
-            tr.appendChild(td6);
-
-            // Add the row element to the table body
-            const tableBody = document.querySelector('tbody');
-            tableBody.appendChild(tr);
         }
 
         const container_div = document.getElementById("container");
@@ -545,33 +552,30 @@
         const closeBtn = document.getElementById("closeBtn");
 
         closeBtn.addEventListener('click', function () {
-            // leaderForm.style.display = 'none';
             table_content.style.display = 'flex'; // hide the form
             container_div.style.display = "none"
         });
-        const minister_list = JSON.parse(localStorage.getItem("politician_data"));
 
-        // const timestamp = new Date().getTime();
-
-        // create HTML elements
 
         let profile_leder_id = null;
 
-        const leaderForm = document.getElementById("leader-form");
 
-        const ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
+        const leaderForm = document.getElementById("leader-form");
 
         // Function to update leader data
         function updateLeader(leader) {
+            console.log(leader);
             // Set form values to current leader data
 
             document.getElementById("candidate_Name").value = leader.candidate_Name;
 
             document.getElementById("constituency_Name").value = leader.constituency_Name;
 
-            document.getElementById("position").value = leader.party;
+            document.getElementById("party_name").value = leader.party;
 
-            document.getElementById("party_name").value = leader.margin;
+            document.getElementById("role").value = leader.role;
+
+            document.getElementById("occupation").value = leader.occupation;
             if (leader.movie) {
 
                 document.getElementById("url").value = leader.img.sourse;
@@ -588,28 +592,35 @@
 
                 document.getElementById("description5").value = leader.family.family_description;
 
-                document.getElementById("date_f").value = leader.from_date;
-
-                document.getElementById("date_t").value = leader.to_date;
-
                 document.getElementById("experiance").value = leader.experiance;
+
+                document.getElementById("votes").value = leader.votes;
+
+                document.getElementById("margin").value = leader.margin;
+
+
             }
 
-            profile_leder_id = leader.id;
+            profile_leder_id = leader.mla_id;
         }
+
 
         // Function to handle form submission
         function handleSubmit(e) {
             e.preventDefault();
             const img_url = document.getElementById("url").value;
 
-            const tamil_name = document.getElementById("tname").value;
+            const tamil_name = document.getElementById("candidate_Name").value;
 
-            const english_name = document.getElementById("ename").value;
+            const constituency_Name= getElementById("constituency_Name").value;
 
             const position = document.getElementById("position").value;
 
             const party_name = document.getElementById("party_name").value;
+
+            const role = document.getElementById("role").value;
+
+            const occupation = document.getElementById("occupation").value
 
             const movie = document.getElementById("movie_radio").value;
 
@@ -635,21 +646,30 @@
 
             const family_description = document.getElementById("description5").value;
 
-            const from_date = document.getElementById("date_f").value;
-
-            const to_date = document.getElementById("date_t").value;
-
             const experiance = document.getElementById("experiance").value;
+
+            const votes = parseFloat(document.getElementById("votes").value);
+
+            const margin = parseFloat(document.getElementById("margin").value);
+
+            const vote_rate = margin / votes * 100;
 
 
 
             const leaderdata = {
+                constituency_Name: constituency_Name,
+
                 candidate_Name: tamil_name,
+
                 img: {
                     source: img_url,
                     alter: tamil_name,
                 },
                 position: position,
+
+                occupation: occupation,
+
+                role: role,
                 movie: {
                     name: movie,
                     description: movie_description
@@ -674,52 +694,60 @@
                     name: education,
                     description: education_description
                 },
-                party_name: party_name,
+                party: party_name,
 
-                id: profile_leder_id,
+                mla_id: profile_leder_id,
 
                 status: true,
 
-                from_date: from_date,
+                votes: votes,
 
-                to_date: to_date,
+                margin: margin,
+
+                vote_Rate: vote_rate,
 
                 experiance: experiance,
 
-
+                status: true
             };
 
 
             // Find index of current leader in ministersData
-            const index = ministersData.findIndex((leader) => leader.id === profile_leder_id);
+            const index = ministers_value.findIndex((leader) => leader.mla_id === profile_leder_id);
 
             // If leader is found, update their data and save to localStorage
             if (index !== -1) {
-                ministersData[index] = leaderdata;
-                localStorage.setItem("politician_data", JSON.stringify(ministersData));
+                ministers_value[index] = leaderdata;
+                localStorage.setItem("mla_ditails", JSON.stringify(ministers_value));
                 alert("Leader updated successfully!");
-                window.location.reload();
+                loadMla();
             }
 
         }
 
         // Add event listener to form submission
         leaderForm.addEventListener("submit", handleSubmit);
-
-
         function deleteLeader(minister) {
-            const ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
 
-            const index = ministersData.findIndex((leader) => leader.name.ename === minister.name.ename);
+            const index = ministers_value.findIndex((leader) => leader.candidate_Name === minister.candidate_Name);
 
             // If leader is found, update their status to false and save to localStorage
             if (index !== -1) {
-                ministersData[index].status = false;
-                localStorage.setItem("politician_data", JSON.stringify(ministersData));
+                ministers_value[index].status = false;
+                localStorage.setItem("mla_ditails", JSON.stringify(mla_list));
                 alert("Leader status changed successfully!");
-                window.location.reload();
+                
+                loadMla()
             }
         }
+
+    
+
+
+        window.onload=function(){
+            loadMla()
+        }
+
 
 
 

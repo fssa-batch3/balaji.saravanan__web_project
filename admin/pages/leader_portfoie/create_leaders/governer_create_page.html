@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <link rel="stylesheet" href="../../../assets/css/admin.css">
 
 
     <style>
@@ -125,7 +125,7 @@
     <!-- Dashboard -->
     <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="nave_side">
         <!-- Vertical Navbar -->
-      
+
         <!-- Main content -->
         <div class="h-screen flex-grow-1 overflow-y-lg-auto">
             <!-- Header -->
@@ -158,21 +158,23 @@
                         <!-- Nav -->
                         <ul class="nav nav-tabs mt-4 overflow-x border-0">
                             <li class="nav-item ">
-                                <a href="profile_list_page.html" class="nav-link active">Mp list</a>
+                                <a href="politicin_create.html" class="nav-link font-regular">Mp create Page</a>
                             </li>
                             <li class="nav-item">
-                                <a href="mla_admin_list.html" class="nav-link font-regular">MLA list</a>
+                                <a href="mla_create_page.html" class="nav-link font-regular">MLA create Page</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Governer list</a>
+                                <a href="governer_create_page.html" class="nav-link  active">Governer create Page</a>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link font-regular">Past leaders</a>
+                                <a href="past_crate_page.html" class="nav-link font-regular">Past leaders create
+                                    Page</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </header>
+
             <!-- Main -->
             <main class="py-6 bg-surface-secondary">
                 <div class="container-fluid">
@@ -182,39 +184,19 @@
                         <div class="card-header">
                             <h5 class="mb-0">Pages</h5>
                         </div>
-                        <!-- <div class="table-responsive">
-                            <table class="table table-hover table-nowrap">
-                                <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">Candidate Name</th>
-                                        <th scope="col">Position</th>
-                                        <th scope="col">Patry Name</th>
-                                        <th scope="col">experiance</th>
-                                        <th scope="col">status</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
 
-                                </tbody>
-                            </table>
-                        </div> -->
                         <div class="container" id="container">
 
                             <form id="leader-form">
 
-                                <h3>Insert your Data</h3>
+                                <h3>Insert Governer Data</h3>
                                 <div class="maindiv">
 
 
                                     <div class="left">
                                         <label for="politics_radio">Tamil name</label>
-                                        <input type="text" id="tname" value="name" placeholder="Tamil Name" required pattern="[\u0B80-\u0BFF]+" />
-
-
-
-                                        <label for="politics_radio">English name</label>
-                                        <input type="text" id="ename" placeholder="English Name" required/>
+                                        <input type="text" id="tname" value="name" placeholder="Tamil Name" required
+                                            pattern="[\u0B80-\u0BFF]+" />
 
 
                                         <label for="politics_radio">Image URL</label>
@@ -226,9 +208,6 @@
                                             <select class="form-select" aria-label="Default select example"
                                                 id="position" required pattern="[A-Za-z]" required>
                                                 <option selected>Enter your opinion</option>
-                                                <option value="முதல் அமைச்சர்">முதல் அமைச்சர்</option>
-                                                <option value="நாடாளுமன்ற உறுப்பினர்">நாடாளுமன்ற உறுப்பினர்</option>
-                                                <option value="நாடாளுமன்ற உறுப்பினர்">நாடாளுமன்ற உறுப்பினர்</option>
                                                 <option value="ஆளுநர்">ஆளுநர்</option>
 
                                             </select>
@@ -243,7 +222,7 @@
                                         </div>
 
                                         <div>
-                                            <label for="movie_radio" id="movie">Movie</label>
+                                            <label for="movie_radio" id="movie">work experience</label>
 
                                             <input type="radio" name="desc_radio" id="movie_radio" value="movie"
                                                 onclick="showDescription()" />
@@ -258,7 +237,8 @@
                                                 onclick="showDescription()" />
                                             <div>
                                                 <textarea name="" id="description1" cols="90" rows="7"
-                                                    style="display:none;" required pattern="[\u0B80-\u0BFF]+"></textarea>
+                                                    style="display:none;" required
+                                                    pattern="[\u0B80-\u0BFF]+"></textarea>
                                             </div>
 
                                         </div>
@@ -274,19 +254,21 @@
                                     </div>
                                     <div class="right">
 
-                                        <label for="politics_radio">Role</label>
-
-
-                                        <input type="text" id="role" placeholder="role" required pattern="[\u0B80-\u0BFF]+">
-
-
-                                        <label for="politics_radio">Party name</label>
-                                        <input type="text" id="party_name" placeholder="Party Name" pattern="[\u0B80-\u0BFF]+" required>
                                         <label for="politics_radio">Occupation</label>
 
-                                        <input type="text" id="occupation" placeholder="occupation" required pattern="[\u0B80-\u0BFF]+">
-                                        <label for="politics_radio">Politics Experiance</label>
+                                        <input type="text" id="occupation" placeholder="occupation" required
+                                            pattern="[\u0B80-\u0BFF]+">
+
+                                        <label for="politics_radio">state</label>
+
+                                        <input type="text" id="state" placeholder="state" required
+                                            pattern="[\u0B80-\u0BFF]+">
+
+
+                                        <label for="politics_radio">Experiance</label>
                                         <input type="number" id="experiance" placeholder="experiance" required>
+
+
                                         <div class="from_date" style="display:block;">
                                             <label for="">To_date</label>
                                             <input type="date" id="date_t" required>
@@ -330,132 +312,34 @@
 
 
                         </div>
-
-                        <script>
-
-                            function showDescription() {
-                                const radios = document.getElementsByName("desc_radio");
-                                let descriptions = document.querySelectorAll("textarea[id^='description']");
-
-                                for (let i = 0; i < radios.length; i++) {
-                                    if (radios[i].checked) {
-                                        const description = descriptions[i];
-                                        description.style.display = "block";
-                                        description.placeholder = `Please insert your ${radios[i].value} information`;
-                                    }
-
-                                }
-                            }
-
-                            const from_date = document.getElementById("date_f");
-                            const to_date = document.getElementById("date_t");
-
-                            const urlParams = new URLSearchParams(window.location.search);
-                            const username = urlParams.get("name");
-                            console.log(username);
-
-                            if (username === "") {
-                                from_date.style.display = "none";
-                                to_date.style.display = "none";
-
-                            } else {
-                                from_date.style.display = "block";
-                                to_date.style.display = "block";
-
-                            }
-                        </script>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-<!-- 
+
+
     <script>
-        let ministers_value = JSON.parse(localStorage.getItem("politician_data"));
+        function showDescription() {
+            const radios = document.getElementsByName("desc_radio");
+            let descriptions = document.querySelectorAll("textarea[id^='description']");
 
-        for (let values of ministers_value) {
+            for (let i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    const description = descriptions[i];
+                    description.style.display = "block";
+                    description.placeholder = `Please insert your ${radios[i].value} information`;
+                }
 
-            // Create the table row element
-            const tr = document.createElement('tr');
-
-            // Create the first table data element for the avatar and name
-            const td1 = document.createElement('td');
-            const avatar = document.createElement('img');
-            avatar.setAttribute('alt', values.name.ename);
-            avatar.setAttribute('src', values.img.sourse);
-            avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
-            const nameLink = document.createElement('a');
-            nameLink.setAttribute('href', '#');
-            nameLink.classList.add('text-heading', 'font-semibold');
-            nameLink.textContent = values.name.ename;
-            td1.appendChild(avatar);
-            td1.appendChild(nameLink);
-
-            // Create the second table data element for the date
-            const td2 = document.createElement('td');
-            td2.textContent = values.position;
-
-            // Create the third table data element for the logo and company name
-            const td3 = document.createElement('td');
-            const logo = document.createElement('img');
-            logo.setAttribute('alt', '...');
-            logo.setAttribute('src', '#');
-            logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
-            const companyLink = document.createElement('a');
-            companyLink.setAttribute('href', '#');
-            companyLink.classList.add('text-heading', 'font-semibold');
-            companyLink.textContent = values.party_name;
-            td3.appendChild(logo);
-            td3.appendChild(companyLink);
-
-            // Create the fourth table data element for the amount
-            const td4 = document.createElement('td');
-            td4.textContent = values.experiance;
-
-            // Create the fifth table data element for the status badge
-            const td5 = document.createElement('td');
-            const badge = document.createElement('span');
-            badge.classList.add('badge', 'badge-lg', 'badge-dot');
-            const badgeIcon = document.createElement('i');
-            badgeIcon.classList.add('bg-success');
-            badge.appendChild(badgeIcon);
-            badge.appendChild(document.createTextNode(values.status));
-            td5.appendChild(badge);
-
-            // Create the sixth table data element for the action buttons
-            const td6 = document.createElement('td');
-            const viewButton = document.createElement('a');
-            viewButton.setAttribute('href', '#');
-            viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
-            viewButton.textContent = 'View';
-            const deleteButton = document.createElement('button');
-            deleteButton.setAttribute('type', 'button');
-            deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
-            const deleteIcon = document.createElement('i');
-            deleteIcon.classList.add('bi', 'bi-trash');
-            deleteButton.appendChild(deleteIcon);
-            td6.appendChild(viewButton);
-            td6.appendChild(deleteButton);
-
-            // Add all the table data elements to the row element
-            tr.appendChild(td1);
-            tr.appendChild(td2);
-            tr.appendChild(td3);
-            tr.appendChild(td4);
-            tr.appendChild(td5);
-            tr.appendChild(td6);
-
-            // Add the row element to the table body
-            const tableBody = document.querySelector('tbody');
-            tableBody.appendChild(tr);
+            }
         }
+    </script>
 
-    </script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="../../assets/js/leader_profile_create.js"></script>
-    <script src="../../admin_main.js"></script>
+    <script src="../../../assets/js/governer_create_page.js"></script>
+    <script src="../../../admin_main.js"></script>
 </body>
 
 </html>

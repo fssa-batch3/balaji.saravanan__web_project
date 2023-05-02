@@ -133,35 +133,40 @@ document.querySelector(".governer").append(table_div);
 // });
 
 
+
+
 window.onload = function () {
     let searchBox = document.querySelector('#searchbar');
     searchBox.addEventListener('input', function () {
         let filterValue = searchBox.value.toLocaleLowerCase();
 
-
         let rows = document.querySelectorAll("table tr");
 
-
         for (let i = 1; i < rows.length; i++) { // start from index 1 to skip the header row
-
-
             let row = rows[i];
-            let id= row.children[0].textContent.toLocaleLowerCase();
-            let name = row.children[1].textContent.toLocaleLowerCase();
-            let party = row.children[3].textContent.toLocaleLowerCase();
-            let leader_name = row.children[2].textContent.toLocaleLowerCase();
 
+            let id= row.children[0].textContent.toLocaleLowerCase();
+
+            let name = row.children[1].textContent.toLocaleLowerCase();
+
+            let party = row.children[3].textContent.toLocaleLowerCase();
+            
+            let leader_name = row.children[2].textContent.toLocaleLowerCase();
 
             if (name.includes(filterValue) || party.includes(filterValue) || leader_name.includes(filterValue)||id.includes(filterValue)) {
 
-                
                 row.style.display = "table-row";
+
             } else {
                 row.style.display = "none";
+
             }
         }
     });
 };
+
+
+
 
 let table = document.querySelector("table");
 let rows = table.rows;
@@ -178,6 +183,9 @@ sortNameButton.addEventListener("click", () => {
 
     table.tBodies[0].append(...sortedRows);
 });
+
+
+
 
 let sortMarginButton = document.querySelector("#sortMargin");
 sortMarginButton.addEventListener("click", () => {

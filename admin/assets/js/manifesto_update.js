@@ -10,81 +10,87 @@ closeBtn.addEventListener('click', function () {
 
 const manifesto = JSON.parse(localStorage.getItem("manifesto_data"));
 
-for (const menifesto_value of manifesto) {
+function loadPastLeaders() {
 
 
-    // Create the accordion container element
-    const accordion = document.createElement('div');
-    accordion.setAttribute('id', 'accordion-1');
+
+    for (const menifesto_value of manifesto) {
 
 
-    // Create the head element
-    const head = document.createElement('div');
-    head.setAttribute('class', 'head');
-
-    // Create the h2 element
-    const h2 = document.createElement('h2');
-    h2.textContent = menifesto_value.title;
-    head.appendChild(h2);
-
-    // Create the arrow icon element
-    const arrow = document.createElement('i');
-    arrow.setAttribute('class', 'fas fa-angle-down arrow');
-    head.appendChild(arrow);
-
-    const content = document.createElement('div');
-    content.setAttribute('class', 'content');
-    content.style.display = 'none'; // hide content by default
-
-    const paragraph = document.createElement('p');
-    paragraph.textContent = menifesto_value.stage;
-
-    const button = document.createElement('button');
-    button.innerText = menifesto_value.status;
-
-    content.appendChild(paragraph);
-    content.appendChild(button);
-
-    const updateButton = document.createElement('button');
-    // updateButton.setAttribute('class', 'arrow');
-    updateButton.innerHTML = "update"
-    updateButton.onclick = function () {
-        popup.style.display = 'block';
-
-        updateMenifesto(menifesto_value);
-    }
-    content.appendChild(updateButton);
+        // Create the accordion container element
+        const accordion = document.createElement('div');
+        accordion.setAttribute('id', 'accordion-1');
 
 
-    let deleteButton = document.createElement('button');
-    // delete4.setAttribute('class', 'arrow');
-    deleteButton.innerHTML = "delete"
-    deleteButton.onclick = function () {
-        // popup.style.display = 'block';
+        // Create the head element
+        const head = document.createElement('div');
+        head.setAttribute('class', 'head');
 
-        deleteLeader(menifesto_value);
-    }
-    content.appendChild(deleteButton);
+        // Create the h2 element
+        const h2 = document.createElement('h2');
+        h2.textContent = menifesto_value.title;
+        head.appendChild(h2);
 
-    // Append the head and content elements to the accordion
-    accordion.appendChild(head);
-    accordion.appendChild(content);
+        // Create the arrow icon element
+        const arrow = document.createElement('i');
+        arrow.setAttribute('class', 'fas fa-angle-down arrow');
+        head.appendChild(arrow);
 
-    // Add the accordion to the document
-    document.querySelector(".container").append(accordion);
+        const content = document.createElement('div');
+        content.setAttribute('class', 'content');
+        content.style.display = 'none'; // hide content by default
 
-    // Add click functionality to the accordion
-    head.addEventListener('click', function () {
-        if (content.style.display === 'none') {
-            content.style.display = 'block';
-            arrow.classList.remove('fa-angle-down');
-            arrow.classList.add('fa-angle-up');
-        } else {
-            content.style.display = 'none';
-            arrow.classList.remove('fa-angle-up');
-            arrow.classList.add('fa-angle-down');
+        const paragraph = document.createElement('p');
+        paragraph.textContent = menifesto_value.stage;
+
+        const button = document.createElement('button');
+        button.innerText = menifesto_value.status;
+
+        content.appendChild(paragraph);
+        content.appendChild(button);
+
+        const updateButton = document.createElement('button');
+        // updateButton.setAttribute('class', 'arrow');
+        updateButton.innerHTML = "update"
+        updateButton.onclick = function () {
+            popup.style.display = 'block';
+
+            updateMenifesto(menifesto_value);
         }
-    });
+        content.appendChild(updateButton);
+
+
+        let deleteButton = document.createElement('button');
+        // delete4.setAttribute('class', 'arrow');
+        deleteButton.innerHTML = "delete"
+        deleteButton.onclick = function () {
+            // popup.style.display = 'block';
+
+            deleteLeader(menifesto_value);
+        }
+        content.appendChild(deleteButton);
+
+        // Append the head and content elements to the accordion
+        accordion.appendChild(head);
+        accordion.appendChild(content);
+
+        // Add the accordion to the document
+        document.querySelector(".container").append(accordion);
+
+        // Add click functionality to the accordion
+        head.addEventListener('click', function () {
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                arrow.classList.remove('fa-angle-down');
+                arrow.classList.add('fa-angle-up');
+            } else {
+                content.style.display = 'none';
+                arrow.classList.remove('fa-angle-up');
+                arrow.classList.add('fa-angle-down');
+            }
+        });
+    }
+
 }
 let manifestoId = null;
 const menifestoForm = document.getElementById("menifesto_form");
@@ -136,7 +142,10 @@ function handleSubmit(e) {
 
         alert("menifesto updated successfully!");
         localStorage.setItem("manifesto_data", JSON.stringify(manifesto_value));
-        window.location.reload();
+
+        loadPastLeaders()
+
+        document.getElementById("menifest_title").value = "";
     }
 
 }
@@ -156,4 +165,8 @@ function deleteLeader(menifesto1) {
         alert("manifesto successfully!");
         window.location.reload();
     }
+}
+
+window.onload = function () {
+    loadPastLeaders();
 }
