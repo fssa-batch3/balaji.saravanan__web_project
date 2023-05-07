@@ -1,72 +1,100 @@
 
 
+const name_list = [
 
-    const name_list = [
-
-        {
-            "name": "திராவிட முன்னேற்றக் கழகம்",
-            "name1": "Dravida Munnetra Kazhagam",
-            "image": {
-                "source":"../../assets/images/flages/dmk-logo.png",
-                "alter" : "dmk image"
-            } 
-        },
-        {
-            "name": "அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்",
-            "name1" : "All India Anna Dravida Munnetra Kazhagam",
-            "image": 
-            {
-                "source":"../../assets/images/flages/aiadmk.png",
-                "alter" : "aiadmk image"
-            } 
-        },
-        {
-            "name": "இந்திய தேசிய காங்கிரசு",
-            "name1" :" Indian National Congress",
-            "image": 
-            {
-                "source":"../../assets/images/flages/inc.png",
-                "alter" : "inc image"
-            } 
-        },
-        {
-            "name": "நாம் தமிழர் கட்சி",
-            "name1" :"name:Naam Tamilar Katchi",
-            "image": 
-            {
-                "source":"../../assets/images/flages/naam-tamizhar.jpg",
-                "alter" : "naam thamizhar katchi image"
-            } 
+    {
+        "name": "திராவிட முன்னேற்றக் கழகம்",
+        "image": {
+            "source": "../../assets/images/flages/dmk-logo.png",
+            "alter": "dmk image"
         }
-    ]
+    },
+    {
+        "name": "அனைத்திந்திய அண்ணா திராவிட முன்னேற்றக் கழகம்",
+        "image":
+        {
+            "source": "../../assets/images/flages/aiadmk.png",
+            "alter": "aiadmk image"
+        }
+    },
+    {
+        "name": "இந்திய தேசிய காங்கிரசு",
+        "image":
+        {
+            "source": "../../assets/images/flages/inc.png",
+            "alter": "inc image"
+        }
+    },
+    {
+        "name": "நாம் தமிழர் கட்சி",
 
-    let parties_main_div;
+        "image":
+        {
+            "source": "../../assets/images/flages/naam-tamizhar.jpg",
+            "alter": "naam thamizhar katchi image"
+        }
+    }
+]
+// const name_list_english = [
 
-    let parties2;
+//     {
 
-    let fontside_div;
+//         "name": "Dravida Munnetra Kazhagam",
+//         "image": {
+//             "source": "../../assets/images/flages/dmk-logo.png",
+//             "alter": "dmk image"
+//         }
+//     },
+//     {
+//         "name": "All India Anna Dravida Munnetra Kazhagam",
+//         "image":
+//         {
+//             "source": "../../assets/images/flages/aiadmk.png",
+//             "alter": "aiadmk image"
+//         }
+//     },
+//     {
 
-    let backround;
-    
-    let title1;
+//         "name": " Indian National Congress",
+//         "image":
+//         {
+//             "source": "../../assets/images/flages/inc.png",
+//             "alter": "inc image"
+//         }
+//     },
+//     {
 
-    let title2;
+//         "name": "name:Naam Tamilar Katchi",
+//         "image":
+//         {
+//             "source": "../../assets/images/flages/naam-tamizhar.jpg",
+//             "alter": "naam thamizhar katchi image"
+//         }
+//     }
+// ]
+let parties_main_div;
 
-    let para1;
+let parties2;
 
-    let para2;
+let fontside_div;
 
-    let backside_div;
+let backround;
 
-    let para_backside;
+let title2;
 
-    let img_backside;
+let para2;
 
-    let button;
+let backside_div;
 
-    let anchor;
+let para_backside;
 
-    for (let i = 0; i < name_list.length; i++) {
+let img_backside;
+
+let button;
+
+let anchor;
+
+for (let i = 0; i < name_list.length; i++) {
 
     // parties_main_div
     parties_main_div = document.createElement("div");
@@ -88,22 +116,22 @@
     backround.setAttribute("src", name_list[i]["image"]["source"]);
     backround.setAttribute("alt", name_list[i]["image"]["alter"])
     fontside_div.append(backround);
- 
-    //title1
-    title1 =document.createElement("p");
-    title1.innerText= "Name :";
-    fontside_div.append(title1);
 
-    
-    //para1
-    para1 = document.createElement("p");
-    para1.innerText =name_list[i]["name1"];
-    fontside_div.append(para1);
+    // //title1
+    // title1 =document.createElement("p");
+    // title1.innerText= "Name :";
+    // fontside_div.append(title1);
+
+
+    // //para1
+    // para1 = document.createElement("p");
+    // para1.innerText =name_list[i]["name1"];
+    // fontside_div.append(para1);
 
     //title2
-    title2 =document.createElement("p");
+    title2 = document.createElement("p");
     title2.setAttribute("class", "para")
-    title2.innerText= "பெயர் :";
+    title2.innerText = "கட்சி பெயர் :";
     fontside_div.append(title2);
 
     //para2
@@ -136,9 +164,13 @@
 
     //anchor
     anchor = document.createElement("a");
-    anchor.setAttribute("href", "./potfolio.html");
+    anchor.setAttribute("href", "./portfolio.html?name=" + name_list[i].name);
     anchor.innerText = "சுயவிவரங்கள்"
     button.append(anchor);
+
+    if (i > 0 && i <=3) {
+        parties_main_div.style.filter = "blur(3px)";
+    }
 
     document.querySelector("div.totalparties").append(parties_main_div);
 

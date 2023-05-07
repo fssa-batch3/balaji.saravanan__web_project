@@ -21,9 +21,9 @@ if (users != null) {
 let favorite_minister =
   JSON.parse(localStorage.getItem("fav_minister")) ?? [];
 
-const popup = document.getElementById("leader-popup");
+// const popup = document.getElementById("leader-popup");
 
-const closeBtn = document.getElementById("closeBtn");
+// const closeBtn = document.getElementById("closeBtn");
 
 // closeBtn.addEventListener("click", function () {
 
@@ -31,29 +31,42 @@ const closeBtn = document.getElementById("closeBtn");
 // });
 
 // Get minister data from localStorage
-const minister_values = JSON.parse(
-
-  localStorage.getItem("politician_data")
-
-);
+const minister_values = JSON.parse(localStorage.getItem("politician_data"));
 
 
+const url = window.location.search;
+
+const urlParams = new URLSearchParams(url);
+
+const username = urlParams.get("name");
+
+let conform= false;
 minister_values.filter(function (obj) {
 
-  if (obj.status && obj) {
+  if (obj.status && obj.party_name==username) {
 
     list_leaders(obj);
 
+    conform=true;
+
   }
 
-})
+});
+
+if(!conform){
+  let li= document.createElement("li");
+  li.innerHTML="Comming soon"
+  document.querySelector("body").append(li)
+}
+
+
 
 // functions to list leaders with filter
 function list_leaders(minister) {
 
-  // create card div.filter(minister => minister.status === true)
-  let card_div = document.createElement("div");
-  card_div.setAttribute("class", "card");
+
+  let card = document.createElement('div');
+  card.classList.add('card');
 
   let multiButton = document.createElement("div");
   multiButton.className = "multi-button";
@@ -63,7 +76,7 @@ function list_leaders(minister) {
 
   commentButton.onclick = function () {
 
-    window.location.href = "stick.html?name=" + minister.name["ename"]
+    window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
   }
   multiButton.appendChild(commentButton);
 
@@ -80,63 +93,64 @@ function list_leaders(minister) {
   multiButton.appendChild(heartButton);
 
 
-  card_div.append(multiButton);
+  card.append(multiButton);
+  let cardImage = document.createElement('div');
 
-  // create imgBx div
-  let imgBx_div = document.createElement("div");
-  imgBx_div.setAttribute("class", "imgBx");
-  card_div.append(imgBx_div);
 
-  // create image element
-  let image5 = document.createElement("img");
-  image5.setAttribute("src", minister["img"]["sourse"]);
-  image5.setAttribute("alt", minister["img"]["alter"]);
-  imgBx_div.append(image5);
+  cardImage.classList.add('card-image');
 
-  // create contentBx div
-  let contentBx = document.createElement("div");
-  contentBx.setAttribute("class", "contentBx");
-  card_div.append(contentBx);
+  let img = document.createElement('img');
+  img.setAttribute('src', minister.img.sourse);
+  img.setAttribute('alt', 'profile picture');
 
-  // create title element
-  let title = document.createElement("p");
-  title.innerText = "பெயர் : " + minister.name["tname"];
-  contentBx.append(title);
+  cardImage.appendChild(img);
 
-  // create size div
-  let size_div = document.createElement("div");
-  size_div.setAttribute("class", "size");
-  contentBx.append(size_div);
+  card.appendChild(cardImage);
 
-  // create name element
-  let name = document.createElement("h3");
-  name.innerText = "NAME : " + minister.name["ename"];
-  size_div.append(name);
+  let cardContent = document.createElement('div');
+  cardContent.classList.add('card-content');
 
-  // create position div
-  let position = document.createElement("div");
-  position.setAttribute("class", "color");
-  contentBx.append(position);
+  let cardTitle = document.createElement('h2');
+  cardTitle.classList.add('card-title');
+  cardTitle.textContent = minister.name.tname;
 
-  // create role_name element
-  let role_name = document.createElement("h3");
-  role_name.innerText = "பதவி : " + minister["position"];
-  position.append(role_name);
+  let cardText1 = document.createElement('p');
+  cardText1.classList.add('card-text');
+  cardText1.textContent = 'மந்திரி சபை';
 
-  // create view portfolio anchor
-  const anchor5 = document.createElement("a");
-  anchor5.setAttribute("class", "rederect_button")
-  anchor5.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
-  anchor5.innerText = "view portfolio";
-  contentBx.append(anchor5);
+  let cardText2 = document.createElement('p');
+  cardText2.classList.add('card-text');
+  cardText2.classList.add('card-strong');
+  cardText2.textContent = minister.position;
+
+  let cardButton = document.createElement('button');
+  cardButton.classList.add('card-button');
+  cardButton.textContent = 'விவரம்';
+  cardButton.onclick = function () {
+
+    window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
+  }
+
+  // const anchor5 = document.createElement("a");
+  // anchor5.setAttribute("class", "rederect_button")
+  // anchor5.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
+  // anchor5.innerText = "விவரம்";
+  // cardButton.append(anchor5);
+
+  cardContent.append(cardTitle);
+  cardContent.append(cardText1);
+  cardContent.append(cardText2);
+  cardContent.append(cardButton);
+  card.append(cardContent);
+
 
   // append card div to list container
-  document.querySelector("div.lists1").append(card_div);
+  document.querySelector("div.lists1").append(card);
 
-  function commend(minister) {
-    window.location.href = "stick.html?name=" + minister.name["ename"]
+  // function commend(minister) {
+  //   window.location.href = "stick.html?name=" + minister.name["ename"]
 
-  }
+  // }
 
   heartButton.addEventListener('click', function () {
 
@@ -200,7 +214,7 @@ function createMinisterCard(minister) {
   card.setAttribute("class", "card");
 
   const name = document.createElement("a");
-  name.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
+  name.setAttribute("href", "profile_ministers.html?name=" + minister.name["ename"]);
   name.innerText = minister.name.ename;
   card.appendChild(name);
 
@@ -242,12 +256,7 @@ searchInput.addEventListener("input", function (e) {
 });
 
 
-// const addbutton = document.getElementById("addbutton");
-// addbutton.addEventListener("click", function () {
-// })
 
 
-// let button= document.createElement("a");
-// button.setAttribute("href", "../admin/politician.html?name="+"minister");
-// button.innerText="add";
-// document.querySelector(".create").append(button);
+
+

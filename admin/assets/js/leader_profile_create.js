@@ -6,8 +6,6 @@ const registerFromValidation = () => {
 
     let ministersData = JSON.parse(localStorage.getItem("politician_data")) ?? [];
 
-    let governer_data = JSON.parse(localStorage.getItem("governer_data")) ?? [];
-
 
     const img_url = document.getElementById("url").value;
 

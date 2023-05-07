@@ -27,7 +27,7 @@ console.log(found);
 
 if (found) {
 
-    let cmImage, cm_name, position, position1, position2, position3, position4, position5;
+    let cmImage, cm_name, position, position1, position3, position4, position5;
 
 
 

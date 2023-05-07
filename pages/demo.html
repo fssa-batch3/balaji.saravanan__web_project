@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>API Test</title>
+</head>
+
+<body>
+    hjbjnghbvhjgvnbvj
+    <button onclick="getData()">Get Data</button>
+    <div id="output"></div>
+    <script>
+        function getData() {
+            const apiKey = 'ccd3790992aa2ed71ffc';
+            const apiUrl = 'https://example.com/api/endpoint';
+
+            fetch(apiUrl, {
+                headers: {
+                    'Authorization': `Bearer ${apiKey}`
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const output = document.getElementById('output');
+                    output.innerText = JSON.stringify(data, null, 2);
+                })
+                .catch(error => console.error(error));
+        }
+    </script>
+</body>
+
+</html>

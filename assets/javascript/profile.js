@@ -8,7 +8,6 @@ const url = window.location.search;
 const urlParams = new URLSearchParams(url);
 
 const username = urlParams.get("name");
-console.log(username);
 
 let found = false;
 
@@ -25,7 +24,7 @@ for (i = 0; i < minister_name.length; i++) {
 
 if (found) {
 
-    let cmImage, cm_name, position, position1, position2, position3, position4, position5;
+    let cmImage, cm_name, position, position1, position3, position4, position5;
 
 
 
@@ -49,13 +48,13 @@ if (found) {
     position1.innerText = "பெயர் : " + minister_name[i].name.tname;
     cm_name.append(position1);
 
-    position2 = document.createElement("p");
-    position2.setAttribute("id", "minister-name")
-    position2.innerText = "NAME : " + minister_name[i].name.ename;
-    cm_name.append(position2);
+    // position2 = document.createElement("p");
+    // position2.setAttribute("id", "minister-name")
+    // position2.innerText = "NAME : " + minister_name[i].name.ename;
+    // cm_name.append(position2);
 
     position3 = document.createElement("p");
-    position3.innerText = "PARTY : " + "திராவிட முன்னேற்றக் கழகம்"
+    position3.innerText = "கட்சியின் பெயர் : " + "திராவிட முன்னேற்றக் கழகம்"
     cm_name.append(position3);
 
     position4 = document.createElement("p");
@@ -80,12 +79,12 @@ if (found) {
 
     // create the iframe element
     const iframe = document.createElement("iframe");
-    iframe.src = "https://drive.google.com/file/d/1CizE-ZahGikKp6f4bSTJRgv0Y6bT9iYR/preview";
+    iframe.src = "https://drive.google.com/file/d/1QvtGma0nm8YY8otWHDyQ4cs695YyIy5k/preview";
 
     // create the error message element
     const p = document.createElement("p");
     p.style.fontSize = "110%";
-    p.innerHTML = '<em><strong>ERROR: </strong>An &#105;frame should be displayed here but your browser version does not support &#105;frames. Please update your browser to its most recent version and try again, or access the file <a href="https://drive.google.com/file/d/0BxrMaW3xINrsR3h2cWx0OUlwRms/preview">with this link.</a></em>';
+    p.innerHTML = '<em><strong>பிழை: </strong>உங்கள் உலாவியை அதன் சமீபத்திய பதிப்பிற்குப் புதுப்பித்து அல்லது கோப்பை அணுகவும் <a href="https://drive.google.com/file/d/1QvtGma0nm8YY8otWHDyQ4cs695YyIy5k/preview">with this link.</a></em>';
 
     // append the elements to the parent container
     responsiveDiv.appendChild(iframe);

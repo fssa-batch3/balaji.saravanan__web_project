@@ -23,6 +23,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/footer.css">
 
 
     <style>
@@ -133,7 +134,6 @@
 <body>
 
 
-
     <!-- background vidieo -->
 
     <div class="headvideo">
@@ -184,7 +184,7 @@
 
             <div class="content1 d-flex justify-content-center align-items-center flex-column">
 
-                <h2 class="h1">poltifact</h2>
+                <h2 class="h1">அரசியல்</h2>
 
                 <p class="p-3">
                     பரஸ்பர சண்டை சச்சரவுகளைக் களைந்து, உயர்ந்தவர் தாழ்ந்தவர் என்ற வேறுபாட்டைக் களைந்து சமத்துவ
@@ -218,7 +218,7 @@
 
     <div class="image_container">
 
-        <section class="carousel">
+        <!-- <section class="carousel">
             <div class="slides">
                 <img class="slide" id="slide-1" src="assets/images/essecial/IMG_20230427_121742.jpg">
                 <img class="slide" id="slide-2"
@@ -226,7 +226,7 @@
 
             </div>
 
-        </section>
+        </section> -->
 
     </div>
 
@@ -265,21 +265,21 @@
 
             <div class="num1">
                 <h1 class="h1 fs-2 text-center pb-3">0k</h1>
-                <p class="text-center text-uppercase">active Volunteer</p>
+                <p class="text-center text-uppercase">தன்னார்வலர்</p>
             </div>
 
             <hr class="border border-danger border-2 opacity-50">
 
             <div class="num1 ">
                 <h1 class="h1 fs-1 text-center pb-3">131</h1>
-                <p class="text-center text-uppercase">campage now</p>
+                <p class="text-center text-uppercase">இப்போது முகாம்</p>
             </div>
 
             <hr class="border border-danger border-2 opacity-50">
 
             <div class="num1">
                 <h1 class="h1 fs-1 text-center pb-3">612</h1>
-                <p class="text-center text-uppercase">area coverage</p>
+                <p class="text-center text-uppercase">பகுதி கவரேஜ்</p>
             </div>
 
             <hr class="project border border-danger border-2 opacity-50">
@@ -287,7 +287,8 @@
 
             <div class="project num1">
                 <h1 class="h1 fs-1 text-center pb-3">2</h1>
-                <p class="text-center text-uppercase">project done</p>
+                <p class="text-center text-uppercase">
+                    திட்டம் முடிந்தது</p>
             </div>
 
         </div>
@@ -347,8 +348,80 @@
 
     <script src="main.js"></script>
 
-    <script src="assets/javascript/translate.js"></script>
+    <!-- <script src="assets/javascript/translate.js"></script> -->
 
+
+    <!-- <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'ta',
+                includedLanguages: 'en' // remove this line if you want to include all languages
+            }, 'google_translate_element');
+        }
+    </script> -->
+
+    <!-- <script type="text/javascript"
+        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
+    <script>
+
+
+        let data = {
+            "tamil": {
+                "nav": {
+                    "option_one": "முகப்பு",
+                    "option_two": "விவரம்",
+                    "option_three": {
+                        "main_menu": "அறிக்கைகள்",
+                        "sub_menu_one": "நிலுவை",
+                        "sub_menu_two": "நிறைவு"
+                    },
+                    "option_four": "தலைவர்கள்",
+                    "option_five": {
+                        "main_menu_2": "மேலும்",
+                        "sub_menu_one_2": "ஆளுநர்கள்",
+                        "sub_menu_two_2": "பிரதிநிதிகள்",
+                    },
+                    "option_six": "உள்நுழைக"
+                }
+            },
+            "english": {
+                "nav": {
+                    "option_one": "Home",
+                    "option_two": "Portfolio",
+                    "option_three": {
+                        "main_menu": "Manifesto",
+                        "sub_menu_one": "Pending",
+                        "sub_menu_two": "Completed"
+                    },
+                    "option_four": "Pastleaders",
+                    "option_five": {
+                        "main_menu_2": "More",
+                        "sub_menu_one_2": "Governors",
+                        "sub_menu_two_2": "MLA List",
+                    },
+                    "option_six": "Login"
+                }
+            }
+        }
+        let lang_options = document.querySelectorAll(".multi_lang");
+        lang_options.forEach(el => {
+            el.addEventListener('click', () => {
+                const attr = el.getAttribute('language');
+                document.getElementById("option_one").textContent = data[attr].nav.option_one;
+                document.getElementById("option_two").textContent = data[attr].nav.option_two;
+                document.getElementById("option_three").textContent = data[attr].nav.option_three.main_menu;
+                document.getElementById("option_three_sub_one").textContent = data[attr].nav.option_three.sub_menu_one;
+                document.getElementById("option_three_sub_two").textContent = data[attr].nav.option_three.sub_menu_two;
+                // document.getElementById("option_three_sub_three").textContent = data[attr].nav.option_three.sub_menu_;
+                document.getElementById("option_four").textContent = data[attr].nav.option_four;
+                document.getElementById("five_option").textContent = data[attr].nav.option_five.main_menu_2;
+                document.getElementById("option_five_sub_one").textContent = data[attr].nav.option_five.sub_menu_one_2;
+                document.getElementById("option_five_sub_two").textContent = data[attr].nav.option_five.sub_menu_two_2;
+                document.getElementById("option_six").textContent = data[attr].nav.option_six;
+            });
+
+        });
+    </script>
 
 </body>
 

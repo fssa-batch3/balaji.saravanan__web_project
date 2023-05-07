@@ -1,7 +1,7 @@
 const governer_list= JSON.parse(localStorage.getItem("governor_details"))
 
 
-let table, table_row_head, table_heading1, table_heading2, table_hading3, table_heading4, table_row, table_data1, table_data2, data2_div_profile, div_parties, div_fontside, name_div, position_div, backside_div, image_div, button_div, anc_link_div, table_data3, table_data4;
+let table, table_row_head, table_heading1, table_heading2, table_heading3, table_heading4, table_row, table_data1, table_data2, data2_div_profile, div_parties, div_fontside, name_div, position_div, backside_div, image_div, button_div, anc_link_div, table_data3, table_data4;
 
 table = document.createElement("table");
 

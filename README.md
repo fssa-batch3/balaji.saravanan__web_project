@@ -76,6 +76,7 @@ CREATE AN ACCOUNT :  ( COMPLETED )
 
 * Scenario 1: Successfully created an account
     * Steps :
+        0. click loging button.
         1. Navigate to the sign-up page.
         2. Fill the required details such as name, phone number and password.
         3. Click the "Submit" button.
@@ -97,8 +98,9 @@ VIEW PROFILE :  ( COMPLETED )
 * Scenario 1: Create a profile
     * steps :
         1. Login as a user.
+        2. click profile icon.
         2. Navigate to the profile page.
-        3. View the user details such as name and phone number.
+        3. View the user details such as first name, last name and phone number.
     * Expected result :
         * The user can view their profile details.
 
@@ -113,15 +115,18 @@ EDIT PROFILE :  ( COMPLETED )
         5. Click "Save" button to save the details.
     * Expected result :
         * The details of the user has been updated.
-        * The user add other values.
+        * The user add address, city , age and gender values.
+
+        
 
 VIEW LEADER PROFILE :  ( COMPLETED )
 
 * Scenario 1: Successfully view Leader profile
     * Steps :
-        1. Login as a user.
-        2. Navigate to the leader profile listing page.
-        3. View the list of available leader profile list.
+        1. As a user.
+        2. click the details page, ad select party.
+        3. Navigate to the leader profile listing page.
+        4. View the list of available leader profile list.
     * Expected result :
         * The user can view the list of available leader profile list.
 
@@ -129,7 +134,7 @@ VIEW LEADER PROFILE DETAIL :  ( COMPLETED )
 
 * Scenario 1: Successfully view leader detail details
     * Steps:
-        1. Login as a user.
+        1. As a user.
         2. Select a leader profile to view its details.
     * Expected result:
         * The user can view the details of the selected leader profile details. 
@@ -146,7 +151,7 @@ ADD LEADER PROFILE TO THE WISHLIST :  ( COMPLETED )
         * The user is redirected to the wishlist page.
         * The profile  is added to the wishlist.
 
-REMOVE LEADER PROFILE FROM THE WISHLIST :  ( COMPLETD )
+REMOVE LEADER PROFILE FROM THE WISHLIST :  ( COMPLETED )
 
 * Scenario 1: Remove the product/item from the wishlist
     * steps :
@@ -157,6 +162,27 @@ REMOVE LEADER PROFILE FROM THE WISHLIST :  ( COMPLETD )
     * Expected Result:
         * The item is removed from the user's wishlist.
 
+SERCHBAR: (COMPLETED)
+
+* Scenario 1: search the leadershow leader name
+    * steps :
+        1. As a user search available leader in searchbar.
+        2. That leader show in page.
+       
+    * Expected Result:
+        * The item is showed in page.
+
+
+VIEW DISTIRCT WISE MANIFESTO :  ( COMPLETED )
+
+* Scenario 1: Successfully view Leader profile
+    * Steps :
+        1. As a user.
+        2. click manifesto page.
+        3. select the district wise menifesto.
+        4. View the all district manifesto list.
+    * Expected result :
+        * The user can view the district wise manifesto list showing.
 
 ADMIN :
 
@@ -164,22 +190,14 @@ UPLOAD NEW LEADER PROFILE TO VIEW :  ( COMPLETD )
 
 * Scenario 1: Successfully uploaded the nEW LEADER PROFILE
     * Steps :
-        1. Login as a admin.
+        1. Login as a admin. in the email name= admin@gmail.com
+             password: Admin@55
         2. Navigate to the admin dash board page click create.
-        3. Enter the required leader profile details such as name, description, and position.
-        4. Click the "submit" button to submit the new LEADER PROFILE.
+        3. click the create lists.
+        4. Enter the required leader profile details such as name, description, and position.
+        5. Click the "submit" button to submit the new LEADER PROFILE.
     * Expected result :
         * The new product is created and added to the new MP list.
-
-VIEW THE LIST OF LEADER PROFILE :  ( COMPLETD )
-
-* Scenario 1: Successfully view list of leader profiles
-    * Steps :
-        1. Login as a admin.
-        2. Navigate to the mp list list page.
-        3. View the list.
-    * Expected result :
-        * The user can view the list of leader profile.
 
 EDIT THE LEADER PROFILE :  ( COMPLETD )
 

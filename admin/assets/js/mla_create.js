@@ -59,7 +59,7 @@ const registerFromValidation = () => {
    
         img: {
             source: img_url,
-            alter: english_name,
+            alter: tamil_name,
         },
         position: position,
 

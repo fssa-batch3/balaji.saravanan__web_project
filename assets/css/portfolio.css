@@ -1,0 +1,183 @@
+
+.lists1 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  row-gap: 50px;
+  margin-left: 5%;
+}
+
+.card .multi-button {
+  z-index: 0;
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  border-radius: 100%;
+  width: 0rem;
+  height: 0rem;
+  transform: translate(-50%, -50%);
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+}
+
+.card .multi-button button {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  border-radius: 100%;
+  background: var(--background);
+  color: var(--text);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
+  box-shadow: 0 0 0rem -0.25rem var(--background);
+  z-index: 10;
+  background-color: lightblue;
+
+}
+
+.card .multi-button button:hover {
+  background: var(--text);
+  color: var(--background);
+  box-shadow: 0 0 1rem -0.25rem var(--background);
+}
+
+.card .multi-button button:nth-child(1) {
+  left: 62.5%;
+  top: 18.75%;
+}
+
+.card .multi-button button:nth-child(2) {
+  left: 37.5%;
+  top: 18.75%;
+
+}
+
+.card .multi-button button:nth-child(3) {
+  left: 18.75%;
+  top: 37.5%;
+
+}
+
+.card .multi-button button:nth-child(4) {
+  left: 18.75%;
+  top: 62.5%;
+}
+
+.card .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  background: var(--background);
+  color: var(--text);
+}
+
+.card:hover .multi-button,
+.multi-button:focus-within {
+  width: 10rem;
+  height: 10rem;
+
+}
+
+.rederect_button {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 15px;
+  margin-left: 25%;
+  font-weight: bold;
+  color: black;
+  background: white;
+  border: 2px solid black;
+  box-shadow: 5px 5px 0 black,
+    -5px -5px 0 rgb(66, 76, 216),
+    -5px 5px 0 rgb(167, 37, 126),
+    5px -5px 0 rgb(159, 224, 129);
+  transition: 0.5s ease-in-out;
+}
+
+.rederect_button:focus {
+  outline: none;
+}
+
+
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+
+  width: 650px;
+  height: 300px;
+
+  position: relative;
+
+  color: #2d2d2d;
+  background-color: #b2e5e6;
+  letter-spacing: 1px;
+
+  border: 25px solid #a0cdcf;
+  border-radius: 25px;
+
+  /* overflow: hidden; */
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-image {
+  width: 250px;
+  height: 100%;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 30px;
+
+  width: auto;
+  height: 100%;
+}
+
+.card-title {
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.card-strong {
+  font-weight: bold;
+}
+
+.card-button {
+  width: 150px;
+  height: 40px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+
+}
