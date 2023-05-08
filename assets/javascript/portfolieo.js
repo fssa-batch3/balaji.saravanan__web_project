@@ -60,145 +60,200 @@ if(!conform){
 }
 
 
+function list_leaders(item){
 
-// functions to list leaders with filter
-function list_leaders(minister) {
+const ministerCard = document.createElement("div");
+ministerCard.classList.add("minister_card");
 
+const ministerImage = document.createElement("div");
+ministerImage.classList.add("minister_image");
 
-  let card = document.createElement('div');
-  card.classList.add('card');
+const image = document.createElement("img");
+image.src = `${item.img.sourse}`;
+image.alt = `${item.img.alter}`;
 
-  let multiButton = document.createElement("div");
-  multiButton.className = "multi-button";
+ministerImage.appendChild(image);
 
-  let commentButton = document.createElement("button");
-  commentButton.className = "	fa fa-comment";
+const ministerDetails = document.createElement("div");
+ministerDetails.classList.add("minister_details");
 
-  commentButton.onclick = function () {
+const detailsContents = document.createElement("div");
+detailsContents.classList.add("details_contents");
 
-    window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
-  }
-  multiButton.appendChild(commentButton);
+const ministerName = document.createElement("p");
+ministerName.classList.add("minister_name");
+ministerName.textContent = `${item.name.tname}`;
 
-  let shareButton = document.createElement("button");
-  shareButton.className = "fas fa-share-alt";
-  multiButton.appendChild(shareButton);
+const counOfMinister = document.createElement("p");
+counOfMinister.classList.add("coun_of_minister");
+counOfMinister.textContent = "மந்திரி சபை";
 
-  let trashButton = document.createElement("button");
-  trashButton.className = "fas fa-trash";
-  multiButton.appendChild(trashButton);
+const ministerPos = document.createElement("p");
+ministerPos.classList.add("minister_pos");
+ministerPos.textContent = `${item.position}`;
 
-  let heartButton = document.createElement("button");
-  heartButton.className = "fa fa-heart";
-  multiButton.appendChild(heartButton);
+const viewPortfolio = document.createElement("p");
+viewPortfolio.classList.add("view_portfolio");
 
+const anchor = document.createElement("a");
+anchor.href = "profile_ministers.html?name=" + item.name.ename;
+anchor.textContent = "View portfolio";
 
-  card.append(multiButton);
-  let cardImage = document.createElement('div');
+viewPortfolio.appendChild(anchor);
 
+detailsContents.appendChild(ministerName);
+detailsContents.appendChild(counOfMinister);
+detailsContents.appendChild(ministerPos);
+detailsContents.appendChild(viewPortfolio);
 
-  cardImage.classList.add('card-image');
+ministerDetails.appendChild(detailsContents);
 
-  let img = document.createElement('img');
-  img.setAttribute('src', minister.img.sourse);
-  img.setAttribute('alt', 'profile picture');
+ministerCard.appendChild(ministerImage);
+ministerCard.appendChild(ministerDetails);
 
-  cardImage.appendChild(img);
-
-  card.appendChild(cardImage);
-
-  let cardContent = document.createElement('div');
-  cardContent.classList.add('card-content');
-
-  let cardTitle = document.createElement('h2');
-  cardTitle.classList.add('card-title');
-  cardTitle.textContent = minister.name.tname;
-
-  let cardText1 = document.createElement('p');
-  cardText1.classList.add('card-text');
-  cardText1.textContent = 'மந்திரி சபை';
-
-  let cardText2 = document.createElement('p');
-  cardText2.classList.add('card-text');
-  cardText2.classList.add('card-strong');
-  cardText2.textContent = minister.position;
-
-  let cardButton = document.createElement('button');
-  cardButton.classList.add('card-button');
-  cardButton.textContent = 'விவரம்';
-  cardButton.onclick = function () {
-
-    window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
-  }
-
-  // const anchor5 = document.createElement("a");
-  // anchor5.setAttribute("class", "rederect_button")
-  // anchor5.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
-  // anchor5.innerText = "விவரம்";
-  // cardButton.append(anchor5);
-
-  cardContent.append(cardTitle);
-  cardContent.append(cardText1);
-  cardContent.append(cardText2);
-  cardContent.append(cardButton);
-  card.append(cardContent);
-
-
-  // append card div to list container
-  document.querySelector("div.lists1").append(card);
-
-  // function commend(minister) {
-  //   window.location.href = "stick.html?name=" + minister.name["ename"]
-
-  // }
-
-  heartButton.addEventListener('click', function () {
-
-    let fav_check = false;
-
-    favorite_minister.find(function (obj) {
-
-      if (user_id === obj.user_id) {
-
-        if (minister.id === obj.min_id) {
-
-          fav_check = true;
-
-        }
-
-      }
-      return fav_check;
-    });
-
-    if (fav_check) {
-
-      alert("already added");
-
-    }
-    else {
-
-      favorite_minister.push({
-
-        "fav_id": favorite_minister.length,
-
-        "min_id": minister.id,
-
-        "user_id": user_id,
-
-        "image": minister.img,
-
-        "name": minister.name
-      });
-
-
-      localStorage.setItem("fav_minister", JSON.stringify(favorite_minister));
-
-      alert("added");
-
-    }
-  });
+document.querySelector(".main_container").appendChild(ministerCard);
 
 }
+
+
+// functions to list leaders with filter
+// function list_leaders(minister) {
+
+
+//   let card = document.createElement('div');
+//   card.classList.add('card');
+
+//   let multiButton = document.createElement("div");
+//   multiButton.className = "multi-button";
+
+//   let commentButton = document.createElement("button");
+//   commentButton.className = "	fa fa-comment";
+
+//   commentButton.onclick = function () {
+
+//     window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
+//   }
+//   multiButton.appendChild(commentButton);
+
+//   let shareButton = document.createElement("button");
+//   shareButton.className = "fas fa-share-alt";
+//   multiButton.appendChild(shareButton);
+
+//   let trashButton = document.createElement("button");
+//   trashButton.className = "fas fa-trash";
+//   multiButton.appendChild(trashButton);
+
+//   let heartButton = document.createElement("button");
+//   heartButton.className = "fa fa-heart";
+//   multiButton.appendChild(heartButton);
+
+
+//   card.append(multiButton);
+//   let cardImage = document.createElement('div');
+
+
+//   cardImage.classList.add('card-image');
+
+//   let img = document.createElement('img');
+//   img.setAttribute('src', minister.img.sourse);
+//   img.setAttribute('alt', 'profile picture');
+
+//   cardImage.appendChild(img);
+
+//   card.appendChild(cardImage);
+
+//   let cardContent = document.createElement('div');
+//   cardContent.classList.add('card-content');
+
+//   let cardTitle = document.createElement('h2');
+//   cardTitle.classList.add('card-title');
+//   cardTitle.textContent = minister.name.tname;
+
+//   let cardText1 = document.createElement('p');
+//   cardText1.classList.add('card-text');
+//   cardText1.textContent = 'மந்திரி சபை';
+
+//   let cardText2 = document.createElement('p');
+//   cardText2.classList.add('card-text');
+//   cardText2.classList.add('card-strong');
+//   cardText2.textContent = minister.position;
+
+//   let cardButton = document.createElement('button');
+//   cardButton.classList.add('card-button');
+//   cardButton.textContent = 'விவரம்';
+//   cardButton.onclick = function () {
+
+//     window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
+//   }
+
+//   // const anchor5 = document.createElement("a");
+//   // anchor5.setAttribute("class", "rederect_button")
+//   // anchor5.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
+//   // anchor5.innerText = "விவரம்";
+//   // cardButton.append(anchor5);
+
+//   cardContent.append(cardTitle);
+//   cardContent.append(cardText1);
+//   cardContent.append(cardText2);
+//   cardContent.append(cardButton);
+//   card.append(cardContent);
+
+
+//   // append card div to list container
+//   document.querySelector("div.lists1").append(card);
+
+//   // function commend(minister) {
+//   //   window.location.href = "stick.html?name=" + minister.name["ename"]
+
+//   // }
+
+//   heartButton.addEventListener('click', function () {
+
+//     let fav_check = false;
+
+//     favorite_minister.find(function (obj) {
+
+//       if (user_id === obj.user_id) {
+
+//         if (minister.id === obj.min_id) {
+
+//           fav_check = true;
+
+//         }
+
+//       }
+//       return fav_check;
+//     });
+
+//     if (fav_check) {
+
+//       alert("already added");
+
+//     }
+//     else {
+
+//       favorite_minister.push({
+
+//         "fav_id": favorite_minister.length,
+
+//         "min_id": minister.id,
+
+//         "user_id": user_id,
+
+//         "image": minister.img,
+
+//         "name": minister.name
+//       });
+
+
+//       localStorage.setItem("fav_minister", JSON.stringify(favorite_minister));
+
+//       alert("added");
+
+//     }
+//   });
+
+// }
 
 
 

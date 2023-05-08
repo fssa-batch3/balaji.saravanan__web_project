@@ -364,63 +364,10 @@
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
     <script>
 
+        
 
-        let data = {
-            "tamil": {
-                "nav": {
-                    "option_one": "முகப்பு",
-                    "option_two": "விவரம்",
-                    "option_three": {
-                        "main_menu": "அறிக்கைகள்",
-                        "sub_menu_one": "நிலுவை",
-                        "sub_menu_two": "நிறைவு"
-                    },
-                    "option_four": "தலைவர்கள்",
-                    "option_five": {
-                        "main_menu_2": "மேலும்",
-                        "sub_menu_one_2": "ஆளுநர்கள்",
-                        "sub_menu_two_2": "பிரதிநிதிகள்",
-                    },
-                    "option_six": "உள்நுழைக"
-                }
-            },
-            "english": {
-                "nav": {
-                    "option_one": "Home",
-                    "option_two": "Portfolio",
-                    "option_three": {
-                        "main_menu": "Manifesto",
-                        "sub_menu_one": "Pending",
-                        "sub_menu_two": "Completed"
-                    },
-                    "option_four": "Pastleaders",
-                    "option_five": {
-                        "main_menu_2": "More",
-                        "sub_menu_one_2": "Governors",
-                        "sub_menu_two_2": "MLA List",
-                    },
-                    "option_six": "Login"
-                }
-            }
-        }
-        let lang_options = document.querySelectorAll(".multi_lang");
-        lang_options.forEach(el => {
-            el.addEventListener('click', () => {
-                const attr = el.getAttribute('language');
-                document.getElementById("option_one").textContent = data[attr].nav.option_one;
-                document.getElementById("option_two").textContent = data[attr].nav.option_two;
-                document.getElementById("option_three").textContent = data[attr].nav.option_three.main_menu;
-                document.getElementById("option_three_sub_one").textContent = data[attr].nav.option_three.sub_menu_one;
-                document.getElementById("option_three_sub_two").textContent = data[attr].nav.option_three.sub_menu_two;
-                // document.getElementById("option_three_sub_three").textContent = data[attr].nav.option_three.sub_menu_;
-                document.getElementById("option_four").textContent = data[attr].nav.option_four;
-                document.getElementById("five_option").textContent = data[attr].nav.option_five.main_menu_2;
-                document.getElementById("option_five_sub_one").textContent = data[attr].nav.option_five.sub_menu_one_2;
-                document.getElementById("option_five_sub_two").textContent = data[attr].nav.option_five.sub_menu_two_2;
-                document.getElementById("option_six").textContent = data[attr].nav.option_six;
-            });
 
-        });
+
     </script>
 
 </body>

@@ -13,36 +13,36 @@ const header = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="${root}/index.html" id="option_one">முகப்பு பக்கம்</a>
+                <a class="nav-link active list_li" aria-current="page" href="${root}/index.html" id="option_one">முகப்பு</a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="${root}/pages/portfolio/parties-profile.html" id="option_two">விவரம்</a>
+                <a class="nav-link list_li" href="${root}/pages/portfolio/parties-profile.html" id="option_two">விவரம்</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle list_li" href="#" id="navbarDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false" id="main_menu">
                     அறிக்கைகள்
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item text-dark" href="${root}/pages/manifesto/total_manifest.html">மாவட்ட வாரியாக அறிக்கை</a></li> 
+                    <li><a class="dropdown-item text-dark list_li" href="${root}/pages/manifesto/total_manifest.html">மாவட்ட வாரியாக அறிக்கை</a></li> 
 
-                    <li><a class="dropdown-item text-dark" href="${root}/pages/manifesto/complte.html" id="option_three_sub_one">நிறைவு</a></li>
+                    <li><a class="dropdown-item text-dark list_li" href="${root}/pages/manifesto/complte.html" id="option_three_sub_one">நிறைவு</a></li>
 
-                    <li><a class="dropdown-item text-dark" href="${root}/pages/manifesto/bending.html" id="option_three_sub_two">நிலுவை</a></li>
+                    <li><a class="dropdown-item text-dark list_li" href="${root}/pages/manifesto/bending.html" id="option_three_sub_two">நிலுவை</a></li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="${root}/pages/past leaders/past leaders.html" id="option_four">தலைவர்கள்</a>
+                <a class="nav-link list_li" href="${root}/pages/past leaders/past leaders.html" id="option_four">தலைவர்கள்</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle list_li" href="#" id="navbarDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false" id="five_option">
                     மேலும்
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item text-dark" href="${root}/pages/more/Governer list.html" id="option_five_sub_one">ஆளுநர்கள்</a></li>
-                    <li><a class="dropdown-item text-dark" href="${root}/pages/more/mla.html" id="option_five_sub_two">பிரதிநிதிகள்</a></li>
+                    <li><a class="dropdown-item text-dark list_li" href="${root}/pages/more/Governer list.html" id="option_five_sub_one">ஆளுநர்கள்</a></li>
+                    <li><a class="dropdown-item text-dark list_li" href="${root}/pages/more/mla.html" id="option_five_sub_two">பிரதிநிதிகள்</a></li>
                 </ul>
             </li>
             <li class="nav-item" id="admin">
@@ -59,7 +59,7 @@ const header = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
                    <form class="navbar-form">
                        <div class="input-group">
 
-                       <input type="search" class="form-control" id="searchbar"       placeholder="தேடுக" aria-label="Search"
+                       <input type="search" class="form-control" id="searchbar" placeholder="தேடுக" aria-label="Search"
                        aria-describedby="basic-addon1">
                     <div class="input-group-prepend">
                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-microphone p-1"
@@ -82,14 +82,14 @@ const header = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
 
         
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle list_li" href="#" id="navbarDropdown" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 
                    மொழி
                     </a>
                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                         <li><a class="dropdown-item text-dark lang-tamil multi_lang" href="#" id="lang_ta">தமிழ்</a></li>
-                         <li><button class="dropdown-item text-dark lang-english multi_lang" id="lang_eng">ஆங்கிலம்</button></li>
+                         <li><a class="dropdown-item text-dark lang-tamil multi_lang list_li" href="#" id="lang_ta">தமிழ்</a></li>
+                         <li><button class="dropdown-item text-dark lang-english multi_lang list_li" id="lang_eng">ஆங்கிலம்</button></li>
                      </ul>
              </li>
 
@@ -100,12 +100,12 @@ const header = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
 
 
             <li class="nav-item dropdown" id="option_six">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                <a class="nav-link dropdown-toggle list_li" href="#" id="navbarDropdown" role="button"
                     data-bs-toggle="dropdown" aria-expanded="false">
                     உள்நுழைக
                 </a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item text-dark" href="${root}/pages/register.html">பதிவு செய்யவும்</a></li>
+                    <li><a class="dropdown-item text-dark list_li" href="${root}/pages/register.html">பதிவு செய்யவும்</a></li>
                 </ul>
             </li>
         </ul>
@@ -5687,3 +5687,34 @@ function search() {
 searchIcon.addEventListener('click', function () {
   recognition.start();
 });
+
+
+let tamil_nav = ["முகப்பு", "விவரம்","அறிக்கைகள்","மாவட்ட வாரியாக அறிக்கை","நிறைவு","நிலுவை","தலைவர்கள்","மேலும்","ஆளுநர்கள்","பிரதிநிதிகள்"," மொழி", "தமிழ்", "ஆங்கிலம்","உள்நுழைக","பதிவு செய்யவும்"];
+
+        let english_nav = ["Home", "Detail"," Reports", "District-wise Report","Completion","Outstanding","Leaders","More","Governors","Representatives", "Language", "Tamil", "English","Login","Register"];
+
+        let change_elem = document.querySelectorAll(".list_li");
+
+
+        document.getElementById("lang_ta").addEventListener("click", function(e){
+
+            change_elem.forEach((item,index)=>{
+
+                item.innerHTML = tamil_nav[index];
+
+            })
+
+            document.getElementById("searchbar").placeholder = "தேடுக";
+            
+        });
+
+        document.getElementById("lang_eng").addEventListener("click", function(e){
+
+            change_elem.forEach((item,index)=>{
+
+                item.innerHTML = english_nav[index];
+            })
+
+            document.getElementById("searchbar").placeholder = "search";
+           
+        });
