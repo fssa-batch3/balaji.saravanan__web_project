@@ -1,11 +1,10 @@
-let root = window.location.origin;
-
+const root = window.location.origin;
 
 const logged_email = localStorage.getItem("admin_login");
 
-let nav = document.getElementById("nave_side");
+const nav = document.getElementById("nave_side");
 
-let header = `<nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg"
+const header = `<nav class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg"
 id="navbarVertical">
 <div class="container-fluid">
     <!-- Toggler -->
@@ -100,16 +99,8 @@ id="navbarVertical">
 </div>
 </nav>`;
 
-
-
 if (logged_email !== null) {
-
-    nav.insertAdjacentHTML("afterbegin", header);
-
+  nav.insertAdjacentHTML("afterbegin", header);
 } else {
-
-    nav.insertAdjacentHTML("afterbegin", header);
-
+  nav.insertAdjacentHTML("afterbegin", header);
 }
-
-

@@ -8,7 +8,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="../../../assets/css/admin.css">
 
-
     <style>
         /* Style for the form container */
         #container {
@@ -121,7 +120,6 @@
 
 <body>
 
-
     <!-- Dashboard -->
     <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="nave_side">
         <!-- Vertical Navbar -->
@@ -192,12 +190,10 @@
                                 <h3>Insert Governer Data</h3>
                                 <div class="maindiv">
 
-
                                     <div class="left">
                                         <label for="politics_radio">Tamil name</label>
                                         <input type="text" id="tname" value="name" placeholder="Tamil Name" required
-                                            pattern="[\u0B80-\u0BFF]+" />
-
+                                            pattern="[\u0B80-\u0BFF]+">
 
                                         <label for="politics_radio">Image URL</label>
                                         <input type="text" id="url" placeholder="Please insert your picture URL"
@@ -206,14 +202,13 @@
                                         <div class="col-sm-6">
                                             Position:
                                             <select class="form-select" aria-label="Default select example"
-                                                id="position" required pattern="[A-Za-z]" required>
+                                                id="position" pattern="[A-Za-z]" required>
                                                 <option selected>Enter your opinion</option>
                                                 <option value="ஆளுநர்">ஆளுநர்</option>
 
                                             </select>
                                         </div>
                                         <div class="from_date" style="display:block;">
-
 
                                             <label for="">from_date</label>
 
@@ -225,16 +220,15 @@
                                             <label for="movie_radio" id="movie">work experience</label>
 
                                             <input type="radio" name="desc_radio" id="movie_radio" value="movie"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description" cols="90" rows="7" style="display:none;"
                                                 required pattern="[\u0B80-\u0BFF]+"></textarea>
                                         </div>
 
-
                                         <div>
                                             <label for="politics_radio">Politics</label>
                                             <input type="radio" name="desc_radio" id="politics_radio" value="politics"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <div>
                                                 <textarea name="" id="description1" cols="90" rows="7"
                                                     style="display:none;" required
@@ -243,11 +237,10 @@
 
                                         </div>
 
-
                                         <div>
                                             <label for="income_radio">Income</label>
                                             <input type="radio" name="desc_radio" id="income_radio" value="income"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description2" cols="90" rows="7" style="display:none;"
                                                 required pattern="[\u0B80-\u0BFF]+"></textarea>
                                         </div>
@@ -264,21 +257,18 @@
                                         <input type="text" id="state" placeholder="state" required
                                             pattern="[\u0B80-\u0BFF]+">
 
-
                                         <label for="politics_radio">Experiance</label>
                                         <input type="number" id="experiance" placeholder="experiance" required>
-
 
                                         <div class="from_date" style="display:block;">
                                             <label for="">To_date</label>
                                             <input type="date" id="date_t" required>
                                         </div>
 
-
                                         <div>
                                             <label for="birth_radio">Birth</label>
                                             <input type="radio" name="desc_radio" id="birth_radio" value="birth"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
 
                                             <textarea name="" id="description3" cols="90" rows="7" style="display:none;"
                                                 required></textarea>
@@ -286,17 +276,15 @@
                                         <div>
                                             <label for="education_radio">Education</label>
                                             <input type="radio" name="desc_radio" id="education_radio" value="education"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description4" cols="90" rows="7"
                                                 style="display:none;"></textarea>
                                         </div>
 
-
-
                                         <div>
                                             <label for="family_radio">Family</label>
                                             <input type="radio" name="desc_radio" id="family_radio" value="family"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description5" cols="90" rows="7"
                                                 style="display:none;"></textarea>
                                         </div>
@@ -304,12 +292,9 @@
                                     </div>
                                 </div>
 
-
                                 <button type="submit" id="submit_button">Submit</button>
 
-
                             </form>
-
 
                         </div>
                     </div>
@@ -318,11 +303,10 @@
         </div>
     </div>
 
-
     <script>
         function showDescription() {
             const radios = document.getElementsByName("desc_radio");
-            let descriptions = document.querySelectorAll("textarea[id^='description']");
+            const descriptions = document.querySelectorAll("textarea[id^='description']");
 
             for (let i = 0; i < radios.length; i++) {
                 if (radios[i].checked) {
@@ -334,7 +318,6 @@
             }
         }
     </script>
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 

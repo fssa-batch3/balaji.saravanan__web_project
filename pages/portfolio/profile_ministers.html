@@ -19,7 +19,6 @@
 
     <link rel="stylesheet" href="../../assets/css/footer.css">
 
-
 </head>
 
 <body>
@@ -30,41 +29,30 @@
     </div>
     <div class="content">
 
-
         <div class="headprofile" id="headprofile">
 
         </div>
 
         <div class="cm-total-content">
 
-
-
-
-
         </div>
-
 
         <h1 class="cmd">கருத்துப் பகுதி</h1>
         <ul id="comments-list"></ul>
         <form id="comment-form">
             <label for="comment">கருத்து:</label>
-            <textarea id="comment" required name="comment"></textarea><br>
+            <textarea id="comment" required name="comment"></textarea>
+<br>
             <input type="submit" id="submit_btn" value="Submit">
         </form>
 
-
-
-
     </div>
-
-
-    <script src="../../main.js"></script>
 
     <script src="../../assets/javascript/profile.js"></script>
 
-    <script>
+    <script src="../../main.js"></script>
 
-        function handleFormSubmit(event) {
+    <script>        function handleFormSubmit(event) {
             event.preventDefault();
 
             const users = JSON.parse(localStorage.getItem("users"));
@@ -88,8 +76,7 @@
                 ministerId,
             };
 
-
-            let comments = JSON.parse(localStorage.getItem("comments")) ?? [];
+            const comments = JSON.parse(localStorage.getItem("comments")) ?? [];
             comments.push(commentObject);
             localStorage.setItem("comments", JSON.stringify(comments));
 
@@ -101,10 +88,9 @@
             document.getElementById("comment-form").reset();
         }
 
-
         function displayComments(comments) {
 
-            let comments1 = JSON.parse(localStorage.getItem("comments")) ?? [];
+            const comments1 = JSON.parse(localStorage.getItem("comments")) ?? [];
 
             const minister = JSON.parse(localStorage.getItem("politician_data"))
 
@@ -117,7 +103,7 @@
 
             commentsList.innerHTML = "";
 
-            for (let comment of comments1) {
+            for (const comment of comments1) {
 
                 if (comment.ministerId === ministerId) {
 
@@ -130,31 +116,24 @@
 
         }
 
-
-
         document.getElementById('comment-form').addEventListener('submit', handleFormSubmit)
 
         window.onload = displayComments;
 
+        const submit_btn = document.getElementById("submit_btn");
 
-        let submit_btn = document.getElementById("submit_btn");
-
-        let loginEmail = localStorage.getItem("profile_email");
+        const loginEmail = localStorage.getItem("profile_email");
 
         if (loginEmail !== null) {
             submit_btn.style.display = "block"
         } else {
             submit_btn.style.display = "none"
         }
-
     </script>
-
 
     <!-- script for bootstrap -->
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
 
     <!-- script for bootstrap -->
 </body>

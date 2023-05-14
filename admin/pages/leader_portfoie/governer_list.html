@@ -289,12 +289,10 @@
                                 <h3>Insert Governer Data</h3>
                                 <div class="maindiv">
 
-
                                     <div class="left">
                                         <label for="politics_radio">Tamil name</label>
                                         <input type="text" id="tname" value="name" placeholder="Tamil Name" required
-                                            pattern="[\u0B80-\u0BFF]+" />
-
+                                            pattern="[\u0B80-\u0BFF]+">
 
                                         <label for="politics_radio">Image URL</label>
                                         <input type="text" id="url" placeholder="Please insert your picture URL"
@@ -303,14 +301,13 @@
                                         <div class="col-sm-6">
                                             Position:
                                             <select class="form-select" aria-label="Default select example"
-                                                id="position" required pattern="[A-Za-z]" required>
+                                                id="position" pattern="[A-Za-z]" required>
                                                 <option selected>Enter your opinion</option>
                                                 <option value="ஆளுநர்">ஆளுநர்</option>
 
                                             </select>
                                         </div>
                                         <div class="from_date" style="display:block;">
-
 
                                             <label for="">from_date</label>
 
@@ -322,16 +319,15 @@
                                             <label for="movie_radio" id="movie">work experience</label>
 
                                             <input type="radio" name="desc_radio" id="movie_radio" value="movie"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description" cols="90" rows="7" style="display:none;"
                                                 required pattern="[\u0B80-\u0BFF]+"></textarea>
                                         </div>
 
-
                                         <div>
                                             <label for="politics_radio">Politics</label>
                                             <input type="radio" name="desc_radio" id="politics_radio" value="politics"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <div>
                                                 <textarea name="" id="description1" cols="90" rows="7"
                                                     style="display:none;" required
@@ -340,11 +336,10 @@
 
                                         </div>
 
-
                                         <div>
                                             <label for="income_radio">Income</label>
                                             <input type="radio" name="desc_radio" id="income_radio" value="income"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description2" cols="90" rows="7" style="display:none;"
                                                 required pattern="[\u0B80-\u0BFF]+"></textarea>
                                         </div>
@@ -361,21 +356,18 @@
                                         <input type="text" id="state" placeholder="state" required
                                             pattern="[\u0B80-\u0BFF]+">
 
-
                                         <label for="politics_radio">Experiance</label>
                                         <input type="number" id="experiance" placeholder="experiance" required>
-
 
                                         <div class="from_date" style="display:block;">
                                             <label for="">To_date</label>
                                             <input type="date" id="date_t" required>
                                         </div>
 
-
                                         <div>
                                             <label for="birth_radio">Birth</label>
                                             <input type="radio" name="desc_radio" id="birth_radio" value="birth"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
 
                                             <textarea name="" id="description3" cols="90" rows="7" style="display:none;"
                                                 required></textarea>
@@ -383,17 +375,15 @@
                                         <div>
                                             <label for="education_radio">Education</label>
                                             <input type="radio" name="desc_radio" id="education_radio" value="education"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description4" cols="90" rows="7"
                                                 style="display:none;"></textarea>
                                         </div>
 
-
-
                                         <div>
                                             <label for="family_radio">Family</label>
                                             <input type="radio" name="desc_radio" id="family_radio" value="family"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description5" cols="90" rows="7"
                                                 style="display:none;"></textarea>
                                         </div>
@@ -401,33 +391,23 @@
                                     </div>
                                 </div>
 
-
                                 <button type="submit" id="submit_button">Submit</button>
                                 <div class="close-what" id="closeBtn">&times;</div>
 
                             </form>
 
-
-
                         </div>
 
+                        <script>                            const radios = document.getElementsByName("desc_radio");
+                            const descriptions = document.querySelectorAll("textarea[id^='description']");
 
-
-
-                        <script>
-
-                            function showDescription() {
-                                const radios = document.getElementsByName("desc_radio");
-                                let descriptions = document.querySelectorAll("textarea[id^='description']");
-
-                                for (let i = 0; i < radios.length; i++) {
-                                    if (radios[i].checked) {
-                                        const description = descriptions[i];
-                                        description.style.display = "block";
-                                        description.placeholder = `Please insert your ${radios[i].value} information`;
-                                    }
-
+                            for (let i = 0; i < radios.length; i++) {
+                                if (radios[i].checked) {
+                                    const description = descriptions[i];
+                                    description.style.display = "block";
+                                    description.placeholder = `Please insert your ${radios[i].value} information`;
                                 }
+
                             }
                         </script>
 
@@ -437,17 +417,15 @@
         </div>
     </div>
     <script>
-        let governer_values = JSON.parse(localStorage.getItem("governor_details"));
+        const governer_values = JSON.parse(localStorage.getItem("governor_details"));
 
         function loadGoverner() {
-
-
 
             const governor_container = document.getElementById("governor_container");
 
             governor_container.innerHTML = ""
 
-            for (let values of governer_values) {
+            governer_values.forEach((values) => {
 
                 // Create the table row element
                 const tr = document.createElement('tr');
@@ -503,7 +481,7 @@
                 viewButton.setAttribute('href', '#');
                 viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
                 viewButton.textContent = 'Edit';
-                viewButton.onclick = function () {
+                viewButton.onclick = function update() {
                     updateLeader(values);
                     container_div.style.display = 'flex';
                     table_content.style.display = "none";
@@ -532,7 +510,7 @@
 
                 // Add the row element to the table body
                 governor_container.appendChild(tr);
-            }
+            });
         }
 
         const container_div = document.getElementById("container");
@@ -541,22 +519,19 @@
 
         const closeBtn = document.getElementById("closeBtn");
 
-        const submit_button= document.getElementById("submit_button")
+        const submit_button = document.getElementById("submit_button")
 
-        closeBtn.addEventListener('click', function () {
+        closeBtn.addEventListener('click', () => {
             // leaderForm.style.display = 'none';
             table_content.style.display = 'flex'; // hide the form
             container_div.style.display = "none"
         });
 
-        submit_button.addEventListener("click", function (){
+        submit_button.addEventListener("click", () => {
             table_content.style.display = 'block'; // hide the form
             container_div.style.display = "none"
 
-
         })
-
-
 
         let profile_leder_id = null;
 
@@ -652,7 +627,7 @@
                     alter: tamil_name,
                 },
 
-                position: position,
+                position,
                 movie: {
                     name: movie,
                     description: movie_description
@@ -686,19 +661,17 @@
 
                 to: to_date,
 
-                experiance: experiance,
+                experiance,
 
-                state: state,
+                state,
 
-                occupation: occupation,
+                occupation,
 
                 id: profile_leder_id,
             };
 
-
             // Find index of current leader in ministersData
             const index = governer_values.findIndex((leader) => leader.id === profile_leder_id);
-            let balaji = 0;
             // If leader is found, update their data and save to localStorage
             if (index !== -1) {
                 governer_values[index] = governer;
@@ -707,7 +680,6 @@
                 loadGoverner();
             }
         }
-
 
         // Add event listener to form submission
         leaderForm.addEventListener("submit", handleSubmit);
@@ -726,15 +698,9 @@
             }
         }
 
-
-
-        window.onload = function () {
+        window.onload = function onload() {
             loadGoverner();
         }
-       
-
-
-
     </script>
 
     <script src="../../admin_main.js"></script>

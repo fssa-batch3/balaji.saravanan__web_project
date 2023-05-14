@@ -1,114 +1,109 @@
 const leaderForm = document.getElementById("leader-form");
 
 const registerFromValidation = () => {
+  const mla_list = JSON.parse(localStorage.getItem("mla_ditails")) ?? [];
 
+  const constituency_Name = document.getElementById("constituency_Name").value;
 
-    let mla_list = JSON.parse(localStorage.getItem("mla_ditails")) ?? [];
+  const img_url = document.getElementById("url").value;
 
-    const constituency_Name=document.getElementById("constituency_Name").value;
+  const tamil_name = document.getElementById("tname").value;
 
-    const img_url = document.getElementById("url").value;
+  const position = document.getElementById("position").value;
 
-    const tamil_name = document.getElementById("tname").value;
+  const role = document.getElementById("role").value;
 
-    const position = document.getElementById("position").value;
+  const party_name = document.getElementById("party_name").value;
 
-    const role = document.getElementById("role").value;
+  const movie = document.getElementById("movie_radio").value;
 
-    const party_name = document.getElementById("party_name").value;
+  const movie_description = document.getElementById("description").value;
 
-    const movie = document.getElementById("movie_radio").value;
+  const politics = document.getElementById("politics_radio").value;
 
-    const movie_description = document.getElementById("description").value;
+  const politics_description = document.getElementById("description1").value;
 
-    const politics = document.getElementById("politics_radio").value;
+  const income = document.getElementById("income_radio").value;
 
-    const politics_description = document.getElementById("description1").value;
+  const income_description = document.getElementById("description2").value;
 
-    const income = document.getElementById("income_radio").value;
+  const birth = document.getElementById("birth_radio").value;
 
-    const income_description = document.getElementById("description2").value;
+  const birth_description = document.getElementById("description3").value;
 
-    const birth = document.getElementById("birth_radio").value;
+  const education = document.getElementById("education_radio").value;
 
-    const birth_description = document.getElementById("description3").value;
+  const education_description = document.getElementById("description4").value;
 
-    const education = document.getElementById("education_radio").value;
+  const family = document.getElementById("family_radio").value;
 
-    const education_description = document.getElementById("description4").value;
+  const family_description = document.getElementById("description5").value;
 
-    const family = document.getElementById("family_radio").value;
+  const experiance = document.getElementById("experiance").value;
 
-    const family_description = document.getElementById("description5").value;
+  const votes = parseFloat(document.getElementById("votes").value);
 
-    const experiance = document.getElementById("experiance").value;
+  const margin = parseFloat(document.getElementById("margin").value);
 
-    const votes = parseFloat(document.getElementById("votes").value);
+  const vote_rate = (margin / votes) * 100;
 
-    const margin = parseFloat(document.getElementById("margin").value);
+  const leaderdata = {
+    constituency_Name,
 
-    const vote_rate = margin / votes * 100;
+    candidate_Name: tamil_name,
 
+    img: {
+      source: img_url,
+      alter: tamil_name,
+    },
+    position,
 
+    role,
+    movie: {
+      name: movie,
+      description: movie_description,
+    },
+    politics: {
+      name: politics,
+      description: politics_description,
+    },
+    income: {
+      name: income,
+      description: income_description,
+    },
+    birth: {
+      name: birth,
+      description: birth_description,
+    },
+    family: {
+      name: family,
+      description: family_description,
+    },
+    education: {
+      name: education,
+      description: education_description,
+    },
+    party: party_name,
 
-    const leaderdata = {
+    mla_id: mla_list.length,
 
-        constituency_Name:constituency_Name,
+    status: true,
 
-        candidate_Name:tamil_name,
-   
-        img: {
-            source: img_url,
-            alter: tamil_name,
-        },
-        position: position,
+    votes,
 
-        role: role,
-        movie: {
-            name: movie,
-            description: movie_description
-        },
-        politics: {
-            name: politics,
-            description: politics_description
-        },
-        income: {
-            name: income,
-            description: income_description
-        },
-        birth: {
-            name: birth,
-            description: birth_description
-        },
-        family: {
-            name: family,
-            description: family_description
-        },
-        education: {
-            name: education,
-            description: education_description
-        },
-        party: party_name,
+    margin,
 
-        mla_id: mla_list.length,
+    vote_Rate: vote_rate,
 
-        status: true,
+    experiance,
+  };
 
-        votes: votes,
-
-        margin: margin,
-
-        vote_Rate: vote_rate,
-
-        experiance: experiance
-    };
-
-    mla_list.push(leaderdata);
-    localStorage.setItem("mla_ditails", JSON.stringify(mla_list));
-    alert("Leader created successfully!");
-    window.location.href = "../profile_list_page.html";
+  mla_list.push(leaderdata);
+  localStorage.setItem("mla_ditails", JSON.stringify(mla_list));
+  alert("Leader created successfully!");
+  window.location.href = "../profile_list_page.html";
 };
 leaderForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    registerFromValidation();
+  event.preventDefault();
+  registerFromValidation();
 });

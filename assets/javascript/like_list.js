@@ -41,7 +41,6 @@
 
 // }
 
-
 // function list_likes(item) {
 
 //   // create the elements
@@ -68,72 +67,47 @@
 //   document.querySelector(".cards-list").append(cardDiv);
 // }
 
-
 const users = JSON.parse(localStorage.getItem("users"));
 
-let login_email = localStorage.getItem("profile_email");
+const login_email = localStorage.getItem("profile_email");
 
-let fav_list = JSON.parse(localStorage.getItem("fav_minister"));
-
-let user_id;
-
-users.some(function (obj) {
-  if (login_email == obj.email) {
-    user_id = obj.id;
-
-    return true;
-  }
-});
-
-let user_like_check = fav_list.some(function (obj) {
-  return user_id == obj.user_id;
-});
-
-if (user_like_check) {
-  fav_list.forEach(function (obj) {
-    if (user_id == obj.user_id) {
-      list_likes(obj);
-    }
-  });
-}
+const fav_list = JSON.parse(localStorage.getItem("fav_minister"));
 
 function list_likes(item) {
   // create the elements
-  let cardLink = document.createElement('a');
+  const cardLink = document.createElement("a");
   cardLink.href = "#";
-  cardLink.classList.add('card');
+  cardLink.classList.add("card");
 
-  let cardBottom = document.createElement('div');
-  cardBottom.classList.add('card-bottom');
+  const cardBottom = document.createElement("div");
+  cardBottom.classList.add("card-bottom");
 
-  let cardText = document.createElement('div');
-  cardText.classList.add('card-text');
+  const cardText = document.createElement("div");
+  cardText.classList.add("card-text");
 
-  let cardContents = document.createElement('div');
-  cardContents.classList.add('card-contents');
+  const cardContents = document.createElement("div");
+  cardContents.classList.add("card-contents");
 
-  let cardTitle = document.createElement('p');
-  cardTitle.classList.add('card-title');
+  const cardTitle = document.createElement("p");
+  cardTitle.classList.add("card-title");
   cardTitle.textContent = item.name.ename;
 
-  let cardText2 = document.createElement('button');
-  cardText2.classList.add('card-text');
+  const cardText2 = document.createElement("button");
+  cardText2.classList.add("card-text");
   cardText2.textContent = "delete";
   cardText2.onclick = function () {
-    deleteLeader(item)
-  }
-
-
+    deleteLeader(item);
+  };
 
   cardContents.appendChild(cardTitle);
   cardContents.appendChild(cardText2);
   cardText.appendChild(cardContents);
   cardBottom.appendChild(cardText);
 
-  let cardTop = document.createElement('div');
-  cardTop.classList.add('card-top', 'card1');
+  const cardTop = document.createElement("div");
+  cardTop.classList.add("card-top", "card1");
 
-  let image = document.createElement('img');
+  const image = document.createElement("img");
   image.setAttribute("src", item.image.sourse);
   image.setAttribute("alt", item.name.ename);
   cardTop.append(image);
@@ -141,14 +115,15 @@ function list_likes(item) {
   cardLink.appendChild(cardBottom);
   cardLink.appendChild(cardTop);
 
-
   document.querySelector(".card-container").appendChild(cardLink);
 }
 
 function deleteLeader(minister) {
   const ministersData = JSON.parse(localStorage.getItem("fav_minister")) ?? [];
 
-  const index = ministersData.findIndex((leader) => leader.name.ename === minister.name.ename);
+  const index = ministersData.findIndex(
+    (leader) => leader.name.ename === minister.name.ename
+  );
 
   // If leader is found, delete the object from the array and save to localStorage
   if (index !== -1) {
@@ -157,4 +132,24 @@ function deleteLeader(minister) {
     alert("Leader deleted successfully!");
     window.location.reload();
   }
+}
+
+let user_id;
+
+users.some((obj) => {
+  if (login_email === obj.email) {
+    user_id = obj.id;
+
+    return true;
+  }
+});
+
+const user_like_check = fav_list.some((obj) => user_id === obj.user_id);
+
+if (user_like_check) {
+  fav_list.forEach((obj) => {
+    if (user_id === obj.user_id) {
+      list_likes(obj);
+    }
+  });
 }

@@ -204,7 +204,6 @@
 
 <body>
 
-
     <!-- Dashboard -->
     <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="nave_side">
         <!-- Vertical Navbar -->
@@ -285,19 +284,15 @@
                                 <h3>Insert MLA ditails</h3>
                                 <div class="maindiv">
 
-
                                     <div class="left">
                                         <label for="politics_radio">candidate name</label>
                                         <input type="text" id="candidate_Name" value="name" placeholder="Tamil Name"
-                                            required pattern=^[\u0B80-\u0BFF\s]+$ />
-
+                                            required pattern>
 
                                         <label for="politics_radio">constituency Name
                                         </label>
                                         <input type="text" id="constituency_Name" value="name"
-                                            placeholder="constituency Name" required pattern=^[\u0B80-\u0BFF\s]+$ />
-
-
+                                            placeholder="constituency Name" required pattern>
 
                                         <label for="politics_radio">Image URL</label>
                                         <input type="text" id="url" placeholder="Please insert your picture URL"
@@ -306,7 +301,7 @@
                                         <div class="col-sm-6">
                                             Position:
                                             <select class="form-select" aria-label="Default select example"
-                                                id="position" required pattern="[A-Za-z]" required>
+                                                id="position" pattern="[A-Za-z]" required>
                                                 <option selected>Enter your opinion</option>
                                                 <option value="சட்டமன்ற உறுப்பினர்">சட்டமன்ற உறுப்பினர்</option>
 
@@ -314,89 +309,75 @@
                                         </div>
 
                                         <label for="politics_radio">Votes</label>
-                                        <input type="text" id="votes" placeholder="English Name" required />
-
-
-
+                                        <input type="text" id="votes" placeholder="English Name" required>
 
                                         <div>
                                             <label for="movie_radio" id="movie">Movie</label>
 
                                             <input type="radio" name="desc_radio" id="movie_radio" value="movie"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description" cols="90" rows="7" style="display:none;"
-                                                required pattern=^[\u0B80-\u0BFF\s]+$></textarea>
+                                                required pattern></textarea>
                                         </div>
-
 
                                         <div>
                                             <label for="politics_radio">Politics</label>
                                             <input type="radio" name="desc_radio" id="politics_radio" value="politics"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <div>
                                                 <textarea name="" id="description1" cols="90" rows="7"
-                                                    style="display:none;" required
-                                                    pattern=^[\u0B80-\u0BFF\s]+$></textarea>
+                                                    style="display:none;" required pattern></textarea>
                                             </div>
 
                                         </div>
 
-
                                         <div>
                                             <label for="income_radio">Income</label>
                                             <input type="radio" name="desc_radio" id="income_radio" value="income"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description2" cols="90" rows="7" style="display:none;"
-                                                required pattern=^[\u0B80-\u0BFF\s]+$></textarea>
+                                                required pattern></textarea>
                                         </div>
                                     </div>
                                     <div class="right">
 
                                         <label for="politics_radio">Role</label>
 
-
-                                        <input type="text" id="role" placeholder="role" required
-                                            pattern=^[\u0B80-\u0BFF\s]+$>
-
+                                        <input type="text" id="role" placeholder="role" required pattern>
 
                                         <label for="politics_radio">Party name</label>
                                         <input type="text" id="party_name" placeholder="Party Name"
-                                            pattern=^[\u0B80-\u0BFF\s]+$ required>
+                                            pattern="^[\u0B80-\u0BFF\s]+$" required>
                                         <label for="politics_radio">Occupation</label>
 
-                                        <input type="text" id="occupation" placeholder="occupation" required
-                                            pattern=^[\u0B80-\u0BFF\s]+$>
+                                        <input type="text" id="occupation" placeholder="occupation" required pattern>
                                         <label for="politics_radio">Politics Experiance</label>
 
                                         <input type="number" id="experiance" placeholder="experiance" required>
 
                                         <label for="politics_radio">Margin</label>
-                                        <input type="text" id="margin" placeholder="English Name" required />
-
-
+                                        <input type="text" id="margin" placeholder="English Name" required>
 
                                         <div>
                                             <label for="birth_radio">Birth</label>
                                             <input type="radio" name="desc_radio" id="birth_radio" value="birth"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
 
                                             <textarea name="" id="description3" cols="90" rows="7" style="display:none;"
-                                                pattern=^[\u0B80-\u0BFF\s]+$ required></textarea>
+                                                pattern="^[\u0B80-\u0BFF\s]+$" required></textarea>
                                         </div>
                                         <div>
                                             <label for="education_radio">Education</label>
                                             <input type="radio" name="desc_radio" id="education_radio" value="education"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description4" cols="90" rows="7"
                                                 style="display:none;"></textarea>
                                         </div>
 
-
-
                                         <div>
                                             <label for="family_radio">Family</label>
                                             <input type="radio" name="desc_radio" id="family_radio" value="family"
-                                                onclick="showDescription()" />
+                                                onclick="showDescription()">
                                             <textarea name="" id="description5" cols="90" rows="7"
                                                 style="display:none;"></textarea>
                                         </div>
@@ -404,36 +385,26 @@
                                     </div>
                                 </div>
 
-
-
                                 <button type="submit" id="submit_button">Submit</button>
                                 <!-- <input id="closeBtn" type="button" value="close"> -->
                                 <div class="close-what" id="closeBtn">&times;</div>
 
-
                             </form>
-
 
                         </div>
 
-
-
                         <script>
+                            const radios = document.getElementsByName("desc_radio");
+                            const descriptions = document.querySelectorAll("textarea[id^='description']");
 
-                            function showDescription() {
-                                const radios = document.getElementsByName("desc_radio");
-                                let descriptions = document.querySelectorAll("textarea[id^='description']");
-
-                                for (let i = 0; i < radios.length; i++) {
-                                    if (radios[i].checked) {
-                                        const description = descriptions[i];
-                                        description.style.display = "block";
-                                        description.placeholder = `Please insert your ${radios[i].value} information`;
-                                    }
-
+                            for (let i = 0; i < radios.length; i++) {
+                                if (radios[i].checked) {
+                                    const description = descriptions[i];
+                                    description.style.display = "block";
+                                    description.placeholder = `Please insert your ${radios[i].value} information`;
                                 }
-                            }
 
+                            }
                         </script>
 
                     </div>
@@ -442,10 +413,8 @@
         </div>
     </div>
 
-
     <script>
-        let ministers_value = JSON.parse(localStorage.getItem("mla_ditails"));
-
+        const ministers_value = JSON.parse(localStorage.getItem("mla_ditails"));
 
         function loadMla() {
 
@@ -455,7 +424,7 @@
 
             mla_container.innerHTML = "";
 
-            for (let values of mla) {
+            mla.array.forEach(values => {
 
                 // Create the table row element
                 const tr = document.createElement('tr');
@@ -541,7 +510,7 @@
                 // Add the row element to the table body
                 const tableBody = document.querySelector('tbody');
                 tableBody.appendChild(tr);
-            }
+            });
 
         }
 
@@ -551,14 +520,12 @@
 
         const closeBtn = document.getElementById("closeBtn");
 
-        closeBtn.addEventListener('click', function () {
+        closeBtn.addEventListener('click', () => {
             table_content.style.display = 'flex'; // hide the form
             container_div.style.display = "none"
         });
 
-
         let profile_leder_id = null;
-
 
         const leaderForm = document.getElementById("leader-form");
 
@@ -598,12 +565,10 @@
 
                 document.getElementById("margin").value = leader.margin;
 
-
             }
 
             profile_leder_id = leader.mla_id;
         }
-
 
         // Function to handle form submission
         function handleSubmit(e) {
@@ -612,7 +577,7 @@
 
             const tamil_name = document.getElementById("candidate_Name").value;
 
-            const constituency_Name= getElementById("constituency_Name").value;
+            const constituency_Name = getElementById("constituency_Name").value;
 
             const position = document.getElementById("position").value;
 
@@ -654,10 +619,8 @@
 
             const vote_rate = margin / votes * 100;
 
-
-
             const leaderdata = {
-                constituency_Name: constituency_Name,
+                constituency_Name,
 
                 candidate_Name: tamil_name,
 
@@ -665,11 +628,11 @@
                     source: img_url,
                     alter: tamil_name,
                 },
-                position: position,
+                position,
 
-                occupation: occupation,
+                occupation,
 
-                role: role,
+                role,
                 movie: {
                     name: movie,
                     description: movie_description
@@ -700,17 +663,16 @@
 
                 status: true,
 
-                votes: votes,
+                votes,
 
-                margin: margin,
+                margin,
 
                 vote_Rate: vote_rate,
 
-                experiance: experiance,
+                experiance,
 
                 status: true
             };
-
 
             // Find index of current leader in ministersData
             const index = ministers_value.findIndex((leader) => leader.mla_id === profile_leder_id);
@@ -736,22 +698,14 @@
                 ministers_value[index].status = false;
                 localStorage.setItem("mla_ditails", JSON.stringify(mla_list));
                 alert("Leader status changed successfully!");
-                
+
                 loadMla()
             }
         }
 
-    
-
-
-        window.onload=function(){
+        window.onload = function () {
             loadMla()
         }
-
-
-
-
-
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>

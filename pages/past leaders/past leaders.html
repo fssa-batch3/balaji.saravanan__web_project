@@ -11,13 +11,13 @@
 
     <title>pastleader</title>
 
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/footer.css">
     <style>
-       table button {
+        table button {
             display: inline-block;
             background-image: linear-gradient(to right top, #abc2e4, #92cef0, #75dbf0, #67e5e2, #79edc8);
             color: #fff;
@@ -32,18 +32,15 @@
             transition: background-color 0.3s ease;
         }
 
-       table button:hover {
+        table button:hover {
             background-color: #0062cc;
         }
     </style>
 
 </head>
 
-
 <body>
     <!-- navbar all -->
-
-
 
     <!-- piechart start -->
 
@@ -54,25 +51,41 @@
 
     <!-- start date list tables -->
 
-
-  
-
-
     <div class="pastleaders">
         <h1>தமிழ்நாட்டு முதலமைச்சர்களின் பட்டியல்</h1>
 
-        <p>இந்திய அரசியலில் தமிழ்நாடு மாநிலம் எப்போதும் முக்கியப் பங்காற்றுகிறது. இந்த மாநிலத்தின் தலைவர்கள் அதன் குடிமக்கள் அனைவருக்கும் நல்வாழ்வை உறுதிப்படுத்த அயராது உழைத்துள்ளனர்.</p>
+        <p>இந்திய அரசியலில் தமிழ்நாடு மாநிலம் எப்போதும் முக்கியப் பங்காற்றுகிறது. இந்த மாநிலத்தின் தலைவர்கள் அதன்
+            குடிமக்கள் அனைவருக்கும் நல்வாழ்வை உறுதிப்படுத்த அயராது உழைத்துள்ளனர்.</p>
         <table class="table bitmap" id="my-table">
-            <tr>
-                
-                <th scope="col">No</th>
-                <th scope="col">முதல்வர்<button id="sortName">Sort by Name</button></th>
-                <th class="date" scope="col">இருந்து<button id="sort-date">Sort by date</button></th>
+            <tr id="head_tamil">
+
+                <th scope="col">வா.எண்</th>
+                <th scope="col">
+                    முதல்வர்<button id="sortName">Sort by Name</button>
+                </th>
+                <th class="date" scope="col">
+                    இருந்து<button id="sort-date">Sort by date</button>
+                </th>
                 <th class="date" scope="col">வரை</th>
 
                 <th scope="col">கட்சி பெயர்</th>
 
             </tr>
+            <tr id="head_english" style="display: none;">
+
+                <th scope="col">No</th>
+                <th scope="col">
+Chief Minister<button id="sortName">Sort by Name</button>
+                </th>
+                <th class="date" scope="col">
+From<button id="sort-date">Sort by date</button>
+                </th>
+                <th class="date" scope="col">to</th>
+
+                <th scope="col">Party Name</th>
+
+            </tr>
+
             <tbody class="table_body">
 
             </tbody>
@@ -80,7 +93,6 @@
                 <td scope="row">1</td>
                 <td>
                     <div class="profile-main">
-
 
                         <div class="parties">
 
@@ -93,7 +105,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/mk stalin.png" alt="error image">
-
 
                                 <button><a href="../portfolio/profile/profile.html">விவரம்</a></button>
 
@@ -118,7 +129,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -130,7 +140,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/edappadi.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -155,7 +164,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -167,7 +175,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/pannirselvam o.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -192,7 +199,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -204,7 +210,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -229,7 +234,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -241,7 +245,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -266,7 +269,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -278,7 +280,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -303,7 +304,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -315,7 +315,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -340,7 +339,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -352,7 +350,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
@@ -377,7 +374,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -389,7 +385,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -414,7 +409,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -426,7 +420,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/pannirselvam o.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -451,7 +444,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -463,7 +455,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -488,7 +479,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -500,7 +490,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
@@ -525,7 +514,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -537,7 +525,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
@@ -562,7 +549,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -574,7 +560,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/flages/govt.png" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -598,7 +583,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -610,7 +594,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
@@ -635,7 +618,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -647,7 +629,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/flages/govt.png" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -666,7 +647,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -678,7 +658,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/flages/govt.png" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
@@ -703,7 +682,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -715,7 +693,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -739,7 +716,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -751,7 +727,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/emjr.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
@@ -776,7 +751,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -788,7 +762,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/emjr.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
@@ -813,7 +786,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -825,7 +797,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/flages/govt.png" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -844,7 +815,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -856,7 +826,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/emjr.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
@@ -881,7 +850,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -893,7 +861,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/flages/govt.png" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -912,7 +879,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -924,7 +890,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
@@ -949,7 +914,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -961,7 +925,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
 
                                 <button><a
                                         href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
@@ -986,7 +949,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -998,7 +960,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1022,7 +983,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1034,7 +994,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1058,7 +1017,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1070,7 +1028,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1094,7 +1051,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1106,7 +1062,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1130,7 +1085,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1142,7 +1096,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/kamaraj-cm.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1166,7 +1119,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1178,7 +1130,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/kamaraj-cm.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1202,7 +1153,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1214,7 +1164,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/kamaraj-cm.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1238,7 +1187,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1250,7 +1198,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1274,7 +1221,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1286,7 +1232,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1310,7 +1255,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1322,7 +1266,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1346,7 +1289,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1358,7 +1300,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1382,7 +1323,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1394,7 +1334,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1418,7 +1357,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1430,7 +1368,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1454,7 +1391,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1466,7 +1402,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1490,7 +1425,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1502,7 +1436,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1521,7 +1454,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1533,7 +1465,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1552,7 +1483,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1564,7 +1494,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1583,7 +1512,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1595,7 +1523,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1614,7 +1541,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1626,7 +1552,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1645,7 +1570,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div id="pastleader" class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1657,7 +1581,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1676,7 +1599,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1688,7 +1610,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1707,7 +1628,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1719,7 +1639,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1738,7 +1657,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1750,7 +1668,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1769,7 +1686,6 @@
                 <td>
                     <div class="profile-main">
 
-
                         <div class="parties">
 
                             <div id="pastleader" class="fontsidepro ">
@@ -1781,7 +1697,6 @@
                             <div class="backsidepro">
                                 <p></p>
                                 <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
 
                                 <button><a href="">விவரம்</a></button>
 
@@ -1798,21 +1713,17 @@
         </table>
     </div>
 
-    <script src="../../assets/javascript/past_leaders.js"></script>
-
     <!-- footer  section-->
-
-
-
 
     <script src="../../main.js"></script>
 
+    <script src="../../assets/javascript/past_leaders.js"></script>
     <!-- script for bootstrap -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- script for bootstrap -->
 
-    <script src="../../assets/javascript/translate.js"></script>
+    <!-- <script src="../../assets/javascript/translate.js"></script> -->
 
 </body>
 
