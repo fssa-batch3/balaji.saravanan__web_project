@@ -17,14 +17,8 @@ if (users != null) {
 const favorite_minister =
   JSON.parse(localStorage.getItem("fav_minister")) ?? [];
 
-// const popup = document.getElementById("leader-popup");
+  const language_values= localStorage.getItem("language");
 
-// const closeBtn = document.getElementById("closeBtn");
-
-// closeBtn.addEventListener("click", function () {
-
-//   popup.style.display = "none"; // hide the form
-// });
 
 // Get minister data from localStorage
 const minister_values = JSON.parse(localStorage.getItem("politician_data"));
@@ -68,9 +62,14 @@ function list_leaders(item) {
   const detailsContents = document.createElement("div");
   detailsContents.classList.add("details_contents");
 
+
   const ministerName = document.createElement("p");
   ministerName.classList.add("minister_name");
-  ministerName.textContent = `${item.name.tname}`;
+  if(language_values==="english"){
+    ministerName.textContent = `${item.name.ename}`;
+  }else if(language_values==="tamil"){
+    ministerName.textContent = `${item.name.tname}`;
+  }
 
   const counOfMinister = document.createElement("p");
   counOfMinister.classList.add("coun_of_minister");
@@ -80,6 +79,10 @@ function list_leaders(item) {
   ministerPos.classList.add("minister_pos");
   ministerPos.textContent = `${item.position}`;
 
+  const button_div= document.createElement("div");
+  button_div.setAttribute("class", "button_div")
+
+
   const viewPortfolio = document.createElement("p");
   viewPortfolio.classList.add("view_portfolio");
 
@@ -87,16 +90,19 @@ function list_leaders(item) {
   anchor.href = `profile_ministers.html?name=${item.name.ename}`;
   anchor.textContent = "View portfolio";
 
-  const heartButton = document.createElement("button");
+  const heartButton = document.createElement("i");
   heartButton.className = "fa fa-heart";
-  viewPortfolio.appendChild(heartButton);
+  heartButton.setAttribute("id", "like_icon")
 
   viewPortfolio.appendChild(anchor);
 
   detailsContents.appendChild(ministerName);
   detailsContents.appendChild(counOfMinister);
   detailsContents.appendChild(ministerPos);
-  detailsContents.appendChild(viewPortfolio);
+  detailsContents.appendChild(button_div)
+  button_div.appendChild(viewPortfolio);
+  button_div.appendChild(heartButton);
+
 
   ministerDetails.appendChild(detailsContents);
 
@@ -227,59 +233,3 @@ function list_leaders(item) {
 //
 
 // }
-
-const searchInput = document.getElementById("searchbar");
-
-const searchResults = document.getElementById("search_result");
-
-// Function to create a card for a minister
-
-function createMinisterCard(minister) {
-  const card = document.createElement("div");
-  card.setAttribute("class", "card");
-
-  const name = document.createElement("a");
-  name.setAttribute(
-    "href",
-    `profile_ministers.html?name=${minister.name.ename}`
-  );
-  name.innerText = minister.name.ename;
-  card.appendChild(name);
-
-  const position = document.createElement("p");
-  position.innerText = minister.position;
-  card.appendChild(position);
-
-  return card;
-}
-
-searchInput.addEventListener("input", (e) => {
-  const searchTerm = searchInput.value.trim().toLowerCase();
-  searchResults.style.display = "block";
-  searchResults.innerHTML = "";
-
-  if (searchTerm === "") {
-    searchResults.style.display = "none";
-    return; // do not display any search results
-  }
-
-  const filteredMinisters = minister_values.filter((minister) => {
-    // this is filter function using this function used to filter the json .
-    const ministerName = minister.name.ename.trim().toLowerCase(); // all value change in lowercase
-    return ministerName.includes(searchTerm); // return filter value and sertterm condition check this line
-  });
-
-  if (filteredMinisters.length > 0) {
-    // card create if condition
-    filteredMinisters.forEach((minister) => {
-      // for each function this line use this check for minister name ;
-      const card_div = createMinisterCard(minister); // already card create this card call this line
-      searchResults.appendChild(card_div); // return value append
-    });
-  } else {
-    const li = document.createElement("li"); // this is not found code
-    li.textContent = "No results found.";
-    searchResults.appendChild(li);
-  }
-  e.preventDefault();
-});

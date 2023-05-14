@@ -63,3 +63,17 @@ margin: 2em 0;
   cursor: pointer;
   font-size: 1.1em;
 }
+
+.button_div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.button_div #like_icon{
+  border: none;
+  padding: 0 0 20px 30px;
+  font-size: 20px;
+}
+

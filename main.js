@@ -93,7 +93,7 @@ const header = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
              </li>
 
             <li class="nav-item" id="my-account">
-                <a class="nav-link list_li" href="${root}/pages/your opinion/profilepage.html"><span class="glyphicon glyphicon-user"></span>Profile</a>
+                <a class="nav-link list_li" href="${root}/pages/your opinion/profilepage.html"><span class="glyphicon glyphicon-user">சுயவிவரம்</span></a>
             </li>
             
 
@@ -3239,6 +3239,81 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
         id: 30,
+      },
+      {
+        img: {
+          sourse: "https://freeimghost.net/images/2023/05/14/trp_raja-removebg-preview.png",
+          alter: "டி.ஆர்.பி. ராஜா",
+        },
+        name: {
+          tname: "டி.ஆர்.பி. ராஜா",
+          ename: "T.R.B. Rajaa",
+        },
+
+        position: "தொழில்துறை அமைச்சர்",
+        party_name: "திராவிட முன்னேற்றக் கழகம்",
+        status: true,
+        id: 31,
+      },
+      {
+        img: {
+          sourse: "https://freeimghost.net/images/2023/05/04/masthan.png",
+          alter: "செஞ்சி கே.எஸ். மஸ்தான்",
+        },
+        name: {
+          tname: "செஞ்சி கே.எஸ். மஸ்தான்",
+          ename: "Gingee K.S. Masthan",
+        },
+
+        position: "வெளிநாடு வாழ் தமிழர்கள் நலத்துறை அமைச்சர்",
+        party_name: "திராவிட முன்னேற்றக் கழகம்",
+        status: true,
+        id: 32,
+      },
+      {
+        img: {
+          sourse: "https://freeimghost.net/images/2023/05/04/meiyanathan.png",
+          alter: "Siva V. Meyyanathan",
+        },
+        name: {
+          tname: "சிவா.வி.மெய்யநாதன்",
+          ename: "Siva V. Meyyanathan",
+        },
+
+        position: "சுற்றுச்சூழல், பருவநிலை மாற்ற அமைச்சர்",
+        party_name: "திராவிட முன்னேற்றக் கழகம்",
+        status: true,
+        id: 33,
+      },
+      {
+        img: {
+          sourse: "https://freeimghost.net/images/2023/05/14/c_v_ganesan-removebg-preview.png",
+          alter: "mano thangaraj",
+        },
+        name: {
+          tname: "ச கணேசன்",
+          ename: "C.V. Ganesan",
+        },
+
+        position: "தொழிலாளர் நலன் மற்றும் திறன் மேம்பாட்டுத் துறை அமைச்சர்",
+        party_name: "திராவிட முன்னேற்றக் கழகம்",
+        status: true,
+        id: 34,
+      },
+      {
+        img: {
+          sourse: "https://freeimghost.net/images/2023/05/14/kazhalvizhi-removebg-preview.png",
+          alter: "N. Kayalvizhi Selvaraj",
+        },
+        name: {
+          tname: "என்.கயல்விழி செல்வராஜ்",
+          ename: "N. Kayalvizhi Selvaraj",
+        },
+
+        position: "ஆதி திராவிடர் நலத்துறை அமைச்சர்",
+        party_name: "திராவிட முன்னேற்றக் கழகம்",
+        status: true,
+        id: 35,
       },
     ])
   );
