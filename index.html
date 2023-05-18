@@ -242,13 +242,18 @@
     </div>
 
     <script>
-
+        check();
+function check(){
+    fetch('https://newsapi.org/v2/everything?q=Tamil%20nadu%20Politics&from=2023-04-18&sortBy=publishedAt&apiKey=317a06010b8f49a4a08e3bb54667ec58').then((response)=> {return response.json()}).then((data)=>{
+            console.log(data.articles)
+})
+}
 
         const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
 
-        document.addEventListener('DOMContentLoaded', function () {
-            loadNewsData("Tamil nadu Politics");
-        });
+        // document.addEventListener('DOMContentLoaded', function () {
+        //     loadNewsData("Tamil nadu Politics");
+        // });
 
         let date = new Date().getDate()
         let month = new Date().getMonth()
