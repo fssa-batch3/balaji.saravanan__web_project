@@ -254,15 +254,22 @@
         let month = new Date().getMonth()
         let yr = new Date().getFullYear()
 
-        const loadNewsData = async searchText => {
-            const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            console.log(data.articles)
+        // const loadNewsData = async searchText => {
+            // const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
+            // const res = await fetch(url);
+            // const data = await res.json();
+            // console.log(data.articles)
             // data.articles.sort();
+            function loadNewsData(text){
+                fetch(`https://newsapi.org/v2/everything?q=Tamil nadu Politics&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`).then((response)=> {return response.json()}).then((data)=>{
+            // console.log(data.articles)
             displayNewsData(data.articles);
-        }
-
+         })
+            }
+            
+            // displayNewsData(data.articles);
+        // }
+         
 
         const displayNewsData = articles => {
             const newsDiv = document.querySelector('.news');
