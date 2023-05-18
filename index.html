@@ -29,7 +29,7 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            
+
             gap: 30px;
             overflow-x: scroll;
 
@@ -242,47 +242,94 @@
     </div>
 
     <script>
-        check();
-function check(){
-    fetch('https://newsapi.org/v2/everything?q=Tamil%20nadu%20Politics&from=2023-04-18&sortBy=publishedAt&apiKey=317a06010b8f49a4a08e3bb54667ec58').then((response)=> {return response.json()}).then((data)=>{
-            console.log(data.articles)
-})
-}
 
-        const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
+
+        // const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
 
         // document.addEventListener('DOMContentLoaded', function () {
         //     loadNewsData("Tamil nadu Politics");
         // });
 
-        let date = new Date().getDate()
-        let month = new Date().getMonth()
-        let yr = new Date().getFullYear()
+        // let date = new Date().getDate()
+        // let month = new Date().getMonth()
+        // let yr = new Date().getFullYear()
 
         // const loadNewsData = async searchText => {
-            // const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
-            // const res = await fetch(url);
-            // const data = await res.json();
-            // console.log(data.articles)
-            // data.articles.sort();
-            function loadNewsData(text){
-                fetch(`https://newsapi.org/v2/everything?q=${text}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`).then((response)=> {return response.json()}).then((data)=>{
-            console.log(data.articles)
-            // displayNewsData(data.articles);
-         })
-            }
-            
-            // displayNewsData(data.articles);
+        //     const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
+        //     const res = await fetch(url);
+        //     const data = await res.json();
+        //     console.log(data.articles)
+        //     // data.articles.sort();
+        //     displayNewsData(data.articles);
         // }
-         
 
-        const displayNewsData = articles => {
+
+        // const displayNewsData = articles => {
+        //     const newsDiv = document.querySelector('.news');
+
+        //     articles.forEach(article => {
+        //         const { author, description, publishedAt, title, url, urlToImage } = article;
+
+
+
+        //         const split = publishedAt.split('T');
+        //         const time = split[1];
+        //         const onlyTime = time.split('Z');
+
+        //         const div = document.createElement('div');
+        //         div.classList.add('h_100_1');
+        //         div.innerHTML = `
+        //     <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
+        //     <div class="card-body">
+        //         <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
+        //         <h5 class="card-title">${title}</h5>
+        //         <p class="card-text">${description}</p>
+        //     </div>
+        // `;
+
+        //         newsDiv.appendChild(div);
+        //     });
+
+
+        const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
+
+        // Function to save data to local storage
+        const saveDataToLocalStorage = (key, data) => {
+            localStorage.setItem(key, JSON.stringify(data));
+        };
+
+        // Function to load data from local storage
+        const loadDataFromLocalStorage = (key) => {
+            const data = localStorage.getItem(key);
+            return JSON.parse(data);
+        };
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const savedData = loadDataFromLocalStorage('newsData');
+            if (savedData) {
+                displayNewsData(savedData);
+            } else {
+                loadNewsData("Tamil nadu Politics");
+            }
+        });
+
+        let date = new Date().getDate();
+        let month = new Date().getMonth();
+        let yr = new Date().getFullYear();
+
+        const loadNewsData = async (searchText) => {
+            const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
+            const res = await fetch(url);
+            const data = await res.json();
+            console.log(data.articles);
+            displayNewsData(data.articles);
+        };
+
+        const displayNewsData = (articles) => {
             const newsDiv = document.querySelector('.news');
-       console.log(articles)
-            articles.forEach(article => {
+
+            articles.forEach((article) => {
                 const { author, description, publishedAt, title, url, urlToImage } = article;
-
-
 
                 const split = publishedAt.split('T');
                 const time = split[1];
@@ -291,16 +338,21 @@ function check(){
                 const div = document.createElement('div');
                 div.classList.add('h_100_1');
                 div.innerHTML = `
-            <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
-            <div class="card-body">
-                <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
-                <h5 class="card-title">${title}</h5>
-                <p class="card-text">${description}</p>
-            </div>
-        `;
+      <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
+      <div class="card-body">
+        <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
+        <h5 class="card-title">${title}</h5>
+        <p class="card-text">${description}</p>
+      </div>
+    `;
 
                 newsDiv.appendChild(div);
             });
+
+            // Save data to local storage
+            saveDataToLocalStorage('newsData', articles);
+
+
 
             if (localStorage.getItem("language") === "tamil") {
                 const targetLanguage = "ta";
@@ -324,8 +376,6 @@ function check(){
                 }
             }
         }
-
-
 
     </script>
 
