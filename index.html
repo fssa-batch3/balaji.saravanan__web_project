@@ -262,8 +262,8 @@
             // data.articles.sort();
             function loadNewsData(text){
                 fetch(`https://newsapi.org/v2/everything?q=${text}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`).then((response)=> {return response.json()}).then((data)=>{
-            // console.log(data.articles)
-            displayNewsData(data.articles);
+            console.log(data.articles)
+            // displayNewsData(data.articles);
          })
             }
             
