@@ -24,107 +24,70 @@
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/css/footer.css">
-
     <style>
-        .image_container {
+        .news {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            background-image: linear-gradient(to left, #b4c5e0, #afcee7, #abd7eb, #a8dfec, #aae7eb);
-            margin-top: 50px;
-
-        }
-
-        .carousel {
-            overflow: hidden;
-            position: relative;
-            border-radius: 0.5rem;
-            scroll-behavior: smooth;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        .carousel:before {
-            content: "";
-            width: 100%;
-            height: 10rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            z-index: 1;
-            pointer-events: none;
-
-            --bg: rgb(226, 228, 233);
-
-            background: linear-gradient(to right,
-                    var(--bg),
-                    transparent 10%,
-                    transparent 90%,
-                    var(--bg));
-        }
-
-        .slides {
-            width: 65%;
-            height: 80%;
-            display: flex;
-            gap: 20px;
-            padding: 1rem;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            
+            gap: 30px;
             overflow-x: scroll;
-            scroll-behavior: smooth;
-            --tw-scroll-snap-strictness: mandatory;
-            scroll-snap-type: x var(--tw-scroll-snap-strictness);
-            align-items: center;
+
         }
 
-        .navigation {
-            gap: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px;
+        .news::-webkit-scrollbar {
+            display: none;
         }
 
-        .slide img {
-            scroll-snap-stop: always;
-            scroll-snap-align: center;
-            flex-grow: 0;
-            flex-shrink: 0;
-            width: 90%;
-            height: 60%;
 
+
+        .h_100_1 {
+            width: 350px;
+            border: 1px solid #ffffffff;
+            border-radius: 5px;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            border-radius: 7px;
+
+        }
+
+        .card-img-top {
+            height: 200px;
             object-fit: cover;
-            background: #1e293b;
+            width: 300px;
+            padding: 10px;
 
-            border: none;
-            border-radius: 0.5rem;
         }
 
-        .slides::-webkit-scrollbar-track {
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 9999px;
-            background-color: #1e293b;
+        .card-body {
+            padding: 10px;
         }
 
-        .slides::-webkit-scrollbar {
-            height: 6px;
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 5px;
         }
 
-        .slides::-webkit-scrollbar-thumb {
-            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-            border-radius: 9999px;
-            background-color: #475569;
+        .card-text {
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: justify;
         }
 
-        .slides::-webkit-scrollbar-thumb:hover {
-            background-color: #657791;
+        .card span {
+            display: block;
+            font-size: 12px;
         }
 
-        .slides::-webkit-scrollbar-thumb:active {
-            background-color: #38485e;
+        .card span p {
+            margin: 0;
         }
+
+        .card span b {
+            font-weight: bold;
+        }
+
+        */
     </style>
 
 </head>
@@ -160,8 +123,8 @@
         </p>
 
         <button type="button" class="btn btn-outline-dark ">
-<a class="text-center text-decoration-none"
-                href="../your opinion/your opnion.html">தங்களது கருத்து</a></button>
+            <a class="text-center text-decoration-none" href="../your opinion/your opnion.html">தங்களது
+                கருத்து</a></button>
 
     </div>
 
@@ -198,28 +161,7 @@
 
     </div>
 
-    <!-- <div class="information p-5">
-        <div class="image1 d-flex justify-content-around align-items-center flex-wrap">
-            <img class="img-fluid p-5" src="assets/images/essecial/IMG_20230427_121742.jpg" alt="">
-            <img class="img-fluid p-4" src="assets/images/essecial/ADMINISTRATIVE-STRUCTURE-AND-HIERACRCHY-IN-INDIA.png"
-                alt="">
-            <img class="img-fluid p-5"
-                src="assets/images/essecial/2021_Tamil_Nadu_Legislative_Assembly_election_result.png" alt="">
-        </div>
-
-    </div> -->
-
     <div class="image_container">
-
-        <!-- <section class="carousel">
-            <div class="slides">
-                <img class="slide" id="slide-1" src="assets/images/essecial/IMG_20230427_121742.jpg">
-                <img class="slide" id="slide-2"
-                    src="assets/images/essecial/ADMINISTRATIVE-STRUCTURE-AND-HIERACRCHY-IN-INDIA.png">
-
-            </div>
-
-        </section> -->
 
     </div>
 
@@ -230,25 +172,24 @@
         <div class="content d-flex flex-column justify-content-center align-items-center p-5">
 
             <p class="h4 fs-5 text-center text-danger fw-bolder lh-base">
-எங்கள் பிரச்சாரம் இயக்கப்படுகிறது<br>
+                எங்கள் பிரச்சாரம் இயக்கப்படுகிறது<br>
                 உங்களைப் போன்ற ஆதரவாளர்களின் பங்களிப்புகளால்
             </p>
 
             <hr>
 
             <h1 class="h2 fs-4 text-center text-dark fw-bold pb-5">
-<span>ஒரு தன்னார்வலராக</span> மாறுங்கள்
-</h1>
+                <span>ஒரு தன்னார்வலராக</span> மாறுங்கள்
+            </h1>
 
             <h2 class="h2 fs-6 text-center text-dark lh-base pb-3">
-நீங்கள் அரசியலில் ஆர்வம் காட்டவில்லை என்பதற்காக<br>
+                நீங்கள் அரசியலில் ஆர்வம் காட்டவில்லை என்பதற்காக<br>
                 நீங்கள் அரசாங்கத்தை மாற்ற விரும்புகிறீர்கள்
                 என்று
                 அர்த்தமல்ல.
             </h2>
             <button type="button" class="btn btn-outline-dark p-2 ">
-<a class="text-center text-decoration-none"
-                    href="../../index.html">இப்போது சேரவும்</a></button>
+                <a class="text-center text-decoration-none" href="../../index.html">இப்போது சேரவும்</a></button>
 
         </div>
 
@@ -293,40 +234,88 @@
 
         <h2 class="head">சமீபத்திய அரசியல் செய்திகள்</h2>
 
-        <div class="news d-flex justify-content-around">
+        <div class="news">
 
-            <div class="news1">
 
-                <img src="../../assets/images/ministers/news3.jpg" class="img-fluid" alt="error image">
-                <h2>அரசியல்</h2>
-                <p>
-                    சினிமாவில் காவி நிறம் அணியக் கூடாது என்றால், கறுப்பு ஆடைகள் அணிந்து வில்லனாக நடிப்பதால்
-                    திராவிடர் கழகத்தினர் எல்லாம் வில்லன்களா? என மதிமுக தலைமை நிலைய செயலாளர் துரை வைகோ கேள்வி
-                    எழுப்பியுள்ளார். வாரிசு அரசியல் பற்றிப் பேச பாஜக மாநிலத் தலைவர் அண்ணாமலைக்கு தகுதியே இல்லை,
-                    அவரது கட்சியிலேயே பலரது வாரிசுகள் பொறுப்புகளில் இருக்கிறார்கள் என துரை வைகோ தெரிவித்துள்ளார்.
-                </p>
-
-            </div>
-
-            <div class="news1">
-                <img src="../../assets/images/ministers/news2.jpg" class="img-fluid" alt="error image">
-                <h2>அரசியல்</h2>
-                <p>தமிழ்நாடு அமைச்சரவையில் பெரும் எதிர்பார்ப்பிற்கு இடையில் பல்வேறு மாற்றங்கள் செய்யப்பட்டு உள்ளன.
-                    முதல்வர் ஸ்டாலினின் ஒரு இலாக்காவையும் சேர்த்து மொத்தமாக 11 அமைச்சர்களின் இலாக்காக்கள்
-                    மாற்றப்பட்டு உள்ளன. உதயநிதி ஸ்டாலினுக்கு இளைஞர் நலன், விளையாட்டுத்துறை வழங்கப்பட்டு உள்ளது.
-                    அதேபோல் சிறப்பு திட்ட செயலாக்கம் துறை வழங்கப்பட்டு உள்ளது.</p>
-            </div>
-
-            <div class="news1">
-                <img src="../../assets/images/ministers/news1.jpg" class="img-fluid" alt="error image">
-                <h2>அரசியல்</h2>
-                <p>சென்னை: கட்சித் தலைமை ஒரு குடும்பத்திடம் மட்டும் தொடர்வதுதான் வாரிசு அரசியல், பாஜகவில் இருப்பது
-                    வாரிசு அரசியல் அல்ல.. முதல்வர் ஸ்டாலின் பட்டியலினத்தை சேர்ந்தவரை துணை முதலமைச்சராக்க வேண்டும்.
-                    என்று பாஜக எம்எல்ஏ வானதி சீனிவாசன் தெரிவித்துள்ளார்.</p>
-            </div>
 
         </div>
     </div>
+
+    <script>
+
+
+        const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadNewsData("Tamil nadu Politics");
+        });
+
+        let date = new Date().getDate()
+        let month = new Date().getMonth()
+        let yr = new Date().getFullYear()
+
+        const loadNewsData = async searchText => {
+            const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
+            const res = await fetch(url);
+            const data = await res.json();
+            console.log(data.articles)
+            // data.articles.sort();
+            displayNewsData(data.articles);
+        }
+
+
+        const displayNewsData = articles => {
+            const newsDiv = document.querySelector('.news');
+
+            articles.forEach(article => {
+                const { author, description, publishedAt, title, url, urlToImage } = article;
+
+
+
+                const split = publishedAt.split('T');
+                const time = split[1];
+                const onlyTime = time.split('Z');
+
+                const div = document.createElement('div');
+                div.classList.add('h_100_1');
+                div.innerHTML = `
+            <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
+            <div class="card-body">
+                <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text">${description}</p>
+            </div>
+        `;
+
+                newsDiv.appendChild(div);
+            });
+
+            if (localStorage.getItem("language") === "tamil") {
+                const targetLanguage = "ta";
+                const walker = document.createTreeWalker(
+                    newsDiv,
+                    NodeFilter.SHOW_TEXT,
+                    { acceptNode: node => /\S/.test(node.nodeValue) }
+                );
+
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    const text = node.nodeValue.trim();
+                    const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${text}`;
+                    fetch(translateUrl)
+                        .then(response => response.json())
+                        .then(data => {
+                            const translatedText = data[0][0][0];
+                            node.textContent = node.textContent.replace(text, translatedText);
+                        })
+                        .catch(error => console.error(error));
+                }
+            }
+        }
+
+
+
+    </script>
 
     <!-- footer  section-->
 
@@ -334,20 +323,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="main.js"></script>
-
-    <!-- <script src="assets/javascript/translate.js"></script> -->
-
-    <!-- <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'ta',
-                includedLanguages: 'en' // remove this line if you want to include all languages
-            }, 'google_translate_element');
-        }
-    </script> -->
-
-    <!-- <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
 
 </body>
 

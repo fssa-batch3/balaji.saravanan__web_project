@@ -1,6 +1,6 @@
 const leaderForm = document.getElementById("leader-form");
 
-const registerFromValidation = () => {
+const registerFromValidation = async () => {
   const mla_list = JSON.parse(localStorage.getItem("mla_ditails")) ?? [];
 
   const constituency_Name = document.getElementById("constituency_Name").value;
@@ -100,8 +100,68 @@ const registerFromValidation = () => {
 
   mla_list.push(leaderdata);
   localStorage.setItem("mla_ditails", JSON.stringify(mla_list));
-  alert("Leader created successfully!");
-  window.location.href = "../profile_list_page.html";
+
+
+
+  // Translate the manifesto values to English
+
+  const targetLanguage = "en"; // translate to English
+
+  const mla_json_english = {};
+
+  for (const [key, value] of Object.entries(leaderdata)) {
+
+    if (typeof value === "string") {
+
+      const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value}`;
+
+      const response = await fetch(translateUrl);
+
+      const data = await response.json();
+
+      const translatedText = data[0][0][0]; // get the translated text from the API response
+      mla_json_english[key] = translatedText; // update the manifesto values object with the translated text
+
+    }
+
+    else if (typeof value === "object" && value !== null) { // Check if the value is an object and not null
+      const translatedValue = {};
+
+      for (const [key2, value2] of Object.entries(value)) {
+        if (key2 === "description") { // Check if the key is "description"
+
+          const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value2}`;
+
+          const response = await fetch(translateUrl);
+          const data = await response.json();
+
+          const translatedText = data[0][0][0]; // get the translated text from the API response
+          translatedValue[key2] = translatedText; // update the translated value object with the translated text
+        } else {
+          translatedValue[key2] = value2;
+
+        }
+
+      }
+
+      mla_json_english[key] = translatedValue;
+
+    } else {
+
+      mla_json_english[key] = value;
+
+    }
+  }
+
+  // Store the translated manifesto data in local storage
+  const governer_json = JSON.parse(localStorage.getItem("mla_details_english")) ?? [];
+  mla_json_english.id = governer_json.length;
+  governer_json.push(mla_json_english);
+  localStorage.setItem("mla_details_english", JSON.stringify(governer_json));
+
+  // Reset the form and display a success message
+  document.getElementById("leader-form").reset();
+  alert("Mla create created successfully!");
 };
 leaderForm.addEventListener("submit", (event) => {
   event.preventDefault();

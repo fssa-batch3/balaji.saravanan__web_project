@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
@@ -7,175 +6,310 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./../../assets/css/admin.css">
+
     <style>
-        body {
-            background-color: #DDF0FF;
-            color: #586791;
-        }
-
         .container {
-            max-width: 700px;
-            margin-right: auto;
-            margin-left: auto;
-            margin-top: 80px;
-        }
-
-        h1 {
-            color: #55648E;
-            font-weight: 300;
-            text-align: center;
-            font-size: 35px;
-        }
-
-        input {
-            width: 100%;
-        }
-
-        select {
-            width: 50%;
-            font-family: tenso;
-            background-color: #586791;
-            letter-spacing: .04em;
-
-            margin: 20px 0px 20px 0px;
-            padding: 10px 30px;
-            border-radius: 8px;
-            border: none;
-            -webkit-box-shadow: 2px 1px 39px 16px rgba(198, 225, 244, 0.86);
-            -moz-box-shadow: 2px 1px 39px 16px rgba(198, 225, 244, 0.86);
-            box-shadow: 2px 1px 39px 16px rgba(198, 225, 244, 0.86);
-
-        }
-
-        option {
-            padding: 20px 30px;
-            font-family: tenso;
-        }
-
-        .dropdown {
-            margin: 40px 20px;
-        }
-
-        input {
-            margin: 10px 0 40px 0;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #C2DCF3;
-            color: #ABC7E8;
-
-        }
-
-        input:focus {
-            border-bottom: 1px solid #596790;
-            outline: none;
-            color: #596790;
-        }
-
-        .submit {
-            border: none;
-            background-color: #ADCAE8;
-            color: #E4EDF7;
-            border-radius: 360px;
-            height: 50px;
-            transition: background 0.3s;
-            -webkit-transition: background 0.3s;
-        }
-
-        .close-what {
-            color: #586790;
-            font-size: 50px;
-            font-weight: 100;
-            text-align: right;
-            padding-right: 19px;
-            line-height: 69px;
-            border-radius: 360px;
-            height: 85px;
-            width: 85px;
-            background-color: #C8E6FE;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
             border-radius: 5px;
-            position: fixed;
-            top: 0;
-            right: 0;
-            border-radius: 0px 0px 0px 360px;
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
         }
 
-        .close-what:hover {
-            color: white;
+        .container h1 {
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .container .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .container .col-sm-6 {
+            width: 50%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .container label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .container input[type="text"],
+        .container select {
+            width: 300px;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .container input[type="submit"] {
+            display: block;
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
 
-        .submit:hover {
-            background: white;
-            color: #5B6B93;
-            cursor: pointer;
+        .container input[type="submit"]:hover {
+            background-color: #0062cc;
+        }
+
+        .container select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath fill='%23000' d='M0 0l4 4 4-4z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 8px 4px;
+            padding-right: 30px;
+        }
+
+        .container select:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .container input:required:invalid {
+            border-color: #f44336;
+        }
+
+        .container input:required:valid {
+            border-color: #4caf50;
         }
     </style>
+
 </head>
 
 <body>
-    <div class="container">
-        <h1>This is an Manifesto create page</h1>
 
-        <div class="row">
-            <div class="col-sm-6">
-                <form id="manifesto_form">
-                    Title of Menifesto:<br>
-                    <input type="text" id="manifesto_title" placeholder="Title of Menifesto" required>
-            </div>
-            <div class="col-sm-6">
-                stage of Menifesto:<br>
-                <input type="text" id="status_stage" placeholder="the status of the stage" required>
-            </div>
+    <!-- Dashboard -->
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="nave_side">
+        <!-- Vertical Navbar -->
+
+        <!-- Main content -->
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+            <!-- Header -->
+            <header class="bg-surface-primary border-bottom pt-6">
+                <div class="container-fluid">
+                    <div class="mb-npx">
+                        <div class="row align-items-center">
+                            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                                <!-- Title -->
+                                <h1 class="h2 mb-0 ls-tight">Application</h1>
+                            </div>
+                            <!-- Actions -->
+                            <div class="col-sm-6 col-12 text-sm-end">
+                                <div class="mx-n1">
+                                    <a href="pages/leader_portfoie/create_leaders/politicin_create.html"
+                                        class="btn d-inline-flex btn-sm btn-primary mx-1" id="direct_to_create">
+                                        <span class=" pe-2">
+                                            <i class="bi bi-plus"></i>
+                                        </span>
+                                        <span>Create</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nav -->
+                        <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link active">Manifest create</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- Main -->
+            <main class="py-6 bg-surface-secondary">
+                <div class="container-fluid">
+                    <!-- Card stats -->
+
+                    <div class="card shadow border-0 mb-7">
+                        <div class="card-header">
+                            <h5 class="mb-0">Pages</h5>
+                        </div>
+                        <!-- <div class="table-responsive">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">date</th>
+                                        <th scope="col">list</th>
+                                        <th scope="col">list type</th>
+                                        <th scope="col">status</th>
+                                        <th scope="col">status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div> -->
+
+                        <div class="container">
+                            <h1>This is an Manifesto create page</h1>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form id="manifesto_form">
+                                        Title of Menifesto:<br>
+                                        <input type="text" id="manifesto_title" placeholder="Title of Menifesto"
+                                            required>
+
+
+                                </div>
+                                <div class="col-sm-6">
+                                    stage of Menifesto:<br>
+                                    <input type="text" id="status_stage" placeholder="the status of the stage" required>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    category:
+                                    <select class="form-select" aria-label="Default select example" id="category"
+                                        required pattern="[A-Za-z]">
+                                        <option selected>Enter your opinion</option>
+                                        <option value="aggriculture">aggriculture</option>
+                                        <option value="water">water</option>
+                                        <option value="fishers">fishers</option>
+                                        <option value="education">education</option>
+                                        <option value="employment">employment</option>
+                                        <option value="electricity">electricity</option>
+                                        <option value="transport">transport</option>
+                                        <option value="disabilities">disabilities</option>
+                                        <option value="woman">woman</option>
+                                        <option value="law">law</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    status:
+                                    <select class="form-select" aria-label="Default select example"
+                                        id="manifesto-status" required pattern="[A-Za-z]">
+                                        <option selected>Enter your opinion</option>
+                                        <option value="complete">complte</option>
+                                        <option value="bending">bending</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-sm-6">
+                                    <input type="submit" value="Submit" class="submit">
+
+                                    </form>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <script src="../../assets/js/manifesto_create.js"> </script>
+
+                    </div>
+                </div>
+            </main>
         </div>
-        <div class="row">
-            <div class="col-sm-6">
-                category:
-                <select class="form-select" aria-label="Default select example" id="category" required
-                    pattern="[A-Za-z]">
-                    <option selected>Enter your opinion</option>
-                    <option value="aggriculture">aggriculture</option>
-                    <option value="water">water</option>
-                    <option value="fishers">fishers</option>
-                    <option value="education">education</option>
-                    <option value="employment">employment</option>
-                    <option value="electricity">electricity</option>
-                    <option value="transport">transport</option>
-                    <option value="disabilities">disabilities</option>
-                    <option value="woman">woman</option>
-                    <option value="law">law</option>
-
-                </select>
-            </div>
-            <div class="col-sm-6">
-                status:
-                <select class="form-select" aria-label="Default select example" id="manifesto-status" required
-                    pattern="[A-Za-z]">
-                    <option selected>Enter your opinion</option>
-                    <option value="complete">complte</option>
-                    <option value="bending">bending</option>
-                </select>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </div>
-        <div class="row">
-
-            <div class="col-sm-6">
-                <input type="submit" value="Submit" class="submit">
-
-                </form>
-
-            </div>
-        </div>
-
     </div>
-    <script src="../../assets/js/manifesto_create.js"> </script>
 
-    <div class="close-what">&times;</div>
+    <script>        // // Create the table row element
+        // const tr = document.createElement('tr');
 
+        // // Create the first table data element for the avatar and name
+        // const td1 = document.createElement('td');
+        // const avatar = document.createElement('img');
+        // avatar.setAttribute('alt', '...');
+        // avatar.setAttribute('src', 'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80');
+        // avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
+        // const nameLink = document.createElement('a');
+        // nameLink.setAttribute('href', '#');
+        // nameLink.classList.add('text-heading', 'font-semibold');
+        // nameLink.textContent = 'Robert Fox';
+        // td1.appendChild(avatar);
+        // td1.appendChild(nameLink);
+
+        // // Create the second table data element for the date
+        // const td2 = document.createElement('td');
+        // td2.textContent = 'Feb 15, 2021';
+
+        // // Create the third table data element for the logo and company name
+        // const td3 = document.createElement('td');
+        // const logo = document.createElement('img');
+        // logo.setAttribute('alt', '...');
+        // logo.setAttribute('src', 'https://preview.webpixels.io/web/img/other/logos/logo-1.png');
+        // logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
+        // const companyLink = document.createElement('a');
+        // companyLink.setAttribute('href', '#');
+        // companyLink.classList.add('text-heading', 'font-semibold');
+        // companyLink.textContent = 'Dribbble';
+        // td3.appendChild(logo);
+        // td3.appendChild(companyLink);
+
+        // // Create the fourth table data element for the amount
+        // const td4 = document.createElement('td');
+        // td4.textContent = '$3.500';
+
+        // // Create the fifth table data element for the status badge
+        // const td5 = document.createElement('td');
+        // const badge = document.createElement('span');
+        // badge.classList.add('badge', 'badge-lg', 'badge-dot');
+        // const badgeIcon = document.createElement('i');
+        // badgeIcon.classList.add('bg-success');
+        // badge.appendChild(badgeIcon);
+        // badge.appendChild(document.createTextNode('Scheduled'));
+        // td5.appendChild(badge);
+
+        // // Create the sixth table data element for the action buttons
+        // const td6 = document.createElement('td');
+        // const viewButton = document.createElement('a');
+        // viewButton.setAttribute('href', '#');
+        // viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
+        // viewButton.textContent = 'View';
+        // const deleteButton = document.createElement('button');
+        // deleteButton.setAttribute('type', 'button');
+        // deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
+        // const deleteIcon = document.createElement('i');
+        // deleteIcon.classList.add('bi', 'bi-trash');
+        // deleteButton.appendChild(deleteIcon);
+        // td6.appendChild(viewButton);
+        // td6.appendChild(deleteButton);
+
+        // // Add all the table data elements to the row element
+        // tr.appendChild(td1);
+        // tr.appendChild(td2);
+        // tr.appendChild(td3);
+        // tr.appendChild(td4);
+        // tr.appendChild(td5);
+        // tr.appendChild(td6);
+
+        // // Add the row element to the table body
+        // const tableBody = document.querySelector('tbody');
+        // tableBody.appendChild(tr);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../admin_main.js"></script>
 </body>
 
 </html>

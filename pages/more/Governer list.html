@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../../assets/css/main.css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="../../assets/css/responsive.css"> -->
+
     <link rel="icon" type="image/jpg" sizes="60x32" href="../../assets/images/icons/p logo.jpg">
 
     <title>governer</title>
@@ -27,15 +27,29 @@
     <div id="governer-list" class="governer">
         <h1>தமிழ்நாடு ஆளுநர்களின் பட்டியல்
         </h1>
-        <!-- <table>
-            
-            <tr>
+        <table id="my-table">
+
+            <tr id="head_tamil">
                 <th>Sl.No</th>
-                <th>Governor</th>
-                <th>இருந்து</th>
+                <th>ஆளுநர்<button id="sortName"><i class="fa fa-sort"></i></button></th>
+                <th>இருந்து<button id="sort-date"><i class="fa fa-sort"></i></button></th>
                 <th>வரை</th>
             </tr>
-            <tr>
+            <tr id="head_english" style="display: none;">
+                <th>Sl.No</th>
+                <th>Governor<button id="sortName"><i class="fa fa-sort"></i></button></th>
+                <th>From<button id="sort-date"><i class="fa fa-sort"></i></button></th>
+                <th>To</th>
+            </tr>
+
+            <tbody class="mla_list_body">
+
+
+            </tbody>
+
+        </table>
+
+        <!--  <tr>
                 <td>1</td>
                 <td>
                     <div class="profile-main">
@@ -940,9 +954,10 @@
 
     <!-- footer  section-->
 
-<script src="../../assets/javascript/governer_list.js"></script>
-
     <script src="../../main.js"></script>
+
+    <script src="../../assets/javascript/governer_list.js"></script>
+
 
     <!-- script for bootstrap -->
 

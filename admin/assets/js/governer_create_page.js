@@ -1,8 +1,8 @@
 const leaderForm = document.getElementById("leader-form");
 
-const registerFromValidation = () => {
-  const governer_data =
-    JSON.parse(localStorage.getItem("governer_details")) ?? [];
+const registerFromValidation = async () => {
+
+  const governer_data = JSON.parse(localStorage.getItem("governer_details")) ?? [];
 
   const img_url = document.getElementById("url").value;
 
@@ -89,12 +89,72 @@ const registerFromValidation = () => {
     experiance,
 
     state,
+
   };
 
   governer_data.push(governer);
+
   localStorage.setItem("governer_details", JSON.stringify(governer_data));
-  alert("Governer created successfully!");
-  window.location.href = "../governer_list.html";
+
+  // Translate the manifesto values to English
+
+  const targetLanguage = "en"; // translate to English
+
+  const governer_json_english = {};
+
+  for (const [key, value] of Object.entries(governer)) {
+
+    if (typeof value === "string") {
+
+      const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value}`;
+
+      const response = await fetch(translateUrl);
+
+      const data = await response.json();
+
+      const translatedText = data[0][0][0]; // get the translated text from the API response
+      governer_json_english[key] = translatedText; // update the manifesto values object with the translated text
+
+    }
+
+    else if (typeof value === "object" && value !== null) { // Check if the value is an object and not null
+      const translatedValue = {};
+
+      for (const [key2, value2] of Object.entries(value)) {
+        if (key2 === "description") { // Check if the key is "description"
+
+          const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value2}`;
+
+          const response = await fetch(translateUrl);
+          const data = await response.json();
+
+          const translatedText = data[0][0][0]; // get the translated text from the API response
+          translatedValue[key2] = translatedText; // update the translated value object with the translated text
+        } else {
+          translatedValue[key2] = value2;
+
+        }
+
+      }
+
+      governer_json_english[key] = translatedValue;
+
+    } else {
+
+      governer_json_english[key] = value;
+
+    }
+  }
+
+  // Store the translated manifesto data in local storage
+  const governer_json = JSON.parse(localStorage.getItem("governer_details_english")) ?? [];
+  governer_json_english.id = governer_json.length;
+  governer_json.push(governer_json_english);
+  localStorage.setItem("governer.details_english", JSON.stringify(governer_json));
+
+  // Reset the form and display a success message
+  document.getElementById("leader-form").reset();
+  alert("Manifesto created successfully!");
 };
 
 leaderForm.addEventListener("submit", (event) => {

@@ -53,7 +53,7 @@ function default_list(array) {
     const table_data3_link = document.createElement("a");
     table_data3_link.setAttribute(
       "href",
-      `mla_profile.html?name=${values.candidate_Name}`
+      `mla_profile.html?name=${values.mla_id}`
     );
     table_data3_link.innerText = values.candidate_Name;
     table_data3.append(table_data3_link);

@@ -67,7 +67,7 @@ function list_leaders(item) {
   ministerName.classList.add("minister_name");
   if(language_values==="english"){
     ministerName.textContent = `${item.name.ename}`;
-  }else if(language_values==="tamil"){
+  }else{
     ministerName.textContent = `${item.name.tname}`;
   }
 

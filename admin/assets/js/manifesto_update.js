@@ -12,13 +12,14 @@ const manifesto = JSON.parse(localStorage.getItem("manifesto_data")) ?? [];
 let manifestoId = null;
 
 const menifestoForm = document.getElementById("menifesto_form");
+console.log();
 
 function updateMenifesto(manifesto_v) {
   // Set form values to current leader data
-  document.getElementById("menifest_title").value = manifesto_v.title;
+  document.getElementById("manifesto_title").value = manifesto_v.title;
   document.getElementById("status_stage").value = manifesto_v.stage;
-  document.getElementById("catogery").value = manifesto_v.catogery;
-  document.getElementById("mainfesto-status").value = manifesto_v.status;
+  document.getElementById("category").value = manifesto_v.category;
+  document.getElementById("manifesto-status").value = manifesto_v.status;
   manifestoId = manifesto_v.id;
 
   console.log(manifestoId);
@@ -26,10 +27,10 @@ function updateMenifesto(manifesto_v) {
 
 function handleSubmit(e) {
   e.preventDefault();
-  const title = document.getElementById("menifest_title").value;
+  const title = document.getElementById("manifesto_title").value;
   const stage = document.getElementById("status_stage").value;
-  const category = document.getElementById("catogery").value;
-  const status = document.getElementById("mainfesto-status").value;
+  const category = document.getElementById("category").value;
+  const status = document.getElementById("manifesto-status").value;
   const time = new Date().getTime();
   // const id=;
   // console.log(id)
@@ -77,10 +78,12 @@ function deleteLeader(menifesto1) {
   if (index !== -1) {
     menifesto_value[index].delete = true;
     localStorage.setItem("manifesto_data", JSON.stringify(menifesto_value));
-    alert("manifesto successfully!");
-    window.location.reload();
+    alert("manifesto delete successfully!");
+    loadPastLeaders()
   }
 }
+
+
 
 function loadPastLeaders() {
   manifesto.forEach((menifesto_value) => {
@@ -119,7 +122,6 @@ function loadPastLeaders() {
     // updateButton.setAttribute('class', 'arrow');
     updateButton.innerHTML = "update";
     updateButton.onclick = function update() {
-      popup.style.display = "block";
 
       updateMenifesto(menifesto_value);
     };
@@ -129,7 +131,6 @@ function loadPastLeaders() {
     // delete4.setAttribute('class', 'arrow');
     deleteButton.innerHTML = "delete";
     deleteButton.onclick = function () {
-      // popup.style.display = 'block';
 
       deleteLeader(menifesto_value);
     };

@@ -12,7 +12,7 @@ let found = false;
 let i;
 
 for (i = 0; i < governer.length; i++) {
-  if (username == governer[i].governor_name) {
+  if (username == governer[i].id) {
     found = true;
     break;
   }

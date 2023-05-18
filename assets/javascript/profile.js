@@ -76,14 +76,12 @@ if (found) {
 
   // create the iframe element
   const iframe = document.createElement("iframe");
-  iframe.src =
-    "https://drive.google.com/file/d/1QvtGma0nm8YY8otWHDyQ4cs695YyIy5k/preview";
-
+  iframe.src =`${minister_name[i].affidate}`;
   // create the error message element
   const p = document.createElement("p");
   p.style.fontSize = "110%";
   p.innerHTML =
-    '<em><strong>பிழை: </strong>உங்கள் உலாவியை அதன் சமீபத்திய பதிப்பிற்குப் புதுப்பித்து அல்லது கோப்பை அணுகவும் <a href="https://drive.google.com/file/d/1QvtGma0nm8YY8otWHDyQ4cs695YyIy5k/preview">with this link.</a></em>';
+    "<em><strong>பிழை: </strong>உங்கள் உலாவியை அதன் சமீபத்திய பதிப்பிற்குப் புதுப்பித்து அல்லது கோப்பை அணுகவும் <a href=`${minister_name[i].affidate}`>with this link.</a></em>";
 
   // append the elements to the parent container
   responsiveDiv.appendChild(iframe);

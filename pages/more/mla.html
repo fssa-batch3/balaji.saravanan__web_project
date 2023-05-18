@@ -23,7 +23,8 @@
             font-size: 13px;
         }
 
-        button {
+        #sortName,
+        #sortMargin {
             display: inline-block;
             background-image: linear-gradient(to right top, #abc2e4, #92cef0, #75dbf0, #67e5e2, #79edc8);
             color: #fff;
@@ -38,11 +39,75 @@
             transition: background-color 0.3s ease;
         }
 
-        button:hover {
+        #sortName,
+        #sortMargin:hover {
             background-color: #0062cc;
         }
 
         @media screen and (max-width:600px) {}
+
+        .winners-map .land:hover {
+            fill: #c0c0bb;
+            cursor: pointer
+        }
+
+        .bar-chart .winners-map .land .geo-tooltip {
+            background-color: aqua;
+
+        }
+
+        .total_div {
+            display: flex;
+        }
+
+        .winners-map .land:hover {
+            fill: #c0c0bb;
+        }
+
+        #table-container {
+            border-radius: 15px;
+            border: 10px solid rgba(255, 255, 255, .03);
+            max-width: 700px;
+            height: 900px;
+            overflow: scroll;
+            color: black;
+        }
+
+        #table-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        #table-container table {
+            border-collapse: collapse;
+            height: auto;
+            color: rgba(255, 255, 255, .3);
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(245, 255, 246, 0.1) 100%);
+        }
+
+        #table-container tbody {
+            height: 100%;
+            width: 100%;
+        }
+
+        #table-container thead {
+            background-image: linear-gradient(to right, #DECBA4, #3E5151);
+
+        }
+
+        #table-container tr td,
+        #table-container tr th {
+            padding: 20px;
+            text-align: left;
+        }
+
+        #table-container tr th {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        #table-container tr td {
+            color: black;
+            font-weight: lighter;
+        }
     </style>
 
 </head>
@@ -72,32 +137,1543 @@
         </div>
     </div>
 
-    <button id="sortName">Sort by Name</button>
-    <button id="sortMargin">Sort by Margin</button>
 
-    <div class="governer">
+
+    <div class="total_div">
+
+
+        <div class="bar-chart">
+            <svg width="900" height="900">
+                <g>
+                    <circle cx="20" cy="25" r="10" fill="#006400"></circle><text x="35" y="30">All India Anna Dravida
+                        Munnetra Kazhagam</text>
+                    <circle cx="20" cy="50" r="10" fill="#ff8c00"></circle><text x="35" y="55">Bharatiya Janata
+                        Party</text>
+                    <circle cx="20" cy="75" r="10" fill="#ff0000"></circle><text x="35" y="80">Communist Party of
+                        India</text>
+                    <circle cx="20" cy="100" r="10" fill="#ff0000"></circle><text x="35" y="105">Communist Party of
+                        India
+                        (Marxist)</text>
+                    <circle cx="20" cy="125" r="10" fill="#800000"></circle><text x="35" y="130">Dravida Munnetra
+                        Kazhagam</text>
+                    <circle cx="20" cy="150" r="10" fill="#228b22"></circle><text x="35" y="155">Indian National
+                        Congress</text>
+                    <circle cx="20" cy="175" r="10" fill="#ffff00"></circle><text x="35" y="180">Pattali Makkal
+                        Katchi</text>
+                    <circle cx="20" cy="200" r="10" fill="#1e90ff"></circle><text x="35" y="205">Viduthalai Chiruthaigal
+                        Katchi</text>
+                </g>
+                <g class="winners-map">
+                    <path class="land" district="1" constituency="1"
+                        d="M617.1679558963624,89.34895586308107L627.2223943659446,72.00181332965485L647.3312713051073,72.00181332965485L657.3857097746913,89.34895586308107L647.3312713051073,106.94750625931079L627.2223943659446,106.94750625931079Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Gummidipoondi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="2"
+                        d="M677.7523928284609,89.34895586308107L687.8068312980449,72.00181332965485L707.9157082372076,72.00181332965485L717.9701467067898,89.34895586308107L707.9157082372076,106.94750625931079L687.8068312980449,106.94750625931079Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Ponneri Indian National Congress</title>
+                    </path>
+                    <path class="land" district="1" constituency="3"
+                        d="M597.0590789571961,89.34895586308107L587.0046404876139,106.94750625931079L566.8957635484494,106.94750625931079L556.8413250788672,89.34895586308107L566.8957635484494,72.00181332965485L587.0046404876139,72.00181332965485Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruttani
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="4"
+                        d="M566.8957635484494,106.94750625931079L587.0046404876139,106.94750625931079L597.0590789571961,124.29464879273701L587.0046404876139,141.8931991889665L566.8957635484494,141.8931991889665L556.8413250788672,124.29464879273701Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruvallur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="5"
+                        d="M587.0046404876139,106.94750625931079L597.0590789571961,89.34895586308107L617.1679558963624,89.34895586308107L627.2223943659446,106.94750625931079L617.1679558963624,124.29464879273701L597.0590789571961,124.29464879273701Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Poonamallee
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="6"
+                        d="M587.0046404876139,141.8931991889665L597.0590789571961,124.29464879273701L617.1679558963624,124.29464879273701L627.2223943659446,141.8931991889665L617.1679558963624,159.24034172239294L597.0590789571961,159.24034172239294Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Avadi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="7"
+                        d="M657.3857097746913,124.29464879273701L677.7523928284609,124.29464879273701L687.8068312980449,141.8931991889665L677.7523928284609,159.24034172239294L657.3857097746913,159.24034172239294L647.3312713051073,141.8931991889665Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Maduravoyal
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="8"
+                        d="M617.1679558963624,124.29464879273701L627.2223943659446,106.94750625931079L647.3312713051073,106.94750625931079L657.3857097746913,124.29464879273701L647.3312713051073,141.8931991889665L627.2223943659446,141.8931991889665Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Ambattur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="9"
+                        d="M677.7523928284609,89.34895586308107L687.8068312980449,106.94750625931079L677.7523928284609,124.29464879273701L657.3857097746913,124.29464879273701L647.3312713051073,106.94750625931079L657.3857097746913,89.34895586308107Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Madavaram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="1" constituency="10"
+                        d="M677.7523928284609,124.29464879273701L687.8068312980449,106.94750625931079L707.9157082372076,106.94750625931079L717.9701467067898,124.29464879273701L707.9157082372076,141.8931991889665L687.8068312980449,141.8931991889665Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruvottiyur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="11"
+                        d="M677.7523928284609,159.24034172239294L687.8068312980449,141.8931991889665L707.9157082372076,141.8931991889665L717.9701467067898,159.24034172239294L707.9157082372076,176.83889211862265L687.8068312980449,176.83889211862265Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Dr.Radhakrishnan Nagar
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="12"
+                        d="M657.3857097746913,159.24034172239294L677.7523928284609,159.24034172239294L687.8068312980449,176.83889211862265L677.7523928284609,194.1860346520491L657.3857097746913,194.1860346520491L647.3312713051073,176.83889211862265Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Perambur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="13"
+                        d="M617.1679558963624,159.24034172239294L627.2223943659446,141.8931991889665L647.3312713051073,141.8931991889665L657.3857097746913,159.24034172239294L647.3312713051073,176.83889211862265L627.2223943659446,176.83889211862265Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kolathur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="14"
+                        d="M587.0046404876139,176.83889211862265L597.0590789571961,159.24034172239294L617.1679558963624,159.24034172239294L627.2223943659446,176.83889211862265L617.1679558963624,194.1860346520491L597.0590789571961,194.1860346520491Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Villivakkam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="15"
+                        d="M657.3857097746913,194.1860346520491L677.7523928284609,194.1860346520491L687.8068312980449,211.5331771854751L677.7523928284609,229.1317275817048L657.3857097746913,229.1317275817048L647.3312713051073,211.5331771854751Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiru-Vi-Ka-Nagar
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="16"
+                        d="M617.1679558963624,229.1317275817048L627.2223943659446,211.5331771854751L647.3312713051073,211.5331771854751L657.3857097746913,229.1317275817048L647.3312713051073,246.47887011513126L627.2223943659446,246.47887011513126Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Egmore
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="17"
+                        d="M677.7523928284609,194.1860346520491L687.8068312980449,176.83889211862265L707.9157082372076,176.83889211862265L717.9701467067898,194.1860346520491L707.9157082372076,211.5331771854751L687.8068312980449,211.5331771854751Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Royapuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="18"
+                        d="M677.7523928284609,229.1317275817048L687.8068312980449,211.5331771854751L707.9157082372076,211.5331771854751L717.9701467067898,229.1317275817048L707.9157082372076,246.47887011513126L687.8068312980449,246.47887011513126Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Harbour
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="19"
+                        d="M657.3857097746913,229.1317275817048L677.7523928284609,229.1317275817048L687.8068312980449,246.47887011513126L677.7523928284609,264.07742051136097L657.3857097746913,264.07742051136097L647.3312713051073,246.47887011513126Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Chepauk-Thiruvallikeni
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="20"
+                        d="M587.0046404876139,246.47887011513126L597.0590789571961,229.1317275817048L617.1679558963624,229.1317275817048L627.2223943659446,246.47887011513126L617.1679558963624,264.07742051136097L597.0590789571961,264.07742051136097Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thousand Lights
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="21"
+                        d="M617.1679558963624,194.1860346520491L627.2223943659446,176.83889211862265L647.3312713051073,176.83889211862265L657.3857097746913,194.1860346520491L647.3312713051073,211.5331771854751L627.2223943659446,211.5331771854751Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Anna Nagar
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="22"
+                        d="M566.8957635484494,211.5331771854751L587.0046404876139,211.5331771854751L597.0590789571961,229.1317275817048L587.0046404876139,246.47887011513126L566.8957635484494,246.47887011513126L556.8413250788672,229.1317275817048Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Virugampakkam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="23"
+                        d="M566.8957635484494,246.47887011513126L587.0046404876139,246.47887011513126L597.0590789571961,264.07742051136097L587.0046404876139,281.4245630447874L566.8957635484494,281.4245630447874L556.8413250788672,264.07742051136097Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Saidapet
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="24"
+                        d="M587.0046404876139,211.5331771854751L597.0590789571961,194.1860346520491L617.1679558963624,194.1860346520491L627.2223943659446,211.5331771854751L617.1679558963624,229.1317275817048L597.0590789571961,229.1317275817048Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiyagarayanagar
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="25"
+                        d="M617.1679558963624,264.07742051136097L627.2223943659446,246.47887011513126L647.3312713051073,246.47887011513126L657.3857097746913,264.07742051136097L647.3312713051073,281.4245630447874L627.2223943659446,281.4245630447874Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Mylapore
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="2" constituency="26"
+                        d="M587.0046404876139,281.4245630447874L597.0590789571961,264.07742051136097L617.1679558963624,264.07742051136097L627.2223943659446,281.4245630447874L617.1679558963624,298.77170557821364L597.0590789571961,298.77170557821364Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Velachery
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="3" constituency="27"
+                        d="M617.1679558963624,298.77170557821364L627.2223943659446,281.4245630447874L647.3312713051073,281.4245630447874L657.3857097746913,298.77170557821364L647.3312713051073,316.37025597444335L627.2223943659446,316.37025597444335Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Shozhinganallur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="3" constituency="28"
+                        d="M566.8957635484494,281.4245630447874L587.0046404876139,281.4245630447874L597.0590789571961,298.77170557821364L587.0046404876139,316.37025597444335L566.8957635484494,316.37025597444335L556.8413250788672,298.77170557821364Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Alandur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="3" constituency="29"
+                        d="M526.4202035555136,316.37025597444335L536.4746420250995,298.77170557821364L556.8413250788672,298.77170557821364L566.8957635484494,316.37025597444335L556.8413250788672,333.7173985078696L536.4746420250995,333.7173985078696Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Sriperumbudur
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="3" constituency="30"
+                        d="M587.0046404876139,316.37025597444335L597.0590789571961,298.77170557821364L617.1679558963624,298.77170557821364L627.2223943659446,316.37025597444335L617.1679558963624,333.7173985078696L597.0590789571961,333.7173985078696Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Pallavaram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="3" constituency="31"
+                        d="M566.8957635484494,316.37025597444335L587.0046404876139,316.37025597444335L597.0590789571961,333.7173985078696L587.0046404876139,351.3159489040993L566.8957635484494,351.3159489040993L556.8413250788672,333.7173985078696Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tambaram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="3" constituency="32"
+                        d="M587.0046404876139,351.3159489040993L597.0590789571961,333.7173985078696L617.1679558963624,333.7173985078696L627.2223943659446,351.3159489040993L617.1679558963624,368.66309143752574L597.0590789571961,368.66309143752574Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Chengalpattu
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="3" constituency="33"
+                        d="M617.1679558963624,333.7173985078696L627.2223943659446,316.37025597444335L647.3312713051073,316.37025597444335L657.3857097746913,333.7173985078696L647.3312713051073,351.3159489040993L627.2223943659446,351.3159489040993Z"
+                        fill="#1e90ff" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruporur
+                            Viduthalai Chiruthaigal Katchi</title>
+                    </path>
+                    <path class="land" district="3" constituency="34"
+                        d="M617.1679558963624,368.66309143752574L627.2223943659446,351.3159489040993L647.3312713051073,351.3159489040993L657.3857097746913,368.66309143752574L647.3312713051073,386.261641833755L627.2223943659446,386.261641833755Z"
+                        fill="#1e90ff" style="opacity: 1;">
+                        <title class="geo-tooltip">Cheyyur
+                            Viduthalai Chiruthaigal Katchi</title>
+                    </path>
+                    <path class="land" district="3" constituency="35"
+                        d="M587.0046404876139,386.261641833755L597.0590789571961,368.66309143752574L617.1679558963624,368.66309143752574L627.2223943659446,386.261641833755L617.1679558963624,403.60878436718144L597.0590789571961,403.60878436718144Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Madurantakam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="3" constituency="36"
+                        d="M566.8957635484494,351.3159489040993L587.0046404876139,351.3159489040993L597.0590789571961,368.66309143752574L587.0046404876139,386.261641833755L566.8957635484494,386.261641833755L556.8413250788672,368.66309143752574Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Uthiramerur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="3" constituency="37"
+                        d="M526.4202035555136,351.3159489040993L536.4746420250995,333.7173985078696L556.8413250788672,333.7173985078696L566.8957635484494,351.3159489040993L556.8413250788672,368.66309143752574L536.4746420250995,368.66309143752574Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kancheepuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="38"
+                        d="M566.8957635484494,141.8931991889665L587.0046404876139,141.8931991889665L597.0590789571961,159.24034172239294L587.0046404876139,176.83889211862265L566.8957635484494,176.83889211862265L556.8413250788672,159.24034172239294Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Arakkonam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="39"
+                        d="M526.4202035555136,176.83889211862265L536.4746420250995,159.24034172239294L556.8413250788672,159.24034172239294L566.8957635484494,176.83889211862265L556.8413250788672,194.1860346520491L536.4746420250995,194.1860346520491Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Sholinghur
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="4" constituency="40"
+                        d="M526.4202035555136,141.8931991889665L536.4746420250995,124.29464879273701L556.8413250788672,124.29464879273701L566.8957635484494,141.8931991889665L556.8413250788672,159.24034172239294L536.4746420250995,159.24034172239294Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Katpadi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="41"
+                        d="M496.2568881467687,159.24034172239294L506.3113266163509,141.8931991889665L526.4202035555136,141.8931991889665L536.4746420250995,159.24034172239294L526.4202035555136,176.83889211862265L506.3113266163509,176.83889211862265Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Ranipet
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="42"
+                        d="M496.2568881467687,194.1860346520491L506.3113266163509,176.83889211862265L526.4202035555136,176.83889211862265L536.4746420250995,194.1860346520491L526.4202035555136,211.5331771854751L506.3113266163509,211.5331771854751Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Arcot
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="43"
+                        d="M476.1480112076024,159.24034172239294L496.2568881467687,159.24034172239294L506.3113266163509,176.83889211862265L496.2568881467687,194.1860346520491L476.1480112076024,194.1860346520491L466.093572738022,176.83889211862265Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Vellore
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="44"
+                        d="M476.1480112076024,194.1860346520491L496.2568881467687,194.1860346520491L506.3113266163509,211.5331771854751L496.2568881467687,229.1317275817048L476.1480112076024,229.1317275817048L466.093572738022,211.5331771854751Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Anaikattu
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="45"
+                        d="M496.2568881467687,124.29464879273701L506.3113266163509,106.94750625931079L526.4202035555136,106.94750625931079L536.4746420250995,124.29464879273701L526.4202035555136,141.8931991889665L506.3113266163509,141.8931991889665Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kilvaithinankuppam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="46"
+                        d="M496.2568881467687,124.29464879273701L506.3113266163509,141.8931991889665L496.2568881467687,159.24034172239294L476.1480112076024,159.24034172239294L466.093572738022,141.8931991889665L476.1480112076024,124.29464879273701Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Gudiyattam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="47"
+                        d="M435.9302573292716,194.1860346520491L445.9846957988557,176.83889211862265L466.093572738022,176.83889211862265L476.1480112076024,194.1860346520491L466.093572738022,211.5331771854751L445.9846957988557,211.5331771854751Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Vaniyambadi
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="48"
+                        d="M435.9302573292716,159.24034172239294L445.9846957988557,141.8931991889665L466.093572738022,141.8931991889665L476.1480112076024,159.24034172239294L466.093572738022,176.83889211862265L445.9846957988557,176.83889211862265Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Ambur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="49"
+                        d="M405.5091358059217,176.83889211862265L415.5635742755039,159.24034172239294L435.9302573292716,159.24034172239294L445.9846957988557,176.83889211862265L435.9302573292716,194.1860346520491L415.5635742755039,194.1860346520491Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Jolarpet
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="4" constituency="50"
+                        d="M435.9302573292716,229.1317275817048L445.9846957988557,211.5331771854751L466.093572738022,211.5331771854751L476.1480112076024,229.1317275817048L466.093572738022,246.47887011513126L445.9846957988557,246.47887011513126Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tirupattur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="5" constituency="51"
+                        d="M385.4002588667572,176.83889211862265L405.5091358059217,176.83889211862265L415.5635742755039,194.1860346520491L405.5091358059217,211.5331771854751L385.4002588667572,211.5331771854751L375.3458203971768,194.1860346520491Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Uthangarai
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="5" constituency="52"
+                        d="M415.5635742755039,159.24034172239294L405.5091358059217,176.83889211862265L385.4002588667572,176.83889211862265L375.3458203971768,159.24034172239294L385.4002588667572,141.8931991889665L405.5091358059217,141.8931991889665Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Bargur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="5" constituency="53"
+                        d="M345.18250498842644,176.83889211862265L355.2369434580087,159.24034172239294L375.3458203971768,159.24034172239294L385.4002588667572,176.83889211862265L375.3458203971768,194.1860346520491L355.2369434580087,194.1860346520491Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Krishnagiri
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="5" constituency="54"
+                        d="M315.01918957967973,194.1860346520491L325.07362804926197,176.83889211862265L345.18250498842644,176.83889211862265L355.2369434580087,194.1860346520491L345.18250498842644,211.5331771854751L325.07362804926197,211.5331771854751Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Veppanahalli
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="5" constituency="55"
+                        d="M315.01918957967973,194.1860346520491L325.07362804926197,211.5331771854751L315.01918957967973,229.1317275817048L294.6525065259084,229.1317275817048L284.598068056328,211.5331771854751L294.6525065259084,194.1860346520491Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Hosur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="5" constituency="56"
+                        d="M294.6525065259084,229.1317275817048L315.01918957967973,229.1317275817048L325.07362804926197,246.47887011513126L315.01918957967973,264.07742051136097L294.6525065259084,264.07742051136097L284.598068056328,246.47887011513126Z"
+                        fill="#ff0000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thalli
+                            Communist Party of India</title>
+                    </path>
+                    <path class="land" district="6" constituency="57"
+                        d="M345.18250498842644,211.5331771854751L355.2369434580087,194.1860346520491L375.3458203971768,194.1860346520491L385.4002588667572,211.5331771854751L375.3458203971768,229.1317275817048L355.2369434580087,229.1317275817048Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Palacode
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="6" constituency="58"
+                        d="M315.01918957967973,229.1317275817048L325.07362804926197,211.5331771854751L345.18250498842644,211.5331771854751L355.2369434580087,229.1317275817048L345.18250498842644,246.47887011513126L325.07362804926197,246.47887011513126Z"
+                        fill="#ffff00" style="opacity: 1;">
+                        <title class="geo-tooltip">Pennagaram
+                            Pattali Makkal Katchi</title>
+                    </path>
+                    <path class="land" district="6" constituency="59"
+                        d="M345.18250498842644,246.47887011513126L355.2369434580087,229.1317275817048L375.3458203971768,229.1317275817048L385.4002588667572,246.47887011513126L375.3458203971768,264.07742051136097L355.2369434580087,264.07742051136097Z"
+                        fill="#ffff00" style="opacity: 1;">
+                        <title class="geo-tooltip">Dharmapuri
+                            Pattali Makkal Katchi</title>
+                    </path>
+                    <path class="land" district="6" constituency="60"
+                        d="M385.4002588667572,211.5331771854751L405.5091358059217,211.5331771854751L415.5635742755039,229.1317275817048L405.5091358059217,246.47887011513126L385.4002588667572,246.47887011513126L375.3458203971768,229.1317275817048Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Pappireddipatti
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="6" constituency="61"
+                        d="M405.5091358059217,211.5331771854751L415.5635742755039,194.1860346520491L435.9302573292716,194.1860346520491L445.9846957988557,211.5331771854751L435.9302573292716,229.1317275817048L415.5635742755039,229.1317275817048Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Harur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="62"
+                        d="M435.9302573292716,264.07742051136097L445.9846957988557,246.47887011513126L466.093572738022,246.47887011513126L476.1480112076024,264.07742051136097L466.093572738022,281.4245630447874L445.9846957988557,281.4245630447874Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Chengam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="63"
+                        d="M476.1480112076024,264.07742051136097L496.2568881467687,264.07742051136097L506.3113266163509,281.4245630447874L496.2568881467687,298.77170557821364L476.1480112076024,298.77170557821364L466.093572738022,281.4245630447874Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruvannamalai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="64"
+                        d="M496.2568881467687,264.07742051136097L506.3113266163509,246.47887011513126L526.4202035555136,246.47887011513126L536.4746420250995,264.07742051136097L526.4202035555136,281.4245630447874L506.3113266163509,281.4245630447874Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kilpennathur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="65"
+                        d="M476.1480112076024,229.1317275817048L496.2568881467687,229.1317275817048L506.3113266163509,246.47887011513126L496.2568881467687,264.07742051136097L476.1480112076024,264.07742051136097L466.093572738022,246.47887011513126Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kalasapakkam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="66"
+                        d="M526.4202035555136,246.47887011513126L536.4746420250995,229.1317275817048L556.8413250788672,229.1317275817048L566.8957635484494,246.47887011513126L556.8413250788672,264.07742051136097L536.4746420250995,264.07742051136097Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Polur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="67"
+                        d="M496.2568881467687,229.1317275817048L506.3113266163509,211.5331771854751L526.4202035555136,211.5331771854751L536.4746420250995,229.1317275817048L526.4202035555136,246.47887011513126L506.3113266163509,246.47887011513126Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Arani
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="68"
+                        d="M566.8957635484494,176.83889211862265L587.0046404876139,176.83889211862265L597.0590789571961,194.1860346520491L587.0046404876139,211.5331771854751L566.8957635484494,211.5331771854751L556.8413250788672,194.1860346520491Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Cheyyar
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="7" constituency="69"
+                        d="M526.4202035555136,211.5331771854751L536.4746420250995,194.1860346520491L556.8413250788672,194.1860346520491L566.8957635484494,211.5331771854751L556.8413250788672,229.1317275817048L536.4746420250995,229.1317275817048Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Vandavasi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="70"
+                        d="M476.1480112076024,298.77170557821364L496.2568881467687,298.77170557821364L506.3113266163509,316.37025597444335L496.2568881467687,333.7173985078696L476.1480112076024,333.7173985078696L466.093572738022,316.37025597444335Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Gingee
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="71"
+                        d="M496.2568881467687,298.77170557821364L506.3113266163509,281.4245630447874L526.4202035555136,281.4245630447874L536.4746420250995,298.77170557821364L526.4202035555136,316.37025597444335L506.3113266163509,316.37025597444335Z"
+                        fill="#ffff00" style="opacity: 1;">
+                        <title class="geo-tooltip">Mailam
+                            Pattali Makkal Katchi</title>
+                    </path>
+                    <path class="land" district="8" constituency="72"
+                        d="M526.4202035555136,281.4245630447874L536.4746420250995,264.07742051136097L556.8413250788672,264.07742051136097L566.8957635484494,281.4245630447874L556.8413250788672,298.77170557821364L536.4746420250995,298.77170557821364Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Tindivanam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="73"
+                        d="M496.2568881467687,333.7173985078696L506.3113266163509,316.37025597444335L526.4202035555136,316.37025597444335L536.4746420250995,333.7173985078696L526.4202035555136,351.3159489040993L506.3113266163509,351.3159489040993Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Vanur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="74"
+                        d="M496.2568881467687,368.66309143752574L506.3113266163509,351.3159489040993L526.4202035555136,351.3159489040993L536.4746420250995,368.66309143752574L526.4202035555136,386.261641833755L506.3113266163509,386.261641833755Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Villupuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="75"
+                        d="M476.1480112076024,333.7173985078696L496.2568881467687,333.7173985078696L506.3113266163509,351.3159489040993L496.2568881467687,368.66309143752574L476.1480112076024,368.66309143752574L466.093572738022,351.3159489040993Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Vikravandi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="76"
+                        d="M435.9302573292716,298.77170557821364L445.9846957988557,281.4245630447874L466.093572738022,281.4245630447874L476.1480112076024,298.77170557821364L466.093572738022,316.37025597444335L445.9846957988557,316.37025597444335Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tirukkoyilur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="77"
+                        d="M496.2568881467687,403.60878436718144L506.3113266163509,386.261641833755L526.4202035555136,386.261641833755L536.4746420250995,403.60878436718144L526.4202035555136,420.9559269006081L506.3113266163509,420.9559269006081Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Ulundurpettai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="78"
+                        d="M435.9302573292716,333.7173985078696L445.9846957988557,316.37025597444335L466.093572738022,316.37025597444335L476.1480112076024,333.7173985078696L466.093572738022,351.3159489040993L445.9846957988557,351.3159489040993Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Rishivandiyam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="79"
+                        d="M435.9302573292716,368.66309143752574L445.9846957988557,351.3159489040993L466.093572738022,351.3159489040993L476.1480112076024,368.66309143752574L466.093572738022,386.261641833755L445.9846957988557,386.261641833755Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Sankarapuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="8" constituency="80"
+                        d="M476.1480112076024,368.66309143752574L496.2568881467687,368.66309143752574L506.3113266163509,386.261641833755L496.2568881467687,403.60878436718144L476.1480112076024,403.60878436718144L466.093572738022,386.261641833755Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kallakurichi
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="81"
+                        d="M405.5091358059217,316.37025597444335L415.5635742755039,298.77170557821364L435.9302573292716,298.77170557821364L445.9846957988557,316.37025597444335L435.9302573292716,333.7173985078696L415.5635742755039,333.7173985078696Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Gangavalli
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="82"
+                        d="M405.5091358059217,281.4245630447874L415.5635742755039,264.07742051136097L435.9302573292716,264.07742051136097L445.9846957988557,281.4245630447874L435.9302573292716,298.77170557821364L415.5635742755039,298.77170557821364Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Attur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="83"
+                        d="M405.5091358059217,246.47887011513126L415.5635742755039,229.1317275817048L435.9302573292716,229.1317275817048L445.9846957988557,246.47887011513126L435.9302573292716,264.07742051136097L415.5635742755039,264.07742051136097Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Yercaud
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="84"
+                        d="M385.4002588667572,246.47887011513126L405.5091358059217,246.47887011513126L415.5635742755039,264.07742051136097L405.5091358059217,281.4245630447874L385.4002588667572,281.4245630447874L375.3458203971768,264.07742051136097Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Omalur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="85"
+                        d="M315.01918957967973,264.07742051136097L325.07362804926197,246.47887011513126L345.18250498842644,246.47887011513126L355.2369434580087,264.07742051136097L345.18250498842644,281.4245630447874L325.07362804926197,281.4245630447874Z"
+                        fill="#ffff00" style="opacity: 1;">
+                        <title class="geo-tooltip">Mettur
+                            Pattali Makkal Katchi</title>
+                    </path>
+                    <path class="land" district="9" constituency="86"
+                        d="M315.01918957967973,298.77170557821364L325.07362804926197,281.4245630447874L345.18250498842644,281.4245630447874L355.2369434580087,298.77170557821364L345.18250498842644,316.37025597444335L325.07362804926197,316.37025597444335Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Edappadi
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="87"
+                        d="M345.18250498842644,316.37025597444335L355.2369434580087,298.77170557821364L375.3458203971768,298.77170557821364L385.4002588667572,316.37025597444335L375.3458203971768,333.7173985078696L355.2369434580087,333.7173985078696Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Sankari
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="88"
+                        d="M345.18250498842644,281.4245630447874L355.2369434580087,264.07742051136097L375.3458203971768,264.07742051136097L385.4002588667572,281.4245630447874L375.3458203971768,298.77170557821364L355.2369434580087,298.77170557821364Z"
+                        fill="#ffff00" style="opacity: 1;">
+                        <title class="geo-tooltip">Salem (West)
+                            Pattali Makkal Katchi</title>
+                    </path>
+                    <path class="land" district="9" constituency="89"
+                        d="M385.4002588667572,281.4245630447874L405.5091358059217,281.4245630447874L415.5635742755039,298.77170557821364L405.5091358059217,316.37025597444335L385.4002588667572,316.37025597444335L375.3458203971768,298.77170557821364Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Salem (North)
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="90"
+                        d="M385.4002588667572,316.37025597444335L405.5091358059217,316.37025597444335L415.5635742755039,333.7173985078696L405.5091358059217,351.3159489040993L385.4002588667572,351.3159489040993L375.3458203971768,333.7173985078696Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Salem (South)
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="9" constituency="91"
+                        d="M345.18250498842644,351.3159489040993L355.2369434580087,333.7173985078696L375.3458203971768,333.7173985078696L385.4002588667572,351.3159489040993L375.3458203971768,368.66309143752574L355.2369434580087,368.66309143752574Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Veerapandi
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="10" constituency="92"
+                        d="M405.5091358059217,351.3159489040993L415.5635742755039,333.7173985078696L435.9302573292716,333.7173985078696L445.9846957988557,351.3159489040993L435.9302573292716,368.66309143752574L415.5635742755039,368.66309143752574Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Rasipuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="10" constituency="93"
+                        d="M405.5091358059217,386.261641833755L415.5635742755039,368.66309143752574L435.9302573292716,368.66309143752574L445.9846957988557,386.261641833755L435.9302573292716,403.60878436718144L415.5635742755039,403.60878436718144Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Senthamangalam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="10" constituency="94"
+                        d="M385.4002588667572,386.261641833755L405.5091358059217,386.261641833755L415.5635742755039,403.60878436718144L405.5091358059217,420.9559269006081L385.4002588667572,420.9559269006081L375.3458203971768,403.60878436718144Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Namakkal
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="10" constituency="95"
+                        d="M345.18250498842644,420.9559269006081L355.2369434580087,403.60878436718144L375.3458203971768,403.60878436718144L385.4002588667572,420.9559269006081L375.3458203971768,438.5544772968376L355.2369434580087,438.5544772968376Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Paramathi-Velur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="10" constituency="96"
+                        d="M385.4002588667572,351.3159489040993L405.5091358059217,351.3159489040993L415.5635742755039,368.66309143752574L405.5091358059217,386.261641833755L385.4002588667572,386.261641833755L375.3458203971768,368.66309143752574Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruchengodu
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="10" constituency="97"
+                        d="M345.18250498842644,386.261641833755L355.2369434580087,368.66309143752574L375.3458203971768,368.66309143752574L385.4002588667572,386.261641833755L375.3458203971768,403.60878436718144L355.2369434580087,403.60878436718144Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kumarapalayam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="98"
+                        d="M294.6525065259084,333.7173985078696L315.01918957967973,333.7173985078696L325.07362804926197,351.3159489040993L315.01918957967973,368.66309143752574L294.6525065259084,368.66309143752574L284.598068056328,351.3159489040993Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Erode (East)
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="11" constituency="99"
+                        d="M294.6525065259084,368.66309143752574L315.01918957967973,368.66309143752574L325.07362804926197,386.261641833755L315.01918957967973,403.60878436718144L294.6525065259084,403.60878436718144L284.598068056328,386.261641833755Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Erode (West)
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="100"
+                        d="M315.01918957967973,333.7173985078696L325.07362804926197,316.37025597444335L345.18250498842644,316.37025597444335L355.2369434580087,333.7173985078696L345.18250498842644,351.3159489040993L325.07362804926197,351.3159489040993Z"
+                        fill="#ff8c00" style="opacity: 1;">
+                        <title class="geo-tooltip">Modakkurichi
+                            Bharatiya Janata Party</title>
+                    </path>
+                    <path class="land" district="11" constituency="101"
+                        d="M315.01918957967973,403.60878436718144L325.07362804926197,386.261641833755L345.18250498842644,386.261641833755L355.2369434580087,403.60878436718144L345.18250498842644,420.9559269006081L325.07362804926197,420.9559269006081Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Dharapuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="102"
+                        d="M315.01918957967973,368.66309143752574L325.07362804926197,351.3159489040993L345.18250498842644,351.3159489040993L355.2369434580087,368.66309143752574L345.18250498842644,386.261641833755L325.07362804926197,386.261641833755Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kangayam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="103"
+                        d="M254.43475264757944,368.66309143752574L264.4891911171635,351.3159489040993L284.598068056328,351.3159489040993L294.6525065259084,368.66309143752574L284.598068056328,386.261641833755L264.4891911171635,386.261641833755Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Perundurai
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="104"
+                        d="M315.01918957967973,298.77170557821364L325.07362804926197,316.37025597444335L315.01918957967973,333.7173985078696L294.6525065259084,333.7173985078696L284.598068056328,316.37025597444335L294.6525065259084,298.77170557821364Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Bhavani
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="105"
+                        d="M254.43475264757944,333.7173985078696L264.4891911171635,316.37025597444335L284.598068056328,316.37025597444335L294.6525065259084,333.7173985078696L284.598068056328,351.3159489040993L264.4891911171635,351.3159489040993Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Anthiyur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="106"
+                        d="M224.27143723883455,351.3159489040993L234.3258757084168,333.7173985078696L254.43475264757944,333.7173985078696L264.4891911171635,351.3159489040993L254.43475264757944,368.66309143752574L234.3258757084168,368.66309143752574Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Gobichettipalayam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="11" constituency="107"
+                        d="M234.3258757084168,333.7173985078696L224.27143723883455,351.3159489040993L204.16256029966826,351.3159489040993L194.10812183008602,333.7173985078696L204.16256029966826,316.37025597444335L224.27143723883455,316.37025597444335Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Bhavanisagar
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="12" constituency="108"
+                        d="M163.68700030673426,386.261641833755L173.7414387763165,368.66309143752574L194.10812183008602,368.66309143752574L204.16256029966826,386.261641833755L194.10812183008602,403.60878436718144L173.7414387763165,403.60878436718144Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Udhagamandalam
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="12" constituency="109"
+                        d="M163.68700030673426,351.3159489040993L173.7414387763165,368.66309143752574L163.68700030673426,386.261641833755L143.5781233675716,386.261641833755L133.52368489798573,368.66309143752574L143.5781233675716,351.3159489040993Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Gudalur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="12" constituency="110"
+                        d="M163.68700030673426,351.3159489040993L173.7414387763165,333.7173985078696L194.10812183008602,333.7173985078696L204.16256029966826,351.3159489040993L194.10812183008602,368.66309143752574L173.7414387763165,368.66309143752574Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Coonoor
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="111"
+                        d="M204.16256029966826,351.3159489040993L224.27143723883455,351.3159489040993L234.3258757084168,368.66309143752574L224.27143723883455,386.261641833755L204.16256029966826,386.261641833755L194.10812183008602,368.66309143752574Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Mettuppalayam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="32" constituency="112"
+                        d="M294.6525065259084,403.60878436718144L315.01918957967973,403.60878436718144L325.07362804926197,420.9559269006081L315.01918957967973,438.5544772968376L294.6525065259084,438.5544772968376L284.598068056328,420.9559269006081Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Avanashi
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="32" constituency="113"
+                        d="M315.01918957967973,438.5544772968376L325.07362804926197,420.9559269006081L345.18250498842644,420.9559269006081L355.2369434580087,438.5544772968376L345.18250498842644,455.9016198302638L325.07362804926197,455.9016198302638Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruppur (North)
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="32" constituency="114"
+                        d="M294.6525065259084,438.5544772968376L315.01918957967973,438.5544772968376L325.07362804926197,455.9016198302638L315.01918957967973,473.5001702264933L294.6525065259084,473.5001702264933L284.598068056328,455.9016198302638Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruppur (South)
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="32" constituency="115"
+                        d="M294.6525065259084,473.5001702264933L315.01918957967973,473.5001702264933L325.07362804926197,490.84731275991976L315.01918957967973,508.44586315614947L294.6525065259084,508.44586315614947L284.598068056328,490.84731275991976Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Palladam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="116"
+                        d="M254.43475264757944,438.5544772968376L264.4891911171635,420.9559269006081L284.598068056328,420.9559269006081L294.6525065259084,438.5544772968376L284.598068056328,455.9016198302638L264.4891911171635,455.9016198302638Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Sulur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="117"
+                        d="M204.16256029966826,386.261641833755L224.27143723883455,386.261641833755L234.3258757084168,403.60878436718144L224.27143723883455,420.9559269006081L204.16256029966826,420.9559269006081L194.10812183008602,403.60878436718144Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kavundampalayam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="118"
+                        d="M224.27143723883455,386.261641833755L234.3258757084168,368.66309143752574L254.43475264757944,368.66309143752574L264.4891911171635,386.261641833755L254.43475264757944,403.60878436718144L234.3258757084168,403.60878436718144Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Coimbatore (North)
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="119"
+                        d="M204.16256029966826,420.9559269006081L224.27143723883455,420.9559269006081L234.3258757084168,438.5544772968376L224.27143723883455,455.9016198302638L204.16256029966826,455.9016198302638L194.10812183008602,438.5544772968376Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Thondamuthur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="120"
+                        d="M224.27143723883455,420.9559269006081L234.3258757084168,403.60878436718144L254.43475264757944,403.60878436718144L264.4891911171635,420.9559269006081L254.43475264757944,438.5544772968376L234.3258757084168,438.5544772968376Z"
+                        fill="#ff8c00" style="opacity: 1;">
+                        <title class="geo-tooltip">Coimbatore (South)
+                            Bharatiya Janata Party</title>
+                    </path>
+                    <path class="land" district="13" constituency="121"
+                        d="M254.43475264757944,403.60878436718144L264.4891911171635,386.261641833755L284.598068056328,386.261641833755L294.6525065259084,403.60878436718144L284.598068056328,420.9559269006081L264.4891911171635,420.9559269006081Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Singanallur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="122"
+                        d="M224.27143723883455,455.9016198302638L234.3258757084168,438.5544772968376L254.43475264757944,438.5544772968376L264.4891911171635,455.9016198302638L254.43475264757944,473.5001702264933L234.3258757084168,473.5001702264933Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kinathukadavu
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="123"
+                        d="M254.43475264757944,473.5001702264933L264.4891911171635,455.9016198302638L284.598068056328,455.9016198302638L294.6525065259084,473.5001702264933L284.598068056328,490.84731275991976L264.4891911171635,490.84731275991976Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Pollachi
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="13" constituency="124"
+                        d="M234.3258757084168,473.5001702264933L254.43475264757944,473.5001702264933L264.4891911171635,490.84731275991976L254.43475264757944,508.44586315614947L234.3258757084168,508.44586315614947L224.27143723883455,490.84731275991976Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Valparai
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="32" constituency="125"
+                        d="M254.43475264757944,508.44586315614947L264.4891911171635,490.84731275991976L284.598068056328,490.84731275991976L294.6525065259084,508.44586315614947L284.598068056328,525.7930056895759L264.4891911171635,525.7930056895759Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Udumalaipettai
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="32" constituency="126"
+                        d="M234.3258757084168,508.44586315614947L254.43475264757944,508.44586315614947L264.4891911171635,525.7930056895759L254.43475264757944,543.1401482230024L234.3258757084168,543.1401482230024L224.27143723883455,525.7930056895759Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Madathukulam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="14" constituency="127"
+                        d="M294.6525065259084,543.1401482230024L315.01918957967973,543.1401482230024L325.07362804926197,560.7386986192319L315.01918957967973,578.0858411526581L294.6525065259084,578.0858411526581L284.598068056328,560.7386986192319Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Palani
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="14" constituency="128"
+                        d="M294.6525065259084,508.44586315614947L315.01918957967973,508.44586315614947L325.07362804926197,525.7930056895759L315.01918957967973,543.1401482230024L294.6525065259084,543.1401482230024L284.598068056328,525.7930056895759Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Oddanchatram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="14" constituency="129"
+                        d="M315.01918957967973,508.44586315614947L325.07362804926197,490.84731275991976L345.18250498842644,490.84731275991976L355.2369434580087,508.44586315614947L345.18250498842644,525.7930056895759L325.07362804926197,525.7930056895759Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Athoor
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="14" constituency="130"
+                        d="M315.01918957967973,543.1401482230024L325.07362804926197,525.7930056895759L345.18250498842644,525.7930056895759L355.2369434580087,543.1401482230024L345.18250498842644,560.7386986192319L325.07362804926197,560.7386986192319Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Nilakkottai
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="14" constituency="131"
+                        d="M345.18250498842644,525.7930056895759L355.2369434580087,508.44586315614947L375.3458203971768,508.44586315614947L385.4002588667572,525.7930056895759L375.3458203971768,543.1401482230024L355.2369434580087,543.1401482230024Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Natham
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="14" constituency="132"
+                        d="M345.18250498842644,490.84731275991976L355.2369434580087,473.5001702264933L375.3458203971768,473.5001702264933L385.4002588667572,490.84731275991976L375.3458203971768,508.44586315614947L355.2369434580087,508.44586315614947Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Dindigul
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="14" constituency="133"
+                        d="M315.01918957967973,473.5001702264933L325.07362804926197,455.9016198302638L345.18250498842644,455.9016198302638L355.2369434580087,473.5001702264933L345.18250498842644,490.84731275991976L325.07362804926197,490.84731275991976Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Vedasandur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="15" constituency="134"
+                        d="M345.18250498842644,455.9016198302638L355.2369434580087,438.5544772968376L375.3458203971768,438.5544772968376L385.4002588667572,455.9016198302638L375.3458203971768,473.5001702264933L355.2369434580087,473.5001702264933Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Aravakurichi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="15" constituency="135"
+                        d="M385.4002588667572,420.9559269006081L405.5091358059217,420.9559269006081L415.5635742755039,438.5544772968376L405.5091358059217,455.9016198302638L385.4002588667572,455.9016198302638L375.3458203971768,438.5544772968376Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Karur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="15" constituency="136"
+                        d="M385.4002588667572,455.9016198302638L405.5091358059217,455.9016198302638L415.5635742755039,473.5001702264933L405.5091358059217,490.84731275991976L385.4002588667572,490.84731275991976L375.3458203971768,473.5001702264933Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Krishnarayapuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="15" constituency="137"
+                        d="M405.5091358059217,455.9016198302638L415.5635742755039,438.5544772968376L435.9302573292716,438.5544772968376L445.9846957988557,455.9016198302638L435.9302573292716,473.5001702264933L415.5635742755039,473.5001702264933Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kulithalai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="138"
+                        d="M385.4002588667572,525.7930056895759L405.5091358059217,525.7930056895759L415.5635742755039,543.1401482230024L405.5091358059217,560.7386986192319L385.4002588667572,560.7386986192319L375.3458203971768,543.1401482230024Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Manapparai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="139"
+                        d="M385.4002588667572,490.84731275991976L405.5091358059217,490.84731275991976L415.5635742755039,508.44586315614947L405.5091358059217,525.7930056895759L385.4002588667572,525.7930056895759L375.3458203971768,508.44586315614947Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Srirangam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="140"
+                        d="M405.5091358059217,525.7930056895759L415.5635742755039,508.44586315614947L435.9302573292716,508.44586315614947L445.9846957988557,525.7930056895759L435.9302573292716,543.1401482230024L415.5635742755039,543.1401482230024Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruchirappalli (West)
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="141"
+                        d="M405.5091358059217,490.84731275991976L415.5635742755039,473.5001702264933L435.9302573292716,473.5001702264933L445.9846957988557,490.84731275991976L435.9302573292716,508.44586315614947L415.5635742755039,508.44586315614947Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruchirappalli (East)
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="142"
+                        d="M435.9302573292716,473.5001702264933L445.9846957988557,455.9016198302638L466.093572738022,455.9016198302638L476.1480112076024,473.5001702264933L466.093572738022,490.84731275991976L445.9846957988557,490.84731275991976Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruverumbur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="143"
+                        d="M476.1480112076024,438.5544772968376L496.2568881467687,438.5544772968376L506.3113266163509,455.9016198302638L496.2568881467687,473.5001702264933L476.1480112076024,473.5001702264933L466.093572738022,455.9016198302638Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Lalgudi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="144"
+                        d="M435.9302573292716,438.5544772968376L445.9846957988557,420.9559269006081L466.093572738022,420.9559269006081L476.1480112076024,438.5544772968376L466.093572738022,455.9016198302638L445.9846957988557,455.9016198302638Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Manachanallur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="145"
+                        d="M405.5091358059217,420.9559269006081L415.5635742755039,403.60878436718144L435.9302573292716,403.60878436718144L445.9846957988557,420.9559269006081L435.9302573292716,438.5544772968376L415.5635742755039,438.5544772968376Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Musiri
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="16" constituency="146"
+                        d="M435.9302573292716,403.60878436718144L445.9846957988557,386.261641833755L466.093572738022,386.261641833755L476.1480112076024,403.60878436718144L466.093572738022,420.9559269006081L445.9846957988557,420.9559269006081Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thuraiyur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="17" constituency="147"
+                        d="M496.2568881467687,473.5001702264933L506.3113266163509,455.9016198302638L526.4202035555136,455.9016198302638L536.4746420250995,473.5001702264933L526.4202035555136,490.84731275991976L506.3113266163509,490.84731275991976Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Perambalur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="17" constituency="148"
+                        d="M526.4202035555136,455.9016198302638L536.4746420250995,438.5544772968376L556.8413250788672,438.5544772968376L566.8957635484494,455.9016198302638L556.8413250788672,473.5001702264933L536.4746420250995,473.5001702264933Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kunnam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="31" constituency="149"
+                        d="M526.4202035555136,490.84731275991976L536.4746420250995,473.5001702264933L556.8413250788672,473.5001702264933L566.8957635484494,490.84731275991976L556.8413250788672,508.44586315614947L536.4746420250995,508.44586315614947Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Ariyalur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="31" constituency="150"
+                        d="M566.8957635484494,455.9016198302638L587.0046404876139,455.9016198302638L597.0590789571961,473.5001702264933L587.0046404876139,490.84731275991976L566.8957635484494,490.84731275991976L556.8413250788672,473.5001702264933Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Jayankondam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="151"
+                        d="M476.1480112076024,403.60878436718144L496.2568881467687,403.60878436718144L506.3113266163509,420.9559269006081L496.2568881467687,438.5544772968376L476.1480112076024,438.5544772968376L466.093572738022,420.9559269006081Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tittakudi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="152"
+                        d="M496.2568881467687,438.5544772968376L506.3113266163509,420.9559269006081L526.4202035555136,420.9559269006081L536.4746420250995,438.5544772968376L526.4202035555136,455.9016198302638L506.3113266163509,455.9016198302638Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Vriddhachalam
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="18" constituency="153"
+                        d="M566.8957635484494,386.261641833755L587.0046404876139,386.261641833755L597.0590789571961,403.60878436718144L587.0046404876139,420.9559269006081L566.8957635484494,420.9559269006081L556.8413250788672,403.60878436718144Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Neyveli
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="154"
+                        d="M526.4202035555136,386.261641833755L536.4746420250995,368.66309143752574L556.8413250788672,368.66309143752574L566.8957635484494,386.261641833755L556.8413250788672,403.60878436718144L536.4746420250995,403.60878436718144Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Panruti
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="155"
+                        d="M617.1679558963624,403.60878436718144L627.2223943659446,386.261641833755L647.3312713051073,386.261641833755L657.3857097746913,403.60878436718144L647.3312713051073,420.9559269006081L627.2223943659446,420.9559269006081Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Cuddalore
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="156"
+                        d="M587.0046404876139,420.9559269006081L597.0590789571961,403.60878436718144L617.1679558963624,403.60878436718144L627.2223943659446,420.9559269006081L617.1679558963624,438.5544772968376L597.0590789571961,438.5544772968376Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kurinjipadi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="157"
+                        d="M526.4202035555136,420.9559269006081L536.4746420250995,403.60878436718144L556.8413250788672,403.60878436718144L566.8957635484494,420.9559269006081L556.8413250788672,438.5544772968376L536.4746420250995,438.5544772968376Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Bhuvanagiri
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="158"
+                        d="M617.1679558963624,438.5544772968376L627.2223943659446,420.9559269006081L647.3312713051073,420.9559269006081L657.3857097746913,438.5544772968376L647.3312713051073,455.9016198302638L627.2223943659446,455.9016198302638Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Chidambaram
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="18" constituency="159"
+                        d="M566.8957635484494,420.9559269006081L587.0046404876139,420.9559269006081L597.0590789571961,438.5544772968376L587.0046404876139,455.9016198302638L566.8957635484494,455.9016198302638L556.8413250788672,438.5544772968376Z"
+                        fill="#1e90ff" style="opacity: 1;">
+                        <title class="geo-tooltip">Kattumannarkoil
+                            Viduthalai Chiruthaigal Katchi</title>
+                    </path>
+                    <path class="land" district="19" constituency="160"
+                        d="M587.0046404876139,455.9016198302638L597.0590789571961,438.5544772968376L617.1679558963624,438.5544772968376L627.2223943659446,455.9016198302638L617.1679558963624,473.5001702264933L597.0590789571961,473.5001702264933Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Sirkazhi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="19" constituency="161"
+                        d="M587.0046404876139,490.84731275991976L597.0590789571961,473.5001702264933L617.1679558963624,473.5001702264933L627.2223943659446,490.84731275991976L617.1679558963624,508.44586315614947L597.0590789571961,508.44586315614947Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Mayiladuthurai
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="19" constituency="162"
+                        d="M617.1679558963624,473.5001702264933L627.2223943659446,455.9016198302638L647.3312713051073,455.9016198302638L657.3857097746913,473.5001702264933L647.3312713051073,490.84731275991976L627.2223943659446,490.84731275991976Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Poompuhar
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="19" constituency="163"
+                        d="M617.1679558963624,508.44586315614947L627.2223943659446,490.84731275991976L647.3312713051073,490.84731275991976L657.3857097746913,508.44586315614947L647.3312713051073,525.7930056895759L627.2223943659446,525.7930056895759Z"
+                        fill="#1e90ff" style="opacity: 1;">
+                        <title class="geo-tooltip">Nagapattinam
+                            Viduthalai Chiruthaigal Katchi</title>
+                    </path>
+                    <path class="land" district="19" constituency="164"
+                        d="M587.0046404876139,525.7930056895759L597.0590789571961,508.44586315614947L617.1679558963624,508.44586315614947L627.2223943659446,525.7930056895759L617.1679558963624,543.1401482230024L597.0590789571961,543.1401482230024Z"
+                        fill="#ff0000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kilvelur
+                            Communist Party of India (Marxist)</title>
+                    </path>
+                    <path class="land" district="19" constituency="165"
+                        d="M617.1679558963624,543.1401482230024L627.2223943659446,525.7930056895759L647.3312713051073,525.7930056895759L657.3857097746913,543.1401482230024L647.3312713051073,560.7386986192319L627.2223943659446,560.7386986192319Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Vedaranyam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="20" constituency="166"
+                        d="M566.8957635484494,525.7930056895759L587.0046404876139,525.7930056895759L597.0590789571961,543.1401482230024L587.0046404876139,560.7386986192319L566.8957635484494,560.7386986192319L556.8413250788672,543.1401482230024Z"
+                        fill="#ff0000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruthuraipoondi
+                            Communist Party of India</title>
+                    </path>
+                    <path class="land" district="20" constituency="167"
+                        d="M526.4202035555136,525.7930056895759L536.4746420250995,508.44586315614947L556.8413250788672,508.44586315614947L566.8957635484494,525.7930056895759L556.8413250788672,543.1401482230024L536.4746420250995,543.1401482230024Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Mannargudi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="20" constituency="168"
+                        d="M496.2568881467687,508.44586315614947L506.3113266163509,490.84731275991976L526.4202035555136,490.84731275991976L536.4746420250995,508.44586315614947L526.4202035555136,525.7930056895759L506.3113266163509,525.7930056895759Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruvarur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="20" constituency="169"
+                        d="M566.8957635484494,490.84731275991976L587.0046404876139,490.84731275991976L597.0590789571961,508.44586315614947L587.0046404876139,525.7930056895759L566.8957635484494,525.7930056895759L556.8413250788672,508.44586315614947Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Nannilam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="170"
+                        d="M476.1480112076024,473.5001702264933L496.2568881467687,473.5001702264933L506.3113266163509,490.84731275991976L496.2568881467687,508.44586315614947L476.1480112076024,508.44586315614947L466.093572738022,490.84731275991976Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruvidaimarudur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="171"
+                        d="M435.9302573292716,508.44586315614947L445.9846957988557,490.84731275991976L466.093572738022,490.84731275991976L476.1480112076024,508.44586315614947L466.093572738022,525.7930056895759L445.9846957988557,525.7930056895759Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Kumbakonam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="172"
+                        d="M435.9302573292716,543.1401482230024L445.9846957988557,525.7930056895759L466.093572738022,525.7930056895759L476.1480112076024,543.1401482230024L466.093572738022,560.7386986192319L445.9846957988557,560.7386986192319Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Papanasam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="173"
+                        d="M476.1480112076024,543.1401482230024L496.2568881467687,543.1401482230024L506.3113266163509,560.7386986192319L496.2568881467687,578.0858411526581L476.1480112076024,578.0858411526581L466.093572738022,560.7386986192319Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruvaiyaru
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="174"
+                        d="M496.2568881467687,578.0858411526581L506.3113266163509,560.7386986192319L526.4202035555136,560.7386986192319L536.4746420250995,578.0858411526581L526.4202035555136,595.6843915488878L506.3113266163509,595.6843915488878Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thanjavur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="175"
+                        d="M476.1480112076024,508.44586315614947L496.2568881467687,508.44586315614947L506.3113266163509,525.7930056895759L496.2568881467687,543.1401482230024L476.1480112076024,543.1401482230024L466.093572738022,525.7930056895759Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Orathanadu
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="176"
+                        d="M496.2568881467687,543.1401482230024L506.3113266163509,525.7930056895759L526.4202035555136,525.7930056895759L536.4746420250995,543.1401482230024L526.4202035555136,560.7386986192319L506.3113266163509,560.7386986192319Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Pattukkottai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="21" constituency="177"
+                        d="M526.4202035555136,560.7386986192319L536.4746420250995,543.1401482230024L556.8413250788672,543.1401482230024L566.8957635484494,560.7386986192319L556.8413250788672,578.0858411526581L536.4746420250995,578.0858411526581Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Peravurani
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="22" constituency="178"
+                        d="M476.1480112076024,578.0858411526581L496.2568881467687,578.0858411526581L506.3113266163509,595.6843915488878L496.2568881467687,613.0315340823142L476.1480112076024,613.0315340823142L466.093572738022,595.6843915488878Z"
+                        fill="#ff0000" style="opacity: 1;">
+                        <title class="geo-tooltip">Gandarvakkottai
+                            Communist Party of India (Marxist)</title>
+                    </path>
+                    <path class="land" district="22" constituency="179"
+                        d="M435.9302573292716,578.0858411526581L445.9846957988557,560.7386986192319L466.093572738022,560.7386986192319L476.1480112076024,578.0858411526581L466.093572738022,595.6843915488878L445.9846957988557,595.6843915488878Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Viralimalai
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="22" constituency="180"
+                        d="M476.1480112076024,613.0315340823142L496.2568881467687,613.0315340823142L506.3113266163509,630.630084478544L496.2568881467687,647.9772270119704L476.1480112076024,647.9772270119704L466.093572738022,630.630084478544Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Pudukkottai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="22" constituency="181"
+                        d="M435.9302573292716,613.0315340823142L445.9846957988557,595.6843915488878L466.093572738022,595.6843915488878L476.1480112076024,613.0315340823142L466.093572738022,630.630084478544L445.9846957988557,630.630084478544Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thirumayam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="22" constituency="182"
+                        d="M496.2568881467687,613.0315340823142L506.3113266163509,595.6843915488878L526.4202035555136,595.6843915488878L536.4746420250995,613.0315340823142L526.4202035555136,630.630084478544L506.3113266163509,630.630084478544Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Alangudi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="22" constituency="183"
+                        d="M526.4202035555136,595.6843915488878L536.4746420250995,578.0858411526581L556.8413250788672,578.0858411526581L566.8957635484494,595.6843915488878L556.8413250788672,613.0315340823142L536.4746420250995,613.0315340823142Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Aranthangi
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="23" constituency="184"
+                        d="M405.5091358059217,560.7386986192319L415.5635742755039,543.1401482230024L435.9302573292716,543.1401482230024L445.9846957988557,560.7386986192319L435.9302573292716,578.0858411526581L415.5635742755039,578.0858411526581Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Karaikudi
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="23" constituency="185"
+                        d="M385.4002588667572,560.7386986192319L405.5091358059217,560.7386986192319L415.5635742755039,578.0858411526581L405.5091358059217,595.6843915488878L385.4002588667572,595.6843915488878L375.3458203971768,578.0858411526581Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruppattur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="23" constituency="186"
+                        d="M405.5091358059217,595.6843915488878L415.5635742755039,578.0858411526581L435.9302573292716,578.0858411526581L445.9846957988557,595.6843915488878L435.9302573292716,613.0315340823142L415.5635742755039,613.0315340823142Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Sivaganga
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="23" constituency="187"
+                        d="M405.5091358059217,630.630084478544L415.5635742755039,613.0315340823142L435.9302573292716,613.0315340823142L445.9846957988557,630.630084478544L435.9302573292716,647.9772270119704L415.5635742755039,647.9772270119704Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Manamadurai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="188"
+                        d="M345.18250498842644,560.7386986192319L355.2369434580087,543.1401482230024L375.3458203971768,543.1401482230024L385.4002588667572,560.7386986192319L375.3458203971768,578.0858411526581L355.2369434580087,578.0858411526581Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Melur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="189"
+                        d="M385.4002588667572,595.6843915488878L405.5091358059217,595.6843915488878L415.5635742755039,613.0315340823142L405.5091358059217,630.630084478544L385.4002588667572,630.630084478544L375.3458203971768,613.0315340823142Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Madurai East
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="190"
+                        d="M315.01918957967973,578.0858411526581L325.07362804926197,560.7386986192319L345.18250498842644,560.7386986192319L355.2369434580087,578.0858411526581L345.18250498842644,595.6843915488878L325.07362804926197,595.6843915488878Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Sholavandan
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="191"
+                        d="M345.18250498842644,630.630084478544L355.2369434580087,613.0315340823142L375.3458203971768,613.0315340823142L385.4002588667572,630.630084478544L375.3458203971768,647.9772270119704L355.2369434580087,647.9772270119704Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Madurai North
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="192"
+                        d="M315.01918957967973,647.9772270119704L325.07362804926197,630.630084478544L345.18250498842644,630.630084478544L355.2369434580087,647.9772270119704L345.18250498842644,665.3243695453966L325.07362804926197,665.3243695453966Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Madurai South
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="193"
+                        d="M315.01918957967973,613.0315340823142L325.07362804926197,595.6843915488878L345.18250498842644,595.6843915488878L355.2369434580087,613.0315340823142L345.18250498842644,630.630084478544L325.07362804926197,630.630084478544Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Madurai Central
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="194"
+                        d="M345.18250498842644,595.6843915488878L355.2369434580087,578.0858411526581L375.3458203971768,578.0858411526581L385.4002588667572,595.6843915488878L375.3458203971768,613.0315340823142L355.2369434580087,613.0315340823142Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Madurai West
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="195"
+                        d="M294.6525065259084,647.9772270119704L315.01918957967973,647.9772270119704L325.07362804926197,665.3243695453966L315.01918957967973,682.9229199416263L294.6525065259084,682.9229199416263L284.598068056328,665.3243695453966Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Thiruparankundram
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="196"
+                        d="M294.6525065259084,613.0315340823142L315.01918957967973,613.0315340823142L325.07362804926197,630.630084478544L315.01918957967973,647.9772270119704L294.6525065259084,647.9772270119704L284.598068056328,630.630084478544Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Thirumangalam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="24" constituency="197"
+                        d="M294.6525065259084,578.0858411526581L315.01918957967973,578.0858411526581L325.07362804926197,595.6843915488878L315.01918957967973,613.0315340823142L294.6525065259084,613.0315340823142L284.598068056328,595.6843915488878Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Usilampatti
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="25" constituency="198"
+                        d="M264.4891911171635,630.630084478544L284.598068056328,630.630084478544L294.6525065259084,647.9772270119704L284.598068056328,665.3243695453966L264.4891911171635,665.3243695453966L254.43475264757944,647.9772270119704Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Andipatti
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="25" constituency="199"
+                        d="M254.43475264757944,543.1401482230024L264.4891911171635,525.7930056895759L284.598068056328,525.7930056895759L294.6525065259084,543.1401482230024L284.598068056328,560.7386986192319L264.4891911171635,560.7386986192319Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Periyakulam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="25" constituency="200"
+                        d="M264.4891911171635,560.7386986192319L284.598068056328,560.7386986192319L294.6525065259084,578.0858411526581L284.598068056328,595.6843915488878L264.4891911171635,595.6843915488878L254.43475264757944,578.0858411526581Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Bodinayakanur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="25" constituency="201"
+                        d="M264.4891911171635,595.6843915488878L284.598068056328,595.6843915488878L294.6525065259084,613.0315340823142L284.598068056328,630.630084478544L264.4891911171635,630.630084478544L254.43475264757944,613.0315340823142Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Cumbum
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="26" constituency="202"
+                        d="M345.18250498842644,700.2700624750526L355.2369434580087,682.9229199416263L375.3458203971768,682.9229199416263L385.4002588667572,700.2700624750526L375.3458203971768,717.8686128712823L355.2369434580087,717.8686128712823Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Rajapalayam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="26" constituency="203"
+                        d="M345.18250498842644,665.3243695453966L355.2369434580087,647.9772270119704L375.3458203971768,647.9772270119704L385.4002588667572,665.3243695453966L375.3458203971768,682.9229199416263L355.2369434580087,682.9229199416263Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Srivilliputhur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="26" constituency="204"
+                        d="M385.4002588667572,665.3243695453966L405.5091358059217,665.3243695453966L415.5635742755039,682.9229199416263L405.5091358059217,700.2700624750526L385.4002588667572,700.2700624750526L375.3458203971768,682.9229199416263Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Sattur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="26" constituency="205"
+                        d="M405.5091358059217,665.3243695453966L415.5635742755039,647.9772270119704L435.9302573292716,647.9772270119704L445.9846957988557,665.3243695453966L435.9302573292716,682.9229199416263L415.5635742755039,682.9229199416263Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Sivakasi
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="26" constituency="206"
+                        d="M385.4002588667572,630.630084478544L405.5091358059217,630.630084478544L415.5635742755039,647.9772270119704L405.5091358059217,665.3243695453966L385.4002588667572,665.3243695453966L375.3458203971768,647.9772270119704Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Virudhunagar
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="26" constituency="207"
+                        d="M435.9302573292716,682.9229199416263L445.9846957988557,665.3243695453966L466.093572738022,665.3243695453966L476.1480112076024,682.9229199416263L466.093572738022,700.2700624750526L445.9846957988557,700.2700624750526Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Aruppukkottai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="26" constituency="208"
+                        d="M435.9302573292716,647.9772270119704L445.9846957988557,630.630084478544L466.093572738022,630.630084478544L476.1480112076024,647.9772270119704L466.093572738022,665.3243695453966L445.9846957988557,665.3243695453966Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruchuli
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="27" constituency="209"
+                        d="M476.1480112076024,647.9772270119704L496.2568881467687,647.9772270119704L506.3113266163509,665.3243695453966L496.2568881467687,682.9229199416263L476.1480112076024,682.9229199416263L466.093572738022,665.3243695453966Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Paramakudi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="27" constituency="210"
+                        d="M496.2568881467687,647.9772270119704L506.3113266163509,630.630084478544L526.4202035555136,630.630084478544L536.4746420250995,647.9772270119704L526.4202035555136,665.3243695453966L506.3113266163509,665.3243695453966Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruvadanai
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="27" constituency="211"
+                        d="M526.4202035555136,665.3243695453966L536.4746420250995,647.9772270119704L556.8413250788672,647.9772270119704L566.8957635484494,665.3243695453966L556.8413250788672,682.9229199416263L536.4746420250995,682.9229199416263Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Ramanathapuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="27" constituency="212"
+                        d="M496.2568881467687,682.9229199416263L506.3113266163509,665.3243695453966L526.4202035555136,665.3243695453966L536.4746420250995,682.9229199416263L526.4202035555136,700.2700624750526L506.3113266163509,700.2700624750526Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Mudhukulathur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="28" constituency="213"
+                        d="M405.5091358059217,700.2700624750526L415.5635742755039,682.9229199416263L435.9302573292716,682.9229199416263L445.9846957988557,700.2700624750526L435.9302573292716,717.8686128712823L415.5635742755039,717.8686128712823Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Vilathikulam
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="28" constituency="214"
+                        d="M385.4002588667572,735.2157554047087L405.5091358059217,735.2157554047087L415.5635742755039,752.5628979381349L405.5091358059217,770.1614483343646L385.4002588667572,770.1614483343646L375.3458203971768,752.5628979381349Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Thoothukkudi
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="28" constituency="215"
+                        d="M385.4002588667572,770.1614483343646L405.5091358059217,770.1614483343646L415.5635742755039,787.5085908677911L405.5091358059217,805.1071412640208L385.4002588667572,805.1071412640208L375.3458203971768,787.5085908677911Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Tiruchendur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="28" constituency="216"
+                        d="M345.18250498842644,770.1614483343646L355.2369434580087,752.5628979381349L375.3458203971768,752.5628979381349L385.4002588667572,770.1614483343646L375.3458203971768,787.5085908677911L355.2369434580087,787.5085908677911Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Srivaikuntam
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="28" constituency="217"
+                        d="M345.18250498842644,735.2157554047087L355.2369434580087,717.8686128712823L375.3458203971768,717.8686128712823L385.4002588667572,735.2157554047087L375.3458203971768,752.5628979381349L355.2369434580087,752.5628979381349Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Ottapidaram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="28" constituency="218"
+                        d="M385.4002588667572,700.2700624750526L405.5091358059217,700.2700624750526L415.5635742755039,717.8686128712823L405.5091358059217,735.2157554047087L385.4002588667572,735.2157554047087L375.3458203971768,717.8686128712823Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kovilpatti
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="29" constituency="219"
+                        d="M315.01918957967973,682.9229199416263L325.07362804926197,665.3243695453966L345.18250498842644,665.3243695453966L355.2369434580087,682.9229199416263L345.18250498842644,700.2700624750526L325.07362804926197,700.2700624750526Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Sankarankovil
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="29" constituency="220"
+                        d="M264.4891911171635,665.3243695453966L284.598068056328,665.3243695453966L294.6525065259084,682.9229199416263L284.598068056328,700.2700624750526L264.4891911171635,700.2700624750526L254.43475264757944,682.9229199416263Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Vasudevanallur
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="29" constituency="221"
+                        d="M264.4891911171635,700.2700624750526L284.598068056328,700.2700624750526L294.6525065259084,717.8686128712823L284.598068056328,735.2157554047087L264.4891911171635,735.2157554047087L254.43475264757944,717.8686128712823Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kadayanallur
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="29" constituency="222"
+                        d="M294.6525065259084,682.9229199416263L315.01918957967973,682.9229199416263L325.07362804926197,700.2700624750526L315.01918957967973,717.8686128712823L294.6525065259084,717.8686128712823L284.598068056328,700.2700624750526Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Tenkasi
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="29" constituency="223"
+                        d="M294.6525065259084,717.8686128712823L315.01918957967973,717.8686128712823L325.07362804926197,735.2157554047087L315.01918957967973,752.5628979381349L294.6525065259084,752.5628979381349L284.598068056328,735.2157554047087Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Alangulam
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="29" constituency="224"
+                        d="M315.01918957967973,717.8686128712823L325.07362804926197,700.2700624750526L345.18250498842644,700.2700624750526L355.2369434580087,717.8686128712823L345.18250498842644,735.2157554047087L325.07362804926197,735.2157554047087Z"
+                        fill="#ff8c00" style="opacity: 1;">
+                        <title class="geo-tooltip">Tirunelveli
+                            Bharatiya Janata Party</title>
+                    </path>
+                    <path class="land" district="29" constituency="225"
+                        d="M264.4891911171635,735.2157554047087L284.598068056328,735.2157554047087L294.6525065259084,752.5628979381349L284.598068056328,770.1614483343646L264.4891911171635,770.1614483343646L254.43475264757944,752.5628979381349Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Ambasamudram
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="29" constituency="226"
+                        d="M315.01918957967973,752.5628979381349L325.07362804926197,735.2157554047087L345.18250498842644,735.2157554047087L355.2369434580087,752.5628979381349L345.18250498842644,770.1614483343646L325.07362804926197,770.1614483343646Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Palayamkottai
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="29" constituency="227"
+                        d="M315.01918957967973,787.5085908677911L325.07362804926197,770.1614483343646L345.18250498842644,770.1614483343646L355.2369434580087,787.5085908677911L345.18250498842644,805.1071412640208L325.07362804926197,805.1071412640208Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Nanguneri
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="29" constituency="228"
+                        d="M345.18250498842644,805.1071412640208L355.2369434580087,787.5085908677911L375.3458203971768,787.5085908677911L385.4002588667572,805.1071412640208L375.3458203971768,822.454283797447L355.2369434580087,822.454283797447Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Radhapuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="30" constituency="229"
+                        d="M315.01918957967973,822.454283797447L325.07362804926197,805.1071412640208L345.18250498842644,805.1071412640208L355.2369434580087,822.454283797447L345.18250498842644,840.0528341936765L325.07362804926197,840.0528341936765Z"
+                        fill="#006400" style="opacity: 1;">
+                        <title class="geo-tooltip">Kanniyakumari
+                            All India Anna Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="30" constituency="230"
+                        d="M294.6525065259084,822.454283797447L315.01918957967973,822.454283797447L325.07362804926197,840.0528341936765L315.01918957967973,857.399976727103L294.6525065259084,857.399976727103L284.598068056328,840.0528341936765Z"
+                        fill="#ff8c00" style="opacity: 1;">
+                        <title class="geo-tooltip">Nagercoil
+                            Bharatiya Janata Party</title>
+                    </path>
+                    <path class="land" district="30" constituency="231"
+                        d="M264.4891911171635,805.1071412640208L284.598068056328,805.1071412640208L294.6525065259084,822.454283797447L284.598068056328,840.0528341936765L264.4891911171635,840.0528341936765L254.43475264757944,822.454283797447Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Colachal
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="30" constituency="232"
+                        d="M294.6525065259084,787.5085908677911L315.01918957967973,787.5085908677911L325.07362804926197,805.1071412640208L315.01918957967973,822.454283797447L294.6525065259084,822.454283797447L284.598068056328,805.1071412640208Z"
+                        fill="#800000" style="opacity: 1;">
+                        <title class="geo-tooltip">Padmanabhapuram
+                            Dravida Munnetra Kazhagam</title>
+                    </path>
+                    <path class="land" district="30" constituency="233"
+                        d="M294.6525065259084,752.5628979381349L315.01918957967973,752.5628979381349L325.07362804926197,770.1614483343646L315.01918957967973,787.5085908677911L294.6525065259084,787.5085908677911L284.598068056328,770.1614483343646Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Vilavancode
+                            Indian National Congress</title>
+                    </path>
+                    <path class="land" district="30" constituency="234"
+                        d="M264.4891911171635,770.1614483343646L284.598068056328,770.1614483343646L294.6525065259084,787.5085908677911L284.598068056328,805.1071412640208L264.4891911171635,805.1071412640208L254.43475264757944,787.5085908677911Z"
+                        fill="#228b22" style="opacity: 1;">
+                        <title class="geo-tooltip">Killiyoor
+                            Indian National Congress</title>
+                    </path>
+                </g>
+            </svg>
+        </div>
+
+        <div class="table-container" id="table-container" style="display: none;">
+            <!-- Add a container for the table -->
+            <table class="district-table">
+                <thead>
+                    <tr>
+                        <th>Candidate</th>
+                        <th>Party</th>
+                        <th>Constituency</th>
+                        <th>Total Votes</th>
+                        <th>Vote Percentage</th>
+                    </tr>
+                </thead>
+                <tbody class="table-row"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+
+
+        const map_json = JSON.parse(localStorage.getItem("map_json"));
+        console.log(map_json);
+        let districts = document.querySelectorAll(".land");
+        let tableContainer = document.querySelector(".table-container");
+        let tableRows = document.querySelectorAll(".table-row"); // Select all table rows
+        let table_container = document.getElementById("table-container");
+
+        districts.forEach(function (district) {
+            district.addEventListener('click', function (event) {
+                table_container.style.display = "block";
+                tableRows.forEach(function (tableRow) { // Iterate over each table row
+                    tableRow.innerHTML = ""; // Clear the table row before appending new data
+                    let distNum = district.getAttribute("constituency");
+
+                    map_json.filter(function (obj) {
+                        if (obj.constituency_number == distNum) {
+                            tableRow.innerHTML += `
+            <tr>
+              <td>${obj.candidate}</td>
+              <td>${obj.party}</td>
+              <td>${obj.constituency}</td>
+              <td>${obj.candidate_total_votes}</td>
+              <td>${obj["candidate_vote_%"]}%</td>
+            </tr>
+          `;
+                        }
+                    });
+                });
+            });
+        });
+
+        if (localStorage.getItem("language") === "tamil") {
+            const targetLanguage = "ta";
+            tableRows.forEach(function (tableRow) {
+                const walker = document.createTreeWalker(
+                    tableRow,
+                    NodeFilter.SHOW_TEXT,
+                    { acceptNode: node => /\S/.test(node.nodeValue) }
+                );
+
+                while (walker.nextNode()) {
+                    const node = walker.currentNode;
+                    const text = node.nodeValue.trim();
+                    const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${text}`;
+                    fetch(translateUrl)
+                        .then(response => response.json())
+                        .then(data => {
+                            const translatedText = data[0][0][0];
+                            node.textContent = node.textContent.replace(text, translatedText);
+                        })
+                        .catch(error => console.error(error));
+                }
+            });
+        }
+
+
+
+    </script>
+    <script src="../../assets/javascript/map.js"></script>
+
+    <div class="governer ">
 
         <table class="table table-hover">
 
             <thead id="head_tamil">
 
                 <th class="text-center">வ.எண்</th>
-                <th class="text-center">தொகுதி பெயர்</th>
+                <th class="text-center">தொகுதி பெயர் <button id="sortName"><i class="fa fa-sort"></button></th>
                 <th class="text-center">வேட்பாளர் பெயர்</th>
                 <th class="text-center">கட்சிகள்</th>
                 <th class="text-center">வாக்குகள்</th>
-                <th class="text-center">வாக்கு வித்தியாசம்</th>
+                <th class="text-center">வாக்கு வித்தியாசம்<button id="sortMargin"><i class="fa fa-sort"></button></th>
                 <th class="text-center">வாக்கு விகிதம் %</th>
 
             </thead>
             <thead id="head_english" style="display: none;">
 
                 <th class="text-center">no</th>
-                <th class="text-center"> contuency name</th>
+                <th class="text-center"> contuency name<button id="sortName"><i class="fa fa-sort"></button></th>
                 <th class="text-center">candidate name</th>
                 <th class="text-center">party</th>
                 <th class="text-center">votes</th>
-                <th class="text-center">vote margin</th>
+                <th class="text-center">vote margin<button id="sortMargin"><i class="fa fa-sort"></button></th>
                 <th class="text-center">persentage %</th>
 
             </thead>
@@ -111,7 +1687,7 @@
     </div>
 
     <!-- <div class="governer">
-        <!-- <table class="table table-hover">
+       <table class="table table-hover">
 
             <thead>
                 <tr>
@@ -3462,7 +5038,7 @@
         </table> -->
 
     <!-- <span>View</span> Details <button id="first"> Toggle</button> -->
-    </div> -->
+    </div>
 
     <a href="mla_profile.html"></a>
     <!-- footer  section-->
@@ -3471,21 +5047,9 @@
 
     <script src="../../main.js"></script>
 
+
     <script src="../../assets/javascript/mla_list.js"></script>
 
-     <!-- <script src="../../assets/javascript/translate.js"></script> -->
-   <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
-
-    <!-- <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                // pageLanguage: 'en',
-                includedLanguages: 'en,ta' // remove this line if you want to include all languages
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript"
-        src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
 
 </body>
 

@@ -1,7 +1,6 @@
-const createManifesto = () => {
+const createManifesto = async () => {
   // Get the existing manifesto data from local storage
-  const manifestoData =
-    JSON.parse(localStorage.getItem("manifesto_data")) ?? [];
+  const manifestoData = JSON.parse(localStorage.getItem("manifesto_data")) ?? [];
 
   // Get the values of the form inputs
   const title = document.getElementById("manifesto_title").value;
@@ -21,27 +20,33 @@ const createManifesto = () => {
     time: timeValue,
   };
 
+  // Add the new manifesto object to the existing data
   manifestoData.push(manifesto_values);
-  alert("ki");
   localStorage.setItem("manifesto_data", JSON.stringify(manifestoData));
 
-  const manifesto_english =
-    JSON.parse(localStorage.getItem("manifesto_data_english")) ?? [];
-  const manifesto_values_en = {
-    id: manifesto_english.length,
-    title,
-    stage,
-    category,
-    status,
-    delete: false,
-    time: timeValue,
-  };
+  // Translate the manifesto values to English
+  const targetLanguage = "en"; // translate to English
+  const manifesto_values_en = {};
+  for (const [key, value] of Object.entries(manifesto_values)) {
+    if (typeof value === "string") {
+      const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value}`;
+      const response = await fetch(translateUrl);
+      const data = await response.json();
+      const translatedText = data[0][0][0]; // get the translated text from the API response
+      manifesto_values_en[key] = translatedText; // update the manifesto values object with the translated text
+    } else {
+      manifesto_values_en[key] = value;
+    }
+  }
 
-  manifesto_english.push(manifesto_values_en);
-  localStorage.setItem(
-    "manifesto_data_english",
-    JSON.stringify(manifesto_english)
-  );
+  // Store the translated manifesto data in local storage
+  const manifestoDataEn = JSON.parse(localStorage.getItem("manifesto_data_english")) ?? [];
+  manifesto_values_en.id = manifestoDataEn.length;
+  manifesto_values_en.time = timeValue;
+  manifestoDataEn.push(manifesto_values_en);
+  localStorage.setItem("manifesto_data_english", JSON.stringify(manifestoDataEn));
+
+  // Reset the form and display a success message
   document.getElementById("manifesto_form").reset();
   alert("Manifesto created successfully!");
 };

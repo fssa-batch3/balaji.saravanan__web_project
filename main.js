@@ -42,6 +42,7 @@ const header = `<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-t
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item text-dark list_li" href="${root}/pages/more/Governer list.html" id="option_five_sub_one">ஆளுநர்கள்</a></li>
                     <li><a class="dropdown-item text-dark list_li" href="${root}/pages/more/mla.html" id="option_five_sub_two">பிரதிநிதிகள்</a></li>
+                    <li><a class="dropdown-item text-dark list_li" href="${root}/pages/more/budget.html" id="option_five_sub_two">நிதிநிலை அறிக்கை</a></li>
                 </ul>
             </li>
             <li class="nav-item " id="admin">
@@ -1283,7 +1284,7 @@ if (JSON.parse(localStorage.getItem("mla_details_tamil"))) {
       {
         mla_id: "99",
         affidate:
-          "https://drive.google.com/file/d/1rJfAxfQG1q5G9CbUfWsQ-u7re__3PQny/preview",
+          "https://drive.google.com/file/d/1rZkppdBHR5p-VmvHCi-9CfOdoT_oeEgG/preview",
         constituency_Name: "ஈரோடு(மேற்கு)",
         candidate_Name: "சு.முத்துசாமி",
         Party: "திமுக",
@@ -2791,6 +2792,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "முதலமைச்சர்",
         status: true,
         party_name: "திராவிட முன்னேற்றக் கழகம்",
+        affidate: "https://drive.google.com/file/d/1CizE-ZahGikKp6f4bSTJRgv0Y6bT9iYR/preview",
         id: 1,
       },
 
@@ -2807,6 +2809,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "விளையாட்டு மேம்பாட்டுத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1b4cpKxofjnMk-IM4LCUp_v7sE3975eae/preview",
+
         id: 2,
       },
 
@@ -2823,6 +2827,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "நீர்வளத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1rju-IGL6KfRLFaEKtXdk6i4OiOUo4ybr/preview",
         id: 3,
       },
 
@@ -2839,6 +2844,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "நகராட்சி நிர்வாக அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1mPCj4smvsbACByYgnw684hDw4R3Hg8zt/preview",
+
         id: 4,
       },
       {
@@ -2854,6 +2861,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "ஊரக வளர்ச்சித்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1GHjnd-S4R36dv-0lQmNJ6uYk9DSBH5ip/preview",
+
         id: 5,
       },
       {
@@ -2869,6 +2878,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: " உயர்கல்வித்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1vbAvSns_9roYEwGLWIMEhOVA0hykirXM/preview",
+
         id: 6,
       },
 
@@ -2885,6 +2896,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "பொதுப்பணித்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1BAIRY06cLNPwZxue0n9iTIe8yHRluXvq/preview",
         id: 7,
       },
 
@@ -2901,6 +2913,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "விவசாயம் மற்றும் விவசாயிகள் நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1Tdzz3fAodyGYxWF3LihngEyR6whSluMB/preview",
+
         id: 8,
       },
 
@@ -2917,6 +2931,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "நிதி மற்றும் மனிதவள மேலாண்மை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/13R9h3H7YFdxvu0asWRjJ8hJvaxKXbkHq/preview",
+
         id: 9,
       },
       {
@@ -2933,6 +2949,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "தமிழக வருவாய் துறை",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1t5mMJ-nTMs-zlTpoWxlXx3tQ8gJbh8W7/preview",
         id: 10,
       },
 
@@ -2949,6 +2966,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "சட்ட அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1rZkppdBHR5p-VmvHCi-9CfOdoT_oeEgG/preview",
+
         id: 11,
       },
 
@@ -2965,6 +2984,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "வீட்டுவசதி மற்றும் நகர்ப்புற வளர்ச்சித் துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1rZkppdBHR5p-VmvHCi-9CfOdoT_oeEgG/preview",
+
         id: 12,
       },
 
@@ -2981,6 +3002,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "கூட்டுறவுத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1WKhFJdsFTbSDbk3mou4atmgkk_wMmkdT/preview",
+
         id: 13,
       },
       {
@@ -2996,6 +3019,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "ஊரகத் துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/19Ox_FtWKYLvx4taiqmnEkooGNMpeE_1v/preview",
+
         id: 14,
       },
 
@@ -3012,6 +3037,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "தமிழ் வளர்ச்சி, செய்தி மற்றும் விளம்பரத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1HvZ4faLvU-2a8RWc8EOuJcnto0_BQ_2L/preview",
+
         id: 15,
       },
       {
@@ -3027,6 +3054,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "சமூக நலன் மற்றும் பெண்கள் அதிகாரமளித்தல் அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1kkjvI-ipt5tHzVwT9dxsIoe9mwt892pc/preview",
+
         id: 16,
       },
 
@@ -3045,6 +3074,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           "மீன்வளம், மீனவர் நலன் மற்றும் கால்நடை பராமரிப்புத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1tQScd8HE36Mu_7-OkRgM9NHtZ7z75-2W/preview",
         id: 17,
       },
 
@@ -3054,13 +3084,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "sivakumar",
         },
         name: {
-          tname: "S .சிவகுமார்",
-          ename: "S S. Sivakumar",
+          tname: "எஸ்.எஸ்.சிவசங்கர்",
+          ename: "S S. Sivasankar",
         },
 
         position: "போக்குவரத்து",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 18,
       },
 
@@ -3071,13 +3102,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "ramachanran",
         },
         name: {
-          tname: "கே.கே.எஸ்.எஸ்.ஆர்.இராமச்சந்திரன்",
+          tname: "கே.கே.எஸ்.எஸ்.ஆர். இராமச்சந்திரன்",
           ename: "K. Ramachandran",
         },
 
-        position: "வருவாய் மற்றும் பேரிடர் மேலாண்மை அமைச்சர்",
+        position: "வருவாய், பேரிடர் மேலாண்மை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 19,
       },
 
@@ -3094,6 +3126,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: " உணவு மற்றும் குடிமைப் பொருள் வழங்கல் துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 20,
       },
 
@@ -3110,6 +3143,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "மின்சாரம், மதுவிலக்கு துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 21,
       },
 
@@ -3126,6 +3160,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "கைத்தறி மற்றும் ஜவுளித்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 22,
       },
 
@@ -3142,6 +3177,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "மருத்துவம் மற்றும் குடும்ப நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 23,
       },
 
@@ -3158,6 +3194,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "வணிக வரிகள் மற்றும் பதிவுத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 24,
       },
 
@@ -3174,6 +3211,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "பிற்படுத்தப்பட்டோர் நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 25,
       },
 
@@ -3190,6 +3228,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "இந்து சமய மற்றும் அறநிலையத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 26,
       },
 
@@ -3207,6 +3246,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "தகவல் தொழில்நுட்பம் மற்றும் டிஜிட்டல் சேவைகள் அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 27,
       },
 
@@ -3223,6 +3263,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: " பள்ளிக் கல்வித்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 29,
       },
       {
@@ -3238,6 +3279,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "பால் மற்றும் பால்வள மேம்பாட்டுத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 30,
       },
       {
@@ -3253,6 +3295,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "தொழில்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 31,
       },
       {
@@ -3268,6 +3311,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "வெளிநாடு வாழ் தமிழர்கள் நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 32,
       },
       {
@@ -3283,6 +3327,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "சுற்றுச்சூழல், பருவநிலை மாற்ற அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 33,
       },
       {
@@ -3295,9 +3340,10 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           ename: "C.V. Ganesan",
         },
 
-        position: "தொழிலாளர் நலன் மற்றும் திறன் மேம்பாட்டுத் துறை அமைச்சர்",
+        position: "திறன் மேம்பாட்டுத் துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 34,
       },
       {
@@ -3313,6 +3359,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "ஆதி திராவிடர் நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
+        affidate: "#",
         id: 35,
       },
     ])
@@ -3713,7 +3760,13 @@ const past_leader = [
     party_name: "Justice Party",
   },
 ];
-localStorage.setItem("past_leader", JSON.stringify(past_leader));
+if (JSON.parse(localStorage.getItem("past_leader"))) {
+  console.log("contitue");
+} else {
+  localStorage.setItem(
+    "past_leader",
+    JSON.stringify(past_leader))
+};
 
 if (JSON.parse(localStorage.getItem("governor_details"))) {
   console.log("contitue");
@@ -6051,15 +6104,19 @@ const mla_details_english = [
     vote_Rate: "59.76 %",
   },
 ];
-localStorage.setItem(
-  "mla_details_english",
-  JSON.stringify(mla_details_english)
-);
+if (JSON.parse(localStorage.getItem("mla_details_english"))) {
+  console.log("contitue");
+} else {
+  localStorage.setItem(
+    "mla_details_english",
+    JSON.stringify(mla_details_english))
+};
 
 const past_leaders_english = [
   {
     id: "1",
     name: "M.K.Stalin",
+    image: "https://freeimghost.net/images/2023/05/04/m-k-stalin.png",
     to: "07 May 2021",
     from: "Present",
     party_name: "DMK",
@@ -6067,6 +6124,7 @@ const past_leaders_english = [
   {
     id: "2",
     name: "Edappadi K. Palaniswami",
+    image: "https://freeimghost.net/images/2023/05/07/edappadi.jpeg",
     to: "16 Feb 2017",
     from: "03 May 2021",
     party_name: "AIADMK",
@@ -6074,6 +6132,7 @@ const past_leaders_english = [
   {
     id: "3",
     name: "O. Panneerselvam",
+    image: "https://freeimghost.net/images/2023/05/07/pannirselvam-o.jpeg",
     to: "06 Dec 2016",
     from: "15 Feb 2017",
     party_name: "AIADMK",
@@ -6081,6 +6140,7 @@ const past_leaders_english = [
   {
     id: "4",
     name: "J. Jayalalithaa",
+    image: "https://freeimghost.net/images/2023/05/07/jayalitha.jpeg",
     to: "24 May 2016",
     from: "04 Dec 2016",
     party_name: "AIADMK",
@@ -6088,6 +6148,7 @@ const past_leaders_english = [
   {
     id: "5",
     name: "J. Jayalalithaa",
+    image: "https://freeimghost.net/images/2023/05/07/jayalitha.jpeg",
     to: "23 May 2015",
     from: "23 May 2016",
     party_name: "AIADMK",
@@ -6095,6 +6156,7 @@ const past_leaders_english = [
   {
     id: "6",
     name: "O. Panneerselvam",
+    image: "https://freeimghost.net/images/2023/05/07/pannirselvam-o.jpeg",
     to: "29 Sep 2014",
     from: "22 May 2015",
     party_name: "AIADMK",
@@ -6102,6 +6164,7 @@ const past_leaders_english = [
   {
     id: "7",
     name: "J. Jayalalithaa",
+    image: "https://freeimghost.net/images/2023/05/07/jayalitha.jpeg",
     to: "16 May 2011",
     from: "27 Sep 2014",
     party_name: "AIADMK",
@@ -6109,6 +6172,7 @@ const past_leaders_english = [
   {
     id: "8",
     name: "M. Karunanidhi",
+    image: "https://freeimghost.net/images/2023/05/07/karunathi.jpeg",
     to: "13 May 2006",
     from: "15 May 2011",
     party_name: "DMK",
@@ -6116,6 +6180,7 @@ const past_leaders_english = [
   {
     id: "9",
     name: "J. Jayalalithaa",
+    image: "https://freeimghost.net/images/2023/05/07/jayalitha.jpeg",
     to: "02 Mar 2002",
     from: "12 May 2006",
     party_name: "AIADMK",
@@ -6123,6 +6188,7 @@ const past_leaders_english = [
   {
     id: "10",
     name: "O. Panneerselvam",
+    image: "https://freeimghost.net/images/2023/05/07/pannirselvam-o.jpeg",
     to: "21 Sep 2001",
     from: "01 Mar 2002",
     party_name: "AIADMK",
@@ -6130,6 +6196,7 @@ const past_leaders_english = [
   {
     id: "11",
     name: "J. Jayalalithaa",
+    image: "https://freeimghost.net/images/2023/05/07/jayalitha.jpeg",
     to: "14 May 2001",
     from: "21 Sep 2001",
     party_name: "AIADMK",
@@ -6137,6 +6204,7 @@ const past_leaders_english = [
   {
     id: "12",
     name: "M. Karunanidhi",
+    image: "https://freeimghost.net/images/2023/05/07/karunathi.jpeg",
     to: "13 May 1996",
     from: "13 May 2001",
     party_name: "DMK",
@@ -6144,6 +6212,7 @@ const past_leaders_english = [
   {
     id: "13",
     name: "J. Jayalalithaa",
+    image: "https://freeimghost.net/images/2023/05/07/jayalitha.jpeg",
     to: "24 Jun 1991",
     from: "13 May 1996",
     party_name: "AIADMK",
@@ -6151,6 +6220,7 @@ const past_leaders_english = [
   {
     id: "14",
     name: "President's rule",
+    image: "https://freeimghost.net/images/2023/05/07/govt.png",
     to: "30 Jan 1991",
     from: "24 Jun 1991",
     party_name: "",
@@ -6158,6 +6228,7 @@ const past_leaders_english = [
   {
     id: "15",
     name: "M. Karunanidhi",
+    image: "https://freeimghost.net/images/2023/05/07/karunathi.jpeg",
     to: "27 Jan 1989",
     from: "30 Jan 1991",
     party_name: "DMK",
@@ -6165,6 +6236,7 @@ const past_leaders_english = [
   {
     id: "4",
     name: "J. Jayalalithaa",
+    image: "https://freeimghost.net/images/2023/05/07/jayalitha.jpeg",
     to: "24 May 2016",
     from: "04 Dec 2016",
     party_name: "AIADMK",
@@ -6172,6 +6244,7 @@ const past_leaders_english = [
   {
     id: "16",
     name: "President's rule",
+    image: "https://freeimghost.net/images/2023/05/07/govt.png",
     to: "30 Jan 1988",
     from: "27 Jan 1989",
     party_name: "",
@@ -6193,6 +6266,7 @@ const past_leaders_english = [
   {
     id: "19",
     name: "M. G. Ramachandran",
+    image: "https://freeimghost.net/images/2023/05/07/emjr.jpeg",
     to: "10 Feb 1985",
     from: "24 Dec 1987",
     party_name: "AIADMK",
@@ -6200,6 +6274,7 @@ const past_leaders_english = [
   {
     id: "20",
     name: "M. G. Ramachandran",
+    image: "https://freeimghost.net/images/2023/05/07/emjr.jpeg",
     to: "09 Jun 1980",
     from: "15 Nov 1984",
     party_name: "AIADMK",
@@ -6207,6 +6282,7 @@ const past_leaders_english = [
   {
     id: "21",
     name: "President's rule",
+    image: "https://freeimghost.net/images/2023/05/07/govt.png",
     to: "17 Feb 1980",
     from: "09 Jun 1980",
     party_name: "",
@@ -6214,6 +6290,7 @@ const past_leaders_english = [
   {
     id: "22",
     name: "M. G. Ramachandran",
+    image: "https://freeimghost.net/images/2023/05/07/emjr.jpeg",
     to: "01 Jul 1977",
     from: "17 Feb 1980",
     party_name: "AIADMK",
@@ -6221,6 +6298,7 @@ const past_leaders_english = [
   {
     id: "23",
     name: "President's rule",
+    image: "https://freeimghost.net/images/2023/05/07/govt.png",
     to: "31 Jan 1976",
     from: "30 Jun 1977",
     party_name: "",
@@ -6228,6 +6306,7 @@ const past_leaders_english = [
   {
     id: "24",
     name: "M. Karunanidhi",
+    image: "https://freeimghost.net/images/2023/05/07/karunathi.jpeg",
     to: "15 Mar 1971",
     from: "31 Jan 1976",
     party_name: "DMK",
@@ -6235,6 +6314,7 @@ const past_leaders_english = [
   {
     id: "25",
     name: "M. Karunanidhi",
+    image: "https://freeimghost.net/images/2023/05/07/karunathi.jpeg",
     to: "10 Feb 1969",
     from: "04 Jan 1971",
     party_name: "DMK",
@@ -6256,6 +6336,7 @@ const past_leaders_english = [
   {
     id: "28",
     name: "C. N. Annadurai",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "01 Mar 1967",
     from: "03 Feb 1969",
     party_name: "DMK",
@@ -6263,6 +6344,7 @@ const past_leaders_english = [
   {
     id: "29",
     name: "M. Bakthavatsalam",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "02 Oct 1963",
     from: "06 Mar 1967",
     party_name: "INC",
@@ -6270,6 +6352,7 @@ const past_leaders_english = [
   {
     id: "30",
     name: "K. Kamaraj",
+    image: "https://freeimghost.net/images/2023/05/07/kamaraj-cm.jpeg",
     to: "15 Mar 1962",
     from: "02 Oct 1963",
     party_name: "INC",
@@ -6277,6 +6360,7 @@ const past_leaders_english = [
   {
     id: "31",
     name: "K. Kamaraj",
+    image: "https://freeimghost.net/images/2023/05/07/kamaraj-cm.jpeg",
     to: "13 Apr 1957",
     from: "01 Mar 1962",
     party_name: "INC",
@@ -6284,6 +6368,7 @@ const past_leaders_english = [
   {
     id: "32",
     name: "K. Kamaraj",
+    image: "https://freeimghost.net/images/2023/05/07/kamaraj-cm.jpeg",
     to: "13 Apr 1954",
     from: "31 Mar 1957",
     party_name: "INC",
@@ -6291,6 +6376,7 @@ const past_leaders_english = [
   {
     id: "33",
     name: "C. Rajagopalachari",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "10 Apr 1952",
     from: "13 Apr 1954",
     party_name: "INC",
@@ -6298,6 +6384,7 @@ const past_leaders_english = [
   {
     id: "34",
     name: "P. S. Kumaraswamy Raja",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "26 Jan 1950",
     from: "10 Apr 1952",
     party_name: "INC",
@@ -6305,6 +6392,7 @@ const past_leaders_english = [
   {
     id: "35",
     name: "P. S. Kumaraswamy Raja",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "06 Apr 1949",
     from: "26 Jan 1950",
     party_name: "INC",
@@ -6312,6 +6400,7 @@ const past_leaders_english = [
   {
     id: "36",
     name: "O. P. Ramaswamy Reddiyar",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "23 Mar 1947",
     from: "06 Apr 1949",
     party_name: "INC",
@@ -6319,6 +6408,7 @@ const past_leaders_english = [
   {
     id: "37",
     name: "Tanguturi Prakasam",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "30 Apr 1946",
     from: "23 Mar 1947",
     party_name: "INC",
@@ -6326,6 +6416,7 @@ const past_leaders_english = [
   {
     id: "38",
     name: "Governor's Rule",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "29 Oct 1939",
     from: "30 Apr 1946",
     party_name: "INC",
@@ -6333,6 +6424,7 @@ const past_leaders_english = [
   {
     id: "39",
     name: "C. Rajagopalachari",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "14 Jul 1937",
     from: "29 Oct 19394",
     party_name: "INC",
@@ -6340,6 +6432,7 @@ const past_leaders_english = [
   {
     id: "40",
     name: "Kurma Venkata Reddy Naidu",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "01 Apr 1937",
     from: "14 Jul 1937",
     party_name: "Interim provisional ministry",
@@ -6347,6 +6440,7 @@ const past_leaders_english = [
   {
     id: "41",
     name: "Raja of Bobbili",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "24 Aug 1936",
     from: "01 Apr 1937",
     party_name: "Justice Party",
@@ -6354,6 +6448,7 @@ const past_leaders_english = [
   {
     id: "42",
     name: "P. T. Rajan",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "04 Apr 1936",
     from: "24 Aug 1936",
     party_name: "Justice Party",
@@ -6361,6 +6456,7 @@ const past_leaders_english = [
   {
     id: "43",
     name: "Raja of Bobbili",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "05 Nov 1934",
     from: "04 Apr 1936",
     party_name: "Justice Party",
@@ -6368,6 +6464,7 @@ const past_leaders_english = [
   {
     id: "44",
     name: "Raja of Bobbili",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "05 Nov 1932",
     from: "05 Nov 1934",
     party_name: "Justice Party",
@@ -6375,6 +6472,7 @@ const past_leaders_english = [
   {
     id: "45",
     name: "B. Munuswamy Naidu",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "27 Oct 1930",
     from: "05 Nov 1932",
     party_name: "Justice Party",
@@ -6382,6 +6480,7 @@ const past_leaders_english = [
   {
     id: "46",
     name: "P. Subbarayan",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "04 Dec 1926",
     from: "04 Dec 1926",
     party_name: "Unaffiliated",
@@ -6389,6 +6488,7 @@ const past_leaders_english = [
   {
     id: "47",
     name: "Raja of Panagal",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "19 Nov 1923",
     from: "04 Dec 1926",
     party_name: "Justice Party",
@@ -6396,6 +6496,7 @@ const past_leaders_english = [
   {
     id: "48",
     name: "Raja of Panagal",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "11 Jul 1921",
     from: "11 Sep 1923",
     party_name: "Justice Party",
@@ -6403,15 +6504,218 @@ const past_leaders_english = [
   {
     id: "49",
     name: "A. Subbarayalu Reddiar",
+    image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     to: "17 Dec 1920",
     from: "11 Jul 1921",
     party_name: "Justice Party",
   },
 ];
-localStorage.setItem(
-  "past_leaders_english",
-  JSON.stringify(past_leaders_english)
-);
+
+if (JSON.parse(localStorage.getItem("past_leaders_english"))) {
+  console.log("contitue");
+} else {
+  localStorage.setItem(
+    "past_leaders_english",
+    JSON.stringify(past_leaders_english))
+};
+
+const governor_list_english = [
+  {
+    "id": "1",
+    "governor_name": "R. N. Ravi",
+    "from": "10 September 2021",
+    "to": "Present Governor"
+  },
+  {
+    "id": "2",
+    "governor_name": "Banwarilal Purohit",
+    "from": "6 October 2017",
+    "to": "10 September 2021"
+  },
+  {
+    "id": "3",
+    "governor_name": "C. Vidyasagar Rao",
+    "from": "2 September 2016",
+    "to": "October 6, 2017"
+  },
+  {
+    "id": "4",
+    "governor_name": "Konijeti Rosaiah",
+    "from": "31 August 2011",
+    "to": "August 30, 2016"
+  },
+  {
+    "id": "5",
+    "governor_name": "Surjit Singh Barnala",
+    "from": "3 November 2004",
+    "to": "August 31, 2011"
+  },
+  {
+    "id": "6",
+    "governor_name": "P.S. Rammohan Rao",
+    "from": "18 January 2002",
+    "to": "November 3, 2004"
+  },
+  {
+    "id": "7",
+    "governor_name": "C. Rangarajan",
+    "from": "25 January 1997",
+    "to": "July 3, 2001"
+  },
+  {
+    "id": "8",
+    "governor_name": "M. Fathima Beevi",
+    "from": "25 January 1997",
+    "to": "July 3, 2001"
+  },
+  {
+    "id": "9",
+    "governor_name": "Krishan Kant",
+    "from": "2 December 1996",
+    "to": "January 25, 1997"
+  },
+  {
+    "id": "10",
+    "governor_name": "Marri Chenna Reddy",
+    "from": "31 May 1993",
+    "to": "Present Governor"
+  },
+  {
+    "id": "11",
+    "governor_name": "Bhishma Narain Singh",
+    "from": "15 February 1991",
+    "to": "May 31, 1993"
+  },
+  {
+    "id": "12",
+    "governor_name": "Surjit Singh Barnala",
+    "from": "24 May 1990",
+    "to": "February 15, 1991"
+  },
+  {
+    "id": "13",
+    "governor_name": "P.C. Alexander",
+    "from": "17 February 1988",
+    "to": "May 24, 1990"
+  },
+  {
+    "id": "14",
+    "governor_name": "Sundar LalKhurana",
+    "from": "3 September 1982",
+    "to": "February 17, 1988"
+  },
+  {
+    "id": "15",
+    "governor_name": "Sadiq Ali",
+    "from": "4 November 1980",
+    "to": "September 3, 1982"
+  },
+  {
+    "id": "16",
+    "governor_name": "M.M. Ismail",
+    "from": "November 4, 1980",
+    "to": "November 4, 1980"
+  },
+  {
+    "id": "17",
+    "governor_name": "Prabhudas Patwari",
+    "from": "27 April 1977",
+    "to": "October 27, 1980"
+  },
+  {
+    "id": "18",
+    "governor_name": "P. Govindan Nair",
+    "from": "9 April 1977",
+    "to": "April 27, 1977"
+  },
+  {
+    "id": "19",
+    "governor_name": "Mohan Lal Sukhadia",
+    "from": "16 June 1976",
+    "to": "April 8, 1977"
+  },
+  {
+    "id": "20",
+    "governor_name": "Kodardas Kalidas Shah",
+    "from": "June 16, 1976",
+    "to": "June 16, 1976"
+  },
+  {
+    "id": "21",
+    "governor_name": "Sardar Ujjal Singh",
+    "from": "14 January 1969",
+    "to": "May 27, 1971"
+  },
+  {
+    "id": "22",
+    "governor_name": "Sardar Ujjal Singh (acting till 16 June 1967)",
+    "from": "28 June 1966",
+    "to": "14 January 1969"
+  },
+  {
+    "id": "23",
+    "governor_name": "Maharaja Sir Jayachamaraja Wodeyar Bahadur",
+    "from": "7 December 1965",
+    "to": "28 June 1966"
+  },
+  {
+    "id": "24",
+    "governor_name": "P. Chandra Reddy",
+    "from": "24 November 1964",
+    "to": "7 December 1965"
+  },
+  {
+    "id": "25",
+    "governor_name": "Maharaja Sir Jayachamaraja Wodeyar Bahadur",
+    "from": "4 May 1964",
+    "to": "24 November 1964"
+  },
+  {
+    "id": "26",
+    "governor_name": "Bhishnuram Medhi",
+    "from": "24 January 1958",
+    "to": "4 May 1964"
+  },
+  {
+    "id": "27",
+    "governor_name": "Pakala Venkata Rajamannar",
+    "from": "1 October 1957",
+    "to": "24 January 1958"
+  },
+  {
+    "id": "28",
+    "governor_name": "A. J. John",
+    "from": "10 December 1956",
+    "to": "30 September 1957"
+  },
+  {
+    "id": "29",
+    "governor_name": "Sri Prakasa",
+    "from": "12 March 1952",
+    "to": "10 December 1956"
+  },
+  {
+    "id": "30",
+    "governor_name": "Maharaja Sir Krishna Kumarasinhji Bhavsinhji",
+    "from": "7 September 1948",
+    "to": "12 March 1952"
+  },
+  {
+    "id": "31",
+    "governor_name": "Lieutenant-General Sir Archibald Edward Nye[3]",
+    "from": "6 May 1946",
+    "to": "September 7, 1948"
+  }
+];
+
+if (JSON.parse(localStorage.getItem("governor_list_english"))) {
+  console.log("contitue");
+} else {
+  localStorage.setItem(
+    "governor_list_english",
+    JSON.stringify(governor_list_english))
+};
+
 
 const tamil_nav = [
   "முகப்பு",
@@ -6424,6 +6728,7 @@ const tamil_nav = [
   "மேலும்",
   "ஆளுநர்கள்",
   "பிரதிநிதிகள்",
+  "நிதிநிலை அறிக்கை",
   "நிர்வாகம்",
   " மொழி",
   "தமிழ்",
@@ -6453,6 +6758,7 @@ const english_nav = [
   "More",
   "Governors",
   "Representatives",
+  "Budget",
   "Admin",
   "Language",
   "Tamil",
@@ -6477,20 +6783,30 @@ const english = "english";
 const change_elem = document.querySelectorAll(".list_li");
 
 document.getElementById("lang_ta").addEventListener("click", () => {
+
   window.location.reload();
+
   change_elem.forEach((item, index) => {
+
     item.innerHTML = tamil_nav[index];
+
   });
 
   document.getElementById("searchbar").placeholder = "தேடுக";
 
+
   localStorage.setItem("language", tamil);
+
 });
 
 document.getElementById("lang_eng").addEventListener("click", () => {
+
   window.location.reload();
+
   change_elem.forEach((item, index) => {
+
     item.innerHTML = english_nav[index];
+
   });
 
   document.getElementById("searchbar").placeholder = "search";
@@ -6527,7 +6843,9 @@ if (language_setting === "english") {
       .catch((error) => console.error(error));
   }
 } else if (language_setting === "tamil") {
+
   change_elem.forEach((item, index) => {
+
     item.innerHTML = tamil_nav[index];
 
     document.getElementById("searchbar").placeholder = "தேடுக";
@@ -6546,27 +6864,27 @@ if (language_setting === "tamil") {
   recognition.lang = "en-US";
 }
 
-// When the user stops speaking, transcribe the speech and perform the search
-
-recognition.onresult = function (event) {
-  const searchText = event.results[0][0].transcript;
-  searchbar.value = searchText;
-  searchbar.focus();
-  search();
-};
-
-// When the search button is clicked, perform the search
-
 const searchIcon = document.getElementById("search-icon");
+
 searchIcon.addEventListener("click", search);
 
 // Perform the search
 function search() {
-  // const searchText = searchbar.value;
-  // Perform your search operation here
+  recognition.onresult = function (event) {
+    const searchText = event.results[0][0].transcript;
+    searchbar.value = searchText;
+    searchbar.focus();
+  };
 }
 
-// When the microphone icon is clicked, start the speech recognition
+
 searchIcon.addEventListener("click", () => {
   recognition.start();
 });
+
+
+
+
+let languages= "tamil";
+
+localStorage.setItem("language",(languages));

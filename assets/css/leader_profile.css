@@ -5,6 +5,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.navbar ul li a {
+    color: #ffffff;
+}
+
 
 
 .wrapper {

@@ -1,3 +1,8 @@
+
+.navbar ul li a {
+  color: #ffffff;
+}
+
 .main_container {
   display: flex;
   flex-wrap: wrap;
@@ -13,8 +18,7 @@
   width: 500px;
   border-radius: 5px;
 background: #ffffff;
-box-shadow:  5px 5px 10px #e6e6e6,
-             -5px -5px 10px #ffffff;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 margin: 2em 0;
 /* border: 2px solid gainsboro; */
 }
@@ -46,11 +50,11 @@ margin: 2em 0;
 
 .main_container .minister_card .minister_details .details_contents .coun_of_minister{
   font-size: 1.1rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .main_container .minister_card .minister_details .details_contents .minister_pos{
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
@@ -75,5 +79,51 @@ margin: 2em 0;
   border: none;
   padding: 0 0 20px 30px;
   font-size: 20px;
+}
+
+
+#search_result {
+  position: fixed;
+  top: 6.5%;
+  left: 0;
+  width: 50%;
+  height: 400px;
+  overflow: scroll;
+  margin: 0 20%;
+  display: none;
+  z-index: 9999;
+
+  
+}
+
+#search_result::-webkit-scrollbar {
+  display: none;
+}
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #e6e6e6, -5px -5px 10px #ffffff;
+  margin-bottom: 0.5em;
+  padding: 1em;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card a {
+  color: #333333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card p {
+  color: #666666;
+  font-size: 0.9rem;
+  margin-top: 0.3em;
 }
 

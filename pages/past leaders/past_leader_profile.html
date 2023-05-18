@@ -14,21 +14,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/leader_profile.css">
-  <link rel="stylesheet" href="../../assets/css/footer.css">
+    <link rel="stylesheet" href="../../assets/css/leader_profile.css">
+    <link rel="stylesheet" href="../../assets/css/footer.css">
 
 </head>
 
 <body>
     <div class="wrapper">
         <nav id="sidebar">
-
-            <!-- <div class="icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div> -->
             </ul>
         </nav>
     </div>
@@ -48,7 +41,7 @@
             <input type="text" id="name" name="name"><br> -->
             <label for="comment">Comment:</label>
             <textarea id="comment" required name="comment"></textarea>
-<br>
+            <br>
             <input type="submit" id="submit_btn" value="Submit">
         </form>
 
@@ -58,12 +51,13 @@
 
     <script src="../../assets/javascript/past_leader_profile.js"></script>
 
-    <script>        function handleFormSubmit(event) {
+    <script>
+        function handleFormSubmit(event) {
             event.preventDefault();
 
             const users = JSON.parse(localStorage.getItem("users"));
 
-            const minister = JSON.parse(localStorage.getItem("mla_ditails"));
+            const minister = JSON.parse(localStorage.getItem("past_leader"));
 
             const loginEmail = localStorage.getItem("profile_email");
             const currentUser = users.find(user => user.email === loginEmail);
@@ -73,7 +67,7 @@
                 .replace("NAME : ", "")
                 .trim();
 
-            const ministerId = minister.find(m => m.candidate_Name === ministerName).mla_id;
+            const ministerId = minister.find(m => m.candidate_Name === ministerName).id;
 
             const comment = document.getElementById("comment").value;
             const timestamp = new Date().getTime();

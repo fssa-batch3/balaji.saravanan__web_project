@@ -287,12 +287,12 @@
                                     <div class="left">
                                         <label for="politics_radio">candidate name</label>
                                         <input type="text" id="candidate_Name" value="name" placeholder="Tamil Name"
-                                            required pattern>
+                                            required>
 
                                         <label for="politics_radio">constituency Name
                                         </label>
                                         <input type="text" id="constituency_Name" value="name"
-                                            placeholder="constituency Name" required pattern>
+                                            placeholder="constituency Name" required>
 
                                         <label for="politics_radio">Image URL</label>
                                         <input type="text" id="url" placeholder="Please insert your picture URL"
@@ -343,14 +343,14 @@
 
                                         <label for="politics_radio">Role</label>
 
-                                        <input type="text" id="role" placeholder="role" required pattern>
+                                        <input type="text" id="role" placeholder="role" required>
 
                                         <label for="politics_radio">Party name</label>
                                         <input type="text" id="party_name" placeholder="Party Name"
                                             pattern="^[\u0B80-\u0BFF\s]+$" required>
                                         <label for="politics_radio">Occupation</label>
 
-                                        <input type="text" id="occupation" placeholder="occupation" required pattern>
+                                        <input type="text" id="occupation" placeholder="occupation" required>
                                         <label for="politics_radio">Politics Experiance</label>
 
                                         <input type="number" id="experiance" placeholder="experiance" required>
@@ -394,14 +394,17 @@
                         </div>
 
                         <script>
-                            const radios = document.getElementsByName("desc_radio");
-                            const descriptions = document.querySelectorAll("textarea[id^='description']");
+                            function showDescription() {
+                                const radios = document.getElementsByName("desc_radio");
+                                const descriptions = document.querySelectorAll("textarea[id^='description']");
 
-                            for (let i = 0; i < radios.length; i++) {
-                                if (radios[i].checked) {
-                                    const description = descriptions[i];
-                                    description.style.display = "block";
-                                    description.placeholder = `Please insert your ${radios[i].value} information`;
+                                for (let i = 0; i < radios.length; i++) {
+                                    if (radios[i].checked) {
+                                        const description = descriptions[i];
+                                        description.style.display = "block";
+                                        description.placeholder = `Please insert your ${radios[i].value} information`;
+                                    }
+
                                 }
 
                             }
@@ -414,17 +417,17 @@
     </div>
 
     <script>
-        const ministers_value = JSON.parse(localStorage.getItem("mla_ditails"));
+        const ministers_value = JSON.parse(localStorage.getItem("mla_details_tamil"));
 
         function loadMla() {
 
-            const mla = JSON.parse(localStorage.getItem("mla_ditails"));
+            const mla = JSON.parse(localStorage.getItem("mla_details_tamil"));
 
             const mla_container = document.getElementById("mal_container");
 
             mla_container.innerHTML = "";
 
-            mla.array.forEach(values => {
+            for (const values of mla) {
 
                 // Create the table row element
                 const tr = document.createElement('tr');
@@ -433,7 +436,7 @@
                 const td1 = document.createElement('td');
                 const avatar = document.createElement('img');
                 avatar.setAttribute('alt', values.candidate_Name);
-                avatar.setAttribute('src', '#');
+                avatar.setAttribute('src', 'https://freeimghost.net/images/2023/05/13/not-iamge.jpeg');
                 avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
                 const nameLink = document.createElement('a');
                 nameLink.setAttribute('href', '#');
@@ -448,15 +451,11 @@
 
                 // Create the third table data element for the logo and company name
                 const td3 = document.createElement('td');
-                const logo = document.createElement('img');
-                logo.setAttribute('alt', '...');
-                logo.setAttribute('src', '#');
-                logo.classList.add('avatar', 'avatar-xs', 'rounded-circle', 'me-2');
+
                 const companyLink = document.createElement('a');
                 companyLink.setAttribute('href', '#');
                 companyLink.classList.add('text-heading', 'font-semibold');
-                companyLink.textContent = values.party;
-                td3.appendChild(logo);
+                companyLink.textContent = values.Party;
                 td3.appendChild(companyLink);
 
                 // Create the fourth table data element for the amount
@@ -510,7 +509,7 @@
                 // Add the row element to the table body
                 const tableBody = document.querySelector('tbody');
                 tableBody.appendChild(tr);
-            });
+            };
 
         }
 
@@ -531,14 +530,14 @@
 
         // Function to update leader data
         function updateLeader(leader) {
-            console.log(leader);
+
             // Set form values to current leader data
 
             document.getElementById("candidate_Name").value = leader.candidate_Name;
 
             document.getElementById("constituency_Name").value = leader.constituency_Name;
 
-            document.getElementById("party_name").value = leader.party;
+            document.getElementById("party_name").value = leader.Party;
 
             document.getElementById("role").value = leader.role;
 
@@ -571,13 +570,13 @@
         }
 
         // Function to handle form submission
-        function handleSubmit(e) {
+        async function handleSubmit(e) {
             e.preventDefault();
             const img_url = document.getElementById("url").value;
 
             const tamil_name = document.getElementById("candidate_Name").value;
 
-            const constituency_Name = getElementById("constituency_Name").value;
+            const constituency_Name = document.getElementById("constituency_Name").value;
 
             const position = document.getElementById("position").value;
 
@@ -657,7 +656,7 @@
                     name: education,
                     description: education_description
                 },
-                party: party_name,
+                Party: party_name,
 
                 mla_id: profile_leder_id,
 
@@ -676,14 +675,67 @@
 
             // Find index of current leader in ministersData
             const index = ministers_value.findIndex((leader) => leader.mla_id === profile_leder_id);
-
-            // If leader is found, update their data and save to localStorage
             if (index !== -1) {
                 ministers_value[index] = leaderdata;
-                localStorage.setItem("mla_ditails", JSON.stringify(ministers_value));
-                alert("Leader updated successfully!");
+                localStorage.setItem("mla_details_tamil", JSON.stringify(ministers_value));
+                alert("Leader updated successfully in Tamil JSON file!");
                 loadMla();
             }
+
+
+            const ministers_value1 = JSON.parse(localStorage.getItem("mla_details_english"));
+
+            // Update leader in English JSON file
+            const index1 = ministers_value1.findIndex((leader) => leader.mla_id === profile_leder_id);
+            if (index1 !== -1) {
+                // Translate leader data to English
+                const targetLanguage = "en";
+                const leaderdata_english = {};
+
+                for (const [key, value] of Object.entries(leaderdata)) {
+                    if (typeof value === "string") {
+                        const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value}`;
+                        const response = await fetch(translateUrl);
+                        const data = await response.json();
+                        const translatedText = data[0][0][0];
+                        leaderdata_english[key] = translatedText;
+                    } 
+                    else if (typeof value === "object" && value !== null) { // Check if the value is an object and not null
+                        const translatedValue = {};
+
+                        for (const [key2, value2] of Object.entries(value)) {
+                            if (key2 === "description") { // Check if the key is "description"
+
+                                const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value2}`;
+
+                                const response = await fetch(translateUrl);
+                                const data = await response.json();
+
+                                const translatedText = data[0][0][0]; // get the translated text from the API response
+                                translatedValue[key2] = translatedText; // update the translated value object with the translated text
+                            } else {
+                                translatedValue[key2] = value2;
+
+                            }
+
+                        }
+
+                        leaderdata_english[key] = translatedValue;
+
+                    } else {
+
+                        leaderdata_english[key] = value;
+
+                    }
+                }
+
+                // Update MLA data in English JSON file
+                ministers_value1[index1] = leaderdata_english;
+                localStorage.setItem("mla_details_english", JSON.stringify(ministers_value1));
+                alert("Leader updated successfully in English JSON file!");
+                loadMla();
+            }
+
 
         }
 
@@ -696,7 +748,7 @@
             // If leader is found, update their status to false and save to localStorage
             if (index !== -1) {
                 ministers_value[index].status = false;
-                localStorage.setItem("mla_ditails", JSON.stringify(mla_list));
+                localStorage.setItem("mla_details_tamil", JSON.stringify(mla_list));
                 alert("Leader status changed successfully!");
 
                 loadMla()

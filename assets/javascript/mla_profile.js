@@ -12,7 +12,7 @@ let found = false;
 let i;
 
 for (i = 0; i < mla_name.length; i++) {
-  if (username === mla_name[i].candidate_Name) {
+  if (username === mla_name[i].mla_id) {
     found = true;
     break;
   }
@@ -91,7 +91,7 @@ if (found) {
   const p = document.createElement("p");
   p.style.fontSize = "110%";
   p.innerHTML =
-    '<em><strong>ERROR: </strong>An &#105;frame should be displayed here but your browser version does not support &#105;frames. Please update your browser to its most recent version and try again, or access the file <a href="https://drive.google.com/file/d/0BxrMaW3xINrsR3h2cWx0OUlwRms/preview">with this link.</a></em>';
+  "<em><strong>பிழை: </strong>உங்கள் உலாவியை அதன் சமீபத்திய பதிப்பிற்குப் புதுப்பித்து அல்லது கோப்பை அணுகவும் <a href=`${minister_name[i].affidate}`>with this link.</a></em>";
 
   // append the elements to the parent container
   responsiveDiv.appendChild(iframe);

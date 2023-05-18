@@ -12,7 +12,7 @@ let found = false;
 let i;
 
 for (i = 0; i < pastLeader.length; i++) {
-  if (username === pastLeader[i].name) {
+  if (username === pastLeader[i].id) {
     found = true;
     break;
   }

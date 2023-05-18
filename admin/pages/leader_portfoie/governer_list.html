@@ -398,16 +398,21 @@
 
                         </div>
 
-                        <script>                            const radios = document.getElementsByName("desc_radio");
-                            const descriptions = document.querySelectorAll("textarea[id^='description']");
+                        <script>
 
-                            for (let i = 0; i < radios.length; i++) {
-                                if (radios[i].checked) {
-                                    const description = descriptions[i];
-                                    description.style.display = "block";
-                                    description.placeholder = `Please insert your ${radios[i].value} information`;
+                            function showDescription() {
+
+                                const radios = document.getElementsByName("desc_radio");
+                                const descriptions = document.querySelectorAll("textarea[id^='description']");
+
+                                for (let i = 0; i < radios.length; i++) {
+                                    if (radios[i].checked) {
+                                        const description = descriptions[i];
+                                        description.style.display = "block";
+                                        description.placeholder = `Please insert your ${radios[i].value} information`;
+                                    }
+
                                 }
-
                             }
                         </script>
 
@@ -425,7 +430,7 @@
 
             governor_container.innerHTML = ""
 
-            governer_values.forEach((values) => {
+            for (const values of governer_values) {
 
                 // Create the table row element
                 const tr = document.createElement('tr');
@@ -449,6 +454,7 @@
 
                 // Create the third table data element for the logo and company name
                 const td3 = document.createElement('td');
+
                 const logo = document.createElement('img');
                 logo.setAttribute('alt', '...');
                 logo.setAttribute('src', '#');
@@ -481,7 +487,7 @@
                 viewButton.setAttribute('href', '#');
                 viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
                 viewButton.textContent = 'Edit';
-                viewButton.onclick = function update() {
+                viewButton.onclick = function () {
                     updateLeader(values);
                     container_div.style.display = 'flex';
                     table_content.style.display = "none";
@@ -510,7 +516,7 @@
 
                 // Add the row element to the table body
                 governor_container.appendChild(tr);
-            });
+            };
         }
 
         const container_div = document.getElementById("container");
@@ -548,6 +554,8 @@
             document.getElementById("date_f").value = leader.from;
 
             document.getElementById("date_t").value = leader.to;
+            document.getElementById("url").value = leader.image;
+
 
             if (leader.movie) {
 
@@ -555,7 +563,6 @@
 
                 document.getElementById("description").value = leader.movie.movie_description;
 
-                document.getElementById("url").value = leader.img.sourse;
 
                 document.getElementById("state").value = leader.state;
 
@@ -576,7 +583,7 @@
         }
 
         // Function to handle form submission
-        function handleSubmit(e) {
+        async function handleSubmit(e) {
             e.preventDefault();
 
             const img_url = document.getElementById("url").value;
@@ -622,10 +629,7 @@
             const governer = {
                 governor_name: tamil_name,
 
-                img: {
-                    source: img_url,
-                    alter: tamil_name,
-                },
+                image: img_url,
 
                 position,
                 movie: {
@@ -671,7 +675,7 @@
             };
 
             // Find index of current leader in ministersData
-            const index = governer_values.findIndex((leader) => leader.id === profile_leder_id);
+            const index = governer_values.findIndex((leader) => leader.id == profile_leder_id);
             // If leader is found, update their data and save to localStorage
             if (index !== -1) {
                 governer_values[index] = governer;
@@ -679,6 +683,60 @@
                 alert("Governer updated successfully!");
                 loadGoverner();
             }
+
+            const ministers_value1 = JSON.parse(localStorage.getItem("governer.details_english"));
+
+            // Update leader in English JSON file
+            const index1 = ministers_value1.findIndex((leader) => leader.id === profile_leder_id);
+            if (index1 !== -1) {
+                // Translate leader data to English
+                const targetLanguage = "en";
+                const leaderdata_english = {};
+
+                for (const [key, value] of Object.entries(past_leader_up)) {
+                    if (typeof value === "string") {
+                        const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value}`;
+                        const response = await fetch(translateUrl);
+                        const data = await response.json();
+                        const translatedText = data[0][0][0];
+                        leaderdata_english[key] = translatedText;
+                    }
+                    else if (typeof value === "object" && value !== null) { // Check if the value is an object and not null
+                        const translatedValue = {};
+
+                        for (const [key2, value2] of Object.entries(value)) {
+                            if (key2 === "description") { // Check if the key is "description"
+
+                                const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value2}`;
+
+                                const response = await fetch(translateUrl);
+                                const data = await response.json();
+
+                                const translatedText = data[0][0][0]; // get the translated text from the API response
+                                translatedValue[key2] = translatedText; // update the translated value object with the translated text
+                            } else {
+                                translatedValue[key2] = value2;
+
+                            }
+
+                        }
+
+                        leaderdata_english[key] = translatedValue;
+
+                    } else {
+
+                        leaderdata_english[key] = value;
+
+                    }
+                }
+
+                // Update MLA data in English JSON file
+                ministers_value1[index1] = leaderdata_english;
+                localStorage.setItem("governer.details_english", JSON.stringify(ministers_value1));
+                alert("Leader updated successfully in English JSON file!");
+                loadGoverner();
+            }
+
         }
 
         // Add event listener to form submission
@@ -698,7 +756,7 @@
             }
         }
 
-        window.onload = function onload() {
+        window.onload = function () {
             loadGoverner();
         }
     </script>
