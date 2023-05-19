@@ -241,95 +241,36 @@
         </div>
     </div>
 
-    <script>
-
-
-        // const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
-
-        // document.addEventListener('DOMContentLoaded', function () {
-        //     loadNewsData("Tamil nadu Politics");
-        // });
-
-        // let date = new Date().getDate()
-        // let month = new Date().getMonth()
-        // let yr = new Date().getFullYear()
-
-        // const loadNewsData = async searchText => {
-        //     const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
-        //     const res = await fetch(url);
-        //     const data = await res.json();
-        //     console.log(data.articles)
-        //     // data.articles.sort();
-        //     displayNewsData(data.articles);
-        // }
-
-
-        // const displayNewsData = articles => {
-        //     const newsDiv = document.querySelector('.news');
-
-        //     articles.forEach(article => {
-        //         const { author, description, publishedAt, title, url, urlToImage } = article;
-
-
-
-        //         const split = publishedAt.split('T');
-        //         const time = split[1];
-        //         const onlyTime = time.split('Z');
-
-        //         const div = document.createElement('div');
-        //         div.classList.add('h_100_1');
-        //         div.innerHTML = `
-        //     <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
-        //     <div class="card-body">
-        //         <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
-        //         <h5 class="card-title">${title}</h5>
-        //         <p class="card-text">${description}</p>
-        //     </div>
-        // `;
-
-        //         newsDiv.appendChild(div);
-        //     });
+    <!-- <script>
 
 
         const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
 
-        // Function to save data to local storage
-        const saveDataToLocalStorage = (key, data) => {
-            localStorage.setItem(key, JSON.stringify(data));
-        };
-
-        // Function to load data from local storage
-        const loadDataFromLocalStorage = (key) => {
-            const data = localStorage.getItem(key);
-            return JSON.parse(data);
-        };
-
         document.addEventListener('DOMContentLoaded', function () {
-            const savedData = loadDataFromLocalStorage('newsData');
-            if (savedData) {
-                displayNewsData(savedData);
-            } else {
-                loadNewsData("Tamil nadu Politics");
-            }
+            loadNewsData("Tamil nadu Politics");
         });
 
-        let date = new Date().getDate();
-        let month = new Date().getMonth();
-        let yr = new Date().getFullYear();
+        let date = new Date().getDate()
+        let month = new Date().getMonth()
+        let yr = new Date().getFullYear()
 
-        const loadNewsData = async (searchText) => {
+        const loadNewsData = async searchText => {
             const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
             const res = await fetch(url);
             const data = await res.json();
-            console.log(data.articles);
+            console.log(data.articles)
+            // data.articles.sort();
             displayNewsData(data.articles);
-        };
+        }
 
-        const displayNewsData = (articles) => {
+
+        const displayNewsData = articles => {
             const newsDiv = document.querySelector('.news');
 
-            articles.forEach((article) => {
+            articles.forEach(article => {
                 const { author, description, publishedAt, title, url, urlToImage } = article;
+
+
 
                 const split = publishedAt.split('T');
                 const time = split[1];
@@ -338,20 +279,16 @@
                 const div = document.createElement('div');
                 div.classList.add('h_100_1');
                 div.innerHTML = `
-      <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
-      <div class="card-body">
-        <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
-        <h5 class="card-title">${title}</h5>
-        <p class="card-text">${description}</p>
-      </div>
-    `;
+            <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
+            <div class="card-body">
+                <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text">${description}</p>
+            </div>
+        `;
 
                 newsDiv.appendChild(div);
             });
-
-            // Save data to local storage
-            saveDataToLocalStorage('newsData', articles);
-
 
 
             if (localStorage.getItem("language") === "tamil") {
@@ -375,10 +312,89 @@
                         .catch(error => console.error(error));
                 }
             }
+
         }
 
-    </script>
 
+
+    </script> -->
+
+
+    <script>
+        const API_KEY = `317a06010b8f49a4a08e3bb54667ec58`;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            loadNewsData("Tamil nadu Politics");
+        });
+
+        let date = new Date().getDate();
+        let month = new Date().getMonth();
+        let yr = new Date().getFullYear();
+
+        const loadNewsData = async searchText => {
+            const url = `https://newsapi.org/v2/everything?q=${searchText}&from=${yr}-0${month}-${date}&sortBy=publishedAt&apiKey=${API_KEY}`;
+            try {
+                const res = await fetch(url);
+                const data = await res.json();
+                console.log(data.articles);
+                displayNewsData(data.articles);
+            } catch (error) {
+                console.error(error);
+                // Handle the error case
+            }
+        };
+
+        const displayNewsData = articles => {
+            const newsDiv = document.querySelector('.news');
+            newsDiv.innerHTML = '';
+
+            articles.forEach(article => {
+                const { author, description, publishedAt, title, url, urlToImage } = article;
+
+                const split = publishedAt.split('T');
+                const time = split[1];
+                const onlyTime = time.split('Z');
+
+                const div = document.createElement('div');
+                div.classList.add('h_100_1');
+                div.innerHTML = `
+      <img src="${urlToImage ? urlToImage : 'No image found'}" class="card-img-top" alt="">
+      <div class="card-body">
+        <span><p><b>Date: </b> ${split[0]} at ${onlyTime[0]}</p></span>
+        <h5 class="card-title">${title}</h5>
+        <p class="card-text">${description}</p>
+      </div>
+    `;
+
+                newsDiv.appendChild(div);
+            });
+
+            // if (localStorage.getItem('language') === 'tamil') {
+            //     const targetLanguage = 'ta';
+            //     const walker = document.createTreeWalker(
+            //         newsDiv,
+            //         NodeFilter.SHOW_TEXT,
+            //         { acceptNode: node => /\S/.test(node.nodeValue) }
+            //     );
+
+            //     while (walker.nextNode()) {
+            //         const node = walker.currentNode;
+            //         const text = node.nodeValue.trim();
+            //         const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${text}`;
+            //         try {
+            //             const response =fetch(translateUrl);
+            //             const data =response.json();
+            //             const translatedText = data[0][0][0];
+            //             node.textContent = node.textContent.replace(text, translatedText);
+            //         } catch (error) {
+            //             console.error(error);
+            //             // Handle translation error
+            //         }
+            //     }
+            // }
+        };
+
+    </script>
     <!-- footer  section-->
 
     </div>
