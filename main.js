@@ -6885,6 +6885,8 @@ searchIcon.addEventListener("click", () => {
 
 
 
-let languages= "tamil";
+let languages = "tamil";
+if (!localStorage.getItem("language")) {
+  localStorage.setItem("language", (languages));
 
-localStorage.setItem("language",(languages));
+}
