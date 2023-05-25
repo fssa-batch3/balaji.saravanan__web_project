@@ -1,9 +1,7 @@
 const past_leader_one = JSON.parse(localStorage.getItem("past_leader"));
 const languagess = localStorage.getItem("language");
 
-const past_leaders_english_one = JSON.parse(
-  localStorage.getItem("past_leaders_english")
-);
+const past_leaders_english_one = JSON.parse(localStorage.getItem("past_leaders_english"));
 
 const dmk = "../../assets/images/flages/dmk-logo.png";
 const aiadmk = "../../assets/images/flages/aiadmk.png";
@@ -113,73 +111,33 @@ function default_list(array) {
 
 default_list(past_leader_one);
 
-const sortTableByDate = () => {
-  const table = document.getElementById("my-table");
 
-  const rows = Array.from(table.getElementsByTagName("tr"));
-  const sortedRows = rows.sort((row1, row2) => {
-    const date1 = new Date(row1.cells[3].textContent);
-    const date2 = new Date(row2.cells[3].textContent);
-    return date1 - date2;
-  });
-  table.tBodies[0].append(...sortedRows);
-};
-
-document.getElementById("sort-date").addEventListener("click", sortTableByDate);
-
-const table = document.querySelector("table");
-const { rows } = table;
-
-const sortNameButton = document.querySelector("#sortName");
-sortNameButton.addEventListener("click", () => {
-  const sortedRows = Array.from(rows)
-    .slice(1)
-    .sort((a, b) => {
-      const nameA = a.cells[1].textContent;
-      const nameB = b.cells[1].textContent;
-      return nameA.localeCompare(nameB);
-    });
-
-  table.tBodies[0].append(...sortedRows);
-});
 
 
 const tamil_tran = document.getElementById("lang_ta");
 
 const english_tran = document.getElementById("lang_eng");
 
-const head_tamil = document.getElementById("head_tamil");
-
-const head_english = document.getElementById("head_english");
 
 tamil_tran.addEventListener("click", () => {
   document.querySelector(".table_body").innerHTML = "";
 
-  head_tamil.style.display = "table-row";
-
-  head_english.style.display = "none";
-
   default_list(past_leader_one);
+
 });
 
 english_tran.addEventListener("click", () => {
   document.querySelector(".table_body").innerHTML = "";
 
-  head_tamil.style.display = "none";
-
-  head_english.style.display = "table-row";
-
   default_list(past_leaders_english_one);
 });
 
 const language_setting11 = localStorage.getItem("language");
-console.log(language_setting11);
+
+
 if (language_setting11 === "english") {
+
   document.querySelector(".table_body").innerHTML = "";
-
-  head_tamil.style.display = "none";
-
-  head_english.style.display = "table-row";
 
   default_list(past_leaders_english_one);
 }
@@ -187,20 +145,20 @@ else if (language_setting11 === "tamil") {
 
   document.querySelector(".table_body").innerHTML = "";
 
-  head_tamil.style.display = "table-row";
-
-  head_english.style.display = "none";
-
   default_list(past_leader_one);
 }
 
 
-
 window.onload = function () {
+
   const searchBox = document.querySelector("#searchbar");
+
   searchBox.addEventListener("input", () => {
+
     const filterValue = searchBox.value.toLocaleLowerCase();
+
     const rows = document.querySelectorAll("table tr")
+
     for (let i = 1; i < rows.length; i++) {
       // start from index 1 to skip the header row
       const row = rows[i];
@@ -220,3 +178,36 @@ window.onload = function () {
     }
   });
 };
+
+const sortDateButton = document.getElementById("sort-date");
+sortDateButton.addEventListener("click", () => {
+  const table = document.querySelector("table");
+
+  const { rows } = table;
+
+  const sortedRows = Array.from(rows)
+    .slice(1)
+    .sort((a, b) => {
+      const dateA = (a.cells[0].textContent);
+      const dateB = (b.cells[0].textContent);
+      return dateB - dateA; // Sort in descending order
+    });
+
+  table.tBodies[0].append(...sortedRows);
+});
+
+const sortNameButton = document.getElementById("sortName");
+sortNameButton.addEventListener("click", () => {
+  const table = document.querySelector("table");
+  const { rows } = table;
+
+  const sortedRows = Array.from(rows)
+    .slice(1)
+    .sort((a, b) => {
+      const nameA = a.cells[1].textContent;
+      const nameB = b.cells[1].textContent;
+      return nameA.localeCompare(nameB);
+    });
+
+  table.tBodies[0].append(...sortedRows);
+});

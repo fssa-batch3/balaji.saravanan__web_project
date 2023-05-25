@@ -2785,7 +2785,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "மு. க. ஸ்டாலின்",
         },
         name: {
-          tname: "மு. க. ஸ்டாலின்",
+          tname: "மு. க.ஸ்டாலின்",
           ename: "M. K. Stalin",
         },
 
@@ -2794,6 +2794,25 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         affidate: "https://drive.google.com/file/d/1CizE-ZahGikKp6f4bSTJRgv0Y6bT9iYR/preview",
         id: 1,
+
+        birth:{
+          name:"birth",
+          description:"Stalin is the third son of 2nd Chief Minister of Tamil Nadu and DMK Chief M. Karunanidhi, and was born to his wife, Dayalu Ammal. Stalin was born in Madras, now Chennai, on 1 March 1953. Karunanidhi was addressing a condolence meeting for Soviet leader Joseph Stalin, who died only four days after his child was born, and thus decided to name his son after Stalin.Stalin studied at the Madras Christian College Higher Secondary School.He completed a pre-university course at Vivekananda College, and obtained a history degree from Presidency College, Chennai of University of Madras in 1973. Stalin was conferred an Honorary Doctorate by Anna University on August 1, 2009"
+        },
+        politics:{
+          name:"politics",
+          description:"His political career began in his early teens when he started the DMK Gopalapuram Youth Wing with several friends.[16] As a 14 year old, he campaigned for his uncle, Murasoli Maran, in the 1967 elections.In 1973, Stalin was elected to the General committee of the DMK.He came to the limelight when he was jailed in Central Prison, Madras under the Maintenance of Internal Security Act (MISA) for protesting against the Emergency in 1976.[20][21][22] He was beaten up in custody and a fellow DMK prisoner C. Chittibabu died of injuries and police torture while protecting him.[23][24][25] He wrote his final year BA exams while in prison.[5] Stalin formed the DMK youth wing. In 1982 Stalin became the youth wing secretary of DMK, a post he held for more than four decades."
+        },
+        family: {
+          name: "family",
+          description: "Stalin is the third son of 2nd Chief Minister of Tamil Nadu and DMK Chief M. Karunanidhi, and was born to his wife, Dayalu Ammal. Stalin was born in Madras, now Chennai, on 1 March 1953. Karunanidhi was addressing a condolence meeting for Soviet leader Joseph Stalin, who died only four days after his child was born, and thus decided to name his son after Stalin",
+        },
+        education: {
+          name: "education",
+          description: "Stalin studied at the Madras Christian College Higher Secondary School.[6] He completed a pre-university course at Vivekananda College, and obtained a history degree from Presidency College, Chennai of University of Madras in 1973. Stalin was conferred an Honorary Doctorate by Anna University on August 1, 2009",
+        },
+        
+
       },
 
       {
@@ -2812,6 +2831,22 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         affidate: "https://drive.google.com/file/d/1b4cpKxofjnMk-IM4LCUp_v7sE3975eae/preview",
 
         id: 2,
+
+        birth:{
+          name:"birth",
+          description:"Udhayanidhi Stalin is the son of M. K. Stalin, Chief Minister of Tamil Nadu, and the grandson of former Chief Minister of Tamil Nadu M. Karunanidhi. He attended Don Bosco school and has a degree in Visual Communications from Loyola College in Chennai.[3][4][5] Several of his relatives have been actively involved in politics, and Tamil cinema since the 1950s. His cousins Arulnithi and Dayanidhi Azhagiri are actor and producer, respectively"
+        },
+        politics:{
+          name:"birth",
+          description:"Udhayanidhi Stalin's fierce campaign across Tamil Nadu has helped the DMK party secure a major win in the assembly elections. His AIIMS Brick remark changed the course of the Tamil Nadu election campaign.Udhayanidhi Stalin contested and won in the Chepauk - Thiruvallikeni Assembly Constituency in the 2021 Tamil Nadu Legislative Assembly election"
+        },
+        family: {
+          name: "family",
+          description: "Udhayanidhi is married to Kiruthiga Udhayanidhi in 2002 and the couple have a son and a daughter. Currently, Kiruthiga heads the lifestyle magazine Inbox 1305.[35][36] She also directed the film Vanakkam Chennai (2013) for Red Giant Movies and Kaali (2018).[37][38] His son Inban Udhayanidhi has signed for NEROCA FC football club which plays in the I-League.[39][40] Udhayanidhi is an atheist",
+        },
+
+
+
       },
 
       {
@@ -2829,6 +2864,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         status: true,
         affidate: "https://drive.google.com/file/d/1rju-IGL6KfRLFaEKtXdk6i4OiOUo4ybr/preview",
         id: 3,
+        birth: {
+          name: "birth",
+          description: "Durai Murugan (born 1 July 1938) is an Indian politician and lawyer. He is the Minister for Water Resources under the government of M. K. Stalin since 2021. He is the general secretary of the DMK party since 9 September 2020. He graduated in M.A. and B.L. and is an advocate by profession. He is a very close confidant to former DMK Supremo M. Karunanidhi and his son DMK President M. K. Stalin. He also worked as Treasurer, Principal Secretary and Deputy General secretary of the DMK party.",
+        }, 
+        politics: {
+          name: "politics",
+          description: "Durai Murugan was first elected to the Tamil Nadu legislative assembly in 1971 and has been elected ten times since. He was elected from the Katpadi constituency in 2006. After the 2006 assembly elections, Durai Murugan was appointed Minister for Public Works in the Government of Tamil Nadu.[citation needed]"
+        },
       },
 
       {
@@ -2837,8 +2880,8 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "KN NERU IMAGE",
         },
         name: {
-          tname: "கே. என். நேரு",
-          ename: "K. N. Nehru",
+          tname: "கே.என்.நேரு",
+          ename: "K. N.Nehru",
         },
 
         position: "நகராட்சி நிர்வாக அமைச்சர்",
@@ -2847,6 +2890,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         affidate: "https://drive.google.com/file/d/1mPCj4smvsbACByYgnw684hDw4R3Hg8zt/preview",
 
         id: 4,
+        birth: {
+          name: "birth",
+          description: "K. N. Nehru (born November 9, 1952) is an Indian Tamil politician and Minister for Municipal Administration, Urban and Water Supply.[1] He is the Member of Legislative Assembly (MLA) of the Tiruchirappalli West constituency. He is a former Minister for Transport in the Government of Tamil Nadu. He has been elected to the Tamil Nadu Legislative Assembly on five occasions as a candidate of the Dravida Munnetra Kazhagam (DMK) party. He is presently elevated as Principal Secretary of DMK.",
+        }, 
+        politics: {
+          name: "politics",
+          description: "Nehru has been elected to the Tamil Nadu Legislative Assembly on four occasions, twice from Lalgudi constituency, in the elections of 1989 and 1996[3] and twice from 2006 and 2016 Tiruchirappalli West constituency. The Madras High Court struck down the controversial land-grabbing cells which were primarily used to torment common people and opposition figures. The court had clearly remarked chance of misuse by officials and ruling government citing broad language used in the act."
+        },
       },
       {
         img: {
@@ -2854,7 +2905,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "PERIYASAMI IMAGE",
         },
         name: {
-          tname: "ஐ. பெரியசாமி ",
+          tname: "ஐ.பெரியசாமி ",
           ename: "I. Periyasamy",
         },
 
@@ -2864,6 +2915,10 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         affidate: "https://drive.google.com/file/d/1GHjnd-S4R36dv-0lQmNJ6uYk9DSBH5ip/preview",
 
         id: 5,
+        birth: {
+          name: "birth",
+          description: "I. Periyasamy is an Indian Tamil politician who serves as the Rural Development Minister of Tamil Nadu[1][2] and the former minister for Co-Operation from 2021 to 2022; Revenue and Housing under the DMK regime from 2006 to 2011. He was born in Batlagundu on 6 January 1953.[3] His son I. P. Senthil Kumar is an MLA of Palani constituency in Tamil nadu.",
+        }, 
       },
       {
         img: {
@@ -2871,7 +2926,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "PONMUDI IMAGE",
         },
         name: {
-          tname: "க. பொன்முடி",
+          tname: "க.பொன்முடி",
           ename: "K. Ponmudy",
         },
 
@@ -2881,6 +2936,10 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         affidate: "https://drive.google.com/file/d/1vbAvSns_9roYEwGLWIMEhOVA0hykirXM/preview",
 
         id: 6,
+        birth: {
+          name: "birth",
+          description: "K. Ponmudi (born Deivasigamani K, 19 August 1950) is an Indian Tamil politician and the current Minister for Higher Education of Tamil Nadu.[3] He was the Minister for Higher Education of Tamil Nadu from 2006 to 2011.[4] He was born in T. Edaiyar in the Villupuram district. He has a bachelor's degree in law, a master's degree in history, political science and public Administration and a doctorate in political science. He is an alumnus of Annamalai University.[5] Before entering professional politics, he was a professor in the Villupuram government college. He has been elected to the Tamil Nadu assembly five times. From 1989 to 1991 during Dravida Munnetra Kazhagam rule he was the Minister for Health, and from 1996 to 2001 he was the Minister for Transport and Highways.[6][7] He authored a book titled Dravidian Movement in India and Black Movement in the U.S.A.",
+        },
       },
 
       {
@@ -2889,7 +2948,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "udhayanithi stalin",
         },
         name: {
-          tname: "எ. வ. வேலு",
+          tname: "எ. வ.வேலு",
           ename: "E. V. Velu",
         },
 
@@ -2898,6 +2957,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         status: true,
         affidate: "https://drive.google.com/file/d/1BAIRY06cLNPwZxue0n9iTIe8yHRluXvq/preview",
         id: 7,
+        birth: {
+          name: "birth",
+          description: "E. V. Velu (born 15 March 1951) is an Indian Tamil and Minister of Public works, Highways and Minor Ports for Tamilnadu. He served as former Minister for Food in the state of Tamil Nadu, India. He was praised as \"Ethilum vallavar Velu\" by former chief minister Kalaignar Karunanithi .",
+        },
+        politics: {
+          name: "politics",
+          description: "Velu has been elected to the Tamil Nadu legislative assembly as All India Anna Dravida Munnetra Kazhagam (AIADMK) party candidate from Thandarambattu constituency, in 1984. In 1997, he joined DMK and got elected from the same constituency in 2001[1] and 2006.[2] He was subsequently elected twice from Tiruvannamalai constituency as a Dravida Munnetra Kazhagam candidate in 2011[3] and 2016."
+        },
       },
 
       {
@@ -2906,7 +2973,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "udhayanithi stalin",
         },
         name: {
-          tname: "எம்.ஆர்.கே. பன்னீர்செல்வம்",
+          tname: "எம்.ஆர்.கே.பன்னீர்செல்வம்",
           ename: "M. R. K. Panneerselvam",
         },
 
@@ -2916,6 +2983,15 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         affidate: "https://drive.google.com/file/d/1Tdzz3fAodyGYxWF3LihngEyR6whSluMB/preview",
 
         id: 8,
+
+        birth: {
+          name: "birth",
+          description: "M. R. K. Panneerselvam is an Indian politician Tamil and Minister of Agriculture and Farmers Welfare of Government of Tamilnadu and he has been the Minister for Health in the state of Tamil Nadu during the period from 2006 to 2011 Minister for Backward Classes during 1996 He was born in Muttam and has a bachelor's degree in Law.( The Tamil Nadu Dr.Ambedkar Law University)",
+        }, 
+        politics: {
+          name: "politics",
+          description: "Panneerselvam has been elected to the Tamil Nadu Legislative Assembly on five occasions from the Kurinjipadi constituency as a candidate of the Dravida Munnetra Kazhagam party. These were in the elections of 1996,[1] 2001, 2006, 2016 and 2021.As promised in the DMK election manifesto, a separate Agriculture Budget for the state was presented on 14 August 2021.[2] MRK Panneerselvam, the minister for agriculture and farmer's welfare, presented the budget and said that it was in line with the views of farmers and experts, whose opinions were sought before preparing it."
+        },
       },
 
       {
@@ -2934,6 +3010,16 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         affidate: "https://drive.google.com/file/d/13R9h3H7YFdxvu0asWRjJ8hJvaxKXbkHq/preview",
 
         id: 9,
+
+        birth: {
+          name: "birth",
+          description: "Thangam Thennarasu (born 3 June 1966) is an Indian politician and the Minister for Finance, Planning, Human Resources Management, Pensions and Pensionary benefits, Statistics and Archeology Minister of Tamil nadu. He served as Minister for School Education in Tamil Nadu during 2006-2011. He was born in Mallankinaru, Tamil Nadu. He has a bachelor's degree in Engineering. He has been elected to the Tamil Nadu assembly five times.[2] He is the son of the former Member of Legislative Assembly from Aruppukottai, V. Thangapandian",
+        }, 
+        politics: {
+          name: "politics",
+          description: "He was elected to the Tamil Nadu legislative assembly as a Dravida Munnetra Kazhagam candidate from Aruppukottai constituency in 1997/98 by-election, and 2006 election.[3][4] He is the younger brother of recently elected Member of Parliament, Lok Sabha, from the Chennai South constituency, Thamizhachi Thangapandian."
+        },
+
       },
       {
         img: {
@@ -2959,7 +3045,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "ragupahty",
         },
         name: {
-          tname: "எஸ். ரகுபதி",
+          tname: "எஸ்.ரகுபதி",
           ename: "S. Regupathy",
         },
 
@@ -2977,7 +3063,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "muthusaami",
         },
         name: {
-          tname: "சு. முத்துசாமி",
+          tname: "சு.முத்துசாமி",
           ename: "S. Muthusamy",
         },
 
@@ -2995,7 +3081,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "periyasami",
         },
         name: {
-          tname: "கே. ஆர். பெரியகருப்பன்",
+          tname: "கே. ஆர்.பெரியகருப்பன்",
           ename: "K.R.Periyakaruppan",
         },
 
@@ -3012,7 +3098,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "anbarasan",
         },
         name: {
-          tname: "தா. மோ. அன்பரசன்",
+          tname: "தா. மோ.அன்பரசன்",
           ename: "T. M. Anbarasan",
         },
 
@@ -3030,7 +3116,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "saaminathan",
         },
         name: {
-          tname: "மு. பெ. சாமிநாதன்",
+          tname: "மு. பெ.சாமிநாதன்",
           ename: "M. P. Saminathan",
         },
 
@@ -3047,7 +3133,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "keetha jeevan",
         },
         name: {
-          tname: "பெ. கீதா ஜீவன்",
+          tname: "பெ.கீதா ஜீவன்",
           ename: "Geetha Jeevan",
         },
 
@@ -3102,14 +3188,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "ramachanran",
         },
         name: {
-          tname: "கே.கே.எஸ்.எஸ்.ஆர். இராமச்சந்திரன்",
-          ename: "K. Ramachandran",
+          tname: "கே.கே.எஸ்.எஸ்.ஆர்.இராமச்சந்திரன்",
+          ename: "K.S.S.R.Ramachandran",
         },
 
         position: "வருவாய், பேரிடர் மேலாண்மை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 19,
       },
 
@@ -3119,14 +3205,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "sakrabaani",
         },
         name: {
-          tname: "அர. சக்கரபாணி",
+          tname: "அர.சக்கரபாணி",
           ename: "R. Sakkarapani",
         },
 
         position: " உணவு மற்றும் குடிமைப் பொருள் வழங்கல் துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1iG1A915QbgXCBkSmi6mu7xz0-x1oD9II/preview",
         id: 20,
       },
 
@@ -3136,14 +3222,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "sendhilbalaji",
         },
         name: {
-          tname: "வே. செந்தில்பாலாஜி",
+          tname: "வே.செந்தில்பாலாஜி",
           ename: "V. Senthilbalaji",
         },
 
         position: "மின்சாரம், மதுவிலக்கு துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1KI36jjFrsGWrAGfdts9JVW32otK6wDeI/preview",
         id: 21,
       },
 
@@ -3153,14 +3239,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "rs gandhi",
         },
         name: {
-          tname: "ஆர். காந்தி",
+          tname: "ஆர்.காந்தி",
           ename: "R. Gandhi",
         },
 
         position: "கைத்தறி மற்றும் ஜவுளித்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 22,
       },
 
@@ -3170,14 +3256,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "subramaniyan",
         },
         name: {
-          tname: "மா. சுப்பிரமணியம்",
+          tname: "மா.சுப்பிரமணியம்",
           ename: "M. Subramaniam",
         },
 
         position: "மருத்துவம் மற்றும் குடும்ப நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 23,
       },
 
@@ -3187,14 +3273,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "moorhty p image",
         },
         name: {
-          tname: "பி. மூர்த்தி",
+          tname: "பி.மூர்த்தி",
           ename: "Moorthy P",
         },
 
         position: "வணிக வரிகள் மற்றும் பதிவுத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 24,
       },
 
@@ -3211,7 +3297,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "பிற்படுத்தப்பட்டோர் நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 25,
       },
 
@@ -3221,14 +3307,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "segar babu",
         },
         name: {
-          tname: "பி. கே. சேகர் பாபு",
+          tname: "பி. கே.சேகர் பாபு",
           ename: "P. K. Sekar Babu",
         },
 
         position: "இந்து சமய மற்றும் அறநிலையத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 26,
       },
 
@@ -3246,7 +3332,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "தகவல் தொழில்நுட்பம் மற்றும் டிஜிட்டல் சேவைகள் அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 27,
       },
 
@@ -3263,7 +3349,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: " பள்ளிக் கல்வித்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 29,
       },
       {
@@ -3279,23 +3365,23 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "பால் மற்றும் பால்வள மேம்பாட்டுத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 30,
       },
       {
         img: {
           sourse: "https://freeimghost.net/images/2023/05/14/trp_raja-removebg-preview.png",
-          alter: "டி.ஆர்.பி. ராஜா",
+          alter: "டி.ஆர்.பி.ராஜா",
         },
         name: {
-          tname: "டி.ஆர்.பி. ராஜா",
-          ename: "T.R.B. Rajaa",
+          tname: "டி.ஆர்.பி.ராஜா",
+          ename: "T.R.B.Rajaa",
         },
 
         position: "தொழில்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 31,
       },
       {
@@ -3304,14 +3390,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "செஞ்சி கே.எஸ். மஸ்தான்",
         },
         name: {
-          tname: "செஞ்சி கே.எஸ். மஸ்தான்",
+          tname: "செஞ்சி கே.எஸ்.மஸ்தான்",
           ename: "Gingee K.S. Masthan",
         },
 
         position: "வெளிநாடு வாழ் தமிழர்கள் நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 32,
       },
       {
@@ -3327,7 +3413,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "சுற்றுச்சூழல், பருவநிலை மாற்ற அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 33,
       },
       {
@@ -3336,14 +3422,14 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "mano thangaraj",
         },
         name: {
-          tname: "ச கணேசன்",
-          ename: "C.V. Ganesan",
+          tname: "சி.வி.கணேசன்",
+          ename: "C.V.Ganesan",
         },
 
         position: "திறன் மேம்பாட்டுத் துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 34,
       },
       {
@@ -3359,7 +3445,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         position: "ஆதி திராவிடர் நலத்துறை அமைச்சர்",
         party_name: "திராவிட முன்னேற்றக் கழகம்",
         status: true,
-        affidate: "#",
+        affidate: "https://drive.google.com/file/d/1SPjRJg1e172-eu4kYyekA18xVzLLhNHY/preview",
         id: 35,
       },
     ])
@@ -3779,218 +3865,218 @@ if (JSON.parse(localStorage.getItem("governor_details"))) {
         governor_name: "ஆர்.என்.ரவி",
         image: "https://freeimghost.net/images/2023/05/07/ravi-gover.jpeg",
         position: "ஆளுநர்",
-        from: "10 September 2021",
+        from: "10 செப்டம்பர் 2021",
         to: "Present Governor",
       },
       {
         id: "2",
         governor_name: "பன்வாரிலால் புரோஹித்",
         image: "https://freeimghost.net/images/2023/05/07/pannish-gover.jpeg",
-        from: "6 October 2017",
-        to: "10 September 2021",
+        from: "6 அக்டோபர் 2017",
+        to: "10 செப்டம்பர் 2021",
       },
       {
         id: "3",
-        governor_name: "சி. வித்யாசாகர ராவ்",
+        governor_name: "சி.வித்யாசாகர ராவ்",
         image: "https://freeimghost.net/images/2023/05/07/rav-gover.jpeg",
-        from: "2 September 2016",
-        to: "October 6, 2017",
+        from: "2 செப்டம்பர் 2016",
+        to: "அக்டோபர் 6, 2017",
       },
       {
         id: "4",
         governor_name: "கோனிஜெட்ஜி ரோசய்யா",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "31 August 2011",
-        to: "August 30, 2016",
+        from: "31 ஆகஸ்ட் 2011",
+        to: "ஆகஸ்ட் 30, 2016",
       },
       {
         id: "5",
         governor_name: "சுர்ஜித் சிங் பர்ணாலா",
         image: "https://freeimghost.net/images/2023/05/07/sigh-governer.jpeg",
-        from: "3 November 2004",
-        to: "August 31, 2011",
+        from: "3 நவம்பர் 2004",
+        to: "ஆகஸ்ட் 31, 2011",
       },
       {
         id: "6",
-        governor_name: "பி.எஸ். ராம் மோகன ராவ்",
+        governor_name: "பி.எஸ்.ராம் மோகன ராவ்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "18 January 2002",
-        to: "November 3, 2004",
+        from: "18 ஜனவரி 2002",
+        to: "நவம்பர் 3, 2004",
       },
       {
         id: "7",
-        governor_name: "சி. ரங்கராஜன்",
+        governor_name: "சி.ரங்கராஜன்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "3 July 2001",
-        to: "January 18, 2002",
+        from: "3 ஜூலை 2001",
+        to: "ஜனவரி 18, 2002",
       },
       {
         id: "8",
-        governor_name: "எம். பாத்திமா பீவி",
+        governor_name: "எம்.பாத்திமா பீவி",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "25 January 1997",
-        to: "July 3, 2001",
+        from: "25 ஜனவரி 1997",
+        to: "ஜூலை 3, 2001",
       },
       {
         id: "9",
         governor_name: "கிருஷ்ணகாந்த்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "2 December 1996",
-        to: "January 25, 1997",
+        from: "2 டிசம்பர் 1996",
+        to: "ஜனவரி 25, 1997",
       },
       {
         id: "10",
         governor_name: "மரி சென்னா ரெட்டி",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "31 May 1993",
-        to: "2 December 1996",
+        from: "31 மே 1993",
+        to: "2 டிசம்பர் 1996",
       },
       {
         id: "11",
         governor_name: "பீஷ்ம நாராயண் சிங்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "15 February 1991",
-        to: "May 31, 1993",
+        from: "15 பிப்ரவரி 1991",
+        to: "மே 31, 1993",
       },
       {
         id: "12",
         governor_name: "சுர்ஜித் சிங் பர்ணாலா",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "24 May 1990",
-        to: "February 15, 1991",
+        from: "24 மே 1990",
+        to: "பிப்ரவரி 15, 1991",
       },
       {
         id: "13",
-        governor_name: "பி.சி. அலெக்சாண்டர்",
+        governor_name: "பி.சி.அலெக்சாண்டர்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "17 February 1988",
-        to: "May 24, 1990",
+        from: "17 பிப்ரவரி 1988",
+        to: "மே 24, 1990",
       },
       {
         id: "14",
         governor_name: "சுந்தர் லால் குரானா",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "3 September 1982",
-        to: "February 17, 1988",
+        from: "3 செப்டம்பர் 1982",
+        to: "பிப்ரவரி 17, 1988",
       },
       {
         id: "15",
         governor_name: "சாதிக் அலி",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "4 November 1980",
-        to: "September 3, 1982",
+        from: "4 நவம்பர் 1980",
+        to: "செப்டம்பர் 3, 1982",
       },
       {
         id: "16",
         governor_name: "எம்எம் இஸ்மாயில்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "27 October 1980",
-        to: "November 4, 1980",
+        from: "27 அக்டோபர் 1980",
+        to: "நவம்பர் 4, 1980",
       },
       {
         id: "17",
         governor_name: "பிரபுதாஸ் பட்வாரி",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "27 April 1977",
-        to: "October 27, 1980",
+        from: "27 ஏப்ரல் 1977",
+        to: "அக்டோபர் 27, 1980",
       },
       {
         id: "18",
         governor_name: "பி.கோவிந்தன் நாயர்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "9 April 1977",
-        to: "April 27, 1977",
+        from: "9 ஏப்ரல் 1977",
+        to: "ஏப்ரல் 27, 1977",
       },
       {
         id: "19",
         governor_name: "மகோன்லால் சுக்காடியா",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "16 June 1976",
-        to: "April 8, 1977",
+        from: "16 ஜூன் 1976",
+        to: "ஏப்ரல் 8, 1977",
       },
       {
         id: "20",
         governor_name: "கோடராஸ் காளிதாஸ் ஷா",
-        from: "27 May 1971",
+        from: "27 மே 1971",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        to: "June 16, 1976",
+        to: "ஜூன் 16, 1976",
       },
       {
         id: "21",
         governor_name: "சர்தார் உஜ்ஜைல் சிங்",
-        from: "14 January 1969",
+        from: "14 ஜனவரி 1969",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        to: "May 27, 1971",
+        to: "மே 27, 1971",
       },
       {
         id: "22",
         governor_name: "சர்தார் உஜ்ஜைல் சிங் (1967 ஜூன் 16 வரை)",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "28 June 1966",
-        to: "14 January 1969",
+        from: "28 ஜூன் 1966",
+        to: "14 ஜனவரி 1969",
       },
       {
         id: "23",
         governor_name: "மகாராஜாரா ஸ்ரீ ஜெயசாமராஜ உடையார் பகதூர்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "7 December 1965",
-        to: "28 June 1966",
+        from: "7 டிசம்பர் 1965",
+        to: "28 ஜூன் 1966",
       },
       {
         id: "24",
         governor_name: "ப. சந்திரா ரெட்டி",
-        from: "24 November 1964",
+        from: "24 நவம்பர் 1964",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        to: "7 December 1965",
+        to: "7 டிசம்பர் 1965",
       },
       {
         id: "25",
         governor_name: "மகாராஜா சர் ஜெயசாமராஜ உடையார் பகதூர்",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "4 May 1964",
-        to: "24 November 1964",
+        from: "4 மே 1964",
+        to: "24 நவம்பர் 1964",
       },
       {
         id: "26",
         governor_name: "பிஷ்ணுராம் மேதி",
-        from: "24 January 1958",
+        from: "24 ஜனவரி 1958",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        to: "4 May 1964",
+        to: "4 மே 1964",
       },
       {
         id: "27",
         governor_name: "பகல வெங்கட ராஜமண்ணார்",
-        from: "1 October 1957",
+        from: "1 அக்டோபர் 1957",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        to: "24 January 1958",
+        to: "24 ஜனவரி 1958",
       },
       {
         id: "28",
-        governor_name: "ஏ.ஜே. ஜான்",
-        from: "10 December 1956",
+        governor_name: "ஏ.ஜே.ஜான்",
+        from: "10 டிசம்பர் 1956",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        to: "30 September 1957",
+        to: "30 செப்டம்பர் 1957",
       },
       {
         id: "29",
         governor_name: "ஸ்ரீ பிரகாசா",
-        from: "12 March 1952",
+        from: "12 மார்ச் 1952",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        to: "10 December 1956",
+        to: "10 டிசம்பர் 1956",
       },
       {
         id: "30",
         governor_name: "மகாராஜா ஸ்ரீ கிருஷ்ண குமாரசிங்ஜி பவ் சிங்ஜி",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "7 September 1948",
-        to: "12 March 1952",
+        from: "7 செப்டம்பர் 1948",
+        to: "12 மார்ச் 1952",
       },
       {
         id: "31",
         governor_name: "லெப்டினென்ட் ஜெனரல் சர் ஆர்ச்சிபால்ட் எட்வர்ட் நை",
         image: "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
-        from: "6 May 1946",
-        to: "September 7, 1948",
+        from: "6 மே 1946",
+        to: "செப்டம்பர் 7, 1948",
       },
     ])
   );
@@ -6523,138 +6609,161 @@ const governor_list_english = [
   {
     "id": "1",
     "governor_name": "R. N. Ravi",
+    "image": "https://freeimghost.net/images/2023/05/07/ravi-gover.jpeg",
     "from": "10 September 2021",
     "to": "Present Governor"
   },
   {
     "id": "2",
     "governor_name": "Banwarilal Purohit",
+    "image": "https://freeimghost.net/images/2023/05/07/pannish-gover.jpeg",
     "from": "6 October 2017",
     "to": "10 September 2021"
   },
   {
     "id": "3",
     "governor_name": "C. Vidyasagar Rao",
+    "image": "https://freeimghost.net/images/2023/05/07/rav-gover.jpeg",
     "from": "2 September 2016",
     "to": "October 6, 2017"
   },
   {
     "id": "4",
     "governor_name": "Konijeti Rosaiah",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "31 August 2011",
     "to": "August 30, 2016"
   },
   {
     "id": "5",
     "governor_name": "Surjit Singh Barnala",
+    "image": "https://freeimghost.net/images/2023/05/07/sigh-governer.jpeg",
     "from": "3 November 2004",
     "to": "August 31, 2011"
   },
   {
     "id": "6",
     "governor_name": "P.S. Rammohan Rao",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "18 January 2002",
     "to": "November 3, 2004"
   },
   {
     "id": "7",
     "governor_name": "C. Rangarajan",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "25 January 1997",
     "to": "July 3, 2001"
   },
   {
     "id": "8",
     "governor_name": "M. Fathima Beevi",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "25 January 1997",
     "to": "July 3, 2001"
   },
   {
     "id": "9",
     "governor_name": "Krishan Kant",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "2 December 1996",
     "to": "January 25, 1997"
   },
   {
     "id": "10",
     "governor_name": "Marri Chenna Reddy",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "31 May 1993",
     "to": "Present Governor"
   },
   {
     "id": "11",
     "governor_name": "Bhishma Narain Singh",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "15 February 1991",
     "to": "May 31, 1993"
   },
   {
     "id": "12",
     "governor_name": "Surjit Singh Barnala",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "24 May 1990",
     "to": "February 15, 1991"
   },
   {
     "id": "13",
     "governor_name": "P.C. Alexander",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "17 February 1988",
     "to": "May 24, 1990"
   },
   {
     "id": "14",
     "governor_name": "Sundar LalKhurana",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "3 September 1982",
     "to": "February 17, 1988"
   },
   {
     "id": "15",
     "governor_name": "Sadiq Ali",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "4 November 1980",
     "to": "September 3, 1982"
   },
   {
     "id": "16",
     "governor_name": "M.M. Ismail",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "November 4, 1980",
     "to": "November 4, 1980"
   },
   {
     "id": "17",
     "governor_name": "Prabhudas Patwari",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "27 April 1977",
     "to": "October 27, 1980"
   },
   {
     "id": "18",
     "governor_name": "P. Govindan Nair",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "9 April 1977",
     "to": "April 27, 1977"
   },
   {
     "id": "19",
     "governor_name": "Mohan Lal Sukhadia",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "16 June 1976",
     "to": "April 8, 1977"
   },
   {
     "id": "20",
     "governor_name": "Kodardas Kalidas Shah",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "June 16, 1976",
     "to": "June 16, 1976"
   },
   {
     "id": "21",
     "governor_name": "Sardar Ujjal Singh",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "14 January 1969",
     "to": "May 27, 1971"
   },
   {
     "id": "22",
     "governor_name": "Sardar Ujjal Singh (acting till 16 June 1967)",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "28 June 1966",
     "to": "14 January 1969"
   },
   {
     "id": "23",
     "governor_name": "Maharaja Sir Jayachamaraja Wodeyar Bahadur",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "7 December 1965",
     "to": "28 June 1966"
   },
@@ -6662,47 +6771,55 @@ const governor_list_english = [
     "id": "24",
     "governor_name": "P. Chandra Reddy",
     "from": "24 November 1964",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "to": "7 December 1965"
   },
   {
     "id": "25",
     "governor_name": "Maharaja Sir Jayachamaraja Wodeyar Bahadur",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "4 May 1964",
     "to": "24 November 1964"
   },
   {
     "id": "26",
     "governor_name": "Bhishnuram Medhi",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "24 January 1958",
     "to": "4 May 1964"
   },
   {
     "id": "27",
     "governor_name": "Pakala Venkata Rajamannar",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "1 October 1957",
     "to": "24 January 1958"
   },
   {
     "id": "28",
     "governor_name": "A. J. John",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "10 December 1956",
     "to": "30 September 1957"
   },
   {
     "id": "29",
     "governor_name": "Sri Prakasa",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "12 March 1952",
     "to": "10 December 1956"
   },
   {
     "id": "30",
     "governor_name": "Maharaja Sir Krishna Kumarasinhji Bhavsinhji",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "7 September 1948",
     "to": "12 March 1952"
   },
   {
     "id": "31",
     "governor_name": "Lieutenant-General Sir Archibald Edward Nye[3]",
+    "image": "https://freeimghost.net/images/2023/05/13/not-iamge.jpeg",
     "from": "6 May 1946",
     "to": "September 7, 1948"
   }

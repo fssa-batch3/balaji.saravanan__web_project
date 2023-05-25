@@ -19,18 +19,27 @@
 
     <link rel="stylesheet" href="../../assets/css/footer.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+
+
+    <style>
+        #Layer_1 {
+            max-width: 300px;
+            min-width: 50px;
+            margin: auto;
+            height: 400px;
+        }
+    </style>
+
 </head>
 
 <body>
     <div class="wrapper">
         <nav id="sidebar">
+            <ul>
 
-            <!-- <div class="icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div> -->
             </ul>
         </nav>
     </div>
@@ -44,16 +53,16 @@
 
         <div class="cm-total-content">
 
-        </div>
 
-        <h1 class="cmd">Comment Section</h1>
-        <ul id="comments-list"></ul>
+
+        </div>
+        
+        <h1 class="cmd">கருத்துப் பகுதி</h1>
+        <ul id="comments-list">கருத்து</ul>
         <form id="comment-form">
-            <!-- <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br> -->
-            <label for="comment">Comment:</label>
-            <textarea id="comment" required name="comment"></textarea>
-<br>
+            <label for="comment"></label>
+            <textarea id="comment" required></textarea>
+            <br>
             <input type="submit" id="submit_btn" value="Submit">
         </form>
 
@@ -64,8 +73,21 @@
 
     <script src="../../main.js"></script>
 
+    <script>
+        var hi = new Vivus('Layer_1', {
+            type: 'oneByOne', // Set the animation type to 'oneByOne'
+            duration: 500, // Adjust the duration to control the speed of rotation
+            start: 'autostart',
+            dashGap: 0, // Set the dash gap to 0 for a continuous rotation
+            forceRender: false
+        }, function () {
+            if (window.console) {
+                console.log('Animation finished. [log triggered from callback]');
+            }
+        });
 
-    <script>        function handleFormSubmit(event) {
+
+        function handleFormSubmit(event) {
             event.preventDefault();
 
             const users = JSON.parse(localStorage.getItem("users"));
@@ -107,7 +129,7 @@
 
             const comments1 = JSON.parse(localStorage.getItem("comments")) ?? [];
 
-            const minister = JSON.parse(localStorage.getItem("mla_ditails"))
+            const minister = JSON.parse(localStorage.getItem("governor_details"))
 
             const ministerName = document.getElementById("minister-name").innerText
                 .replace("NAME : ", "")
@@ -144,6 +166,7 @@
         } else {
             submit_btn.style.display = "none"
         }
+
     </script>
 
     <!-- script for bootstrap -->

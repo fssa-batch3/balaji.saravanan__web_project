@@ -19,6 +19,20 @@
 
     <link rel="stylesheet" href="../../assets/css/footer.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+
+
+    <style>
+        #Layer_1 {
+            max-width: 300px;
+            min-width: 50px;
+            margin: auto;
+            height: 400px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -42,7 +56,8 @@
         <form id="comment-form">
             <label for="comment">கருத்து:</label>
             <textarea id="comment" required name="comment"></textarea>
-<br>
+            <br>
+            <h2 id="information">Login and then try comment Thank you</h2>
             <input type="submit" id="submit_btn" value="Submit">
         </form>
 
@@ -52,7 +67,24 @@
 
     <script src="../../main.js"></script>
 
-    <script>        function handleFormSubmit(event) {
+    <script>
+
+
+
+
+        var hi = new Vivus('Layer_1', {
+            type: 'oneByOne', // Set the animation type to 'oneByOne'
+            duration: 500, // Adjust the duration to control the speed of rotation
+            start: 'autostart',
+            dashGap: 0, // Set the dash gap to 0 for a continuous rotation
+            forceRender: false
+        }, function () {
+            if (window.console) {
+                console.log('Animation finished. [log triggered from callback]');
+            }
+        });
+
+        function handleFormSubmit(event) {
             event.preventDefault();
 
             const users = JSON.parse(localStorage.getItem("users"));
@@ -124,10 +156,17 @@
 
         const loginEmail = localStorage.getItem("profile_email");
 
+        const information = document.getElementById("information");
+
+
         if (loginEmail !== null) {
             submit_btn.style.display = "block"
+
+            information.style.display = "none"
         } else {
             submit_btn.style.display = "none"
+
+            information.style.display = "block"
         }
     </script>
 

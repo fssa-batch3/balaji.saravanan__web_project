@@ -113,6 +113,10 @@
 
 /* commend start */
 
+.total_commant{
+    margin-left: 20%;
+}
+
 .cmd {
     font-size: 20px;
     text-align: center;
