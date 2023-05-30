@@ -42,7 +42,7 @@ function default_list(array) {
     table_data_row.append(table_data2);
 
     name_link = document.createElement("a");
-    name_link.setAttribute("href", "../../assets");
+    name_link.setAttribute("href", "mla_ditails.html?name="+values.mla_id);
     name_link.setAttribute("title", values.constituency_Name);
     name_link.innerText = values.constituency_Name;
     table_data2.append(name_link);
@@ -119,7 +119,9 @@ window.onload = function () {
     const rows = document.querySelectorAll("table tr");
 
     for (let i = 1; i < rows.length; i++) {
+      
       // start from index 1 to skip the header row
+      
       const row = rows[i];
 
       const id = row.children[0].textContent.toLocaleLowerCase();
@@ -144,7 +146,7 @@ window.onload = function () {
   });
 };
 
-const table = document.querySelector("table");
+const table = document.getElementById("mlatable");
 const { rows } = table;
 
 const sortNameButton = document.querySelector("#sortName");
@@ -165,34 +167,23 @@ sortMarginButton.addEventListener("click", () => {
   const sortedRows = Array.from(rows)
     .slice(1)
     .sort((a, b) => {
-      const marginA = parseInt(a.cells[4].textContent);
-      const marginB = parseInt(b.cells[4].textContent);
+      const marginA = parseInt(a.cells[5].textContent);
+      const marginB = parseInt(b.cells[5].textContent);
       return marginB - marginA;
     });
 
   table.tBodies[0].append(...sortedRows);
 });
 
-const head_tamil = document.getElementById("head_tamil");
-
-const head_english = document.getElementById("head_english");
 
 tamil_tran.addEventListener("click", () => {
   document.querySelector(".mla_list_body").innerHTML = "";
-
-  head_tamil.style.display = "table-header-group";
-
-  head_english.style.display = "none";
 
   default_list(mla_list_tamil);
 });
 
 english_tran.addEventListener("click", () => {
   document.querySelector(".mla_list_body").innerHTML = "";
-
-  head_tamil.style.display = "none";
-
-  head_english.style.display = "table-header-group";
 
   default_list(mla_list_eng);
 });
@@ -202,17 +193,14 @@ const language_setting11 = localStorage.getItem("language");
 if (language_setting11 === "english") {
   document.querySelector(".mla_list_body").innerHTML = "";
 
-  head_tamil.style.display = "none";
-
-  head_english.style.display = "table-header-group";
 
   default_list(mla_list_eng);
 } else if (language_setting11 == "tamil") {
   document.querySelector(".mla_list_body").innerHTML = "";
 
-  head_tamil.style.display = "table-header-group";
-
-  head_english.style.display = "none";
 
   default_list(mla_list_tamil);
 }
+
+
+

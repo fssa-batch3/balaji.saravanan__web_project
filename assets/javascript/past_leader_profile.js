@@ -24,14 +24,6 @@ if (found) {
   const cmImage = document.createElement("div");
   cmImage.setAttribute("class", "cm-image");
 
-  // cmPicture
-
-  // cmPicture = document.createElement("img");
-  // cmPicture.setAttribute("src", minister_name[i].image.sourse);
-  // cmImage.append(cmPicture);
-
-  // document.querySelector(".headprofile").append(cmImage);
-
   // // cm_name
   const cm_name = document.createElement("div");
   cm_name.setAttribute("class", "cm-name");
@@ -43,6 +35,7 @@ if (found) {
   cm_name.append(position);
 
   const position1 = document.createElement("p");
+  position1.setAttribute("id", "minister-name")
   position1.innerText = `பெயர் : ${pastLeader[i].name}`;
   cm_name.append(position1);
 
@@ -74,7 +67,7 @@ if (found) {
   unorderList.append(list);
 
   const list1img = document.createElement("img");
-  list1img.setAttribute("src", "#");
+  list1img.setAttribute("src", pastLeader[i].image);
   list1img.setAttribute("alt", "error image");
   list.append(list1img);
 
@@ -131,150 +124,163 @@ if (found) {
   // cmcontent
   const cmcontent_div = document.createElement("div");
   cmcontent_div.setAttribute("class", "cmcontent");
+  if (pastLeader[i].birth) {
 
-  const birth_div = document.createElement("div");
-  birth_div.setAttribute("id", "birth");
-  cmcontent_div.append(birth_div);
 
-  const topic = document.createElement("h2");
-  topic.innerText = "பிறப்பு";
-  birth_div.append(topic);
 
-  const describe = document.createElement("p");
-  describe.innerText =
-    "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
-  birth_div.append(describe);
+    const birth_div = document.createElement("div");
+    birth_div.setAttribute("id", "birth");
+    cmcontent_div.append(birth_div);
 
-  const education_div = document.createElement("div");
-  education_div.setAttribute("id", "educatiion");
-  cmcontent_div.append(education_div);
+    const topic = document.createElement("h2");
+    topic.innerText = "பிறப்பு";
+    birth_div.append(topic);
 
-  const topic_education = document.createElement("h2");
-  topic_education.innerText = "கல்வி";
-  education_div.append(topic_education);
+    const describe = document.createElement("p");
+    describe.innerText =
+      "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
+    birth_div.append(describe);
 
-  const describe_education = document.createElement("p");
-  describe_education.innerText =
-    "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
-  education_div.append(describe_education);
+    const education_div = document.createElement("div");
+    education_div.setAttribute("id", "educatiion");
+    cmcontent_div.append(education_div);
 
-  const family_div = document.createElement("div");
-  family_div.setAttribute("id", "family");
-  cmcontent_div.append(family_div);
+    const topic_education = document.createElement("h2");
+    topic_education.innerText = "கல்வி";
+    education_div.append(topic_education);
 
-  const topic_family = document.createElement("h2");
-  topic_family.innerText = "திரைப்படம்";
-  family_div.append(topic_family);
+    const describe_education = document.createElement("p");
+    describe_education.innerText =
+      "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
+    education_div.append(describe_education);
 
-  const describe_family = document.createElement("p");
-  describe_family.innerText =
-    "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
-  family_div.append(describe_family);
+    const family_div = document.createElement("div");
+    family_div.setAttribute("id", "family");
+    cmcontent_div.append(family_div);
 
-  const movie_div = document.createElement("div");
-  movie_div.setAttribute("id", "movie");
-  cmcontent_div.append(movie_div);
+    const topic_family = document.createElement("h2");
+    topic_family.innerText = "திரைப்படம்";
+    family_div.append(topic_family);
 
-  const topic_movie = document.createElement("h2");
-  topic_movie.innerText = "அரசியல்";
-  movie_div.append(topic_movie);
+    const describe_family = document.createElement("p");
+    describe_family.innerText =
+      "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
+    family_div.append(describe_family);
 
-  const describe_movie = document.createElement("p");
-  describe_movie.innerText =
-    "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
-  movie_div.append(describe_movie);
+    const movie_div = document.createElement("div");
+    movie_div.setAttribute("id", "movie");
+    cmcontent_div.append(movie_div);
 
-  const politics_div = document.createElement("div");
-  politics_div.setAttribute("id", "politics");
-  cmcontent_div.append(politics_div);
+    const topic_movie = document.createElement("h2");
+    topic_movie.innerText = "அரசியல்";
+    movie_div.append(topic_movie);
 
-  const topic_politics = document.createElement("h2");
-  topic_politics.innerText = "குடும்பம்";
-  politics_div.append(topic_politics);
+    const describe_movie = document.createElement("p");
+    describe_movie.innerText =
+      "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
+    movie_div.append(describe_movie);
 
-  const describe_politics = document.createElement("p");
-  describe_politics.innerText =
-    "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
-  politics_div.append(describe_politics);
+    const politics_div = document.createElement("div");
+    politics_div.setAttribute("id", "politics");
+    cmcontent_div.append(politics_div);
 
-  const income_div = document.createElement("div");
-  income_div.setAttribute("id", "income");
-  cmcontent_div.append(income_div);
+    const topic_politics = document.createElement("h2");
+    topic_politics.innerText = "குடும்பம்";
+    politics_div.append(topic_politics);
 
-  const topic_income = document.createElement("h2");
-  topic_income.innerText = "வருமானம்";
-  income_div.append(topic_income);
+    const describe_politics = document.createElement("p");
+    describe_politics.innerText =
+      "1953 ஆம் ஆண்டு மார்ச் 1ம் தேதி கலைஞர் மு.கருணாநிதி-தயாளு தம்பதிக்கு மூன்றாவது மகனாக பிறந்தார் தளபதி என  எல்லோராலும் அன்புடன் அழைக்கப்படும் மு.க.ஸ்டாலின்.ரஷ்யாவின் அதிபர் ஜோசப் ஸ்டாலின் நினைவாக ஸ்டாலின எனப் பெயர் சூட்டினார் அவரது தந்தை கலைஞர் மு கருணாநிதி.தளபதி உடன் பிறந்தோர், முத்து, அழகிரி, செல்வி,தமிழரசு  மற்றும் கனிமொழி.";
+    politics_div.append(describe_politics);
 
-  const assets_div = document.createElement("div");
-  assets_div.setAttribute("class", "assets");
-  income_div.append(assets_div);
+    const income_div = document.createElement("div");
+    income_div.setAttribute("id", "income");
+    cmcontent_div.append(income_div);
 
-  const table = document.createElement("table");
-  income_div.append(table);
+    const topic_income = document.createElement("h2");
+    topic_income.innerText = "வருமானம்";
+    income_div.append(topic_income);
 
-  const table_row = document.createElement("tr");
-  table.append(table_row);
+    const assets_div = document.createElement("div");
+    assets_div.setAttribute("class", "assets");
+    income_div.append(assets_div);
 
-  const table_data_row1 = document.createElement("td");
-  table_data_row1.innerText = "ஆண்டு";
-  table_row.append(table_data_row1);
+    const table = document.createElement("table");
+    income_div.append(table);
 
-  const table_data1 = document.createElement("td");
-  table_data1.innerText = `₹${2.05}Lakh`;
-  table_row.append(table_data1);
+    const table_row = document.createElement("tr");
+    table.append(table_row);
 
-  const table_row1 = document.createElement("tr");
-  table.append(table_row1);
+    const table_data_row1 = document.createElement("td");
+    table_data_row1.innerText = "ஆண்டு";
+    table_row.append(table_data_row1);
 
-  const table_data_row2 = document.createElement("td");
-  table_data_row2.innerText = "மாதாந்திர";
-  table_row1.append(table_data_row2);
+    const table_data1 = document.createElement("td");
+    table_data1.innerText = `₹${2.05}Lakh`;
+    table_row.append(table_data1);
 
-  const table_data2 = document.createElement("td");
-  table_data2.innerText = `₹${2.05}Lakh`;
-  table_row1.append(table_data2);
+    const table_row1 = document.createElement("tr");
+    table.append(table_row1);
 
-  const table_row2 = document.createElement("tr");
-  table.append(table_row2);
+    const table_data_row2 = document.createElement("td");
+    table_data_row2.innerText = "மாதாந்திர";
+    table_row1.append(table_data_row2);
 
-  const table_data_row3 = document.createElement("td");
-  table_data_row3.innerText = "வாரந்தோறும்";
-  table_row2.append(table_data_row3);
+    const table_data2 = document.createElement("td");
+    table_data2.innerText = `₹${2.05}Lakh`;
+    table_row1.append(table_data2);
 
-  const table_data3 = document.createElement("td");
-  table_data3.innerText = `₹${2.05}Lakh`;
-  table_row2.append(table_data3);
+    const table_row2 = document.createElement("tr");
+    table.append(table_row2);
 
-  const table_row3 = document.createElement("tr");
-  table.append(table_row3);
+    const table_data_row3 = document.createElement("td");
+    table_data_row3.innerText = "வாரந்தோறும்";
+    table_row2.append(table_data_row3);
 
-  const table_data_row4 = document.createElement("td");
-  table_data_row4.innerText = "தினசரி";
-  table_row3.append(table_data_row4);
+    const table_data3 = document.createElement("td");
+    table_data3.innerText = `₹${2.05}Lakh`;
+    table_row2.append(table_data3);
 
-  const table_data4 = document.createElement("td");
-  table_data4.innerText = `₹${2.05}Lakh`;
-  table_row3.append(table_data4);
+    const table_row3 = document.createElement("tr");
+    table.append(table_row3);
 
-  const assets1_div = document.createElement("div");
-  assets1_div.setAttribute("class", "assets1");
-  income_div.append(assets1_div);
+    const table_data_row4 = document.createElement("td");
+    table_data_row4.innerText = "தினசரி";
+    table_row3.append(table_data_row4);
 
-  const assets1_describe = document.createElement("p");
-  assets1_describe.innerText = "நிகர மதிப்பு ₹ 8.89 CRORE";
-  assets1_div.append(assets1_describe);
+    const table_data4 = document.createElement("td");
+    table_data4.innerText = `₹${2.05}Lakh`;
+    table_row3.append(table_data4);
 
-  const assets_cm_div = document.createElement("div");
-  assets_cm_div.setAttribute("class", "assetscm");
-  assets1_div.append(assets_cm_div);
+    const assets1_div = document.createElement("div");
+    assets1_div.setAttribute("class", "assets1");
+    income_div.append(assets1_div);
 
-  const total_assets_div = document.createElement("p");
-  total_assets_div.innerText = "சொத்துக்கள் ₹8.89 CRORE";
-  assets_cm_div.append(total_assets_div);
+    const assets1_describe = document.createElement("p");
+    assets1_describe.innerText = "நிகர மதிப்பு ₹ 8.89 CRORE";
+    assets1_div.append(assets1_describe);
 
-  const loan_describe = document.createElement("p");
-  loan_describe.innerText = "கடன்கள் ₹ N/A";
-  assets_cm_div.append(loan_describe);
+    const assets_cm_div = document.createElement("div");
+    assets_cm_div.setAttribute("class", "assetscm");
+    assets1_div.append(assets_cm_div);
+
+    const total_assets_div = document.createElement("p");
+    total_assets_div.innerText = "சொத்துக்கள் ₹8.89 CRORE";
+    assets_cm_div.append(total_assets_div);
+
+    const loan_describe = document.createElement("p");
+    loan_describe.innerText = "கடன்கள் ₹ N/A";
+    assets_cm_div.append(loan_describe);
 
   document.querySelector(".cm-total-content").append(cmcontent_div);
+
+}
+
+  else {
+    let lii= document.createElement("p");
+    lii.innerHTML="Comming soon"
+
+    document.querySelector(".cm-total-content").append(lii);
+    
+  }
 }

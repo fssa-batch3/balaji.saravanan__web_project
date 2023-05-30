@@ -19,10 +19,6 @@
 
     <link rel="stylesheet" href="../../assets/css/footer.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
-
 
     <style>
         #Layer_1 {
@@ -57,7 +53,8 @@
             <label for="comment">கருத்து:</label>
             <textarea id="comment" required name="comment"></textarea>
             <br>
-            <h2 id="information">Login and then try comment Thank you</h2>
+            <p id="information">Login and then try comment Thank you</p>
+
             <input type="submit" id="submit_btn" value="Submit">
         </form>
 
@@ -69,21 +66,6 @@
 
     <script>
 
-
-
-
-        var hi = new Vivus('Layer_1', {
-            type: 'oneByOne', // Set the animation type to 'oneByOne'
-            duration: 500, // Adjust the duration to control the speed of rotation
-            start: 'autostart',
-            dashGap: 0, // Set the dash gap to 0 for a continuous rotation
-            forceRender: false
-        }, function () {
-            if (window.console) {
-                console.log('Animation finished. [log triggered from callback]');
-            }
-        });
-
         function handleFormSubmit(event) {
             event.preventDefault();
 
@@ -94,10 +76,13 @@
             const currentUser = users.find(user => user.email === loginEmail);
             const currentUserName = currentUser.first_name;
 
-            const ministerName = document.getElementById("minister-name").innerText
-                .replace("NAME : ", "")
-                .trim();
-            const ministerId = minister.find(m => m.name.ename === ministerName).id;
+            const url = window.location.search;
+
+            const urlParams = new URLSearchParams(url);
+
+            const username = urlParams.get("name");
+
+            const ministerId = minister.find(m => m.name.ename === username).id;
 
             const comment = document.getElementById("comment").value;
             const timestamp = new Date().getTime();
@@ -126,10 +111,13 @@
 
             const minister = JSON.parse(localStorage.getItem("politician_data"))
 
-            const ministerName = document.getElementById("minister-name").innerText
-                .replace("NAME : ", "")
-                .trim();
-            const ministerId = minister.find(m => m.name.ename === ministerName).id;
+            const url = window.location.search;
+
+            const urlParams = new URLSearchParams(url);
+
+            const username = urlParams.get("name");
+
+            const ministerId = minister.find(m => m.name.ename === username).id;
 
             const commentsList = document.getElementById("comments-list");
 

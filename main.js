@@ -2801,15 +2801,15 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         },
         politics:{
           name:"politics",
-          description:"His political career began in his early teens when he started the DMK Gopalapuram Youth Wing with several friends.[16] As a 14 year old, he campaigned for his uncle, Murasoli Maran, in the 1967 elections.In 1973, Stalin was elected to the General committee of the DMK.He came to the limelight when he was jailed in Central Prison, Madras under the Maintenance of Internal Security Act (MISA) for protesting against the Emergency in 1976.[20][21][22] He was beaten up in custody and a fellow DMK prisoner C. Chittibabu died of injuries and police torture while protecting him.[23][24][25] He wrote his final year BA exams while in prison.[5] Stalin formed the DMK youth wing. In 1982 Stalin became the youth wing secretary of DMK, a post he held for more than four decades."
+          description:"His political career began in his early teens when he started the DMK Gopalapuram Youth Wing with several friends. As a 14 year old, he campaigned for his uncle, Murasoli Maran, in the 1967 elections.In 1973, Stalin was elected to the General committee of the DMK.He came to the limelight when he was jailed in Central Prison, Madras under the Maintenance of Internal Security Act (MISA) for protesting against the Emergency in 1976. He was beaten up in custody and a fellow DMK prisoner C. Chittibabu died of injuries and police torture while protecting him. He wrote his final year BA exams while in prison.[5] Stalin formed the DMK youth wing. In 1982 Stalin became the youth wing secretary of DMK, a post he held for more than four decades."
         },
         family: {
           name: "family",
-          description: "Stalin is the third son of 2nd Chief Minister of Tamil Nadu and DMK Chief M. Karunanidhi, and was born to his wife, Dayalu Ammal. Stalin was born in Madras, now Chennai, on 1 March 1953. Karunanidhi was addressing a condolence meeting for Soviet leader Joseph Stalin, who died only four days after his child was born, and thus decided to name his son after Stalin",
+          description: "Stalin is the third son of 2nd Chief Minister of Tamil Nadu and DMK Chief M. Karunanidhi, and was born to his wife, Dayalu Ammal.Stalin was born in Madras, now Chennai, on 1 March 1953. Karunanidhi was addressing a condolence meeting for Soviet leader Joseph Stalin, who died only four days after his child was born,and thus decided to name his son after Stalin",
         },
         education: {
           name: "education",
-          description: "Stalin studied at the Madras Christian College Higher Secondary School.[6] He completed a pre-university course at Vivekananda College, and obtained a history degree from Presidency College, Chennai of University of Madras in 1973. Stalin was conferred an Honorary Doctorate by Anna University on August 1, 2009",
+          description: "Stalin studied at the Madras Christian College Higher Secondary School.He completed a pre-university course at Vivekananda College, and obtained a history degree from Presidency College,Chennai of University of Madras in 1973. Stalin was conferred an Honorary Doctorate by Anna University on August 1, 2009",
         },
         
 
@@ -2834,7 +2834,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
 
         birth:{
           name:"birth",
-          description:"Udhayanidhi Stalin is the son of M. K. Stalin, Chief Minister of Tamil Nadu, and the grandson of former Chief Minister of Tamil Nadu M. Karunanidhi. He attended Don Bosco school and has a degree in Visual Communications from Loyola College in Chennai.[3][4][5] Several of his relatives have been actively involved in politics, and Tamil cinema since the 1950s. His cousins Arulnithi and Dayanidhi Azhagiri are actor and producer, respectively"
+          description:"Udhayanidhi Stalin is the son of M. K. Stalin, Chief Minister of Tamil Nadu, and the grandson of former Chief Minister of Tamil Nadu M. Karunanidhi. He attended Don Bosco school and has a degree in Visual Communications from Loyola College in Chennai.Several of his relatives have been actively involved in politics, and Tamil cinema since the 1950s. His cousins Arulnithi and Dayanidhi Azhagiri are actor and producer, respectively"
         },
         politics:{
           name:"birth",
@@ -2842,7 +2842,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
         },
         family: {
           name: "family",
-          description: "Udhayanidhi is married to Kiruthiga Udhayanidhi in 2002 and the couple have a son and a daughter. Currently, Kiruthiga heads the lifestyle magazine Inbox 1305.[35][36] She also directed the film Vanakkam Chennai (2013) for Red Giant Movies and Kaali (2018).[37][38] His son Inban Udhayanidhi has signed for NEROCA FC football club which plays in the I-League.[39][40] Udhayanidhi is an atheist",
+          description: "Udhayanidhi is married to Kiruthiga Udhayanidhi in 2002 and the couple have a son and a daughter. Currently, Kiruthiga heads the lifestyle magazine Inbox 1305.[35][36] She also directed the film Vanakkam Chennai (2013) for Red Giant Movies and Kaali (2018).[37][38] His son Inban Udhayanidhi has signed for NEROCA FC football club which plays in the I-League. Udhayanidhi is an atheist",
         },
 
 
@@ -3188,7 +3188,7 @@ if (JSON.parse(localStorage.getItem("politician_data"))) {
           alter: "ramachanran",
         },
         name: {
-          tname: "கே.கே.எஸ்.எஸ்.ஆர்.இராமச்சந்திரன்",
+          tname: "கே.கே.எஸ்.எஸ் .ஆர்.இராமச்சந்திரன்",
           ename: "K.S.S.R.Ramachandran",
         },
 

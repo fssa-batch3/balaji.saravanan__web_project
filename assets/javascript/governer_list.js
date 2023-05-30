@@ -130,29 +130,24 @@ sortNameButton.addEventListener("click", () => {
   table1.tBodies[0].append(...sortedRows);
 });
 
-const sortTableByDate = () => {
-  const table = document.getElementById("my-table");
+const sortDateButton = document.getElementById("sort-date");
+sortDateButton.addEventListener("click", () => {
 
-  const rows = Array.from(table.getElementsByTagName("tr"));
+  const table = document.querySelector("table");
 
-  const sortedRows = rows.sort((row1, row2) => {
+  const { rows } = table;
 
-    const date1 = new Date(row1.cells[3].textContent);
-
-    const date2 = new Date(row2.cells[3].textContent);
-
-    return date1 - date2;
-  });
+  const sortedRows = Array.from(rows)
+    .slice(1)
+    .sort((a, b) => {
+      const dateA = (a.cells[0].textContent);
+      const dateB = (b.cells[0].textContent);
+      return dateB - dateA; // Sort in descending order
+    });
 
   table.tBodies[0].append(...sortedRows);
+});
 
-};
-
-document.getElementById("sort-date").addEventListener("click", sortTableByDate);
-
-const head_tamil = document.getElementById("head_tamil");
-
-const head_english = document.getElementById("head_english");
 
 const tamil_tran = document.getElementById("lang_ta");
 
@@ -161,9 +156,7 @@ const english_tran = document.getElementById("lang_eng");
 tamil_tran.addEventListener("click", () => {
   document.querySelector(".mla_list_body").innerHTML = "";
 
-  head_tamil.style.display = "table-row";
 
-  head_english.style.display = "none";
 
   default_list(governer_list);
 });
@@ -171,9 +164,6 @@ tamil_tran.addEventListener("click", () => {
 english_tran.addEventListener("click", () => {
   document.querySelector(".mla_list_body").innerHTML = "";
 
-  head_tamil.style.display = "none";
-
-  head_english.style.display = "table-row";
 
   default_list(governer_list_english);
 });
@@ -183,19 +173,12 @@ const language_setting11 = localStorage.getItem("language");
 if (language_setting11 === "english") {
   document.querySelector(".mla_list_body").innerHTML = "";
 
-  head_tamil.style.display = "none";
-
-  head_english.style.display = "table-row";
-
   default_list(governer_list_english);
 
 }
 else if (language_setting11 == "tamil") {
+
   document.querySelector(".mla_list_body").innerHTML = "";
-
-  head_tamil.style.display = "table-row";
-
-  head_english.style.display = "none";
 
   default_list(governer_list);
 }

@@ -180,7 +180,11 @@ window.onload = function () {
 };
 
 const sortDateButton = document.getElementById("sort-date");
+
+const sortDateButton1 = document.getElementById("sort-date1");
+
 sortDateButton.addEventListener("click", () => {
+
   const table = document.querySelector("table");
 
   const { rows } = table;
@@ -196,7 +200,27 @@ sortDateButton.addEventListener("click", () => {
   table.tBodies[0].append(...sortedRows);
 });
 
+sortDateButton1.addEventListener("click", () => {
+
+  const table = document.querySelector("table");
+
+  const { rows } = table;
+
+  const sortedRows = Array.from(rows)
+    .slice(1)
+    .sort((a, b) => {
+      const dateA = (a.cells[0].textContent);
+      const dateB = (b.cells[0].textContent);
+      return dateA - dateB; // Sort in descending order
+    });
+
+  table.tBodies[0].append(...sortedRows);
+});
+
 const sortNameButton = document.getElementById("sortName");
+
+const sortNameButton1 = document.getElementById("sortName1");
+
 sortNameButton.addEventListener("click", () => {
   const table = document.querySelector("table");
   const { rows } = table;
@@ -207,6 +231,22 @@ sortNameButton.addEventListener("click", () => {
       const nameA = a.cells[1].textContent;
       const nameB = b.cells[1].textContent;
       return nameA.localeCompare(nameB);
+    });
+
+  table.tBodies[0].append(...sortedRows);
+});
+
+
+sortNameButton1.addEventListener("click", () => {
+  const table = document.querySelector("table");
+  const { rows } = table;
+
+  const sortedRows = Array.from(rows)
+    .slice(1)
+    .sort((a, b) => {
+      const nameA = a.cells[1].textContent;
+      const nameB = b.cells[1].textContent;
+      return nameB.localeCompare(nameA);
     });
 
   table.tBodies[0].append(...sortedRows);

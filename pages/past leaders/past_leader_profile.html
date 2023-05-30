@@ -17,6 +17,20 @@
     <link rel="stylesheet" href="../../assets/css/leader_profile.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
 
+    <script src="https://cdn.jsdelivr.net/npm/vivus@0.4.5/dist/vivus.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+
+
+    <style>
+        #Layer_1 {
+            max-width: 300px;
+            min-width: 50px;
+            margin: auto;
+            height: 400px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -37,8 +51,6 @@
         <h1 class="cmd">Comment Section</h1>
         <ul id="comments-list"></ul>
         <form id="comment-form">
-            <!-- <label for="name">Name:</label>
-            <input type="text" id="name" name="name"><br> -->
             <label for="comment">Comment:</label>
             <textarea id="comment" required name="comment"></textarea>
             <br>
@@ -47,11 +59,16 @@
 
     </div>
 
-    <script src="../../main.js"></script>
+
 
     <script src="../../assets/javascript/past_leader_profile.js"></script>
 
+    <script src="../../main.js"></script>
+
+
     <script>
+
+
         function handleFormSubmit(event) {
             event.preventDefault();
 
@@ -63,11 +80,13 @@
             const currentUser = users.find(user => user.email === loginEmail);
             const currentUserName = currentUser.first_name;
 
-            const ministerName = document.getElementById("minister-name").innerText
-                .replace("NAME : ", "")
-                .trim();
+            const url = window.location.search;
 
-            const ministerId = minister.find(m => m.candidate_Name === ministerName).id;
+            const urlParams = new URLSearchParams(url);
+
+            const username = urlParams.get("name");
+
+            const ministerId = minister.find(m => m.id === username).name;
 
             const comment = document.getElementById("comment").value;
             const timestamp = new Date().getTime();
@@ -94,20 +113,25 @@
 
             const comments1 = JSON.parse(localStorage.getItem("comments")) ?? [];
 
-            const minister = JSON.parse(localStorage.getItem("mla_ditails"))
+            const minister = JSON.parse(localStorage.getItem("past_leader"))
 
-            const ministerName = document.getElementById("minister-name").innerText
-                .replace("NAME : ", "")
-                .trim();
-            const ministerId = minister.find(m => m.candidate_Name === ministerName).mla_id;
+            const url = window.location.search;
+
+            const urlParams = new URLSearchParams(url);
+
+            const username = urlParams.get("name");
+
+            const ministerId = minister.find(m => m.id === username).name;
+
             console.log(ministerId);
+
             const commentsList = document.getElementById("comments-list");
 
             commentsList.innerHTML = "";
 
             for (const comment of comments1) {
 
-                if (comment.ministerId === ministerId) {
+                if (comment.ministerId === ministerId && comment) {
 
                     const li = document.createElement("li");
                     const date = new Date(comment.timestamp).toLocaleString();
@@ -131,6 +155,7 @@
         } else {
             submit_btn.style.display = "none"
         }
+
     </script>
 
     <!-- script for bootstrap -->

@@ -16,9 +16,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="../../assets/css/footer.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         table button {
-            display: inline-block;
             background-image: linear-gradient(to right top, #abc2e4, #92cef0, #75dbf0, #67e5e2, #79edc8);
             color: #fff;
             font-size: 16px;
@@ -30,1690 +31,268 @@
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+
         }
 
         table button:hover {
             background-color: #0062cc;
+        }
+
+        #head_tamil {
+            position: sticky;
+            top: 50px;
+            z-index: 10;
+        }
+
+        #chartCanvas {
+
+            width: 650px;
+            margin: 0 auto;
+        }
+
+        .piechart_heading {
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+            color: indianred;
+
+        }
+
+        fieldset {
+            padding: 0;
+            margin: 0;
+            border: 0;
+            max-width: 340px;
+            border-radius: 20px;
+            width: 100%;
+            position: sticky;
+            top: 50px;
+        }
+
+        legend {
+            font-size: 22px;
+            font-weight: 600;
+            color: #191919;
+            margin: 0;
+            background: #edf4fe;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px 10px 0 0;
+            border: 2px solid #3a88f6;
+            display: flex;
+        }
+
+        fieldset label {
+            font-weight: 300;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            flex: 1;
+            box-sizing: border-box;
+            display: flex;
+            padding: 20px 20px 20px 50px;
+            font-weight: 500;
+            color: #191919;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        fieldset input[type="radio"] {
+            position: relative;
+            appearance: none;
+            -webkit-appearance: none;
+            transition: linear 0.8s;
+            height: 0;
+            width: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        fieldset input[type="radio"]:after {
+            content: "";
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            top: -10.5px;
+            left: -30px;
+            border-radius: 20px;
+            border: 2px solid #3a88f6;
+            transition: linear 0.2s;
+            cursor: pointer;
+        }
+
+        fieldset input[type="radio"]:checked:after {
+            content: "";
+            position: absolute;
+            height: 16px;
+            width: 16px;
+            background: #3a88f6;
+            transition: linear 0.2s;
+            cursor: pointer;
+        }
+
+        fieldset input[type="radio"]:checked:before {
+            content: "";
+            position: absolute;
+            height: 8px;
+            width: 8px;
+            border-radius: 4px;
+            background: #fff;
+            left: -24px;
+            top: -4.5px;
+            z-index: 1;
+            cursor: pointer;
+        }
+
+        .radio-item-container {
+            display: flex;
+            flex-direction: column;
+            border: 2px solid #3a88f6;
+            border-top: 0;
+            background: #fff;
+            border-radius: 0 0 10px 10px;
+            padding: 10px 0;
+        }
+
+        .radio-item {
+            display: flex;
+            position: relative;
+        }
+
+        .icon {
+            font-size: 24px;
+            position: absolute;
+            right: 26px;
+            top: 11px;
+            transition: linear 0.3s;
+        }
+
+        fieldset input[type="radio"]:checked+span>.icon {
+            transform: scale(1.3);
+            color: red;
         }
     </style>
 
 </head>
 
 <body>
-    <!-- navbar all -->
+    <p class="piechart_heading">தமிழக கட்சிகளில் எத்தனை முறை வெற்றி பெறுகிறது என்பதை இது காட்டுகிறது</p>
+    <canvas id="chartCanvas"></canvas>
 
-    <!-- piechart start -->
-
-    <!-- <div class="piechart">
-        <img src="../../assets/images/piecharts/Parties by total duration (in days) of holding Chief Minister's Office.svg"
-            class="img-fluid" alt="error image">
-    </div> -->
-
-    <!-- start date list tables -->
 
     <div class="pastleaders">
         <h1>தமிழ்நாட்டு முதலமைச்சர்களின் பட்டியல்</h1>
 
         <p>இந்திய அரசியலில் தமிழ்நாடு மாநிலம் எப்போதும் முக்கியப் பங்காற்றுகிறது. இந்த மாநிலத்தின் தலைவர்கள் அதன்
             குடிமக்கள் அனைவருக்கும் நல்வாழ்வை உறுதிப்படுத்த அயராது உழைத்துள்ளனர்.</p>
-        <table class="table bitmap" id="my-table">
-            <tr id="head_tamil">
+        <div class="pastleaderside">
 
-                <th scope="col">வா.எண்</th>
-                <th scope="col">
-                    முதல்வர்<button id="sortName"><i class="fa fa-sort"></i></button>
-                </th>
-                <th class="date" scope="col">
-                    இருந்து<button id="sort-date"><i class="fa fa-sort"></i></button>
-                </th>
-                <th class="date" scope="col">வரை</th>
-
-                <th scope="col">கட்சி பெயர்</th>
-
-            </tr>
-            <!-- <tr id="head_english" style="display: none;">
-
-                <th scope="col">No</th>
-                <th scope="col">
-                    Chief Minister<button id="sortName"><i class="fa fa-sort"></i></button>
-                </th>
-                <th class="date" scope="col">
-                    From<button id="sort-date"><i class="fa fa-sort"></i></button>
-                </th>
-                <th class="date" scope="col">to</th>
-
-                <th scope="col">Party Name</th>
-
-            </tr> -->
-
-            <tbody class="table_body">
-
-            </tbody>
-            <!-- <tr>
-                <td scope="row">1</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>மு.க.ஸ்டாலின்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/mk stalin.png" alt="error image">
-
-                                <button><a href="../portfolio/profile/profile.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </td>
-                <td class="date">07 May 2021</td>
-                <td class="date">Present</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">2</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>எடப்பாடி கே. பழனிச்சாமி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/edappadi.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">16 Feb 2017</td>
-                <td class="date">03 May 2021</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">3</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஓ.பன்னீர் செல்வம்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/pannirselvam o.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">06 Dec 2016</td>
-                <td class="date">15 Feb 2017</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">4</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜெ.ஜெயலலிதா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">24 May 2016</td>
-                <td class="date">04 Dec 2016</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">5</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜெ. ஜெயலலிதா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">23 May 2015</td>
-                <td class="date">23 May 2016</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">6</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜெ. ஜெயலலிதா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">29 Sep 2014</td>
-                <td class="date">22 May 2015</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">7</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜெ. ஜெயலலிதா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">16 May 2011</td>
-                <td class="date">27 Sep 2014</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">8</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>மு.கருணாநிதி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">13 May 2006</td>
-                <td class="date">15 May 2011</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">9</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜெ. ஜெயலலிதா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">02 Mar 2002</td>
-                <td class="date">12 May 2006</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">10</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஓ.பன்னீர் செல்வம்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/pannirselvam o.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">21 Sep 2001</td>
-                <td class="date">01 Mar 2002</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">11</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜெ. ஜெயலலிதா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">14 May 2001</td>
-                <td class="date">21 Sep 2001</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">12</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>மு.கருணாநிதி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">13 May 1996</td>
-                <td class="date">13 May 2001</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">13</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜெ. ஜெயலலிதா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/jayalitha.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/jayalalitha.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">24 Jun 1991</td>
-                <td class="date">13 May 1996</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">14</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜனாதிபதி ஆட்சி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/flages/govt.png" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">30 Jan 1991</td>
-                <td class="date">24 Jun 1991</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">15</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>மு.கருணாநிதி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">27 Jan 1989</td>
-                <td class="date">30 Jan 1991</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">16</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜனாதிபதி ஆட்சி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/flages/govt.png" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">30 Jan 1988</td>
-                <td class="date">27 Jan 1989</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td scope="row">17</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜானகி ராமச்சந்திரன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/flages/govt.png" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">07 Jan 1988</td>
-                <td class="date">30 Jan 1988</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">18</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>வி.ஆர்.<br>நெடுஞ்செழியன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">24 Dec 1987</td>
-                <td class="date">07 Jan 1988</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">19</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>எம்.ஜி. ராமச்சந்திரன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/emjr.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">10 Feb 1985</td>
-                <td class="date">24 Dec 1987</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">20</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>எம்.ஜி.ராமச்சந்திரன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/emjr.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">09 Jun 1980</td>
-                <td class="date">15 Nov 1984</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">21</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜனாதிபதி ஆட்சி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/flages/govt.png" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">17 Feb 1980</td>
-                <td class="date">09 Jun 1980</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td scope="row">22</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>எம்.ஜி.ராமச்சந்திரன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/emjr.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/m g ramachandran.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">01 Jul 1977</td>
-                <td class="date">17 Feb 1980</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/aiadmk.png" alt="">
-                        <p>அதிமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">23</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜனாதிபதி ஆட்சி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/flages/govt.png" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">31 Jan 1976</td>
-                <td class="date">30 Jun 1977</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td scope="row">24</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>மு.கருணாநிதி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">15 Mar 1971</td>
-                <td class="date">31 Jan 1976</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">25</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>மு.கருணாநிதி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/karunathi.jpg" alt="error image">
-
-                                <button><a
-                                        href="../passt leaders/pastleader-profile/karunanithi.html">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">10 Feb 1969</td>
-                <td class="date">04 Jan 1971</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">26</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>வி.ஆர். நெடுஞ்செழியன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">03 Feb 1969</td>
-                <td class="date">10 Feb 1969</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">27</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>சி.என்.<br>அண்ணாதுரை</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">01 Mar 1967</td>
-                <td class="date">03 Feb 1969</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">28</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>சி.என். அண்ணாதுரை</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">06 Mar 1967</td>
-                <td class="date">14 Jan 1969</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/dmk-logo.png" alt="">
-                        <p>திமுக</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">29</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>எம். பக்தவச்சலம்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">02 Oct 1963</td>
-                <td class="date">06 Mar 1967</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">30</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>கு. காமராஜ்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/kamaraj-cm.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">15 Mar 1962</td>
-                <td class="date">02 Oct 1963</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">31</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>கு. காமராஜ்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/kamaraj-cm.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">13 Apr 1957</td>
-                <td class="date">01 Mar 1962</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">32</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>கு. காமராஜ்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/kamaraj-cm.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">13 Apr 1954</td>
-                <td class="date">31 Mar 1957</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">33</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>சி. ராஜகோபாலச்சாரி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">10 Apr 1952</td>
-                <td class="date">13 Apr 1954</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">34</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பி.எஸ்.குமாரசாமி ராஜா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">26 Jan 1950</td>
-                <td class="date">10 Apr 1952</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">35</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பி.எஸ். குமாரசாமி ராஜா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">06 Apr 1949</td>
-                <td class="date">26 Jan 1950</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">36</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஓ.பி. ராமசாமி ரெட்டியார்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">23 Mar 1947</td>
-                <td class="date">06 Apr 1949</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">37</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>தெங்குட்டுரி பிரகாசம்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">30 Apr 1946</td>
-                <td class="date">23 Mar 1947</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">38</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>ஜனாதிபதி ஆட்சி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">29 Oct 1939</td>
-                <td class="date">30 Apr 1946</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">39</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>சி. ராஜகோபாலாச்சாரி</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">14 Jul 1937</td>
-                <td class="date">29 Oct 1939</td>
-                <td>
-                    <div class="name-img">
-                        <img src="../../assets/images/flages/inc.png" alt="">
-                        <p>காங்.</p>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td scope="row">40</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>கர்மா வெங்கட ரெட்டி நாயுடு</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">01 Apr 1937</td>
-                <td class="date">14 Jul 1937</td>
-                <td>Interim provisional ministry</td>
-            </tr>
-            <tr>
-                <td scope="row">41</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பொப்பிலி ராஜா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">24 Aug 1936</td>
-                <td class="date">01 Apr 1937</td>
-                <td>Justice Party</td>
-            </tr>
-            <tr>
-                <td scope="row">42</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பி.டி.ராஜன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">04 Apr 1936</td>
-                <td class="date">24 Aug 1936</td>
-                <td>Justice Party</td>
-            </tr>
-            <tr>
-                <td scope="row">43</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பொப்பிலி ராஜா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">05 Nov 1934</td>
-                <td class="date">04 Apr 1936</td>
-                <td>Justice Party</td>
-            </tr>
-            <tr>
-                <td scope="row">44</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பொப்பிலி ராஜா</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">05 Nov 1932</td>
-                <td class="date">05 Nov 1934</td>
-                <td>Justice Party</td>
-            </tr>
-            <tr>
-                <td scope="row">45</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div id="pastleader" class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பி. முனுசாமி நாயுடு</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
+            <fieldset>
+                <legend>Choose a sort</legend>
+                <div class="radio-item-container">
+                    <div class="radio-item">
+                        <label for="vanilla" id="sortName">
+                            <input type="radio" id="vanilla" name="flavor" value="vanilla">
+                            <span>Sort Name<span class="icon">A-Z</span> </span>
+                        </label>
                     </div>
-                </td>
-                <td class="date">27 Oct 1930</td>
-                <td class="date">05 Nov 1932</td>
-                <td>Justice Party</td>
-            </tr>
-            <tr>
-                <td scope="row">46</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பி.சுப்பராயன்</p>
-
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
+                    <div class="radio-item">
+                        <label for="vanilla" id="sortName1">
+                            <input type="radio" id="vanilla" name="flavor" value="vanilla">
+                            <span>Sort Name<span class="icon">Z-A</span> </span>
+                        </label>
                     </div>
-                </td>
-                <td class="date">04 Dec 1926</td>
-                <td class="date">27 Oct 1930</td>
-                <td>Unaffiliated</td>
-            </tr>
-            <tr>
-                <td scope="row">47</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பனகல் ராஜா</p>
 
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
+                    <div class="radio-item">
+                        <label for="chocolate" id="sort-date1">
+                            <input type="radio" id="chocolate" name="flavor" value="chocolate">
+                            <span>Sort Date<span class="icon">1-9</span></span></label>
                     </div>
-                </td>
-                <td class="date">19 Nov 1923</td>
-                <td class="date">04 Dec 1926</td>
-                <td>Justice Party</td>
-            </tr>
-            <tr>
-                <td scope="row">48</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
-
-                            <div id="pastleader" class="fontsidepro ">
-
-                                <p>பனகல் ராஜா</p>
 
-                            </div>
-
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
-
-                                <button><a href="">விவரம்</a></button>
-
-                            </div>
-
-                        </div>
-
+                    <div class="radio-item">
+                        <label for="strawberry" id="sort-date">
+                            <input type="radio" id="strawberry" name="flavor" value="strawberry">
+                            <span>Sort Date<span class="icon">9-1</span></span></label>
                     </div>
-                </td>
-                <td class="date">11 Jul 1921</td>
-                <td class="date">11 Sep 1923</td>
-                <td>Justice Party</td>
-            </tr>
-            <tr>
-                <td scope="row">49</td>
-                <td>
-                    <div class="profile-main">
-
-                        <div class="parties">
+                </div>
+            </fieldset>
+            <table class="table bitmap" id="my-table">
+                <tr id="head_tamil">
 
-                            <div id="pastleader" class="fontsidepro ">
+                    <th scope="col">வா.எண்</th>
+                    <th scope="col">முதல்வர்</th>
+                    <th class="date" scope="col">இருந்து</th>
+                    <th class="date" scope="col">வரை</th>
+                    <th scope="col">கட்சி பெயர்</th>
 
-                                <p>சுப்பராயலு ரெட்டியார்</p>
+                </tr>
 
-                            </div>
+                <tbody class="table_body">
 
-                            <div class="backsidepro">
-                                <p></p>
-                                <img src="../../assets/images/ministers/not-iamge.jpg" alt="error image">
+                </tbody>
 
-                                <button><a href="">விவரம்</a></button>
+            </table>
+        </div>
 
-                            </div>
-
-                        </div>
-
-                    </div>
-                </td>
-                <td class="date">17 Dec 1920</td>
-                <td class="date">11 Jul 1921</td>
-                <td>Justice Party</td>
-            </tr> -->
-        </table>
     </div>
 
+
     <!-- footer  section-->
+
+    <script>
+        const mlaDetails = JSON.parse(localStorage.getItem("past_leader"));
+
+        // Extract party names and count their occurrences
+        const partyCounts = {};
+        mlaDetails.forEach(mla => {
+            const party = mla.party_name;
+            partyCounts[party] = (partyCounts[party] || 0) + 1;
+        });
+
+        // Convert party counts to chart data format
+        const chartData = Object.entries(partyCounts).map(([party, count]) => ({
+            party,
+            count
+        }));
+
+        // Generate random colors for chart slices
+        const colors = generateRandomColors(chartData.length);
+
+        // Create pie chart
+
+        const ctx = document.getElementById("chartCanvas").getContext("2d");
+        new Chart(ctx, {
+            type: "pie",
+            data: {
+                labels: chartData.map(data => data.party),
+                datasets: [{
+                    data: chartData.map(data => data.count),
+                    backgroundColor: colors,
+                    hoverBackgroundColor: colors
+                }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        position: "left", // Adjust the position to your preference (e.g., "left", "top", "bottom")
+                        align: "start", // Align the legend text to the start of the line
+                    },
+                },
+            },
+        });
+
+        // Function to generate random colors
+        function generateRandomColors(numColors) {
+            const colors = [];
+            for (let i = 0; i < numColors; i++) {
+                const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+                colors.push(color);
+            }
+            return colors;
+        }
+    </script>
 
     <script src="../../main.js"></script>
 
