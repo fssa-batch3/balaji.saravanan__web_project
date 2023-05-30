@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/join now.css">
+    <link rel="stylesheet" href="../../assets/css/notify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="icon" type="image/jpg" sizes="60x32" href="assets/images/icons/p logo.jpg">
+    <title>politifact</title>
+
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="register">
+                <h1>Sign up</h1>
+                <div class="social-container">
+
+                    <a href="#" class="social">
+<i class="fab fa-google-plus-g"></i>
+</a>
+                </div>
+                <span>or use your email for registration</span>
+
+                <input type="text" id="first_name" placeholder="Name" minlength="3" pattern="^[A-Za-z]+$"
+                    maxlength="20" title="please insert only alphabet value" required>
+
+                <input type="text" id="last_name" placeholder="last Name" minlength="1" pattern="^[A-Za-z]+$"
+                    maxlength="20" required>
+
+                <input type="tel" id="mobile_number" required title="please enter a valid mobile number" minlength="10"
+                    maxlength="10" placeholder="Mobile Number" pattern="^[6-9][0-9]{9}$">
+
+                <input type="email" id="regemail" spellcheck="@" placeholder="Email" required
+                    title="please use @ symbol, not use space" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required
+                    id="regpassword" minlength="8" maxlength="12" placeholder="Password">
+
+                <button type="submit" id="submit" class="btn btn-success">Submit</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in-container">
+            <form id="checkregister">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                    <a href="#" class="social">
+<i class="fab fa-facebook-f"></i>
+</a>
+                    <a href="#" class="social">
+<i class="fab fa-google-plus-g"></i>
+</a>
+                    <a href="#" class="social">
+<i class="fab fa-linkedin-in"></i>
+</a>
+                </div>
+                <span>or use your account</span>
+
+                <input type="email" id="username" spellcheck="@" placeholder="Email" required
+                    title="please use @ symbol" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+
+                <input type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" required
+                    id="password" maxlength="12" minlength="8" placeholder="Password">
+
+                <a href="#">Forgot your password?</a>
+
+                <button type="submit">Sign In</button>
+
+            </form>
+
+        </div>
+
+        <div class="overlay-container">
+
+            <div class="overlay">
+
+                <div class="overlay-panel overlay-left">
+                    <h1>Hello futures</h1>
+                    <p>To keep connected with us please login with your personal info</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../../assets/javascript/index.js"></script>
+    <script src="../../assets/javascript/notify.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "run-script-os",
-    "start:win32": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js, !node_modules/**/*' --directory --port 1212 --browser \"C:\\Program Files\\Google\\chrome\\Application\\chrome.exe\""
+    "start:win32": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js, !node_modules/**/*' --directory --port 1212 --browser \"C:\\Program Files\\Google\\chrome\\Application\\chrome.exe\"",
+    "lint": "npx eslint ."
   },
   "repository": {
     "type": "git",
@@ -20,10 +21,33 @@
   },
   "homepage": "https://github.com/fssa-batch3/balaji.saravanan__web_project#readme",
   "devDependencies": {
-    "browser-sync": "^2.27.11",
-    "run-script-os": "^1.1.6"
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@html-eslint/eslint-plugin": "^0.18.0",
+    "@html-eslint/parser": "^0.18.0",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-code-complexity": "^1.1.1",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-prettier-standard": "^4.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-vue": "^9.11.0",
+    "husky": "^8.0.3",
+    "prettier": "^2.8.8",
+    "prettier-config-standard": "^5.0.0"
   },
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "fs": "^0.0.1-security",
+    "google-translate-api": "^2.3.0",
+    "mysql2": "^3.2.0",
+    "uuid": "^9.0.0"
   }
 }

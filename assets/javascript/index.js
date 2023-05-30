@@ -1,6 +1,20 @@
+const root = window.location.origin;
+
+const signUpButton = document.getElementById("signUp");
+
+const signInButton = document.getElementById("signIn");
+
+const container = document.getElementById("container");
+
+signUpButton.addEventListener("click", () => {
+  container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener("click", () => {
+  container.classList.remove("right-panel-active");
+});
+
 //    register starts
-
-
 
 const form = document.getElementById("register");
 
@@ -14,114 +28,52 @@ const regemail = document.getElementById("regemail");
 
 const regpassword = document.getElementById("regpassword");
 
-
-
 const registerFromValidation = () => {
+  // this is a register page star and this store the value in localstorage
 
+  const f_name_value = f_name.value.trim();
+  const l_name_value = l_name.value.trim();
+  const mobile_value = mobilenumber.value.trim();
+  const reg_email_value = regemail.value.trim();
+  const reg_pass_value = regpassword.value.trim();
 
-    const user_data = JSON.parse(localStorage.getItem("users"));
+  // empty array
+  const record = [];
 
-    const f_name_value = f_name.value.trim();
-    const l_name_value = l_name.value.trim();
-    const mobile_value = mobilenumber.value.trim();
-    const reg_email_value = regemail.value.trim();
-    const reg_pass_value = regpassword.value.trim();
+  // empty object
+  const user = {};
 
-    // empty array
-    let record = [];
+  const users = JSON.parse(localStorage.getItem("users")) ?? record;
 
+  user.first_name = f_name_value;
+  user.last_name = l_name_value;
+  user.mobile_number = mobile_value;
+  user.email = reg_email_value;
+  user.password = reg_pass_value;
+  user.id = users.length;
 
+  const isDuplicate = users.find(
+    (user_v) =>
+      user_v.email === reg_email_value || user_v.mobile_number === mobile_value
+  );
 
-    // empty object
-    let user = {};
+  if (isDuplicate) {
+    Notify.error("You already have an account");
+  } else {
+    users.push(user);
+    localStorage.setItem("users", JSON.stringify(users));
 
+    container.classList.remove("right-panel-active");
 
+    Notify.success("Account created successfully");
+  }
+};
 
-    let users = JSON.parse(localStorage.getItem('users')) ?? record;
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
 
-
-    user["first_name"] = f_name_value,
-        user["last_name"] = l_name_value,
-        user["mobile_number"] = mobile_value,
-        user["email"] = reg_email_value,
-        user["password"] = reg_pass_value;
-
-    // let check = true;
-
-
-    // if (user_data !== null) {
-
-
-        //     for (let i = 0; i < user_data.length; i++) {
-
-
-        //         if (user_data[i].email === reg_email_value) {
-        //             check = false;
-
-        //         }
-
-        //         else if (user_data[i].mobile_number === mobile_value) {
-
-        //             check = false;
-
-        //             break;
-        //         }
-
-        //     }
-
-
-
-        // }
-
-        const isDuplicate = users.find(
-            (user) => user.email === reg_email_value || user.mobile_number === mobile_value
-        );
-
-        if (isDuplicate) {
-            Notify.error("You already have an account");
-        } else {
-            users.push(user);
-            localStorage.setItem("users", JSON.stringify(users));
-            Notify.success("Account created successfully");
-        }
-
-
-
-
-
-    
-
-
-    // if (check) {
-
-    //     users.push(user);
-
-    //     localStorage.setItem('users', JSON.stringify(users));
-
-
-    //     Notify.success("Account created successfully");
-
-
-    // }
-
-    // else {
-    //     Notify.error("You Already Have a account");
-    // }
-
-
-}
-
-
-
-
-form.addEventListener("submit", e => {
-
-    e.preventDefault();
-
-    registerFromValidation();
+  registerFromValidation();
 });
-
-
 
 //    login starts
 
@@ -131,84 +83,45 @@ const username = document.getElementById("username");
 
 const password = document.getElementById("password");
 
-
-
 const checkregisterFromValidation = () => {
+  const admin_email = "admin@gmail.com";
+  const admin_password = "Admin@55";
 
+  const user_data = JSON.parse(localStorage.getItem("users"));
 
-    const user_data = JSON.parse(localStorage.getItem("users"));
+  const username_value = username.value.trim();
+  const password_value = password.value.trim();
 
-    const username_value = username.value.trim();
-    const password_value = password.value.trim();
+  if (user_data === null) {
+    Notify.error("you first sinup next you come and try");
+  }
+  if (admin_email === username_value && admin_password === password_value) {
+    localStorage.setItem("admin_login", admin_email);
+    Notify.success("admin entry");
+    window.location.href = `${root}/../index.html`;
+    checkform.reset();
+  } else {
+    const email_check = user_data.filter(
+      (obj) => obj.email === username_value && obj.password === password_value
+    );
 
+    if (email_check.length === 1) {
+      const profile_email = username_value;
 
-    // if (!username_value || !password_value) {
+      localStorage.setItem("profile_email", profile_email);
 
-    //     alert("Please Fill All Required Field");
+      window.location.href = `${root}/../index.html`;
 
-    // }
+      Notify.success("Successfully Login");
 
-    if (user_data === null) {
-        Notify.error("you first sinup next you come and try")
-
+      checkform.reset();
     } else {
-
-        const email_check = user_data.filter(obj => obj.email == username_value && obj.password == password_value)
-
-        if (email_check.length == 1) {
-
-            let profile_email = username_value;
-
-            console.log(profile_email);
-
-            localStorage.setItem("profile_email", profile_email);
-
-            window.location.href = "pages/home/home.html"
-
-            Notify.success("Successfully Login");
-
-            checkform.reset();
-
-
-
-
-        }
-        else {
-            Notify.error("Email or Password Incorrect");
-        }
-
-
+      Notify.error("Email or Password Incorrect");
     }
-
-
-
-
-}
-
-
+  }
+};
 
 checkform.addEventListener("submit", (e) => {
-    e.preventDefault();
-    checkregisterFromValidation();
-});
-
-
-// const signup1 = document.getElementById("submit");
-
-
-// signup1.addEventListener('click', () => {
-//     container.classList.remove("right-panel-active");
-// });
-
-
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
-
-signUpButton.addEventListener('click', () => {
-    container.classList.add("right-panel-active");
-});
-
-signInButton.addEventListener('click', () => {
-    container.classList.remove("right-panel-active");
+  e.preventDefault();
+  checkregisterFromValidation();
 });

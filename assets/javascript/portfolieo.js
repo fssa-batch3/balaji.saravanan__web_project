@@ -1,361 +1,235 @@
+const users = JSON.parse(localStorage.getItem("users"));
 
+const login_email = localStorage.getItem("profile_email");
 
-const minister_values = JSON.parse(localStorage.getItem("politician_data"));
+let user_id;
 
-// const delete_button1 = document.getElementById("deleteButton");
+if (users != null) {
+  users.find((obj) => {
+    if (login_email === obj.email) {
+      user_id = obj.id;
 
-
-// let card_div;
-
-// let imgBx_div;
-
-// let image5;
-
-// let contentBx;
-
-// let title;
-
-// let size_div;
-
-// let name;
-
-// let position;
-
-// let role_name;
-
-// let anchor5;
-
-// let edit_button;
-
-// let delete_button;
-
-
-// for (let minister of minister_values) {
-
-//     //card_div
-//     card_div = document.createElement("div");
-//     card_div.setAttribute("class", "card");
-
-
-
-//     //imgBx_div
-
-//     imgBx_div = document.createElement("div");
-//     imgBx_div.setAttribute("class", "imgBx");
-//     card_div.append(imgBx_div);
-
-
-
-
-
-//     //image
-//     image5 = document.createElement("img");
-//     image5.setAttribute("src", minister["img"]["sourse"]);
-//     image5.setAttribute("alt", minister["img"]["alter"]);
-//     imgBx_div.append(image5);
-
-//     //contentBx
-//     contentBx = document.createElement("div");
-//     contentBx.setAttribute("class", "contentBx");
-//     card_div.append(contentBx);
-
-
-//     //title
-//     title = document.createElement("p");
-//     title.innerText = "பெயர் : " + minister.name["tname"];
-//     contentBx.append(title);
-
-//     //size_div
-//     size_div = document.createElement("div");
-//     size_div.setAttribute("class", "size");
-//     contentBx.append(size_div);
-
-//     //name
-//     name = document.createElement("h3");
-//     name.innerText = "NAME : " + minister.name["ename"];
-//     size_div.append(name);
-
-//     //position
-//     position = document.createElement("div");
-//     position.setAttribute("class", "color");
-//     contentBx.append(position);
-
-//     //role_name
-//     role_name = document.createElement("h3");
-//     role_name.innerText = "பதவி : " + minister["position"];
-//     position.append(role_name);
-
-
-//     // delete_button = document.createElement("a");
-//     // delete_button.setAttribute("id", "deleteButton");
-//     // delete_button.setAttribute("href", "../admin/delete_politician.html?name=" + minister.name.ename + "&data=" + encodeURIComponent(JSON.stringify(minister)));
-//     // delete_button.innerText = "delete";
-//     // contentBx.append(delete_button);
-
-//     // Create the delete button
-//     // Create the delete button
-//     // Create the delete button
-//     delete_button = document.createElement("a");
-//     delete_button.setAttribute("id", "deleteButton");
-//     delete_button.innerText = "delete";
-
-//     // Add the onclick event to the delete button
-//     delete_button.onclick = function () {
-//         // Get the name of the minister to delete
-//         const name = this.parentElement.querySelector(".name").textContent();
-
-//         // Call the deleteButton function with the name as argument
-//         deleteButton(name);
-//     };
-
-//     // Add the delete button to the content box
-//     contentBx.append(delete_button);
-
-//     // Function to handle the delete action
-//     function deleteButton(name) {
-//         // Find the index of the minister to delete
-//         const index = minister_values.findIndex(minister => minister.name.ename === name);
-
-//         // Remove the minister from the minister_values array
-//         minister_values.splice(index, 1);
-
-//         // Update localStorage with the modified array
-//         localStorage.setItem("politician_data", JSON.stringify(minister_values));
-
-//         // Show a success message to the user
-//         // Notify.success("Product Deleted");
-//         alert("delete success fully");
-
-//         // Reload the current page to reflect the changes
-//         window.location.reload();
-//     }
-
-
-
-//     //anchor
-//     anchor5 = document.createElement("a");
-//     anchor5.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister.name["ename"]);
-//     anchor5.innerText = "vief port folio"
-//     contentBx.append(anchor5);
-
-
-
-//     document.querySelector("div.lists1").append(card_div)
-// }
-
-// const deleteButton = document.getElementById("deleteButton");
-
-// <td onclick="deleteButton(${index})"><i class="fa-solid fa-trash"></i></td>
-// function deleteButton(index) {
-
-//     created_products.splice(index, 1);
-
-//     localStorage.setItem("product_list", JSON.stringify(created_products));
-
-//     Notify.success("Product Deleted");
-
-//     self.location.assign(window.location);
-
-// }
-
-
-// deleteButton.onclick = function () {
-//     const confirmed = confirm("Are you sure you want to delete this leader?");
-//     if (!confirmed) {
-//         return false; // prevent the default behavior of following the link
-//     }
-// }
-// const deleteButton= document.getElementById("deleteButton")
-// const urlParams = new URLSearchParams(window.location.search);
-//         const username = urlParams.get("name");
-
-// delete_button.addEventListener("click", function (e) {                   // this isdelete button user want delete user pres and account delete 
-//     let index =minister_values.findIndex(user=>user.name.ename===username);// thisis frofile check and delete
-
-//     if (index !== -1) {     // this is condition not equal to -one 
-
-//         users = [...users.slice(0, index), ...users.slice(index + 1)];  //slice operator
-
-//         localStorage.setItem('politician_data', JSON.stringify(users));   // this is object all of the resotre the collect annother value.
-
-//         window.location.href = "../../index.html";
-
-//         alert("User deleted successfully.");
-
-//     }
-//     e.preventDefault();
-// });
-
-
-// // Get the modal
-// const modal = document.getElementById("editModal");
-
-// // Get the <span> element that closes the modal
-// const span = document.getElementsByClassName("close")[0];
-
-// // Get the form and input elements
-// const form = document.querySelector("form");
-// const nameInput = document.getElementById("name");
-// const positionInput = document.getElementById("position");
-
-// // Add an event listener to the edit button
-// edit_button.addEventListener("click", function () {
-//     // Set the initial values of the form inputs to the current values of the card
-//     nameInput.value = minister.name["tname"];
-//     positionInput.value = minister["position"];
-
-//     // Show the modal
-//     modal.style.display = "block";
-// });
-
-// // When the user clicks on <span> (x), close the modal
-// span.addEventListener("click", function () {
-//     modal.style.display = "none";
-// });
-
-// When
-
-
-
-
-
-
-const searchInput = document.getElementById("searchbar");
-const searchResults = document.getElementById("search_result");
-
-// Function to create a card for a minister
-
-function createMinisterCard(minister) {
-
-    const card = document.createElement("div");
-    card.setAttribute("class", "card");
-
-    const name = document.createElement("a");
-    name.setAttribute("href", "../portfolio/profile/profile.html?name=" + minister["ename"]);
-    name.innerText = minister.name.ename;
-    card.appendChild(name);
-
-    const position = document.createElement("p");
-    position.innerText = minister.position;
-    card.appendChild(position);
-
-    return card;
+      return user_id;
+    }
+  });
 }
 
+const favorite_minister =
+  JSON.parse(localStorage.getItem("fav_minister")) ?? [];
+
+  const language_values= localStorage.getItem("language");
 
 
+// Get minister data from localStorage
+const minister_values = JSON.parse(localStorage.getItem("politician_data"));
 
-// searchInput.addEventListener("input", function () {
-//     const searchTerm = searchInput.value.trim().toLowerCase();
-//     searchResults.innerHTML = '';
-//     let hasResults = false;
+const url = window.location.search;
 
-//     for (let i = 0; i < minister_name.length; i++) {
-//         const minister = minister_name[i];
-//         const ministerName = minister.ename.trim().toLowerCase();
+const urlParams = new URLSearchParams(url);
 
-//         if (ministerName.includes(searchTerm)) {
-//             const card_div = createMinisterCard(minister);
-//             searchResults.appendChild(card_div);
-//             hasResults = true;
-//         }
-//     }
+const username = urlParams.get("name");
 
-//     if (!hasResults) {
-//         const li = document.createElement("li");
-//         li.textContent = "No results found.";
-//         searchResults.appendChild(li);
-//     }
-// });
-
-
-
-
-// function createMinisterCard(minister, searchTerm) {
-//     const card = document.createElement("div");
-//     card.setAttribute("class", "card");
-
-//     const name = document.createElement("h2");
-//     name.textContent = minister.ename;
-//     card.appendChild(name);
-
-//     const position = document.createElement("p");
-//     position.textContent = minister.position;
-//     card.appendChild(position);
-
-//     const searchTermElem = document.createElement("p");
-//     searchTermElem.textContent = "Search term: " + searchTerm;
-//     card.appendChild(searchTermElem);
-
-//     return card;
-// }
-
-
-
-searchInput.addEventListener("input", function (e) {
-    const searchTerm = searchInput.value.trim().toLowerCase();
-    searchResults.innerHTML = '';
-
-    if (searchTerm === "") {
-        return; // do not display any search results
-    }
-
-    const filteredMinisters = minister_values.filter(function (minister) { //this is filter function using this function used to filter the json .
-        const ministerName = minister.name.ename.trim().toLowerCase();    // all value change in lowercase
-        return ministerName.includes(searchTerm);            // return filter value and sertterm condition check this line
-    });
-
-
-    if (filteredMinisters.length > 0) {        // card create if condition
-        filteredMinisters.forEach(function (minister) {       //for each function this line use this check for minister name ;
-            const card_div = createMinisterCard(minister);   // already card create this card call this line
-            searchResults.appendChild(card_div);       // return value append
-        });
-    } else {
-        const li = document.createElement("li");  // this is not found code
-        li.textContent = "No results found.";
-        searchResults.appendChild(li);
-    }
-    e.preventDefault();
+let conform = false;
+minister_values.filter((obj) => {
+  if (obj.status && obj.party_name === username) {
+    list_leaders(obj);
+    conform = true;
+  }
 });
 
+if (!conform) {
+  const li = document.createElement("li");
+  li.innerHTML = "Comming soon";
+  document.querySelector("body").append(li);
+}
 
-const addbutton = document.getElementById("addbutton");
-addbutton.addEventListener("click", function () {
-    window.location.href = "../portfolio/profile/profile.html";
-})
+function list_leaders(item) {
+  const ministerCard = document.createElement("div");
+  ministerCard.classList.add("minister_card");
+
+  const ministerImage = document.createElement("div");
+  ministerImage.classList.add("minister_image");
+
+  const image = document.createElement("img");
+  image.src = `${item.img.sourse}`;
+  image.alt = `${item.img.alter}`;
+
+  ministerImage.appendChild(image);
+
+  const ministerDetails = document.createElement("div");
+  ministerDetails.classList.add("minister_details");
+
+  const detailsContents = document.createElement("div");
+  detailsContents.classList.add("details_contents");
 
 
+  const ministerName = document.createElement("p");
+  ministerName.classList.add("minister_name");
+  if(language_values==="english"){
+    ministerName.textContent = `${item.name.ename}`;
+  }else{
+    ministerName.textContent = `${item.name.tname}`;
+  }
+
+  const counOfMinister = document.createElement("p");
+  counOfMinister.classList.add("coun_of_minister");
+  counOfMinister.textContent = "மந்திரி சபை";
+
+  const ministerPos = document.createElement("p");
+  ministerPos.classList.add("minister_pos");
+  ministerPos.textContent = `${item.position}`;
+
+  const button_div= document.createElement("div");
+  button_div.setAttribute("class", "button_div")
 
 
+  const viewPortfolio = document.createElement("p");
+  viewPortfolio.classList.add("view_portfolio");
 
-// function deleteButton(minister) {
-//     // Find the index of the minister to delete
-//     const index = minister_values.findIndex(m => m.name.ename === minister.name.ename);
+  const anchor = document.createElement("a");
+  anchor.href = `profile_ministers.html?name=${item.name.ename}`;
+  anchor.textContent = "View portfolio";
 
-//     // Remove the minister from the minister_values array
-//     minister_values.splice(index, 1);
+  const heartButton = document.createElement("i");
+  heartButton.className = "fa fa-heart";
+  heartButton.setAttribute("id", "like_icon")
 
-//     // Update localStorage with the modified array
-//     localStorage.setItem("politician_data", JSON.stringify(minister_values));
+  viewPortfolio.appendChild(anchor);
 
-//     // Show a success message to the user
-//     const conform= confirm("Successfully deleted minister: " + minister.name.ename);
+  detailsContents.appendChild(ministerName);
+  detailsContents.appendChild(counOfMinister);
+  detailsContents.appendChild(ministerPos);
+  detailsContents.appendChild(button_div)
+  button_div.appendChild(viewPortfolio);
+  button_div.appendChild(heartButton);
 
-//     // Reload the current page to reflect the changes
-//     window.location.reload();
+
+  ministerDetails.appendChild(detailsContents);
+
+  ministerCard.appendChild(ministerImage);
+  ministerCard.appendChild(ministerDetails);
+
+  document.querySelector(".main_container").appendChild(ministerCard);
+
+  heartButton.addEventListener("click", () => {
+    let fav_check = false;
+
+    favorite_minister.find((obj) => {
+      if (user_id === obj.user_id) {
+        if (item.id == obj.min_id) {
+          fav_check = true;
+        }
+      }
+      return fav_check;
+    });
+
+    if (fav_check) {
+      alert("already added");
+    } else {
+      favorite_minister.push({
+        fav_id: favorite_minister.length,
+
+        min_id: item.id,
+
+        user_id,
+
+        image: item.img,
+
+        name: item.name,
+      });
+
+      localStorage.setItem("fav_minister", JSON.stringify(favorite_minister));
+
+      alert("added");
+    }
+  });
+}
+
+// functions to list leaders with filter
+// function list_leaders(minister) {
+
+//   let card = document.createElement('div');
+//   card.classList.add('card');
+
+//   let multiButton = document.createElement("div");
+//   multiButton.className = "multi-button";
+
+//   let commentButton = document.createElement("button");
+//   commentButton.className = "	fa fa-comment";
+
+//   commentButton.onclick = function () {
+
+//     window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
+//   }
+//   multiButton.appendChild(commentButton);
+
+//   let shareButton = document.createElement("button");
+//   shareButton.className = "fas fa-share-alt";
+//   multiButton.appendChild(shareButton);
+
+//   let trashButton = document.createElement("button");
+//   trashButton.className = "fas fa-trash";
+//   multiButton.appendChild(trashButton);
+
+//
+
+//   card.append(multiButton);
+//   let cardImage = document.createElement('div');
+
+//   cardImage.classList.add('card-image');
+
+//   let img = document.createElement('img');
+//   img.setAttribute('src', minister.img.sourse);
+//   img.setAttribute('alt', 'profile picture');
+
+//   cardImage.appendChild(img);
+
+//   card.appendChild(cardImage);
+
+//   let cardContent = document.createElement('div');
+//   cardContent.classList.add('card-content');
+
+//   let cardTitle = document.createElement('h2');
+//   cardTitle.classList.add('card-title');
+//   cardTitle.textContent = minister.name.tname;
+
+//   let cardText1 = document.createElement('p');
+//   cardText1.classList.add('card-text');
+//   cardText1.textContent = 'மந்திரி சபை';
+
+//   let cardText2 = document.createElement('p');
+//   cardText2.classList.add('card-text');
+//   cardText2.classList.add('card-strong');
+//   cardText2.textContent = minister.position;
+
+//   let cardButton = document.createElement('button');
+//   cardButton.classList.add('card-button');
+//   cardButton.textContent = 'விவரம்';
+//   cardButton.onclick = function () {
+
+//     window.location.href = "profile_ministers.html?name=" + minister.name["ename"]
+//   }
+
+//   // const anchor5 = document.createElement("a");
+//   // anchor5.setAttribute("class", "rederect_button")
+//   // anchor5.setAttribute("href", "stick.html?name=" + minister.name["ename"]);
+//   // anchor5.innerText = "விவரம்";
+//   // cardButton.append(anchor5);
+
+//   cardContent.append(cardTitle);
+//   cardContent.append(cardText1);
+//   cardContent.append(cardText2);
+//   cardContent.append(cardButton);
+//   card.append(cardContent);
+
+//   // append card div to list container
+//   document.querySelector("div.lists1").append(card);
+
+//   // function commend(minister) {
+//   //   window.location.href = "stick.html?name=" + minister.name["ename"]
+
+//   // }
+
+//
+
 // }
-// function deleteButton(ministerCard) {
-//     // Find the parent element of the minister card
-//     const parent = ministerCard.card_div;
-
-//     // Remove the minister card from the parent element
-//     parent.removeChild(ministerCard);
-
-//     // Show a success message to the user
-//     const conform = confirm("Successfully deleted minister.");
-
-//     // You can still update the localStorage with the modified array if needed
-//     // localStorage.setItem("politician_data", JSON.stringify(minister_values));
-// }
-

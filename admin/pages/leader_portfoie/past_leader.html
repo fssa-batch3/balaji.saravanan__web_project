@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+
+    <style>
+        /* Close button */
+        #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Form fields */
+        #leader-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            width: 700px;
+        }
+
+        #leader-form input[type="text"],
+        #leader-form textarea {
+            /* width: 100%; */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        #leader-form textarea {
+            height: 100px;
+        }
+
+        #leader-form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #leader-form input[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+
+        .horizontal-card-bg-img img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .custom-select {
+            display: block;
+            width: 20%;
+            height: 3rem;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        }
+
+        .custom-select:focus {
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+        }
+
+        .custom-select option {
+            font-weight: 400;
+            background-color: #fff;
+            color: #495057;
+        }
+
+        .select {
+            display: flex;
+
+        }
+    </style>
+
+    <style>
+        /* Style for the form container */
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Style for the form */
+        #leader-form {
+            width: 90%;
+            padding: 50px;
+            /* background-color: ; */
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Style for the form title */
+        h3 {
+            text-align: center;
+            /* margin-bottom: 50px; */
+        }
+
+        /* Style for the form inputs */
+        input[type="text"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        textarea {
+            /* display: none; */
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        /* Style for the form select */
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0 20px 0;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the form radio buttons */
+        label {
+            margin-right: 10px;
+        }
+
+        /* Style for the form submit button */
+        button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Style for the form main divs */
+        .maindiv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .left,
+        .right {
+            width: 45%;
+        }
+
+        /* Style for the form textareas */
+        textarea {
+            resize: none;
+        }
+
+        /* Style for the form description textareas */
+        #description,
+        #description1,
+        #description2,
+        #description3,
+        #description4,
+        #description5 {
+            display: none;
+        }
+
+        /* Style for the form error messages */
+        .error-message {
+            color: red;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="nave_side">
+        <!-- Vertical Navbar -->
+
+        <!-- Main content -->
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+            <!-- Header -->
+            <header class="bg-surface-primary border-bottom pt-6">
+                <div class="container-fluid">
+                    <div class="mb-npx">
+                        <div class="row align-items-center">
+                            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                                <!-- Title -->
+                                <h1 class="h2 mb-0 ls-tight">Application</h1>
+                            </div>
+                            <!-- Actions -->
+                            <div class="col-sm-6 col-12 text-sm-end">
+                                <div class="mx-n1">
+                                    <a href="#" class="btn d-inline-flex btn-sm btn-neutral border-base mx-1">
+                                        <span class=" pe-2">
+                                            <i class="bi bi-pencil"></i>
+                                        </span>
+                                        <span>Edit</span>
+                                    </a>
+                                    <a href="#" class="btn d-inline-flex btn-sm btn-primary mx-1">
+                                        <span class=" pe-2">
+                                            <i class="bi bi-plus"></i>
+                                        </span>
+                                        <span>Create</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nav -->
+                        <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                            <li class="nav-item ">
+                                <a href="profile_list_page.html" class="nav-link font-regular">Mp list</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="mla_admin_list.html" class="nav-link font-regular">MLA
+                                    list</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="governer_list.html" class="nav-link font-regular">Governer list</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="past_leader.html" class="nav-link active">Past leaders</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- Main -->
+            <main class="py-6 bg-surface-secondary">
+                <div class="container-fluid">
+                    <!-- Card stats -->
+
+                    <div class="card shadow border-0 mb-7">
+                        <div class="card-header">
+                            <h5 class="mb-0">Pages</h5>
+                        </div>
+                        <div class="table-responsive" id="table_content">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Governer Name</th>
+                                        <th scope="col">position
+                                        </th>
+                                        <th scope="col">from_date</th>
+                                        <th scope="col">to date</th>
+                                        <th scope="col">status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="past_container">
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="container" id="container" style="display: none;">
+
+                            <form id="leader-form">
+
+                                <h3>Insert your Data</h3>
+                                <div class="maindiv">
+
+                                    <div class="left">
+                                        <label for="politics_radio">Tamil name</label>
+                                        <input type="text" id="tname" value="name" placeholder="Tamil Name" required
+                                            pattern="[\u0B80-\u0BFF]+">
+
+
+
+                                        <label for="politics_radio">Image URL</label>
+                                        <input type="text" id="url" placeholder="Please insert your picture URL"
+                                            required>
+
+                                        <div class="col-sm-6">
+                                            Position:
+                                            <select class="form-select" aria-label="Default select example"
+                                                id="position" pattern="[A-Za-z]" required>
+                                                <option selected>Enter your opinion</option>
+                                                <option value="முன்னாள் முதல் அமைச்சர்">முன்னாள் முதல் அமைச்சர்</option>
+
+                                            </select>
+                                        </div>
+                                        <div class="from_date" style="display:block;">
+
+                                            <label for="">from_date</label>
+
+                                            <input type="date" id="date_f" required>
+
+                                        </div>
+
+                                        <div>
+                                            <label for="movie_radio" id="movie">life achievement</label>
+
+                                            <input type="radio" name="desc_radio" id="movie_radio" value="movie"
+                                                onclick="showDescription()">
+                                            <textarea name="" id="description" cols="90" rows="7" style="display:none;"
+                                                required pattern="[\u0B80-\u0BFF]+"></textarea>
+                                        </div>
+
+                                        <div>
+                                            <label for="politics_radio">Politics</label>
+                                            <input type="radio" name="desc_radio" id="politics_radio" value="politics"
+                                                onclick="showDescription()">
+                                            <div>
+                                                <textarea name="" id="description1" cols="90" rows="7"
+                                                    style="display:none;" required
+                                                    pattern="[\u0B80-\u0BFF]+"></textarea>
+                                            </div>
+
+                                        </div>
+
+                                        <div>
+                                            <label for="income_radio">Income</label>
+                                            <input type="radio" name="desc_radio" id="income_radio" value="income"
+                                                onclick="showDescription()">
+                                            <textarea name="" id="description2" cols="90" rows="7" style="display:none;"
+                                                required pattern="[\u0B80-\u0BFF]+"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <label for="politics_radio">constuency Name</label>
+                                        <input type="text" id="constuency_name" placeholder="contuency Nmae" required>
+
+                                        <label for="politics_radio">How many times wining</label>
+                                        <input type="text" id="count_winning" placeholder="winning aount" required>
+
+                                        <label for="politics_radio">Party name</label>
+                                        <input type="text" id="party_name" placeholder="Party Name"
+                                            pattern="[\u0B80-\u0BFF]+" required>
+
+                                        <label for="politics_radio">Politics Experiance</label>
+                                        <input type="number" id="experiance" placeholder="experiance" required>
+
+                                        <div class="from_date" style="display:block;">
+                                            <label for="">To_date</label>
+                                            <input type="date" id="date_t" required>
+                                        </div>
+
+                                        <div>
+                                            <label for="birth_radio">Birth</label>
+                                            <input type="radio" name="desc_radio" id="birth_radio" value="birth"
+                                                onclick="showDescription()">
+
+                                            <textarea name="" id="description3" cols="90" rows="7" style="display:none;"
+                                                required></textarea>
+                                        </div>
+                                        <div>
+                                            <label for="education_radio">Education</label>
+                                            <input type="radio" name="desc_radio" id="education_radio" value="education"
+                                                onclick="showDescription()">
+                                            <textarea name="" id="description4" cols="90" rows="7"
+                                                style="display:none;"></textarea>
+                                        </div>
+
+                                        <div>
+                                            <label for="family_radio">Family</label>
+                                            <input type="radio" name="desc_radio" id="family_radio" value="family"
+                                                onclick="showDescription()">
+                                            <textarea name="" id="description5" cols="90" rows="7"
+                                                style="display:none;"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <button type="submit" id="submit_button">Submit</button>
+                                <div class="close-what" id="closeBtn">&times;</div>
+                            </form>
+
+                        </div>
+
+                        <script>
+                            function showDescription() {
+                                const radios = document.getElementsByName("desc_radio");
+                                const descriptions = document.querySelectorAll("textarea[id^='description']");
+
+                                for (let i = 0; i < radios.length; i++) {
+                                    if (radios[i].checked) {
+                                        const description = descriptions[i];
+                                        description.style.display = "block";
+                                        description.placeholder = `Please insert your ${radios[i].value} information`;
+                                    }
+
+                                }
+                            }
+                        </script>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        const past_leader = JSON.parse(localStorage.getItem("past_leader"));
+
+        function loadPast() {
+
+            const past_container = document.getElementById("past_container");
+
+            past_container.innerHTML = ""
+
+            for (const values of past_leader) {
+
+                // Create the table row element
+                const tr = document.createElement('tr');
+
+                // Create the first table data element for the avatar and name
+                const td1 = document.createElement('td');
+                const avatar = document.createElement('img');
+                avatar.setAttribute('alt', values.name);
+                avatar.setAttribute('src', values.image);
+                avatar.classList.add('avatar', 'avatar-sm', 'rounded-circle', 'me-2');
+                const nameLink = document.createElement('a');
+                nameLink.setAttribute('href', '#');
+                nameLink.classList.add('text-heading', 'font-semibold');
+                nameLink.textContent = values.name;
+                td1.appendChild(avatar);
+                td1.appendChild(nameLink);
+
+                // Create the second table data element for the date
+                const td2 = document.createElement('td');
+                td2.textContent = values.party_name;
+
+                // Create the third table data element for the logo and company name
+                const td3 = document.createElement('td');
+
+                const companyLink = document.createElement('a');
+                companyLink.setAttribute('href', '#');
+                companyLink.classList.add('text-heading', 'font-semibold');
+                companyLink.textContent = values.to;
+
+                td3.appendChild(companyLink);
+
+                // Create the fourth table data element for the amount
+                const td4 = document.createElement('td');
+                td4.textContent = values.from;
+
+                // Create the fifth table data element for the status badge
+                const td5 = document.createElement('td');
+                const badge = document.createElement('span');
+                badge.classList.add('badge', 'badge-lg', 'badge-dot');
+                const badgeIcon = document.createElement('i');
+                badgeIcon.classList.add('bg-success');
+                badge.appendChild(badgeIcon);
+                badge.appendChild(document.createTextNode(values.status));
+                td5.appendChild(badge);
+
+                // Create the sixth table data element for the action buttons
+                const td6 = document.createElement('td');
+
+                const viewButton = document.createElement('a');
+                viewButton.setAttribute('href', '#');
+                viewButton.classList.add('btn', 'btn-sm', 'btn-neutral');
+                viewButton.textContent = 'Edit';
+                viewButton.onclick = function () {
+                    updateLeader(values);
+                    container_div.style.display = 'flex';
+                    table_content.style.display = "none";
+
+                }
+                const deleteButton = document.createElement('button');
+                deleteButton.setAttribute('type', 'button');
+                deleteButton.classList.add('btn', 'btn-sm', 'btn-square', 'btn-neutral', 'text-danger-hover');
+                const deleteIcon = document.createElement('i');
+                deleteIcon.classList.add('bi', 'bi-trash');
+                deleteButton.appendChild(deleteIcon);
+                deleteButton.onclick = function () {
+                    deleteLeader(values);
+
+                }
+                td6.appendChild(viewButton);
+                td6.appendChild(deleteButton);
+
+                // Add all the table data elements to the row element
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tr.appendChild(td4);
+                tr.appendChild(td5);
+                tr.appendChild(td6);
+
+                // Add the row element to the table body
+                past_container.appendChild(tr);
+            }
+        }
+
+        const container_div = document.getElementById("container");
+
+        const table_content = document.getElementById("table_content")
+
+        const closeBtn = document.getElementById("closeBtn");
+
+        closeBtn.addEventListener('click', () => {
+            // leaderForm.style.display = 'none';
+            table_content.style.display = 'flex'; // hide the form
+            container_div.style.display = "none"
+        });
+
+        let profile_leder_id = null;
+
+        const leaderForm = document.getElementById("leader-form");
+
+        // Function to update leader data
+        function updateLeader(leader) {
+            // Set form values to current leader data
+
+            document.getElementById("tname").value = leader.name;
+
+            document.getElementById("date_f").value = leader.from;
+
+            document.getElementById("date_t").value = leader.to;
+
+            document.getElementById("party_name").value = leader.party_name;
+
+            document.getElementById("url").value = leader.image;
+
+
+            if (leader.movie) {
+                document.getElementById("position").value = "முன்னாள் முதல் அமைச்சர்";
+
+                document.getElementById("description").value = leader.movie.movie_description;
+
+                document.getElementById("description1").value = leader.politics.politics_description;
+
+                document.getElementById("description2").value = leader.income.income_description;
+
+                document.getElementById("description3").value = leader.birth.birth_description;
+
+                document.getElementById("description4").value = leader.education.education_description;
+
+                document.getElementById("description5").value = leader.family.family_description;
+
+                document.getElementById("experiance").value = leader.experiance;
+
+                document.getElementById("constuency_name").value = leader.constuency_name;
+
+                document.getElementById("count_winning").value = leader.count_winning;
+            }
+
+            profile_leder_id = leader.id;
+        }
+
+        // Function to handle form submission
+        async function handleSubmit(e) {
+            e.preventDefault();
+
+            const img_url = document.getElementById("url").value;
+
+            const tamil_name = document.getElementById("tname").value;
+
+
+            const position = document.getElementById("position").value;
+
+            const party_name = document.getElementById("party_name").value;
+
+            const movie = document.getElementById("movie_radio").value;
+
+            const movie_description = document.getElementById("description").value;
+
+            const politics = document.getElementById("politics_radio").value;
+
+            const politics_description = document.getElementById("description1").value;
+
+            const income = document.getElementById("income_radio").value;
+
+            const income_description = document.getElementById("description2").value;
+
+            const birth = document.getElementById("birth_radio").value;
+
+            const birth_description = document.getElementById("description3").value;
+
+            const education = document.getElementById("education_radio").value;
+
+            const education_description = document.getElementById("description4").value;
+
+            const family = document.getElementById("family_radio").value;
+
+            const family_description = document.getElementById("description5").value;
+
+            const from_date = document.getElementById("date_f").value;
+
+            const to_date = document.getElementById("date_t").value;
+
+            const constuency_name = document.getElementById("constuency_name").value;
+
+            const count_winning = document.getElementById("count_winning")
+
+            const experiance = document.getElementById("experiance").value;
+
+            const past_leader_up = {
+
+                name: tamil_name,
+
+                image: img_url,
+
+                position,
+                movie: {
+                    name: movie,
+                    description: movie_description
+                },
+                politics: {
+                    name: politics,
+                    description: politics_description
+                },
+                income: {
+                    name: income,
+                    description: income_description
+                },
+                birth: {
+                    name: birth,
+                    description: birth_description
+                },
+                family: {
+                    name: family,
+                    description: family_description
+                },
+                education: {
+                    name: education,
+                    description: education_description
+                },
+                party_name,
+
+                status: true,
+
+                from: from_date,
+
+                to: to_date,
+
+                experiance,
+
+                constuency_name,
+
+                count_winning,
+
+                id: profile_leder_id,
+            };
+
+            // Find index of current leader in ministersData
+            const index = past_leader.findIndex((leader) => leader.id === profile_leder_id);
+
+            // If leader is found, update their data and save to localStorage
+            if (index !== -1) {
+                past_leader[index] = past_leader_up;
+                localStorage.setItem("past_leader", JSON.stringify(past_leader));
+                alert("Governer updated successfully!");
+                loadPast()
+            }
+
+            const ministers_value1 = JSON.parse(localStorage.getItem("past_leaders_english"));
+
+            // Update leader in English JSON file
+            const index1 = ministers_value1.findIndex((leader) => leader.id === profile_leder_id);
+            if (index1 !== -1) {
+                // Translate leader data to English
+                const targetLanguage = "en";
+                const leaderdata_english = {};
+
+                for (const [key, value] of Object.entries(past_leader_up)) {
+                    if (typeof value === "string") {
+                        const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value}`;
+                        const response = await fetch(translateUrl);
+                        const data = await response.json();
+                        const translatedText = data[0][0][0];
+                        leaderdata_english[key] = translatedText;
+                    } 
+                    else if (typeof value === "object" && value !== null) { // Check if the value is an object and not null
+                        const translatedValue = {};
+
+                        for (const [key2, value2] of Object.entries(value)) {
+                            if (key2 === "description") { // Check if the key is "description"
+
+                                const translateUrl = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=${targetLanguage}&dt=t&q=${value2}`;
+
+                                const response = await fetch(translateUrl);
+                                const data = await response.json();
+
+                                const translatedText = data[0][0][0]; // get the translated text from the API response
+                                translatedValue[key2] = translatedText; // update the translated value object with the translated text
+                            } else {
+                                translatedValue[key2] = value2;
+
+                            }
+
+                        }
+
+                        leaderdata_english[key] = translatedValue;
+
+                    } else {
+
+                        leaderdata_english[key] = value;
+
+                    }
+                }
+
+                // Update MLA data in English JSON file
+                ministers_value1[index1] = leaderdata_english;
+                localStorage.setItem("past_leaders_english", JSON.stringify(ministers_value1));
+                alert("Leader updated successfully in English JSON file!");
+                loadPast();
+            }
+
+        }
+
+        // Add event listener to form submission
+        leaderForm.addEventListener("submit", handleSubmit);
+
+        function deleteLeader(minister) {
+            const ministersData = JSON.parse(localStorage.getItem("past_leader")) ?? [];
+
+            const index = ministersData.findIndex((leader) => leader.name
+                === minister.name
+            );
+
+            // If leader is found, update their status to false and save to localStorage
+            if (index !== -1) {
+                past_leader[index].status = false;
+                localStorage.setItem("past_leader", JSON.stringify(ministersData));
+                alert("past_leader status changed successfully!");
+                loadPast()
+            }
+        }
+
+        window.onload = function () {
+            loadPast()
+        }
+    </script>
+
+    <script src="../../admin_main.js"></script>
+</body>
+
+</html>

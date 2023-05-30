@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+    <style>
+        p.title {
+            text-align: center;
+            font-size: 45px;
+            color: #efdeff;
+        }
+
+        b {
+            color: #FFFFFF;
+            font-size: 55px;
+        }
+
+        /* p.remarks,
+        a {
+            text-align: center;
+            margin-top: 100px;
+            color: #FFFFFF;
+        } */
+
+        .container1 {
+            width: 100%;
+            max-width: 700px;
+            min-width: 300px;
+            margin: 0 auto;
+            padding: 0 5vh;
+        }
+
+        /* accordion-1 */
+        #accordion-1 {
+            position: relative;
+            box-shadow: 0px 1px 7px #DBDBDB;
+        }
+
+        #accordion-1 .head {
+            background-color: #FFFFFF;
+            color: #563e6e;
+            padding: 20px 30px;
+            cursor: pointer;
+            transition: 0.2s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #accordion-1 .arrow {
+            color: #563e6e;
+            font-size: 60px;
+            transition: 0.25s ease;
+            opacity: 0.3;
+            transform: rotate(-180deg);
+        }
+
+        #accordion-1 .head:hover .arrow {
+            opacity: 1;
+        }
+
+        #accordion-1 .head:hover,
+        #accordion-1 .active {
+            background-color: #FFE77AFF;
+        }
+
+        #accordion-1 .arrow-animate {
+            transform: rotate(0deg);
+            opacity: 1;
+        }
+
+        #accordion-1 .content {
+            background-color: #FFFFFF;
+            display: none;
+            padding: 20px 30px;
+            color: #333333;
+        }
+
+        /* form */
+
+        .container1 {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        }
+
+        .container1 h1 {
+            font-size: 26px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .container1 .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+        }
+
+        .container1 .col-sm-6 {
+            width: 50%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+        }
+
+        .container1 label {
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .container1 input[type="text"],
+        .container1 select {
+            width: 300px;
+            height: 50px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+        }
+
+        .container1 input[type="submit"] {
+            display: block;
+            width: 100%;
+            height: 50px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .container1 input[type="submit"]:hover {
+            background-color: #0062cc;
+        }
+
+        .container1 select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4'%3E%3Cpath fill='%23000' d='M0 0l4 4 4-4z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 8px 4px;
+            padding-right: 30px;
+        }
+
+        .container1 select:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .container1 input:required:invalid {
+            border-color: #f44336;
+        }
+
+        .container1 input:required:valid {
+            border-color: #4caf50;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Dashboard -->
+    <div class="d-flex flex-column flex-lg-row h-lg-full bg-surface-secondary" id="nave_side">
+        <!-- Vertical Navbar -->
+
+        <!-- Main content -->
+        <div class="h-screen flex-grow-1 overflow-y-lg-auto">
+            <!-- Header -->
+            <header class="bg-surface-primary border-bottom pt-6">
+                <div class="container-fluid">
+                    <div class="mb-npx">
+                        <div class="row align-items-center">
+                            <div class="col-sm-6 col-12 mb-4 mb-sm-0">
+                                <!-- Title -->
+                                <h1 class="h2 mb-0 ls-tight">Application</h1>
+                            </div>
+                            <!-- Actions -->
+                            <div class="col-sm-6 col-12 text-sm-end">
+                                <div class="mx-n1">
+                                    <a href="pages/leader_portfoie/create_leaders/politicin_create.html"
+                                        class="btn d-inline-flex btn-sm btn-primary mx-1" id="direct_to_create">
+                                        <span class=" pe-2">
+                                            <i class="bi bi-plus"></i>
+                                        </span>
+                                        <span>Create</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Nav -->
+                        <ul class="nav nav-tabs mt-4 overflow-x border-0">
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link active">All files</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link font-regular">Shared</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link font-regular">File requests</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+            <!-- Main -->
+            <main class="py-6 bg-surface-secondary">
+                <div class="container-fluid">
+                    <!-- Card stats -->
+
+                    <div class="card shadow border-0 mb-7">
+                        <div class="card-header">
+                            <h5 class="mb-0">Pages</h5>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">date</th>
+                                        <th scope="col">list</th>
+                                        <th scope="col">list type</th>
+                                        <th scope="col">status</th>
+                                        <th scope="col">status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="container">
+
+
+                        </div>
+                        <div class="container1">
+                            <h1>This is an Manifesto create page</h1>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <form id="menifesto_form">
+                                        Title of Menifesto:<br>
+                                        <input type="text" id="manifesto_title" placeholder="Title of Menifesto"
+                                            required>
+
+
+                                </div>
+                                <div class="col-sm-6">
+                                    stage of Menifesto:<br>
+                                    <input type="text" id="status_stage" placeholder="the status of the stage" required>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    category:
+                                    <select class="form-select" aria-label="Default select example" id="category"
+                                        required pattern="[A-Za-z]">
+                                        <option selected>Enter your opinion</option>
+                                        <option value="aggriculture">aggriculture</option>
+                                        <option value="water">water</option>
+                                        <option value="fishers">fishers</option>
+                                        <option value="education">education</option>
+                                        <option value="employment">employment</option>
+                                        <option value="electricity">electricity</option>
+                                        <option value="transport">transport</option>
+                                        <option value="disabilities">disabilities</option>
+                                        <option value="woman">woman</option>
+                                        <option value="law">law</option>
+
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    status:
+                                    <select class="form-select" aria-label="Default select example"
+                                        id="manifesto-status" required pattern="[A-Za-z]">
+                                        <option selected>Enter your opinion</option>
+                                        <option value="complete">complte</option>
+                                        <option value="bending">bending</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-sm-6">
+                                    <input type="submit" value="Submit" class="submit">
+
+                                    </form>
+
+                                </div>
+
+                                <div class="close-what" id="closeBtn">&times;</div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="../../assets/js/manifesto_update.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../admin_main.js"></script>
+</body>
+
+</html>
